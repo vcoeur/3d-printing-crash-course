@@ -60,7 +60,7 @@ def synth(lang, scene_id, text, out_dir, force, api_key):
         headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
         method="POST",
     )
-    with urllib.request.urlopen(request) as response:
+    with urllib.request.urlopen(request, timeout=60) as response:
         audio = response.read()
     os.makedirs(os.path.dirname(out), exist_ok=True)
     # Write via a temp file so an interrupted run never leaves a truncated mp3.
