@@ -30,7 +30,8 @@ Large binaries (PDF, audio, fonts, images) are tracked with **Git LFS** — run
 bash build/build_all.sh
 
 # Narration audio for the player (writes player/audio/<lang>/<id>.mp3)
-python3 player/gen_audio_voxtral.py --course player/course.json --out player/audio   # OpenRouter Voxtral
+python3 player/gen_audio_gpt.py     --course player/course.json --out player/audio   # GPT-4o Mini TTS — cheap (~$0.60/1M chars), voice marin
+python3 player/gen_audio_voxtral.py --course player/course.json --out player/audio   # Voxtral — expressive (~$16/1M chars)
 # (or the free Edge TTS variant: gen_audio_edge.py, via `uv run --with edge-tts`)
 
 # Assemble the deployable player bundle -> player/site/

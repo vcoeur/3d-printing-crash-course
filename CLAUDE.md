@@ -17,7 +17,7 @@ credential or private hosting detail.
   `build_html.py` (self-contained HTML), writing to `dist/`.
 - `player/` — `player.html` (data-driven animated player), `course.json` (merged scene
   data), `scenes/module_*.json` (authored decks; schema in `SCHEMA.md`), and the pipeline
-  `merge_scenes.py` → `gen_audio_{edge,voxtral}.py` → `build_site.sh`.
+  `merge_scenes.py` → `gen_audio_{gpt,voxtral,edge}.py` → `build_site.sh`.
 - `assets/fonts`, `assets/images` — embedded build assets (LFS).
 - `dist/` — built deliverables (LFS for PDFs).
 
@@ -27,8 +27,9 @@ credential or private hosting detail.
   (see `.gitattributes`). Run `git lfs install` once; `git lfs pull` after clone.
 - Narration audio (`player/audio/`) is committed via LFS. Other generated outputs stay
   git-ignored: `player/site/` and the consolidated `course_{en,fr}.md` — regenerate those.
-- Narration voices: Voxtral `gb_jane_neutral` (EN) / `fr_marie_neutral` (FR) via
-  `gen_audio_voxtral.py` (needs `OPENROUTER_API_KEY`); the free Edge-TTS path
-  (`gen_audio_edge.py`) remains as a fallback.
+- Narration: `gen_audio_gpt.py` (GPT-4o Mini TTS, voice `marin`, cheap multilingual —
+  one voice for EN+FR) or `gen_audio_voxtral.py` (Voxtral `gb_jane_neutral` EN /
+  `fr_marie_neutral` FR, expressive). Both need `OPENROUTER_API_KEY`; `gen_audio_edge.py`
+  (free Edge TTS) is a fallback. The shipped audio is currently Voxtral.
 - `build_all.sh` depends on an external `md_to_pdf.sh` (pandoc + xelatex + mermaid) that
   is not vendored here; the PDF step needs that toolchain on PATH.

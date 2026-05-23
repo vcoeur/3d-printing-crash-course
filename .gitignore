@@ -4,6 +4,9 @@
 .course_*.pdfsrc.md
 player/site/
 
+# Local audio backups — kept on disk, not committed
+player/audio-v*/
+
 # Deploy state — never commit (Netlify coordinates live elsewhere, kept private)
 .netlify/
 
