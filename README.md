@@ -37,5 +37,5 @@ python3 player/gen_audio_voxtral.py --course player/course.json --out player/aud
 bash player/build_site.sh
 ```
 
-Generated audio (`player/audio/`) and the assembled `player/site/` are git-ignored —
-regenerate them with the commands above.
+Narration audio (`player/audio/`) is committed via Git LFS. Only the assembled
+`player/site/` bundle is git-ignored — rebuild it with the command above.

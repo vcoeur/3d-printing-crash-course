@@ -25,8 +25,8 @@ credential or private hosting detail.
 
 - Large binaries (`*.pdf *.mp3 *.woff2 *.jpg *.png *.webp *.zip`) go through **Git LFS**
   (see `.gitattributes`). Run `git lfs install` once; `git lfs pull` after clone.
-- Generated outputs are git-ignored: `player/audio/`, `player/site/`, the consolidated
-  `course_{en,fr}.md`. Regenerate via the build scripts; don't commit them.
+- Narration audio (`player/audio/`) is committed via LFS. Other generated outputs stay
+  git-ignored: `player/site/` and the consolidated `course_{en,fr}.md` — regenerate those.
 - Narration voices: Voxtral `gb_jane_neutral` (EN) / `fr_marie_neutral` (FR) via
   `gen_audio_voxtral.py` (needs `OPENROUTER_API_KEY`); the free Edge-TTS path
   (`gen_audio_edge.py`) remains as a fallback.
