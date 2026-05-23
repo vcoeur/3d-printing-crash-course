@@ -1,0 +1,2472 @@
+{
+ "module": 7,
+ "module_title": {
+  "en": "Multi-Material Printing with AMS",
+  "fr": "Impression multi-matériaux avec l'AMS"
+ },
+ "chapters": [
+  {
+   "chapter": 1,
+   "title": {
+    "en": "AMS System Overview",
+    "fr": "Présentation du système AMS"
+   },
+   "scenes": [
+    {
+     "id": "7.1.0",
+     "narration": {
+      "en": "Welcome to Chapter 1. The Automatic Material System is Bambu Lab's answer to a bold question: can a single-nozzle printer handle multiple colors or materials, automatically, in one job?",
+      "fr": "Bienvenue au chapitre 1. L'Automatic Material System est la réponse de Bambu Lab à une question audacieuse : une imprimante à buse unique peut-elle gérer plusieurs couleurs ou matériaux, automatiquement, en un seul travail ?"
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 7 · Chapter 1",
+        "fr": "Module 7 · Chapitre 1"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "AMS System Overview",
+        "fr": "Présentation du système AMS"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Think of the AMS as a robotic librarian for your filament — it stores up to four spools, feeds them on demand, and swaps between them seamlessly when your model calls for a different color or material.",
+        "fr": "Pensez à l'AMS comme à un bibliothécaire robotisé pour vos filaments — il stocke jusqu'à quatre bobines, les alimente à la demande, et les permute sans interruption lorsque votre modèle nécessite une couleur ou un matériau différent."
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.1.1",
+     "narration": {
+      "en": "The AMS debuted alongside the X1 Carbon in 2022, and has since grown into a full ecosystem of four distinct products, each targeting different printers, budgets, and materials.",
+      "fr": "L'AMS a fait ses débuts avec le X1 Carbon en 2022, et s'est depuis développé en un écosystème complet de quatre produits distincts, ciblant chacun des imprimantes, des budgets et des matériaux différents."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The AMS Ecosystem",
+        "fr": "L'écosystème AMS"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "ams"
+      },
+      {
+       "type": "timeline",
+       "nodes": [
+        {
+         "label": "2022",
+         "text": {
+          "en": "AMS launched with X1 Carbon — 4 spools, sealed chamber, RFID",
+          "fr": "AMS lancé avec le X1 Carbon — 4 bobines, boîtier étanche, RFID"
+         }
+        },
+        {
+         "label": "Later",
+         "text": {
+          "en": "AMS Lite — budget variant for A1 / A1 Mini, open frame",
+          "fr": "AMS Lite — variante économique pour A1 / A1 Mini, cadre ouvert"
+         }
+        },
+        {
+         "label": "Later",
+         "text": {
+          "en": "AMS HT — 85 °C high-temp drying for Nylon and PC",
+          "fr": "AMS HT — séchage haute température à 85 °C pour Nylon et PC"
+         }
+        },
+        {
+         "label": "Later",
+         "text": {
+          "en": "AMS 2 Pro — 65 °C active drying, independent direct-drive per slot",
+          "fr": "AMS 2 Pro — séchage actif à 65 °C, entraînement direct indépendant par emplacement"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.1.2",
+     "narration": {
+      "en": "The original AMS, priced at around 399 dollars, set the template: four sealed spool bays, motorized feed rollers, a central hub, and a 5-level humidity sensor backed by desiccant packs.",
+      "fr": "L'AMS d'origine, au prix d'environ 399 dollars, a établi le modèle : quatre emplacements pour bobines étanches, galets d'entraînement motorisés, un moyeu central et un capteur d'humidité à 5 niveaux avec sachets dessiccants."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Original AMS — The Template",
+        "fr": "AMS d'origine — le modèle de référence"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "4 spool bays",
+          "fr": "4 emplacements"
+         },
+         "desc": {
+          "en": "Sealed, airtight enclosure with desiccant",
+          "fr": "Boîtier étanche avec dessiccant"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Hub merge",
+          "fr": "Moyeu de fusion"
+         },
+         "desc": {
+          "en": "Central hub merges 4 paths into 1 output tube",
+          "fr": "Le moyeu central fusionne 4 chemins en 1 tube de sortie"
+         }
+        },
+        {
+         "title": {
+          "en": "~$399",
+          "fr": "~$399"
+         },
+         "desc": {
+          "en": "X1C, X1E, P1P, P1S compatible",
+          "fr": "Compatible X1C, X1E, P1P, P1S"
+         }
+        },
+        {
+         "title": {
+          "en": "RFID detection",
+          "fr": "Détection RFID"
+         },
+         "desc": {
+          "en": "Auto-reads Bambu Lab spool material data",
+          "fr": "Lit automatiquement les données de matériau des bobines Bambu Lab"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.1.3",
+     "narration": {
+      "en": "The AMS 2 Pro is the flagship upgrade. It adds active filament drying up to 65 degrees Celsius — useful for PLA at 45, PETG at 55, and ABS at 65 degrees. Its independent direct-drive feeders and brushless servo motors are 60% faster than the original.",
+      "fr": "L'AMS 2 Pro est la mise à niveau haut de gamme. Il ajoute le séchage actif des filaments jusqu'à 65 °C — utile pour le PLA à 45, le PETG à 55 et l'ABS à 65 degrés. Ses entraînements directs indépendants et ses servomoteurs sans balais sont 60 % plus rapides que l'original."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "AMS 2 Pro — Active Drying",
+        "fr": "AMS 2 Pro — séchage actif"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>~$359 MSRP</b> — has sold for $299 with rebates",
+         "fr": "<b>~$359 MSRP</b> — vendu à $299 avec remises"
+        },
+        {
+         "en": "<b>Active drying to 65 °C</b> — PLA (45 °C), PETG (55 °C), ABS (65 °C)",
+         "fr": "<b>Séchage actif jusqu'à 65 °C</b> — PLA (45 °C), PETG (55 °C), ABS (65 °C)"
+        },
+        {
+         "en": "<b>60% faster</b> brushless servo motors vs original",
+         "fr": "<b>60 % plus rapide</b> — servomoteurs sans balais vs l'original"
+        },
+        {
+         "en": "<b>Built-in filament cutter</b> — clean cuts every swap",
+         "fr": "<b>Coupe-filament intégré</b> — coupes nettes à chaque changement"
+        },
+        {
+         "en": "<b>Cannot dry and print simultaneously</b> on the same unit",
+         "fr": "<b>Impossible de sécher et imprimer simultanément</b> sur la même unité"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.1.4",
+     "narration": {
+      "en": "A critical limitation of the AMS 2 Pro: 65 degrees is not enough for Nylon, which needs 70 to 90 degrees to dry properly. For those engineering materials, you need the AMS HT.",
+      "fr": "Une limitation critique de l'AMS 2 Pro : 65 °C ne suffit pas pour le Nylon, qui nécessite 70 à 90 °C pour sécher correctement. Pour ces matériaux techniques, l'AMS HT est nécessaire."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "65 °C is insufficient for Nylon/PA, which typically requires 70–90 °C to dry properly. Use the AMS HT for Nylon, PC, and PVA.",
+        "fr": "65 °C est insuffisant pour le Nylon/PA, qui nécessite généralement 70–90 °C pour sécher correctement. Utilisez l'AMS HT pour le Nylon, le PC et le PVA."
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.1.5",
+     "narration": {
+      "en": "The AMS Lite targets the A1 and A1 Mini at around 70 dollars. It drops the sealed enclosure and humidity control entirely, using open-frame rotary spool holders instead. The trade-off is real: no moisture protection, and it cannot be daisy-chained.",
+      "fr": "L'AMS Lite cible l'A1 et l'A1 Mini à environ 70 dollars. Il abandonne complètement le boîtier étanche et le contrôle de l'humidité, au profit de porte-bobines rotatifs à cadre ouvert. Le compromis est significatif : aucune protection contre l'humidité, et il ne peut pas être chaîné."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "AMS Lite — Budget Entry",
+        "fr": "AMS Lite — entrée de gamme"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "AMS Lite gains",
+         "fr": "Avantages AMS Lite"
+        },
+        "note": {
+         "en": "~$70 · A1 / A1 Mini · handles cardboard spools better",
+         "fr": "~$70 · A1 / A1 Mini · gère mieux les bobines en carton"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "AMS Lite limits",
+         "fr": "Limites AMS Lite"
+        },
+        "note": {
+         "en": "No humidity control · no chaining · max 4 filaments",
+         "fr": "Aucun contrôle d'humidité · sans chaînage · max 4 filaments"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.1.6",
+     "narration": {
+      "en": "The AMS HT is purpose-built for engineering filaments. It holds only one spool per unit but dries up to 85 degrees Celsius — enough for Nylon, Polycarbonate, and PVA. An electromagnetic air vent expels moisture during drying, then seals for storage.",
+      "fr": "L'AMS HT est conçu expressément pour les filaments techniques. Il ne contient qu'une bobine par unité mais sèche jusqu'à 85 °C — suffisant pour le Nylon, le polycarbonate et le PVA. Un évent électromagnétique expulse l'humidité pendant le séchage, puis se scelle pour le stockage."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "AMS HT — Engineering Grade",
+        "fr": "AMS HT — matériaux techniques"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>~$169</b> · 1 spool per unit · all Bambu Lab printers",
+         "fr": "<b>~$169</b> · 1 bobine par unité · toutes imprimantes Bambu Lab"
+        },
+        {
+         "en": "<b>85 °C</b> active drying — Nylon, PC, PVA fully covered",
+         "fr": "<b>85 °C</b> de séchage actif — Nylon, PC, PVA entièrement couverts"
+        },
+        {
+         "en": "<b>Bypass outlet</b> for soft/flexible filaments like TPU",
+         "fr": "<b>Sortie dérivée</b> pour filaments souples/flexibles comme le TPU"
+        },
+        {
+         "en": "<b>Up to 8 units</b> chainable alongside 4 AMS 2 Pro = 24 filaments",
+         "fr": "<b>Jusqu'à 8 unités</b> chaînables avec 4 AMS 2 Pro = 24 filaments"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.1.7",
+     "narration": {
+      "en": "Here is the full comparison across all four AMS variants at a glance.",
+      "fr": "Voici la comparaison complète des quatre variantes AMS en un coup d'oeil."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Four Variants at a Glance",
+        "fr": "Quatre variantes en un coup d'oeil"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Model",
+         "fr": "Modèle"
+        },
+        {
+         "en": "Price",
+         "fr": "Prix"
+        },
+        {
+         "en": "Spools",
+         "fr": "Bobines"
+        },
+        {
+         "en": "Max Temp",
+         "fr": "Temp max"
+        }
+       ],
+       "rows": [
+        [
+         "Original AMS",
+         "~$399",
+         "4",
+         {
+          "en": "Passive (desiccant)",
+          "fr": "Passive (dessiccant)"
+         }
+        ],
+        [
+         "AMS 2 Pro",
+         "~$359",
+         "4",
+         "65 °C"
+        ],
+        [
+         "AMS Lite",
+         "~$70",
+         "4",
+         {
+          "en": "None",
+          "fr": "Aucune"
+         }
+        ],
+        [
+         "AMS HT",
+         "~$169",
+         "1",
+         "85 °C"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.1.8",
+     "narration": {
+      "en": "Before adding a second AMS unit, pay very close attention to the 4-pin cable orientation when connecting via the AMS Hub. Inserting it backwards can damage or destroy both the printer and AMS mainboards.",
+      "fr": "Avant d'ajouter une deuxième unité AMS, faites très attention à l'orientation du câble à 4 broches lors de la connexion via l'AMS Hub. Le brancher à l'envers peut endommager ou détruire les cartes principales de l'imprimante et de l'AMS."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "When daisy-chaining AMS units via the AMS Hub, the 4-pin cable orientation matters. Reversed insertion can destroy printer and AMS mainboards.",
+        "fr": "Lors du chaînage d'unités AMS via l'AMS Hub, l'orientation du câble à 4 broches est cruciale. Un branchement inversé peut détruire les cartes principales de l'imprimante et de l'AMS."
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.1.9",
+     "narration": {
+      "en": "Now let's follow a filament from spool to nozzle. The journey has six stages, each playing a specific role in the coordinated push-pull system.",
+      "fr": "Suivons maintenant un filament depuis la bobine jusqu'à la buse. Le trajet comporte six étapes, chacune jouant un rôle spécifique dans le système push-pull coordonné."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Filament Path — 6 Stages",
+        "fr": "Le chemin du filament — 6 étapes"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "ams"
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Spool bay",
+          "fr": "Emplacement bobine"
+         },
+         "sub": {
+          "en": "Motorized feed rollers",
+          "fr": "Galets motorisés"
+         }
+        },
+        {
+         "name": {
+          "en": "RFID",
+          "fr": "RFID"
+         },
+         "sub": {
+          "en": "Material detection",
+          "fr": "Détection matériau"
+         }
+        },
+        {
+         "name": {
+          "en": "Hub",
+          "fr": "Moyeu"
+         },
+         "sub": {
+          "en": "4 → 1 merge",
+          "fr": "Fusion 4 → 1"
+         }
+        },
+        {
+         "name": {
+          "en": "PTFE tube",
+          "fr": "Tube PTFE"
+         },
+         "sub": {
+          "en": "Low-friction path",
+          "fr": "Trajet faible friction"
+         }
+        },
+        {
+         "name": {
+          "en": "Buffer",
+          "fr": "Tampon"
+         },
+         "sub": {
+          "en": "Tension control",
+          "fr": "Contrôle tension"
+         }
+        },
+        {
+         "name": {
+          "en": "Extruder",
+          "fr": "Extrudeur"
+         },
+         "sub": {
+          "en": "Final pull force",
+          "fr": "Force de traction finale"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.1.10",
+     "narration": {
+      "en": "Each spool bay has motorized feed rollers providing the first push. When a Bambu Lab spool loads, the AMS reads the MIFARE RFID tag on the spool core. That tag carries encrypted material type, color, manufacturing date, and temperatures, all protected by a 2048-bit RSA digital signature.",
+      "fr": "Chaque emplacement dispose de galets d'entraînement motorisés qui fournissent la première poussée. Lorsqu'une bobine Bambu Lab est chargée, l'AMS lit l'étiquette RFID MIFARE sur le noyau de la bobine. Cette étiquette contient le type de matériau, la couleur, la date de fabrication et les températures, protégés par une signature numérique RSA 2048 bits."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Stage 1–2: Spool Bay and RFID",
+        "fr": "Étapes 1–2 : emplacement bobine et RFID"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Motorized rollers</b> — grip spool edges, push filament into transport tube",
+         "fr": "<b>Galets motorisés</b> — saisissent les bords de la bobine, poussent le filament dans le tube"
+        },
+        {
+         "en": "<b>MIFARE RFID tag</b> on Bambu Lab spools — encrypted material data",
+         "fr": "<b>Étiquette RFID MIFARE</b> sur les bobines Bambu Lab — données matériau chiffrées"
+        },
+        {
+         "en": "<b>2048-bit RSA signature</b> verified by the printer",
+         "fr": "<b>Signature RSA 2048 bits</b> vérifiée par l'imprimante"
+        },
+        {
+         "en": "<b>Third-party filaments</b> — manual profile selection required in Bambu Studio",
+         "fr": "<b>Filaments tiers</b> — sélection manuelle du profil requise dans Bambu Studio"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.1.11",
+     "narration": {
+      "en": "At the bottom of the AMS sits the hub. It contains four hall sensors, a magnetic rotary encoder, and a brushless motor. Its sole job is to merge four independent filament paths into one output tube, providing a second stage of driving force.",
+      "fr": "En bas de l'AMS se trouve le moyeu. Il contient quatre capteurs à effet Hall, un encodeur rotatif magnétique et un moteur sans balais. Son seul rôle est de fusionner quatre chemins de filament indépendants en un seul tube de sortie, en fournissant une seconde phase de force d'entraînement."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Stage 3–5: Hub, Tube, and Buffer",
+        "fr": "Étapes 3–5 : moyeu, tube et tampon"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "ams"
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Hub",
+          "fr": "Moyeu"
+         },
+         "desc": {
+          "en": "4 hall sensors + brushless motor — merges 4 paths into 1",
+          "fr": "4 capteurs Hall + moteur sans balais — fusionne 4 chemins en 1"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "PTFE tube",
+          "fr": "Tube PTFE"
+         },
+         "desc": {
+          "en": "Low-friction carrier from AMS to printer — can be several feet long",
+          "fr": "Transport faible friction de l'AMS à l'imprimante — peut mesurer plusieurs dizaines de cm"
+         }
+        },
+        {
+         "title": {
+          "en": "Buffer",
+          "fr": "Tampon"
+         },
+         "desc": {
+          "en": "Spring + hall sensor monitors tension — prevents over- or under-tensioning",
+          "fr": "Ressort + capteur Hall surveille la tension — empêche la surtension ou la sous-tension"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.1.12",
+     "narration": {
+      "en": "When your print calls for a different color, the AMS executes a precise five-step choreography: cut, retract, load, purge, and resume. The raw mechanical swap — retract plus load, before any purge — takes roughly 15 to 25 seconds.",
+      "fr": "Lorsque votre impression nécessite une couleur différente, l'AMS exécute une chorégraphie précise en cinq étapes : découpe, rétractation, chargement, purge et reprise. La durée mécanique brute — rétractation et chargement, avant toute purge — est d'environ 15 à 25 secondes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Filament Change Sequence",
+        "fr": "La séquence de changement de filament"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "ams"
+      },
+      {
+       "type": "stages",
+       "items": [
+        {
+         "label": {
+          "en": "1 Cut",
+          "fr": "1 Découpe"
+         },
+         "sub": {
+          "en": "Blade severs current filament at toolhead",
+          "fr": "La lame sectionne le filament à la tête"
+         }
+        },
+        {
+         "label": {
+          "en": "2 Retract",
+          "fr": "2 Rétractation"
+         },
+         "sub": {
+          "en": "Old filament pulled back to its AMS slot",
+          "fr": "L'ancien filament revient à son emplacement AMS"
+         }
+        },
+        {
+         "label": {
+          "en": "3 Load",
+          "fr": "3 Chargement"
+         },
+         "sub": {
+          "en": "New filament pushed through hub to nozzle",
+          "fr": "Le nouveau filament est poussé jusqu'à la buse"
+         }
+        },
+        {
+         "label": {
+          "en": "4 Purge",
+          "fr": "4 Purge"
+         },
+         "sub": {
+          "en": "Wipe tower absorbs transition material",
+          "fr": "La tour d'essuyage absorbe le matériau de transition"
+         }
+        },
+        {
+         "label": {
+          "en": "5 Resume",
+          "fr": "5 Reprise"
+         },
+         "sub": {
+          "en": "Nozzle primed — back to the model",
+          "fr": "Buse amorcée — retour au modèle"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.1.13",
+     "narration": {
+      "en": "The raw swap takes 15 to 25 seconds, but total cycle time grows significantly once purge is included. High-contrast transitions from dark to light, requiring 250 to 300 cubic millimetres of purge, add the most time.",
+      "fr": "Le changement brut prend 15 à 25 secondes, mais le temps de cycle total augmente considérablement une fois la purge incluse. Les transitions à fort contraste du sombre vers le clair, nécessitant 250 à 300 mm³ de purge, ajoutent le plus de temps."
+     },
+     "elements": [
+      {
+       "type": "stat",
+       "value": "15–25 s",
+       "caption": {
+        "en": "raw mechanical swap time (cut + retract + load, before purge)",
+        "fr": "durée mécanique brute du changement (découpe + rétractation + chargement, avant purge)"
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.1.14",
+     "narration": {
+      "en": "One original AMS gives you four filaments. But add an AMS Hub in place of the standard buffer, daisy-chain up to four AMS units via 6-pin bus cables, and you have 16 different filaments in a single print job. The AMS Lite cannot be chained at all.",
+      "fr": "Un seul AMS d'origine vous donne quatre filaments. Mais en ajoutant un AMS Hub à la place du tampon standard, en chaînant jusqu'à quatre unités AMS via des câbles bus à 6 broches, vous avez 16 filaments différents en un seul travail. L'AMS Lite ne peut pas être chaîné."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Daisy-Chaining: Up to 16 Colors",
+        "fr": "Chaînage : jusqu'à 16 couleurs"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Standard setup",
+         "fr": "Configuration standard"
+        },
+        "note": {
+         "en": "1 AMS = 4 filaments — plug directly to printer",
+         "fr": "1 AMS = 4 filaments — branché directement à l'imprimante"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "AMS Hub setup",
+         "fr": "Configuration avec AMS Hub"
+        },
+        "note": {
+         "en": "Up to 4 AMS + Hub = 16 filaments — 6-pin bus cables (510 mm or 1500 mm)",
+         "fr": "Jusqu'à 4 AMS + Hub = 16 filaments — câbles bus 6 broches (510 mm ou 1500 mm)"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.1.15",
+     "narration": {
+      "en": "The original AMS, AMS 2 Pro, and AMS HT all include humidity management. The original uses passive desiccant with silicon O-rings and a 5-level sensor. Level C or above means desiccant needs renewing.",
+      "fr": "L'AMS d'origine, l'AMS 2 Pro et l'AMS HT incluent tous des systèmes de gestion de l'humidité. L'original utilise un système passif avec dessiccant, joints toriques silicone et un capteur à 5 niveaux. Le niveau C ou au-dessus signifie que le dessiccant doit être renouvelé."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Humidity Control and Storage",
+        "fr": "Contrôle de l'humidité et stockage"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Original AMS</b> — passive desiccant + silicon O-ring seal + 5-level sensor",
+         "fr": "<b>AMS d'origine</b> — dessiccant passif + joint torique silicone + capteur 5 niveaux"
+        },
+        {
+         "en": "<b>Level C or above</b> — replace or re-dry desiccant immediately",
+         "fr": "<b>Niveau C ou au-dessus</b> — remplacer ou re-sécher le dessiccant immédiatement"
+        },
+        {
+         "en": "<b>AMS 2 Pro</b> — intelligent active humidity management",
+         "fr": "<b>AMS 2 Pro</b> — gestion intelligente de l'humidité active"
+        },
+        {
+         "en": "<b>AMS HT</b> — real-time display humidity sensor",
+         "fr": "<b>AMS HT</b> — capteur d'humidité avec affichage en temps réel"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.1.16",
+     "narration": {
+      "en": "One counterintuitive tip: after drying desiccant in an oven, the humidity reading may temporarily rise as the chamber cools. This is normal physics. Cooler air holds less moisture, so relative humidity increases even when absolute moisture content is unchanged. Wait for the chamber to equilibrate before interpreting the reading.",
+      "fr": "Une astuce contre-intuitive : après avoir séché le dessiccant au four, le relevé d'humidité peut temporairement augmenter lorsque le compartiment refroidit. C'est de la physique normale. L'air plus froid retient moins d'humidité, donc l'humidité relative augmente même si la teneur absolue en humidité reste constante. Attendez que le compartiment s'équilibre avant d'interpréter la valeur."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "After oven-drying desiccant, humidity readings may temporarily rise as the chamber cools — this is normal. Cooler air holds less moisture. Let the chamber equilibrate before reading.",
+        "fr": "Après avoir séché le dessiccant au four, les relevés d'humidité peuvent temporairement augmenter le temps que le compartiment refroidisse — c'est normal. L'air plus froid retient moins d'humidité. Laissez le compartiment s'équilibrer avant de lire."
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.1.17",
+     "narration": {
+      "en": "Let's recap what we covered in Chapter 1: four AMS variants for different needs, a six-stage filament path, a five-step change sequence, daisy-chaining to 16 colors, and active humidity management.",
+      "fr": "Récapitulons ce que nous avons couvert au chapitre 1 : quatre variantes AMS pour des besoins différents, un chemin de filament en six étapes, une séquence de changement en cinq étapes, un chaînage jusqu'à 16 couleurs, et une gestion active de l'humidité."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 1 Recap",
+        "fr": "Récapitulatif du chapitre 1"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>4 variants:</b> Original ~$399 · AMS 2 Pro ~$359 (active 65 °C) · AMS Lite ~$70 (A1 only) · AMS HT ~$169 (85 °C, 1 spool)",
+         "fr": "<b>4 variantes :</b> Original ~$399 · AMS 2 Pro ~$359 (actif 65 °C) · AMS Lite ~$70 (A1 seulement) · AMS HT ~$169 (85 °C, 1 bobine)"
+        },
+        {
+         "en": "<b>Filament path:</b> spool bay → RFID → hub → PTFE tube → buffer → extruder",
+         "fr": "<b>Chemin du filament :</b> emplacement bobine → RFID → moyeu → tube PTFE → tampon → extrudeur"
+        },
+        {
+         "en": "<b>Raw swap time:</b> ~15–25 s; total cycle longer with purge",
+         "fr": "<b>Durée brute du changement :</b> ~15–25 s ; cycle total plus long avec la purge"
+        },
+        {
+         "en": "<b>Daisy-chain:</b> up to 4 original AMS + Hub = 16 filaments; AMS Lite cannot chain",
+         "fr": "<b>Chaînage :</b> jusqu'à 4 AMS + Hub = 16 filaments ; AMS Lite ne peut pas être chaîné"
+        },
+        {
+         "en": "<b>Humidity:</b> desiccant + O-rings + sensor (levels A–E); renew at level C+",
+         "fr": "<b>Humidité :</b> dessiccant + joints + capteur (niveaux A–E) ; renouveler au niveau C+"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 2,
+   "title": {
+    "en": "Multi-Material Slicing and Printing",
+    "fr": "Découpage et impression multi-matériaux"
+   },
+   "scenes": [
+    {
+     "id": "7.2.0",
+     "narration": {
+      "en": "Welcome to Chapter 2. Having an AMS is only half the equation. The other half is the slicer — where you decide which parts print in which color, configure the wipe tower, and make choices that dramatically affect both quality and waste.",
+      "fr": "Bienvenue au chapitre 2. Disposer d'un AMS ne représente que la moitié de l'équation. L'autre moitié se passe dans le slicer — où vous décidez quelles parties s'impriment dans quelle couleur, configurez la tour d'essuyage, et prenez des décisions qui affectent considérablement la qualité et le gaspillage."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 7 · Chapter 2",
+        "fr": "Module 7 · Chapitre 2"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Multi-Material Slicing and Printing",
+        "fr": "Découpage et impression multi-matériaux"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "From model import to optimized multi-material G-code — Bambu Studio gives you two color assignment workflows, powerful purge controls, and waste-reduction tools that can slash filament use.",
+        "fr": "De l'importation du modèle au G-code multi-matériaux optimisé — Bambu Studio offre deux flux de travail d'attribution de couleur, des contrôles de purge puissants et des outils de réduction du gaspillage qui peuvent réduire considérablement la consommation de filament."
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.2.1",
+     "narration": {
+      "en": "Every multi-material print begins in Bambu Studio's Filament panel, where you define the materials you plan to use. Bambu Lab filaments in an AMS auto-populate via RFID. Third-party filaments require manual profile selection.",
+      "fr": "Toute impression multi-matériaux commence dans le panneau Filament de Bambu Studio, où vous définissez les matériaux que vous prévoyez d'utiliser. Les filaments Bambu Lab dans un AMS se remplissent automatiquement via RFID. Les filaments tiers nécessitent une sélection manuelle du profil."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Setting Up Multi-Material in Bambu Studio",
+        "fr": "Configurer le multi-matériaux dans Bambu Studio"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Filament panel",
+          "fr": "Panneau Filament"
+         },
+         "sub": {
+          "en": "Add each material",
+          "fr": "Ajouter chaque matériau"
+         }
+        },
+        {
+         "name": {
+          "en": "RFID / manual",
+          "fr": "RFID / manuel"
+         },
+         "sub": {
+          "en": "Auto or profile pick",
+          "fr": "Auto ou choix de profil"
+         }
+        },
+        {
+         "name": {
+          "en": "Assign colors",
+          "fr": "Attribuer couleurs"
+         },
+         "sub": {
+          "en": "Objects or paint",
+          "fr": "Objets ou peinture"
+         }
+        },
+        {
+         "name": {
+          "en": "Configure purge",
+          "fr": "Configurer purge"
+         },
+         "sub": {
+          "en": "Tower + volumes",
+          "fr": "Tour + volumes"
+         }
+        },
+        {
+         "name": {
+          "en": "Slice",
+          "fr": "Trancher"
+         },
+         "sub": {
+          "en": "Multi-color G-code",
+          "fr": "G-code multi-couleurs"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.2.2",
+     "narration": {
+      "en": "There are two primary ways to assign colors in Bambu Studio: object-based assignment and paint-based assignment. The CAD-first, object-based approach generally produces cleaner color boundaries.",
+      "fr": "Il y a deux façons principales d'attribuer des couleurs dans Bambu Studio : l'attribution par objet et l'attribution par peinture. L'approche CAO en amont, basée sur les objets, produit généralement des transitions de couleurs plus nettes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Two Color Assignment Workflows",
+        "fr": "Deux flux de travail d'attribution de couleur"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Object-based",
+         "fr": "Par objet"
+        },
+        "note": {
+         "en": "CAD bodies per color → export multi-part 3MF → Split to Parts in Studio. Cleanest boundaries.",
+         "fr": "Corps CAO par couleur → exporter 3MF multi-pièces → Diviser en pièces dans Studio. Transitions les plus nettes."
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Paint-based",
+         "fr": "Par peinture"
+        },
+        "note": {
+         "en": "Brush, fill, or region-select on a single-body model. Faster, less precise — may affect internal infill.",
+         "fr": "Brosser, remplir ou sélectionner des régions sur un modèle à corps unique. Plus rapide, moins précis — peut affecter le remplissage interne."
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.2.3",
+     "narration": {
+      "en": "The CAD-first workflow deserves extra emphasis: when color accuracy matters for functional parts, model each color as a distinct body in Fusion 360, SolidWorks, or Onshape, then export as a multi-part 3MF. The colors map to distinct mesh volumes, not surface paint.",
+      "fr": "Le flux de travail CAO en amont mérite une attention particulière : lorsque la précision des couleurs est importante pour des pièces fonctionnelles, modélisez chaque couleur comme un corps distinct dans Fusion 360, SolidWorks ou Onshape, puis exportez en tant que 3MF multi-pièces. Les couleurs correspondent à des volumes de maillage distincts, pas à une peinture de surface."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "For functional parts where color boundaries must be precise, use the CAD-first approach: separate bodies per color in Fusion 360 / SolidWorks / Onshape, exported as a multi-part 3MF.",
+        "fr": "Pour les pièces fonctionnelles où les transitions de couleur doivent être précises, utilisez l'approche CAO en amont : corps séparés par couleur dans Fusion 360 / SolidWorks / Onshape, exportés en tant que 3MF multi-pièces."
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.2.4",
+     "narration": {
+      "en": "Bambu Studio's color painting tools let you assign filaments directly on model surfaces. There are six tools, each suited to different geometry types.",
+      "fr": "Les outils de peinture de couleur de Bambu Studio permettent d'attribuer des filaments directement sur les surfaces du modèle. Il y a six outils, chacun adapté à différents types de géométrie."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Color Painting Tools",
+        "fr": "Outils de peinture de couleur"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Tool",
+         "fr": "Outil"
+        },
+        {
+         "en": "Function",
+         "fr": "Fonction"
+        },
+        {
+         "en": "Best for",
+         "fr": "Idéal pour"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Fill",
+          "fr": "Remplir"
+         },
+         {
+          "en": "Bucket-fill connected areas",
+          "fr": "Remplissage zones connectées"
+         },
+         {
+          "en": "Large regions",
+          "fr": "Grandes régions"
+         }
+        ],
+        [
+         {
+          "en": "Height Range",
+          "fr": "Plage de hauteur"
+         },
+         {
+          "en": "Assign filament to a Z slice",
+          "fr": "Attribuer à une tranche Z"
+         },
+         {
+          "en": "Text, banded layers",
+          "fr": "Texte, couches en bandes"
+         }
+        ],
+        [
+         {
+          "en": "Segment",
+          "fr": "Segment"
+         },
+         {
+          "en": "Paint geometric segments",
+          "fr": "Peindre segments géométriques"
+         },
+         {
+          "en": "Organic shapes",
+          "fr": "Formes organiques"
+         }
+        ],
+        [
+         {
+          "en": "Support Painting",
+          "fr": "Peinture support"
+         },
+         {
+          "en": "Mark soluble support areas",
+          "fr": "Marquer zones support soluble"
+         },
+         {
+          "en": "Complex overhangs",
+          "fr": "Surplombs complexes"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.2.5",
+     "narration": {
+      "en": "The height range tool is particularly powerful. You define a specific Z-height range — say, 2 millimetres to 4 millimetres — and every feature within that vertical slice gets the assigned filament. It is the go-to method for embedded text, colored base layers, and banded designs.",
+      "fr": "L'outil de plage de hauteur est particulièrement puissant. Vous définissez une plage de hauteur Z spécifique — par exemple, de 2 mm à 4 mm — et chaque élément dans cette tranche verticale reçoit le filament attribué. C'est la méthode de référence pour le texte incrusté, les couches de base colorées et les motifs en bandes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Height Range Tool — Precise Z Control",
+        "fr": "Outil Plage de hauteur — contrôle Z précis"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Define a Z range</b> — from any height to any height (e.g. 2 mm to 4 mm)",
+         "fr": "<b>Définir une plage Z</b> — de n'importe quelle hauteur à n'importe quelle hauteur (ex : 2 mm à 4 mm)"
+        },
+        {
+         "en": "<b>Everything in that slice</b> gets the assigned filament color",
+         "fr": "<b>Tout dans cette tranche</b> reçoit la couleur de filament attribuée"
+        },
+        {
+         "en": "<b>Ideal for</b> embedded text, colored base, banded designs",
+         "fr": "<b>Idéal pour</b> le texte incrusté, les bases colorées, les motifs en bandes"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.2.6",
+     "narration": {
+      "en": "The wipe tower — also called the purge block or prime tower — serves two essential functions during every filament change: it absorbs the old material being flushed out, and it gives the nozzle a place to prime stable flow before returning to the model.",
+      "fr": "La tour d'essuyage — aussi appelée bloc de purge ou tour d'amorçage — remplit deux fonctions essentielles à chaque changement de filament : elle absorbe l'ancien matériau chassé, et elle donne à la buse un endroit pour amorcer un flux stable avant de retourner au modèle."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Wipe Tower — Purpose",
+        "fr": "La tour d'essuyage — rôle"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Purge",
+         "fr": "Purge"
+        },
+        "note": {
+         "en": "Flushes residual material out of the nozzle completely",
+         "fr": "Chasse complètement le matériau résiduel hors de la buse"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Prime",
+         "fr": "Amorçage"
+        },
+        "note": {
+         "en": "Establishes stable flow before returning to the model surface",
+         "fr": "Établit un flux stable avant de retourner à la surface du modèle"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.2.7",
+     "narration": {
+      "en": "Here is the key insight about the wipe tower: its size depends on the number of color changes, not on the object size. A tiny keychain with hundreds of layer-level swaps will generate a massive tower, while a large single-color vase needs none at all.",
+      "fr": "Voici l'élément clé à retenir sur la tour d'essuyage : sa taille dépend du nombre de changements de couleur, pas de la taille de l'objet. Un petit porte-clés avec des centaines de changements de couleur au niveau des couches générera une tour massive, alors qu'un grand vase monochrome n'en a pas besoin du tout."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Wipe tower size depends on the number of color changes, not the object size. A tiny model with many swaps gets a huge tower; a large single-color print gets none.",
+        "fr": "La taille de la tour d'essuyage dépend du nombre de changements de couleur, pas de la taille de l'objet. Un petit modèle avec beaucoup de changements aura une tour énorme ; une grande impression monochrome n'en a pas besoin."
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.2.8",
+     "narration": {
+      "en": "The cost of multi-color printing is real. On typical 4-color prints, expect 15 to 30 percent of your total filament to go to the wipe tower. That is material that becomes waste.",
+      "fr": "Le coût de l'impression multi-couleurs est bien réel. Sur des impressions 4 couleurs typiques, attendez-vous à ce que 15 à 30 % de votre filament total aille à la tour d'essuyage. C'est du matériau qui devient un déchet."
+     },
+     "elements": [
+      {
+       "type": "stat",
+       "value": "15–30%",
+       "caption": {
+        "en": "of total filament consumed by the wipe tower on typical 4-color prints",
+        "fr": "du filament total consommé par la tour d'essuyage sur des impressions 4 couleurs typiques"
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.2.9",
+     "narration": {
+      "en": "Bambu Studio places the tower automatically, but you can adjust its width in Print Settings under Multiple Extruders, Wipe Tower. Position it near your model to minimize travel moves. For tall, narrow towers, enable the stabilization cone to prevent toppling.",
+      "fr": "Bambu Studio place la tour automatiquement, mais vous pouvez ajuster sa largeur dans Paramètres d'impression, sous Extrudeurs multiples, Tour d'essuyage. Positionnez-la près de votre modèle pour minimiser les mouvements de déplacement. Pour les tours très hautes et étroites, activez le cône de stabilisation pour éviter qu'elle ne tombe."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Configuring the Wipe Tower",
+        "fr": "Configurer la tour d'essuyage"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Adjust width</b> in Print Settings → Multiple Extruders → Wipe Tower",
+         "fr": "<b>Ajuster la largeur</b> dans Paramètres d'impression → Extrudeurs multiples → Tour d'essuyage"
+        },
+        {
+         "en": "<b>Position near the model</b> — minimizes travel moves",
+         "fr": "<b>Positionner près du modèle</b> — minimise les mouvements de déplacement"
+        },
+        {
+         "en": "<b>Must not intersect</b> any printed objects on the plate",
+         "fr": "<b>Ne doit pas intersecter</b> les objets imprimés sur le plateau"
+        },
+        {
+         "en": "<b>Enable stabilization cone</b> for tall, narrow towers to prevent toppling",
+         "fr": "<b>Activer le cône de stabilisation</b> pour les tours hautes et étroites"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.2.10",
+     "narration": {
+      "en": "Bambu Studio auto-calculates the required purge volume based on color contrast and material properties. The asymmetry is striking: going white to black needs only about 44 cubic millimetres, but black to white needs 250 to 300, because even a trace of dark pigment ruins a light-colored part.",
+      "fr": "Bambu Studio calcule automatiquement le volume de purge requis en fonction du contraste de couleur et des propriétés du matériau. L'asymétrie est frappante : passer du blanc au noir ne nécessite qu'environ 44 mm³, mais du noir au blanc il en faut 250 à 300, car même une trace de pigment sombre gâche une pièce de couleur claire."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Purge Volume by Transition Type",
+        "fr": "Volume de purge selon le type de transition"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Transition",
+         "fr": "Transition"
+        },
+        {
+         "en": "Flush volume",
+         "fr": "Volume de chasse"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "White → Black",
+          "fr": "Blanc → Noir"
+         },
+         "~44 mm³"
+        ],
+        [
+         {
+          "en": "Black → White",
+          "fr": "Noir → Blanc"
+         },
+         "250–300 mm³"
+        ],
+        [
+         {
+          "en": "Similar colors (red → orange)",
+          "fr": "Couleurs similaires (rouge → orange)"
+         },
+         "60–100 mm³"
+        ],
+        [
+         {
+          "en": "Different materials",
+          "fr": "Matériaux différents"
+         },
+         "200–400+ mm³"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.2.11",
+     "narration": {
+      "en": "Dark to light transitions require 3 to 5 times more purge than light to dark. The reason: even trace dark pigment is visible in a light-colored part. This asymmetry is one of the most important things to understand when planning your color sequences.",
+      "fr": "Les transitions du sombre vers le clair nécessitent 3 à 5 fois plus de purge que l'inverse. La raison : même une trace de pigment sombre est visible dans une pièce de couleur claire. Cette asymétrie est l'une des choses les plus importantes à comprendre lors de la planification de vos séquences de couleurs."
+     },
+     "elements": [
+      {
+       "type": "stat",
+       "value": "3–5×",
+       "caption": {
+        "en": "more purge needed going dark-to-light versus light-to-dark",
+        "fr": "plus de purge nécessaire en allant du sombre vers le clair par rapport à l'inverse"
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.2.12",
+     "narration": {
+      "en": "The Flush Multiplier in Bambu Studio is a global scaling factor applied to all auto-calculated purge values. The default is 1.0 times. Many experienced users reduce this to 0.6 to 0.8 times, cutting waste by 20 to 40 percent with minimal quality impact. But reduce gradually — too low causes visible color bleeding called ghosting.",
+      "fr": "Le Multiplicateur de chasse dans Bambu Studio est un facteur d'échelle global appliqué à toutes les valeurs de purge calculées automatiquement. La valeur par défaut est 1,0×. De nombreux utilisateurs expérimentés le réduisent à 0,6–0,8×, réduisant le gaspillage de 20 à 40 % avec un impact minimal sur la qualité. Mais réduisez progressivement — trop bas provoque des saignées de couleur visibles appelées fantômes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Flush Multiplier",
+        "fr": "Le multiplicateur de chasse"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Default:</b> 1.0× — full auto-calculated purge volumes",
+         "fr": "<b>Défaut :</b> 1,0× — volumes de purge calculés automatiquement en totalité"
+        },
+        {
+         "en": "<b>0.6–0.8×</b> — cuts waste 20–40% with minimal quality impact",
+         "fr": "<b>0,6–0,8×</b> — réduit le gaspillage de 20–40 % avec un impact minimal sur la qualité"
+        },
+        {
+         "en": "<b>Too low</b> → visible color bleeding (\"ghosting\") in the print",
+         "fr": "<b>Trop bas</b> → saignées de couleur visibles (« fantômes ») dans l'impression"
+        },
+        {
+         "en": "<b>\"Re-calculate\"</b> button resets all individual values to defaults",
+         "fr": "<b>Bouton « Recalculer »</b> remet toutes les valeurs individuelles aux défauts"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.2.13",
+     "narration": {
+      "en": "Always test a reduced flush multiplier on a small, unimportant print before committing to a large, multi-day project. Ghosting discovered halfway through a 20-hour print is painful.",
+      "fr": "Testez toujours un multiplicateur de chasse réduit sur une petite impression sans importance avant de vous engager dans un grand projet multi-jours. Découvrir des fantômes à mi-chemin d'une impression de 20 heures est très pénalisant."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Setting the flush multiplier too low causes visible color contamination. Always test on a small print first before committing to a large multi-day project with reduced purge values.",
+        "fr": "Régler le multiplicateur de chasse trop bas provoque une contamination visible des couleurs. Testez toujours sur une petite impression avant de vous engager dans un grand projet multi-jours avec des valeurs de purge réduites."
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.2.14",
+     "narration": {
+      "en": "Bambu Studio offers three ways to redirect purge material away from the wipe tower and into hidden areas of your print. Each reduces visible waste without affecting part quality when used correctly.",
+      "fr": "Bambu Studio propose trois façons de rediriger le matériau de purge loin de la tour d'essuyage vers des zones cachées de votre impression. Chacune réduit le gaspillage visible sans affecter la qualité de la pièce lorsqu'elle est utilisée correctement."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Flush Redirection — Three Options",
+        "fr": "Redirection de purge — trois options"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Flush into infill",
+          "fr": "Purge dans le remplissage"
+         },
+         "desc": {
+          "en": "Purge goes inside the model. Invisible if walls are thick and filament is opaque.",
+          "fr": "La purge va à l'intérieur du modèle. Invisible si les parois sont épaisses et le filament opaque."
+         }
+        },
+        {
+         "title": {
+          "en": "Flush into support",
+          "fr": "Purge dans les supports"
+         },
+         "desc": {
+          "en": "On by default — supports get removed anyway. Limited by total support volume.",
+          "fr": "Activé par défaut — les supports sont de toute façon retirés. Limité par le volume total de support."
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Flush into object",
+          "fr": "Purge dans un objet"
+         },
+         "desc": {
+          "en": "Designate a sacrificial object — can cut purge by 50–90%+. Object gets random multicolor infill but stays functional.",
+          "fr": "Désigner un objet sacrificiel — peut réduire la purge de 50–90 %+. L'objet reçoit un remplissage multicolore aléatoire mais reste fonctionnel."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.2.15",
+     "narration": {
+      "en": "Flush into infill is powerful but requires care with translucent PETG, light-colored PLA with thin walls, or models with few perimeters. Colors can ghost through walls when the filament is not fully opaque. Check your wall count before enabling.",
+      "fr": "La purge dans le remplissage est puissante mais nécessite de la prudence avec le PETG translucide, le PLA de couleur claire avec des parois minces, ou les modèles avec peu de périmètres. Les couleurs peuvent transparaître au travers des parois lorsque le filament n'est pas totalement opaque. Vérifiez votre nombre de parois avant d'activer cette option."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Flush into infill is safe only with opaque filaments and adequate wall counts. Translucent PETG, light PLA, or thin walls risk color ghosting through the outer surface.",
+        "fr": "La purge dans le remplissage n'est sûre qu'avec des filaments opaques et un nombre de parois suffisant. Le PETG translucide, le PLA clair ou les parois minces risquent de laisser transparaître la couleur en surface."
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.2.16",
+     "narration": {
+      "en": "Now for multi-material best practices. First: group same colors together in your design or print orientation — every color boundary is a potential filament change, so minimize them at the design stage.",
+      "fr": "Passons maintenant aux bonnes pratiques multi-matériaux. Premièrement : regroupez les mêmes couleurs ensemble dans votre modèle ou dans l'orientation d'impression — chaque limite de couleur est un potentiel changement de filament, minimisez-les dès la phase de conception."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Multi-Material Best Practices",
+        "fr": "Bonnes pratiques multi-matériaux"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Group same colors</b> — contiguous color regions mean fewer swaps",
+         "fr": "<b>Regroupez les mêmes couleurs</b> — les régions contiguës signifient moins de changements"
+        },
+        {
+         "en": "<b>Largest area = base color</b> — minimizes total number of color changes",
+         "fr": "<b>Grande surface = couleur de base</b> — minimise le nombre total de changements de couleur"
+        },
+        {
+         "en": "<b>Compatible temperatures</b> — PLA+PETG+PVA work; PLA+PC do not",
+         "fr": "<b>Températures compatibles</b> — PLA+PETG+PVA fonctionnent ; PLA+PC ne fonctionnent pas"
+        },
+        {
+         "en": "<b>Batch multi-color prints</b> — shared swaps, no extra purge per part",
+         "fr": "<b>Regroupez les impressions multi-couleurs</b> — changements partagés, aucune purge supplémentaire par pièce"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.2.17",
+     "narration": {
+      "en": "Compatible temperatures are non-negotiable. PLA at 200 degrees and Polycarbonate at 290 degrees cannot share a nozzle — you will either degrade one material or fail to melt the other. PLA pairs well with PETG and PVA; ABS works with ASA and HIPS.",
+      "fr": "Les températures compatibles sont non négociables. Le PLA à 200 degrés et le polycarbonate à 290 degrés ne peuvent pas partager une buse — vous dégraderez l'un des matériaux ou ne ferez pas fondre l'autre correctement. Le PLA se marie bien avec le PETG et le PVA ; l'ABS fonctionne avec l'ASA et le HIPS."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Compatible Material Pairings",
+        "fr": "Associations de matériaux compatibles"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Good pairings",
+         "fr": "Bonnes associations"
+        },
+        "note": {
+         "en": "PLA + PETG + PVA · ABS + ASA + HIPS · similar temp range materials",
+         "fr": "PLA + PETG + PVA · ABS + ASA + HIPS · matériaux à plages de température similaires"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Problem pairings",
+         "fr": "Associations problématiques"
+        },
+        "note": {
+         "en": "PLA (200 °C) + PC (290 °C) — degrades one or fails to melt the other",
+         "fr": "PLA (200 °C) + PC (290 °C) — dégrade l'un ou ne fait pas fondre l'autre"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.2.18",
+     "narration": {
+      "en": "Functional multi-material printing often delivers more practical value than pure color changes. Soluble supports with PVA or BVOH unlock geometries impossible with breakaway supports. Rigid plus flexible combinations in a single print — think PLA structural walls with integrated TPU hinges — are impossible with a single material.",
+      "fr": "L'impression multi-matériaux fonctionnelle délivre souvent plus de valeur pratique que les simples changements de couleur. Les supports solubles avec PVA ou BVOH permettent des géométries impossibles avec des supports à casser. Les combinaisons rigide et flexible dans une seule impression — imaginez des parois structurelles PLA avec des charnières TPU intégrées — sont impossibles avec un seul matériau."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Functional vs Aesthetic Multi-Material",
+        "fr": "Multi-matériaux fonctionnel vs esthétique"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Functional (high value)",
+         "fr": "Fonctionnel (haute valeur)"
+        },
+        "note": {
+         "en": "PVA/BVOH soluble supports · rigid + flexible combos · multi-property parts — impossible without multi-material",
+         "fr": "Supports solubles PVA/BVOH · combos rigide + flexible · pièces multi-propriétés — impossibles sans multi-matériaux"
+        },
+        "highlight": true
+       },
+       "right": {
+        "title": {
+         "en": "Aesthetic (evaluate honestly)",
+         "fr": "Esthétique (évaluer honnêtement)"
+        },
+        "note": {
+         "en": "Multi-color logos, decorative text, display models — impressive but 30% waste and doubled print time",
+         "fr": "Logos multi-couleurs, texte décoratif, modèles d'exposition — impressionnant mais 30 % de gaspillage et temps doublé"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.2.19",
+     "narration": {
+      "en": "Let's recap Chapter 2. Two workflows, careful purge configuration, and smart design choices are the keys to quality multi-material results with minimal waste.",
+      "fr": "Récapitulons le chapitre 2. Deux flux de travail, une configuration soigneuse de la purge, et des choix de conception intelligents sont les clés pour obtenir des résultats multi-matériaux de qualité avec un minimum de gaspillage."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 2 Recap",
+        "fr": "Récapitulatif du chapitre 2"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Two workflows:</b> object-based (cleanest) vs paint-based (faster)",
+         "fr": "<b>Deux flux de travail :</b> par objet (plus net) vs par peinture (plus rapide)"
+        },
+        {
+         "en": "<b>Wipe tower:</b> 15–30% waste on 4-color prints; size driven by change count, not object size",
+         "fr": "<b>Tour d'essuyage :</b> 15–30 % de gaspillage sur 4 couleurs ; taille dictée par le nombre de changements"
+        },
+        {
+         "en": "<b>Flush volumes:</b> white→black ~44 mm³ · black→white 250–300 mm³; 3–5× asymmetry",
+         "fr": "<b>Volumes de purge :</b> blanc→noir ~44 mm³ · noir→blanc 250–300 mm³ ; asymétrie 3–5×"
+        },
+        {
+         "en": "<b>Flush multiplier 0.6–0.8×</b> cuts waste 20–40%; test first, then reduce",
+         "fr": "<b>Multiplicateur 0,6–0,8×</b> réduit le gaspillage de 20–40 % ; tester d'abord, puis réduire"
+        },
+        {
+         "en": "<b>Flush into infill / support / sacrificial object</b> — up to 90%+ waste reduction when combined",
+         "fr": "<b>Purge dans remplissage / supports / objet sacrificiel</b> — jusqu'à 90 %+ de réduction combinée"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 3,
+   "title": {
+    "en": "AMS Tips, Limitations, and Alternatives",
+    "fr": "Astuces, limites et alternatives à l'AMS"
+   },
+   "scenes": [
+    {
+     "id": "7.3.0",
+     "narration": {
+      "en": "Welcome to Chapter 3. This is where we get fully practical: comprehensive waste reduction strategies, the most common AMS issues and their fixes, a maintenance schedule, and a clear-eyed look at alternatives when the AMS is not the right tool.",
+      "fr": "Bienvenue au chapitre 3. C'est ici que nous devenons pleinement pratiques : stratégies complètes de réduction du gaspillage, problèmes AMS les plus courants et leurs solutions, calendrier de maintenance, et un regard lucide sur les alternatives lorsque l'AMS n'est pas le bon outil."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 7 · Chapter 3",
+        "fr": "Module 7 · Chapitre 3"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "AMS Tips, Limitations, and Alternatives",
+        "fr": "Astuces, limites et alternatives à l'AMS"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Layered waste-reduction strategies can cut purge from 30% of total filament to under 5%. Let's build that toolkit — then troubleshoot what goes wrong.",
+        "fr": "Des stratégies de réduction du gaspillage combinées peuvent ramener la purge de 30 % du filament total à moins de 5 %. Construisons cette boîte à outils — puis diagnostiquons ce qui va mal."
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.3.1",
+     "narration": {
+      "en": "The multi-material paradox is real: the AMS makes multi-color printing effortless, but that convenience has a material cost. The good news is that five specific strategies, layered together, can take purge waste below 5 percent.",
+      "fr": "Le paradoxe du multi-matériaux est bien réel : l'AMS rend l'impression multi-couleurs sans effort, mais cette commodité a un coût matériel. La bonne nouvelle est que cinq stratégies spécifiques, combinées, peuvent faire passer le gaspillage de purge en dessous de 5 %."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Multi-Material Paradox",
+        "fr": "Le paradoxe du multi-matériaux"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "30% → <5%",
+       "caption": {
+        "en": "purge waste reduction possible with combined strategies",
+        "fr": "réduction du gaspillage de purge possible avec des stratégies combinées"
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.3.2",
+     "narration": {
+      "en": "Strategy one: reduce the flush multiplier. Start at 0.8 times and test. If color transitions look clean, work down to 0.6 times. Light-to-dark transitions tolerate much lower multipliers than dark-to-light.",
+      "fr": "Stratégie 1 : réduire le multiplicateur de chasse. Commencez à 0,8× et testez. Si les transitions de couleur sont propres, descendez à 0,6×. Les transitions clair vers sombre tolèrent des multiplicateurs bien plus faibles que les transitions sombre vers clair."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Strategy 1 — Reduce Flush Multiplier",
+        "fr": "Stratégie 1 — Réduire le multiplicateur de chasse"
+       }
+      },
+      {
+       "type": "stages",
+       "items": [
+        {
+         "label": {
+          "en": "Start at 0.8×",
+          "fr": "Commencer à 0,8×"
+         },
+         "sub": {
+          "en": "10–20% waste saved; test on small model",
+          "fr": "10–20 % économisés ; tester sur un petit modèle"
+         }
+        },
+        {
+         "label": {
+          "en": "Try 0.6×",
+          "fr": "Essayer 0,6×"
+         },
+         "sub": {
+          "en": "20–40% saved; check for ghosting",
+          "fr": "20–40 % économisés ; vérifier les fantômes"
+         }
+        },
+        {
+         "label": {
+          "en": "Light→dark",
+          "fr": "Clair→sombre"
+         },
+         "sub": {
+          "en": "Tolerates lower multiplier",
+          "fr": "Tolère un multiplicateur plus faible"
+         }
+        },
+        {
+         "label": {
+          "en": "Dark→light",
+          "fr": "Sombre→clair"
+         },
+         "sub": {
+          "en": "Needs higher multiplier",
+          "fr": "Nécessite un multiplicateur plus élevé"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.3",
+     "narration": {
+      "en": "Strategy two: enable flush into infill and support. Support flushing is on by default — leave it. Add infill flushing for models with generous infill volume and opaque filaments. Watch for ghosting on thin-walled or translucent prints.",
+      "fr": "Stratégie 2 : activer la purge dans le remplissage et le support. La purge dans les supports est activée par défaut — laissez-la. Ajoutez la purge dans le remplissage pour les modèles avec un volume de remplissage généreux et des filaments opaques. Surveillez les fantômes sur les impressions à parois minces ou translucides."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Strategy 2 — Flush into Infill and Support",
+        "fr": "Stratégie 2 — Purge dans le remplissage et les supports"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Flush into support</b> — on by default; 5–15% savings; no downside for most prints",
+         "fr": "<b>Purge dans les supports</b> — activé par défaut ; 5–15 % d'économie ; aucun inconvénient pour la plupart des impressions"
+        },
+        {
+         "en": "<b>Flush into infill</b> — 10–30% savings with opaque filaments and enough wall count",
+         "fr": "<b>Purge dans le remplissage</b> — 10–30 % d'économie avec filaments opaques et nombre de parois suffisant"
+        },
+        {
+         "en": "<b>Caution:</b> translucent PETG or thin walls risk color ghosting",
+         "fr": "<b>Attention :</b> PETG translucide ou parois minces risquent les fantômes de couleur"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.4",
+     "narration": {
+      "en": "Strategy three: use a sacrificial flush object. Add a functional item to your plate and designate it as the purge target. The object must be at least as tall as your last color change. Desk organizers, calibration cubes, and fidget toys all work. Combined with flush to infill, this approach can eliminate over 90 percent of wipe tower waste.",
+      "fr": "Stratégie 3 : utiliser un objet sacrificiel de purge. Ajoutez un objet fonctionnel sur votre plateau et désignez-le comme cible de purge. L'objet doit être au moins aussi haut que votre dernier changement de couleur. Les organiseurs de bureau, les cubes de calibration et les jouets antistatiques conviennent parfaitement. Combinée à la purge dans le remplissage, cette approche peut éliminer plus de 90 % du gaspillage de la tour d'essuyage."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Strategy 3 — Sacrificial Flush Object",
+        "fr": "Stratégie 3 — Objet sacrificiel de purge"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Designate a functional object</b> as the purge target on your build plate",
+         "fr": "<b>Désigner un objet fonctionnel</b> comme cible de purge sur votre plateau"
+        },
+        {
+         "en": "<b>Must be ≥ height of last color change</b> to absorb all transitions",
+         "fr": "<b>Doit être ≥ hauteur du dernier changement de couleur</b> pour absorber toutes les transitions"
+        },
+        {
+         "en": "<b>50–90%+ savings</b> — desk organizer, calibration cube, fidget toy",
+         "fr": "<b>50–90 %+ d'économie</b> — organiseur de bureau, cube de calibration, jouet antistatique"
+        },
+        {
+         "en": "<b>Object gets multicolor infill</b> but remains fully functional",
+         "fr": "<b>L'objet reçoit un remplissage multicolore</b> mais reste pleinement fonctionnel"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.5",
+     "narration": {
+      "en": "Strategy four: strategic color ordering. Print dark colors before light ones whenever possible — less purge needed for dark-to-light transitions. Group similar colors adjacent to each other in the print sequence.",
+      "fr": "Stratégie 4 : ordre des couleurs stratégique. Imprimez les couleurs sombres avant les claires autant que possible — moins de purge nécessaire pour les transitions sombre vers clair. Regroupez les couleurs similaires de manière adjacente dans la séquence d'impression."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Strategy 4 — Strategic Color Ordering",
+        "fr": "Stratégie 4 — Ordre des couleurs stratégique"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Efficient sequence",
+         "fr": "Séquence efficace"
+        },
+        "note": {
+         "en": "Dark before light · similar colors adjacent · minimize high-contrast transitions",
+         "fr": "Sombre avant clair · couleurs similaires adjacentes · minimiser les transitions à fort contraste"
+        },
+        "highlight": true
+       },
+       "right": {
+        "title": {
+         "en": "Wasteful sequence",
+         "fr": "Séquence gaspilleuse"
+        },
+        "note": {
+         "en": "Light before dark · alternating high-contrast transitions · maximum purge at every step",
+         "fr": "Clair avant sombre · transitions fort contraste alternées · purge maximale à chaque étape"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.3.6",
+     "narration": {
+      "en": "Strategy five: batch multi-color prints. When you print multiple objects simultaneously, color swaps happen for all objects at once — no extra purge per additional part. A 4-color print of one figurine generates exactly the same wipe tower as four figurines on the same plate.",
+      "fr": "Stratégie 5 : regrouper les impressions multi-couleurs. Lorsque vous imprimez plusieurs objets simultanément, les changements de couleur se produisent pour tous les objets à la fois — aucune purge supplémentaire par pièce. Une impression 4 couleurs d'une figurine génère exactement la même tour d'essuyage que quatre figurines sur le même plateau."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Strategy 5 — Batch Multi-Color Prints",
+        "fr": "Stratégie 5 — Regrouper les impressions multi-couleurs"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Printing multiple objects simultaneously means shared color swaps with no extra purge per part. 1 figurine or 4 figurines — the same wipe tower. Batch production dramatically cuts per-object waste.",
+        "fr": "Imprimer plusieurs objets simultanément signifie des changements de couleur partagés sans purge supplémentaire par pièce. 1 figurine ou 4 figurines — la même tour d'essuyage. La production groupée réduit considérablement le gaspillage par objet."
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.3.7",
+     "narration": {
+      "en": "Here is the full waste-reduction toolkit with estimated savings and effort levels for each technique — and the combined result when you layer them together.",
+      "fr": "Voici la boîte à outils complète de réduction du gaspillage avec les économies estimées et les niveaux d'effort pour chaque technique — et le résultat combiné lorsque vous les utilisez ensemble."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Waste-Reduction Toolkit — Savings at a Glance",
+        "fr": "Boîte à outils de réduction — économies en un coup d'oeil"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Technique",
+         "fr": "Technique"
+        },
+        {
+         "en": "Savings",
+         "fr": "Économies"
+        },
+        {
+         "en": "Effort",
+         "fr": "Effort"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Multiplier 0.8×",
+          "fr": "Multiplicateur 0,8×"
+         },
+         "10–20%",
+         {
+          "en": "Low",
+          "fr": "Faible"
+         }
+        ],
+        [
+         {
+          "en": "Multiplier 0.6×",
+          "fr": "Multiplicateur 0,6×"
+         },
+         "20–40%",
+         {
+          "en": "Low-Med",
+          "fr": "Faible-Moyen"
+         }
+        ],
+        [
+         {
+          "en": "Flush into infill",
+          "fr": "Purge dans remplissage"
+         },
+         "10–30%",
+         {
+          "en": "Low",
+          "fr": "Faible"
+         }
+        ],
+        [
+         {
+          "en": "Sacrificial object",
+          "fr": "Objet sacrificiel"
+         },
+         "50–90%+",
+         {
+          "en": "Medium",
+          "fr": "Moyen"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.8",
+     "narration": {
+      "en": "Combining all strategies — reduced multiplier, flush into infill and support, sacrificial objects, strategic ordering, and batch printing — can cut purge waste by 80 to 90 percent or more. That is the combined approach.",
+      "fr": "Combiner toutes les stratégies — multiplicateur réduit, purge dans le remplissage et les supports, objets sacrificiels, ordre stratégique et impression groupée — peut réduire le gaspillage de purge de 80 à 90 % ou plus. C'est l'approche combinée."
+     },
+     "elements": [
+      {
+       "type": "stat",
+       "value": "80–90%+",
+       "caption": {
+        "en": "waste reduction possible with the full combined approach (high effort, high reward)",
+        "fr": "réduction du gaspillage possible avec l'approche combinée complète (effort élevé, gain élevé)"
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.3.9",
+     "narration": {
+      "en": "Now let's talk about the most common AMS issues. First: cardboard spools. The AMS feed rollers grip spools by their edges, and cardboard breaks down under this pressure, generating debris that causes jams. The fix: wrap edges with electrical tape, print reinforcement rings from MakerWorld, or respool onto Bambu Lab reusable spools.",
+      "fr": "Parlons maintenant des problèmes AMS les plus courants. Premièrement : les bobines en carton. Les galets d'entraînement de l'AMS saisissent les bobines par leurs bords, et le carton se dégrade sous cette pression, générant des débris qui provoquent des bourrages. La solution : enrouler les bords avec du ruban électrique, imprimer des rondelles de renforcement depuis MakerWorld, ou rembobiner sur des bobines réutilisables Bambu Lab."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Issue 1: Cardboard Spools",
+        "fr": "Problème 1 : bobines en carton"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Cause:</b> feed rollers grip spool edges — cardboard crumbles under pressure",
+         "fr": "<b>Cause :</b> les galets saisissent les bords — le carton s'effrite sous la pression"
+        },
+        {
+         "en": "<b>Fix 1:</b> wrap cardboard edges with electrical tape",
+         "fr": "<b>Solution 1 :</b> enrouler les bords en carton avec du ruban électrique"
+        },
+        {
+         "en": "<b>Fix 2:</b> print reinforcement rings from MakerWorld",
+         "fr": "<b>Solution 2 :</b> imprimer des rondelles de renforcement depuis MakerWorld"
+        },
+        {
+         "en": "<b>Fix 3:</b> respool onto Bambu Lab reusable spools",
+         "fr": "<b>Solution 3 :</b> rembobiner sur des bobines réutilisables Bambu Lab"
+        },
+        {
+         "en": "<b>AMS Lite note:</b> handles cardboard better due to open-frame rotary holders",
+         "fr": "<b>Note AMS Lite :</b> gère mieux le carton grâce aux porte-bobines rotatifs à cadre ouvert"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.10",
+     "narration": {
+      "en": "Issue two: TPU and flexible filaments. Standard TPU at 95A shore hardness is officially incompatible with the AMS. The soft material buckles and jams in the long PTFE tube paths under pushing force. Bambu Lab sells a special TPU for AMS at 68D hardness — less flexible, engineered to work with the feed system. For standard TPU, use the external spool holder instead.",
+      "fr": "Problème 2 : TPU et filaments flexibles. Le TPU standard à dureté Shore 95A est officiellement incompatible avec l'AMS. Le matériau souple flambe et se bloque dans les longs tubes PTFE sous la force de poussée. Bambu Lab vend un TPU spécial pour AMS à dureté 68D — moins flexible, conçu pour fonctionner avec le système d'alimentation. Pour le TPU standard, utilisez plutôt le porte-bobine externe."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Issue 2: TPU and Flexible Filaments",
+        "fr": "Problème 2 : TPU et filaments flexibles"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Standard TPU (95A)",
+         "fr": "TPU standard (95A)"
+        },
+        "note": {
+         "en": "OFFICIALLY incompatible — buckles in PTFE tube under push force. Use external spool holder.",
+         "fr": "OFFICIELLEMENT incompatible — flambe dans le tube PTFE sous la force de poussée. Utiliser le porte-bobine externe."
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Bambu TPU for AMS (68D)",
+         "fr": "TPU Bambu pour AMS (68D)"
+        },
+        "note": {
+         "en": "Specifically engineered for AMS feed system — stiffer, reliable in tubes.",
+         "fr": "Spécialement conçu pour le système d'alimentation AMS — plus rigide, fiable dans les tubes."
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.3.11",
+     "narration": {
+      "en": "Issue three: abrasive filaments. Carbon fiber, glass fiber, and glow-in-the-dark filaments gradually wear down the internal PTFE tubes of the AMS. For the original AMS and AMS 2 Pro, consider running abrasive filaments from the external spool holder instead. Note: the AMS HT's bypass outlet is designed for flexible filaments, not specifically as an abrasive bypass.",
+      "fr": "Problème 3 : filaments abrasifs. Les filaments en fibres de carbone, en fibres de verre et phosphorescents usent progressivement les tubes PTFE internes de l'AMS. Pour l'AMS d'origine et l'AMS 2 Pro, envisagez d'utiliser les filaments abrasifs depuis le porte-bobine externe. Note : la sortie dérivée de l'AMS HT est conçue pour les filaments flexibles, pas spécifiquement comme dérivation pour abrasifs."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Issue 3: Abrasive Filaments",
+        "fr": "Problème 3 : filaments abrasifs"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Carbon fiber, glass fiber, glow-in-the-dark</b> — abrasive, wear PTFE tubes over time",
+         "fr": "<b>Fibres de carbone, fibres de verre, phosphorescents</b> — abrasifs, usent les tubes PTFE avec le temps"
+        },
+        {
+         "en": "<b>Fix:</b> use external spool holder for abrasive filaments on original AMS / AMS 2 Pro",
+         "fr": "<b>Solution :</b> utiliser le porte-bobine externe pour les filaments abrasifs sur AMS original / AMS 2 Pro"
+        },
+        {
+         "en": "<b>AMS HT bypass</b> — designed for flexible filaments, NOT an abrasive bypass",
+         "fr": "<b>Dérivation AMS HT</b> — conçue pour filaments flexibles, PAS une dérivation pour abrasifs"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.12",
+     "narration": {
+      "en": "Issue four: wet filament. Moisture causes popping, steam bubbles, poor layer adhesion, and rough surfaces. Even with AMS humidity control, pre-drying hygroscopic materials before loading is essential. The original AMS relies on passive desiccant — limited drying capacity for already-saturated filament.",
+      "fr": "Problème 4 : filament humide. L'humidité provoque des claquements, des bulles de vapeur, une mauvaise adhérence des couches et des surfaces rugueuses. Même avec le contrôle d'humidité de l'AMS, le pré-séchage des matériaux hygroscopiques avant le chargement est indispensable. L'AMS d'origine repose sur un dessiccant passif — capacité de séchage limitée pour les filaments déjà saturés."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Issue 4: Wet Filament",
+        "fr": "Problème 4 : filament humide"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Symptoms",
+          "fr": "Symptômes"
+         },
+         "desc": {
+          "en": "Popping sounds · steam bubbles · poor layer adhesion · rough surface",
+          "fr": "Bruits de claquement · bulles de vapeur · mauvaise adhérence des couches · surface rugueuse"
+         }
+        },
+        {
+         "title": {
+          "en": "Original AMS",
+          "fr": "AMS d'origine"
+         },
+         "desc": {
+          "en": "Passive desiccant only — pre-dry saturated filament before loading",
+          "fr": "Dessiccant passif uniquement — pré-sécher le filament saturé avant le chargement"
+         }
+        },
+        {
+         "title": {
+          "en": "AMS 2 Pro / HT",
+          "fr": "AMS 2 Pro / HT"
+         },
+         "desc": {
+          "en": "Active drying capable — can dry loaded filament in-place",
+          "fr": "Séchage actif possible — peut sécher le filament chargé en place"
+         },
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.13",
+     "narration": {
+      "en": "Regular maintenance prevents mid-print failures that waste hours and filament. Here is your complete AMS maintenance schedule.",
+      "fr": "Une maintenance régulière prévient les pannes en cours d'impression qui gaspillent des heures et du filament. Voici votre calendrier de maintenance AMS complet."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "AMS Maintenance Schedule",
+        "fr": "Calendrier de maintenance AMS"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Task",
+         "fr": "Tâche"
+        },
+        {
+         "en": "Frequency",
+         "fr": "Fréquence"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Clean feed rollers and funnels",
+          "fr": "Nettoyer galets et entonnoirs"
+         },
+         {
+          "en": "Monthly (weekly for high volume)",
+          "fr": "Mensuelle (hebdo pour fort volume)"
+         }
+        ],
+        [
+         {
+          "en": "Replace PTFE tubes (normal use)",
+          "fr": "Remplacer tubes PTFE (usage normal)"
+         },
+         {
+          "en": "Every 2 months",
+          "fr": "Tous les 2 mois"
+         }
+        ],
+        [
+         {
+          "en": "Replace PTFE tubes (abrasive CF/GF)",
+          "fr": "Remplacer tubes PTFE (CF/GF abrasif)"
+         },
+         {
+          "en": "Every 1 month",
+          "fr": "Tous les mois"
+         }
+        ],
+        [
+         {
+          "en": "Refresh desiccant (level C+)",
+          "fr": "Renouveler dessiccant (niveau C+)"
+         },
+         {
+          "en": "Every 4–6 weeks active use",
+          "fr": "Toutes les 4–6 semaines d'utilisation"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.14",
+     "narration": {
+      "en": "Two more maintenance tasks that are easy to forget: check the buffer slide moves freely and the spring is not compressed or damaged, and keep firmware current. Bambu Lab regularly releases updates that improve AMS reliability, change sequences, and error handling.",
+      "fr": "Deux tâches de maintenance faciles à oublier : vérifier que le coulisseau du tampon se déplace librement et que le ressort n'est pas comprimé ou endommagé, et maintenir le firmware à jour. Bambu Lab publie régulièrement des mises à jour qui améliorent la fiabilité de l'AMS, les séquences de changement et la gestion des erreurs."
+     },
+     "elements": [
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Check buffer and hub</b> — buffer slide free, spring intact, no filament debris in hub",
+         "fr": "<b>Vérifier tampon et moyeu</b> — coulisseau libre, ressort intact, pas de débris dans le moyeu"
+        },
+        {
+         "en": "<b>Update firmware</b> — printer AND AMS firmware must both be current for best reliability",
+         "fr": "<b>Mettre à jour le firmware</b> — firmware de l'imprimante ET de l'AMS, les deux doivent être à jour"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.15",
+     "narration": {
+      "en": "The AMS is not the only path to multi-material printing. Five alternatives exist, from fully managed systems to completely manual approaches, each with different trade-offs on materials, complexity, and cost.",
+      "fr": "L'AMS n'est pas la seule voie vers l'impression multi-matériaux. Cinq alternatives existent, des systèmes entièrement gérés aux approches totalement manuelles, chacune avec des compromis différents sur les matériaux, la complexité et le coût."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Alternatives to AMS",
+        "fr": "Alternatives à l'AMS"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "System",
+         "fr": "Système"
+        },
+        {
+         "en": "Materials",
+         "fr": "Matériaux"
+        },
+        {
+         "en": "Complexity",
+         "fr": "Complexité"
+        }
+       ],
+       "rows": [
+        [
+         "Bambu AMS",
+         "16 (4 units)",
+         {
+          "en": "Plug and play",
+          "fr": "Plug and play"
+         }
+        ],
+        [
+         "Prusa MMU3",
+         "5",
+         {
+          "en": "Moderate",
+          "fr": "Modérée"
+         }
+        ],
+        [
+         "Mosaic Palette 3",
+         "4–8",
+         {
+          "en": "Moderate",
+          "fr": "Modérée"
+         }
+        ],
+        [
+         "ERCF",
+         "8+",
+         {
+          "en": "High (DIY)",
+          "fr": "Élevée (DIY)"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.16",
+     "narration": {
+      "en": "The Prusa MMU3 supports five materials on MK4/S, MK3.9/S, MK3.5/S, MK3S+, and CORE One printers. Note: the MINI+ is not compatible. Unlike the AMS's individual feed motors, the MMU3 uses a single selector bar with a shared Bowden tube. Recent firmware updates cut swap time from about 52 seconds to about 42 seconds.",
+      "fr": "Le Prusa MMU3 supporte cinq matériaux sur les imprimantes MK4/S, MK3.9/S, MK3.5/S, MK3S+ et CORE One. Note : la MINI+ n'est pas compatible. Contrairement aux moteurs d'alimentation individuels de l'AMS, le MMU3 utilise une barre sélectrice unique avec un tube Bowden partagé. Les récentes mises à jour du firmware ont réduit le temps de changement d'environ 52 secondes à environ 42 secondes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Prusa MMU3",
+        "fr": "Prusa MMU3"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>5 materials</b> — MK4/S, MK3.9/S, MK3.5/S, MK3S+, CORE One (MINI+ NOT compatible)",
+         "fr": "<b>5 matériaux</b> — MK4/S, MK3.9/S, MK3.5/S, MK3S+, CORE One (MINI+ NON compatible)"
+        },
+        {
+         "en": "<b>Selector bar + shared Bowden</b> — vs individual motors in AMS",
+         "fr": "<b>Barre sélectrice + Bowden partagé</b> — vs moteurs individuels dans l'AMS"
+        },
+        {
+         "en": "<b>Swap time ~42 s</b> after firmware update (down from ~52 s)",
+         "fr": "<b>Temps de changement ~42 s</b> après mise à jour firmware (contre ~52 s précédemment)"
+        },
+        {
+         "en": "<b>Fully open source</b> — strong community; excellent for PVA supports",
+         "fr": "<b>Entièrement open source</b> — forte communauté ; excellent pour les supports PVA"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.17",
+     "narration": {
+      "en": "The Mosaic Palette 3 takes a different approach: it is printer-agnostic. An external splicer cuts and heat-splices filament segments into a single strand before it enters your printer — so it works with virtually any FDM machine. The Canvas software provides an intuitive texture-painting workflow. But at around 799 to 899 dollars for the Pro version, it costs as much as a complete Bambu printer with AMS.",
+      "fr": "Le Mosaic Palette 3 adopte une approche différente : il est agnostique vis-à-vis de l'imprimante. Un épisseur externe découpe et soude thermiquement des segments de filament en un seul brin avant qu'il n'entre dans votre imprimante — donc il fonctionne avec pratiquement n'importe quelle machine FDM. Le logiciel Canvas offre un flux de travail de peinture de texture intuitif. Mais à environ 799 à 899 dollars pour la version Pro, il coûte autant qu'une imprimante Bambu complète avec AMS."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Mosaic Palette 3",
+        "fr": "Mosaic Palette 3"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Strengths",
+         "fr": "Points forts"
+        },
+        "note": {
+         "en": "Works with any FDM printer · Canvas texture-painting software · 4–8 materials",
+         "fr": "Fonctionne avec toute imprimante FDM · logiciel Canvas de peinture de texture · 4–8 matériaux"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Drawbacks",
+         "fr": "Inconvénients"
+        },
+        "note": {
+         "en": "~$799–$899 Pro version — as much as a Bambu printer + AMS · substantial purge waste",
+         "fr": "~$799–$899 version Pro — autant qu'une imprimante Bambu + AMS · gaspillage de purge substantiel"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.3.18",
+     "narration": {
+      "en": "The ERCF — Enraged Rabbit Carrot Feeder — is a popular DIY open-source system for Klipper-based printers like Voron and RatRig. Version 2 adds a toolhead filament cutter and integrates with Klipper's endless spool functionality for unattended long prints. It is a significant self-sourcing and tuning project — rewarding for advanced users, overwhelming for beginners.",
+      "fr": "L'ERCF — Enraged Rabbit Carrot Feeder — est un système DIY open source populaire pour les imprimantes basées sur Klipper comme Voron et RatRig. La version 2 ajoute un coupe-filament à la tête d'impression et s'intègre à la fonctionnalité de bobine sans fin de Klipper pour des impressions longues sans surveillance. C'est un projet d'auto-sourcing et de réglage significatif — gratifiant pour les utilisateurs avancés, décourageant pour les débutants."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "ERCF (Enraged Rabbit Carrot Feeder)",
+        "fr": "ERCF (Enraged Rabbit Carrot Feeder)"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>8+ materials</b> — Klipper/Voron/RatRig printers",
+         "fr": "<b>8+ matériaux</b> — imprimantes Klipper/Voron/RatRig"
+        },
+        {
+         "en": "<b>V2 toolhead cutter</b> — eliminates tip-shaping requirements of V1",
+         "fr": "<b>Coupe-filament V2</b> — élimine les exigences de mise en forme de la pointe de la V1"
+        },
+        {
+         "en": "<b>Endless spool</b> — Klipper integration for unattended long prints",
+         "fr": "<b>Bobine sans fin</b> — intégration Klipper pour impressions longues sans surveillance"
+        },
+        {
+         "en": "<b>Significant DIY effort</b> — self-sourcing + tuning; not for beginners",
+         "fr": "<b>Effort DIY significatif</b> — auto-sourcing + réglage ; pas pour débutants"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.19",
+     "narration": {
+      "en": "The simplest alternative of all costs nothing and requires no hardware: manual filament swapping using Bambu Studio's pause-at-layer function. Right-click the plus on the layer slider after slicing to pause at specific heights. This uses M600 filament change commands. The limitations are real — layer-height changes only, no mid-layer swaps, and you must be present — but it generates zero purge waste.",
+      "fr": "L'alternative la plus simple ne coûte rien et ne nécessite aucun matériel : le changement manuel de filament en utilisant la fonction de pause par couche de Bambu Studio. Cliquez avec le bouton droit sur le plus du curseur de couche après le découpage pour faire une pause à des hauteurs spécifiques. Cela utilise les commandes M600 de changement de filament. Les limitations sont réelles — changements à la hauteur des couches uniquement, pas de changements en milieu de couche, et vous devez être présent — mais cela ne génère aucun déchet de purge."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Manual Filament Swap (Pause at Layer)",
+        "fr": "Changement manuel (pause par couche)"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Benefits",
+         "fr": "Avantages"
+        },
+        "note": {
+         "en": "Zero cost · no hardware · zero purge waste · unlimited materials sequentially",
+         "fr": "Aucun coût · aucun matériel · zéro déchet de purge · matériaux illimités en séquence"
+        },
+        "highlight": true
+       },
+       "right": {
+        "title": {
+         "en": "Limits",
+         "fr": "Limites"
+        },
+        "note": {
+         "en": "Layer-height changes only · no mid-layer swap · must be physically present · right-click + on layer slider in Bambu Studio",
+         "fr": "Changements à la hauteur des couches uniquement · pas de changement en milieu de couche · présence physique requise · clic droit sur + du curseur de couche dans Bambu Studio"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.3.20",
+     "narration": {
+      "en": "When is multi-material actually worth it? Functional applications deliver the most value. Soluble supports with PVA or BVOH enable geometries — internal channels, complex overhangs, delicate lattices — that are impossible with breakaway supports. Combining rigid structural sections with flexible zones in a single part creates integrated hinges and dampeners with no single-material equivalent.",
+      "fr": "Quand le multi-matériaux en vaut-il vraiment la peine ? Les applications fonctionnelles délivrent le plus de valeur. Les supports solubles avec PVA ou BVOH permettent des géométries — canaux internes, surplombs complexes, treillis délicats — impossibles avec des supports à casser. La combinaison de sections structurelles rigides et de zones flexibles dans une seule pièce crée des charnières et amortisseurs intégrés sans équivalent mono-matériau."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "When Multi-Material Makes Sense",
+        "fr": "Quand le multi-matériaux est-il justifié ?"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Soluble supports (PVA/BVOH)</b> — internal channels, complex overhangs, delicate lattices",
+         "fr": "<b>Supports solubles (PVA/BVOH)</b> — canaux internes, surplombs complexes, treillis délicats"
+        },
+        {
+         "en": "<b>Rigid + flexible combos</b> — PLA structure + TPU hinges/grips/dampeners in one print",
+         "fr": "<b>Combos rigide + flexible</b> — structure PLA + charnières/poignées/amortisseurs TPU en une impression"
+        },
+        {
+         "en": "<b>Aesthetic multi-color</b> — evaluate honestly: is 30% waste + double print time worth it?",
+         "fr": "<b>Multi-couleurs esthétique</b> — évaluer honnêtement : 30 % de gaspillage + temps doublé, est-ce justifié ?"
+        },
+        {
+         "en": "<b>Rule of thumb:</b> use the minimum number of materials that achieve the design goal",
+         "fr": "<b>Règle pratique :</b> utiliser le nombre minimum de matériaux qui permet d'atteindre l'objectif de conception"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7.3.21",
+     "narration": {
+      "en": "The most effective multi-material practitioners follow one simple rule: use the minimum number of materials that achieve the design goal. A two-color print with strategic placement and optimized purge can look just as good as a four-color print with defaults — using half the material in half the time.",
+      "fr": "Les praticiens du multi-matériaux les plus efficaces suivent une règle simple : utiliser le nombre minimum de matériaux qui permet d'atteindre l'objectif de conception. Une impression 2 couleurs avec un placement stratégique et une purge optimisée peut être aussi belle qu'une impression 4 couleurs avec les paramètres par défaut — tout en utilisant deux fois moins de matériau en deux fois moins de temps."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "The multi-material paradox does not mean avoiding multi-color printing. It means approaching it strategically: minimize changes at design stage, optimize purge, and reserve complex jobs for cases where the capability enables something truly impossible otherwise.",
+        "fr": "Le paradoxe du multi-matériaux ne signifie pas éviter l'impression multi-couleurs. Il signifie l'aborder stratégiquement : minimiser les changements à la phase de conception, optimiser la purge, et réserver les travaux complexes aux cas où la capacité permet véritablement quelque chose d'impossible autrement."
+       }
+      }
+     ]
+    },
+    {
+     "id": "7.3.22",
+     "narration": {
+      "en": "Let's close with the Chapter 3 recap — and the key takeaways that complete the full Module 7 on multi-material printing with the AMS.",
+      "fr": "Concluons avec le récapitulatif du chapitre 3 — et les points clés qui complètent l'intégralité du module 7 sur l'impression multi-matériaux avec l'AMS."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 3 Recap",
+        "fr": "Récapitulatif du chapitre 3"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Combined strategies</b> (multiplier + flush to infill/object + batch + ordering) → 80–90%+ waste cut",
+         "fr": "<b>Stratégies combinées</b> (multiplicateur + purge remplissage/objet + groupé + ordre) → 80–90 %+ de réduction"
+        },
+        {
+         "en": "<b>Cardboard spools:</b> tape edges or respool · TPU 95A jams — use TPU for AMS 68D or external · abrasives wear PTFE monthly",
+         "fr": "<b>Bobines carton :</b> ruban adhésif ou rembobinage · TPU 95A bourre — utiliser TPU AMS 68D ou externe · abrasifs usent PTFE mensuellement"
+        },
+        {
+         "en": "<b>Maintenance:</b> clean rollers monthly · PTFE tubes every 1–2 months · desiccant every 4–6 weeks",
+         "fr": "<b>Maintenance :</b> nettoyer galets mensuellement · tubes PTFE tous les 1–2 mois · dessiccant toutes les 4–6 semaines"
+        },
+        {
+         "en": "<b>Alternatives:</b> MMU3 (5 mat, ~42 s swap) · Palette 3 (~$800, any printer) · ERCF (DIY Klipper) · manual pause (free, zero waste)",
+         "fr": "<b>Alternatives :</b> MMU3 (5 mat, ~42 s) · Palette 3 (~$800, toute imprimante) · ERCF (DIY Klipper) · pause manuelle (gratuit, zéro déchet)"
+        },
+        {
+         "en": "<b>Functional &gt; aesthetic</b> multi-material — use minimum materials for the design goal",
+         "fr": "<b>Fonctionnel &gt; esthétique</b> pour le multi-matériaux — utiliser le minimum de matériaux pour l'objectif de conception"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

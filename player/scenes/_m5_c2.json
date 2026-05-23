@@ -1,0 +1,448 @@
+{
+  "chapter": 2,
+  "title": {"en": "Bambu Studio Deep Dive", "fr": "Plongée en profondeur dans Bambu Studio"},
+  "scenes": [
+    {
+      "id": "5.2.0",
+      "narration": {
+        "en": "Welcome to Chapter 2. Bambu Studio is the official slicer for Bambu Lab printers — forked from PrusaSlicer in 2022 and widely regarded as one of the most polished and beginner-friendly slicers available today.",
+        "fr": "Bienvenue au chapitre 2. Bambu Studio est le trancheur officiel pour les imprimantes Bambu Lab — forké à partir de PrusaSlicer en 2022 et largement considéré comme l'une des interfaces les plus soignées et accessibles aux débutants parmi les trancheurs modernes."
+      },
+      "elements": [
+        {"type": "kicker", "text": {"en": "Module 5 · Chapter 2", "fr": "Module 5 · Chapitre 2"}},
+        {"type": "title", "text": {"en": "Bambu Studio Deep Dive", "fr": "Plongée en profondeur dans Bambu Studio"}},
+        {"type": "lead", "text": {"en": "The official Bambu Lab slicer — forked from PrusaSlicer in 2022 — combines a mature, battle-tested engine with a modern interface, seamless hardware integration, and cloud-connected features.", "fr": "Le trancheur officiel de Bambu Lab — forké à partir de PrusaSlicer en 2022 — combine un moteur mature et éprouvé avec une interface moderne, une intégration matérielle transparente et des fonctionnalités connectées au cloud."}}
+      ]
+    },
+    {
+      "id": "5.2.1",
+      "narration": {
+        "en": "Bambu Studio is designed specifically for Bambu Lab printers — the X1, P1P, P1S, and A1. Its three-panel layout puts settings on the left, the 3D view in the center, and the preview on the right. Note that support for non-Bambu printers is secondary and less polished.",
+        "fr": "Bambu Studio est conçu spécifiquement pour les imprimantes Bambu Lab — X1, P1P, P1S et A1. Sa disposition en trois panneaux place les paramètres à gauche, la vue 3D au centre et l'aperçu à droite. La prise en charge des imprimantes non-Bambu est secondaire et moins soignée."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "What Is Bambu Studio?", "fr": "Qu'est-ce que Bambu Studio ?"}},
+        {"type": "compare",
+          "left": {"title": {"en": "Built on PrusaSlicer", "fr": "Fondé sur PrusaSlicer"}, "note": {"en": "Inherits the mature, battle-tested PrusaSlicer codebase (2022 fork)", "fr": "Hérite de la base de code mature et éprouvée de PrusaSlicer (fork 2022)"}},
+          "right": {"title": {"en": "Bambu-first", "fr": "Bambu en priorité"}, "note": {"en": "Tight hardware integration, modern UI, cloud features — designed for X1, P1P, P1S, A1", "fr": "Intégration matérielle étroite, interface moderne, cloud — conçu pour X1, P1P, P1S, A1"}, "highlight": true}
+        }
+      ]
+    },
+    {
+      "id": "5.2.2",
+      "narration": {
+        "en": "The interface is organized around four tabs: Prepare, Preview, Device, and Project. Each tab handles a distinct stage of the printing workflow, from model setup all the way to multi-plate management.",
+        "fr": "L'interface est organisée en quatre onglets : Prepare, Preview, Device et Project. Chaque onglet prend en charge une étape distincte du flux de travail d'impression, de la configuration du modèle jusqu'à la gestion multi-plateau."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "The Four Main Tabs", "fr": "Les quatre onglets principaux"}},
+        {"type": "table",
+          "headers": [{"en": "Tab", "fr": "Onglet"}, {"en": "Purpose", "fr": "Objectif"}, {"en": "Key Actions", "fr": "Actions clés"}],
+          "rows": [
+            [{"en": "Prepare", "fr": "Prepare"}, {"en": "Model setup", "fr": "Configuration du modèle"}, {"en": "Import, orient, paint supports, configure", "fr": "Importer, orienter, peindre, configurer"}],
+            [{"en": "Preview", "fr": "Preview"}, {"en": "Layer inspection", "fr": "Inspection des couches"}, {"en": "Verify toolpaths, check supports, estimate time", "fr": "Vérifier les trajectoires, contrôler les supports, estimer le temps"}],
+            [{"en": "Device", "fr": "Device"}, {"en": "Printer control", "fr": "Contrôle de l'imprimante"}, {"en": "Send prints, camera, pause/resume", "fr": "Envoyer, caméra, pause/reprise"}],
+            [{"en": "Project", "fr": "Project"}, {"en": "Multi-plate", "fr": "Multi-plateau"}, {"en": "Organize build plates, batch layout", "fr": "Organiser les plateaux, mise en page par lots"}]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5.2.3",
+      "narration": {
+        "en": "The Prepare tab is where you spend most of your time. The left panel presents Printer, Filament, and Process as simple dropdowns. The top toolbar provides six key tools for positioning, orienting, painting supports, adding text, measuring, and cutting models.",
+        "fr": "L'onglet Prepare est là où vous passez la majeure partie de votre temps. Le panneau gauche présente Imprimante, Filament et Processus sous forme de listes déroulantes simples. La barre d'outils supérieure propose six outils clés pour positionner, orienter, peindre les supports, ajouter du texte, mesurer et découper les modèles."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Prepare Tab: Key Toolbar Tools", "fr": "Onglet Prepare : outils de la barre d'outils"}},
+        {"type": "cards", "items": [
+          {"title": {"en": "Auto-Arrange", "fr": "Auto-Arrange"}, "desc": {"en": "Intelligently positions multiple models on the build plate", "fr": "Positionne intelligemment plusieurs modèles sur le plateau"}},
+          {"title": {"en": "Auto-Orient", "fr": "Auto-Orient"}, "desc": {"en": "Finds optimal orientation for overhangs and bed adhesion", "fr": "Trouve l'orientation optimale pour les surplombs et l'adhérence"}},
+          {"title": {"en": "Support Painting", "fr": "Peinture de supports"}, "desc": {"en": "Manually enforce or block support generation", "fr": "Imposer ou bloquer manuellement la génération de supports"}, "highlight": true},
+          {"title": {"en": "Cut", "fr": "Couper"}, "desc": {"en": "Slice model into parts for multi-color or assembly prints", "fr": "Découper le modèle en parties pour les impressions multicolores ou d'assemblage"}},
+          {"title": {"en": "Measure / Text", "fr": "Mesurer / Texte"}, "desc": {"en": "Verify dimensions or emboss text without leaving the slicer", "fr": "Vérifier les dimensions ou embosser du texte sans quitter le trancheur"}}
+        ]}
+      ]
+    },
+    {
+      "id": "5.2.4",
+      "narration": {
+        "en": "After slicing, the Preview tab becomes your quality control center. Scrub through layers with the vertical slider, and watch for travel moves in a distinct color, support contact points, and the Z-seam placement.",
+        "fr": "Après le tranchage, l'onglet Preview devient votre centre de contrôle qualité. Faites défiler les couches avec le curseur vertical, et surveillez les déplacements à vide dans une couleur distincte, les points de contact des supports, et le placement de la couture en Z."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Preview Tab: Quality Control", "fr": "Onglet Preview : contrôle qualité"}},
+        {"type": "bullets", "items": [
+          {"en": "<b>Layer slider</b> — scrub through every layer before committing filament", "fr": "<b>Curseur de couche</b> — faites défiler chaque couche avant de dépenser du filament"},
+          {"en": "<b>Travel moves</b> — shown in a distinct color (red/orange); minimize long open-area moves", "fr": "<b>Déplacements à vide</b> — affichés dans une couleur distincte (rouge/orange) ; minimisez les longs trajets en zone ouverte"},
+          {"en": "<b>Support contact points</b> — verify minimal, strategic placement", "fr": "<b>Points de contact des supports</b> — vérifiez qu'ils sont minimaux et stratégiquement placés"},
+          {"en": "<b>Z-seam</b> — check it is hidden at the back or inside the model", "fr": "<b>Couture en Z</b> — vérifiez qu'elle est cachée à l'arrière ou à l'intérieur du modèle"}
+        ]}
+      ]
+    },
+    {
+      "id": "5.2.5",
+      "narration": {
+        "en": "The Device tab connects to your printer over your local network or Bambu Cloud. You can monitor the live camera feed, view progress and temperatures, pause or cancel prints, and manage the AMS filament system remotely.",
+        "fr": "L'onglet Device se connecte à votre imprimante via votre réseau local ou Bambu Cloud. Vous pouvez surveiller le flux caméra en direct, voir la progression et les températures, mettre en pause ou annuler des impressions, et gérer le système de filaments AMS à distance."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Device Tab: Remote Control", "fr": "Onglet Device : contrôle à distance"}},
+        {"type": "bullets", "items": [
+          {"en": "<b>Live camera feed</b> — monitor your print in real time", "fr": "<b>Flux caméra en direct</b> — surveillez votre impression en temps réel"},
+          {"en": "<b>Progress and temperatures</b> — view remaining time and thermal readings", "fr": "<b>Progression et températures</b> — visualisez le temps restant et les relevés thermiques"},
+          {"en": "<b>Pause / resume / cancel</b> — control print flow remotely", "fr": "<b>Pause / reprise / annulation</b> — contrôlez le flux d'impression à distance"},
+          {"en": "<b>AMS management</b> — load filament and manage spools", "fr": "<b>Gestion AMS</b> — charger le filament et gérer les bobines"}
+        ]}
+      ]
+    },
+    {
+      "id": "5.2.6",
+      "narration": {
+        "en": "The Project tab enables multi-plate management — organizing different models across multiple virtual build plates, each with independent settings. This is invaluable for print farms or batch production.",
+        "fr": "L'onglet Project permet la gestion multi-plateau — organiser différents modèles sur plusieurs plateaux de construction virtuels, chacun avec des paramètres indépendants. C'est indispensable pour les fermes d'impression ou la production en série."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Project Tab: Multi-Plate Management", "fr": "Onglet Project : gestion multi-plateau"}},
+        {"type": "callout", "variant": "tip", "text": {"en": "Each virtual build plate can have its own independent settings — ideal for print farms or batching different parts in a single session.", "fr": "Chaque plateau de construction virtuel peut avoir ses propres paramètres indépendants — idéal pour les fermes d'impression ou le regroupement de pièces différentes en une seule session."}}
+      ]
+    },
+    {
+      "id": "5.2.7",
+      "narration": {
+        "en": "When you first launch Bambu Studio and select your printer model — for example, 'Bambu Lab X1 Carbon 0.4mm' — the software loads a complete configuration bundle of pre-tuned presets. Switching nozzle size automatically updates all available quality presets and recommended layer heights.",
+        "fr": "Lors du premier lancement de Bambu Studio, si vous sélectionnez votre modèle d'imprimante — par exemple « Bambu Lab X1 Carbon 0.4mm » — le logiciel charge un ensemble complet de préréglages pré-réglés. Changer de taille de buse met automatiquement à jour tous les préréglages de qualité disponibles et les hauteurs de couche recommandées."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Printer Selection and Setup", "fr": "Sélection et configuration de l'imprimante"}},
+        {"type": "pipeline", "steps": [
+          {"name": {"en": "Select printer", "fr": "Choisir l'imprimante"}, "sub": {"en": "e.g. X1 Carbon 0.4mm", "fr": "ex. X1 Carbon 0.4mm"}},
+          {"name": {"en": "Load bundle", "fr": "Charger le bundle"}, "sub": {"en": "Pre-tuned process, filament, printer presets", "fr": "Préréglages processus, filament, imprimante"}},
+          {"name": {"en": "Select nozzle", "fr": "Choisir la buse"}, "sub": {"en": "0.2 / 0.4 / 0.6 / 0.8mm", "fr": "0,2 / 0,4 / 0,6 / 0,8mm"}},
+          {"name": {"en": "Auto-update", "fr": "Mise à jour auto"}, "sub": {"en": "Layer heights and speeds adapt", "fr": "Hauteurs de couche et vitesses s'adaptent"}}
+        ]}
+      ]
+    },
+    {
+      "id": "5.2.8",
+      "narration": {
+        "en": "Bambu Studio uses a three-tier profile system. The Printer profile defines physical limits; the Filament profile holds material-specific thermal settings; and the Process profile controls the slicing strategy. Together they organize hundreds of settings into manageable, reusable presets.",
+        "fr": "Bambu Studio utilise un système de profils à trois niveaux. Le profil Imprimante définit les limites physiques ; le profil Filament contient les paramètres thermiques spécifiques au matériau ; et le profil Processus contrôle la stratégie de tranchage. Ensemble, ils organisent des centaines de paramètres en préréglages gérables et réutilisables."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "The Three-Tier Profile System", "fr": "Le système de profils à trois niveaux"}},
+        {"type": "stages", "items": [
+          {"label": {"en": "Printer / Machine", "fr": "Imprimante / Machine"}, "sub": {"en": "Bed size, nozzle, firmware, safety limits (max speed/accel)", "fr": "Plateau, buse, firmware, limites de sécurité (vitesse/accélération max)"}},
+          {"label": {"en": "Filament", "fr": "Filament"}, "sub": {"en": "Temperatures, cooling curves, flow rate, retraction, pressure advance", "fr": "Températures, courbes de refroidissement, débit, rétraction, pressure advance"}},
+          {"label": {"en": "Process", "fr": "Processus"}, "sub": {"en": "Layer height, walls, infill, speeds, supports, special features", "fr": "Hauteur de couche, parois, remplissage, vitesses, supports, fonctionnalités spéciales"}}
+        ]}
+      ]
+    },
+    {
+      "id": "5.2.9",
+      "narration": {
+        "en": "System presets are locked from editing but can be duplicated into user presets. User presets sync across devices via Bambu Cloud, up to twenty printer presets, one hundred process presets, and two hundred filament presets per account. Project presets stay inside the current 3MF file only.",
+        "fr": "Les préréglages système sont verrouillés à l'édition mais peuvent être dupliqués en préréglages utilisateur. Les préréglages utilisateur se synchronisent entre les appareils via Bambu Cloud, jusqu'à 20 préréglages d'imprimante, 100 préréglages de processus et 200 préréglages de filament par compte. Les préréglages de projet restent uniquement dans le fichier 3MF actuel."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Preset Hierarchy", "fr": "Hiérarchie des préréglages"}},
+        {"type": "cards", "items": [
+          {"title": {"en": "System presets", "fr": "Préréglages système"}, "desc": {"en": "Built-in, vendor-provided — locked from editing", "fr": "Intégrés, fournis par le fabricant — verrouillés à l'édition"}},
+          {"title": {"en": "User presets", "fr": "Préréglages utilisateur"}, "desc": {"en": "Your custom configs — sync to Bambu Cloud (20 printer / 100 process / 200 filament max)", "fr": "Vos configurations personnalisées — sync Bambu Cloud (20 imprimante / 100 processus / 200 filament max)"}, "highlight": true},
+          {"title": {"en": "Project presets", "fr": "Préréglages de projet"}, "desc": {"en": "Saved only inside the current .3MF file", "fr": "Sauvegardés uniquement dans le fichier .3MF actuel"}}
+        ]},
+        {"type": "callout", "variant": "warning", "text": {"en": "Bambu Cloud sync does not support presets for non-Bambu Lab printers. Back up your presets locally via export files if you use third-party printers.", "fr": "La synchronisation Bambu Cloud ne prend pas en charge les préréglages pour les imprimantes non-Bambu Lab. Sauvegardez vos préréglages localement via des fichiers d'exportation si vous utilisez des imprimantes tierces."}}
+      ]
+    },
+    {
+      "id": "5.2.10",
+      "narration": {
+        "en": "For third-party filaments from brands like eSUN, Overture, or Sunlu, Bambu Studio offers two approaches: creating a Custom Filament via the Settings menu (recommended for AMS users), or saving a modified preset as a user or project preset.",
+        "fr": "Pour les filaments tiers de marques comme eSUN, Overture ou Sunlu, Bambu Studio propose deux approches : créer un filament personnalisé via le menu Settings (recommandé pour les utilisateurs AMS), ou enregistrer un préréglage modifié comme préréglage utilisateur ou de projet."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Custom Filament Profiles", "fr": "Profils de filaments personnalisés"}},
+        {"type": "compare",
+          "left": {"title": {"en": "Method 1 — Custom Filaments", "fr": "Méthode 1 — Filaments personnalisés"}, "note": {"en": "Settings → Custom Filaments → Create New. Choose vendor, type, base to inherit from. Best for AMS users.", "fr": "Settings → Custom Filaments → Create New. Choisir fournisseur, type, base dont hériter. Idéal pour les utilisateurs AMS."}},
+          "right": {"title": {"en": "Method 2 — Save As User Preset", "fr": "Méthode 2 — Enregistrer comme préréglage utilisateur"}, "note": {"en": "Modify an existing filament preset, save as user or project preset. User presets sync via Bambu Cloud.", "fr": "Modifier un préréglage existant, enregistrer comme préréglage utilisateur ou de projet. Les préréglages utilisateur se synchronisent via Bambu Cloud."}}
+        },
+        {"type": "callout", "variant": "tip", "text": {"en": "For lesser-known brands, start with Bambu Lab's generic preset for the same material type and calibrate from there — community experience consistently shows better baseline results.", "fr": "Pour les marques moins connues, commencez avec le préréglage générique Bambu Lab pour le même type de matériau et calibrez à partir de là — l'expérience communautaire montre systématiquement de meilleurs résultats de base."}}
+      ]
+    },
+    {
+      "id": "5.2.11",
+      "narration": {
+        "en": "The Quality category in Process settings controls the main resolution parameters. Layer height runs from 0.08 to 0.32 millimetres on a 0.4mm nozzle. Wall loops and top and bottom shells set the solid shell count. Seam position determines where the visible Z-seam falls.",
+        "fr": "La catégorie Quality des paramètres de processus contrôle les principaux paramètres de résolution. La hauteur de couche va de 0,08 à 0,32 mm sur une buse de 0,4 mm. Les boucles de paroi et les couches supérieures et inférieures définissent le nombre de coques pleines. La position de la couture détermine où tombe la couture en Z visible."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Process Settings: Quality Category", "fr": "Paramètres de processus : catégorie Quality"}},
+        {"type": "table",
+          "headers": [{"en": "Setting", "fr": "Paramètre"}, {"en": "Typical Range", "fr": "Plage typique"}],
+          "rows": [
+            [{"en": "Layer Height", "fr": "Layer Height"}, {"en": "0.08–0.32mm (0.4mm nozzle)", "fr": "0,08–0,32 mm (buse 0,4 mm)"}],
+            [{"en": "Line Width", "fr": "Line Width"}, {"en": "0.4–0.6mm", "fr": "0,4–0,6 mm"}],
+            [{"en": "Wall Loops", "fr": "Wall Loops"}, {"en": "2–4 (more for strength)", "fr": "2–4 (plus pour la résistance)"}],
+            [{"en": "Top/Bottom Shells", "fr": "Top/Bottom Shells"}, {"en": "3–5 layers", "fr": "3–5 couches"}],
+            [{"en": "Seam Position", "fr": "Seam Position"}, {"en": "Aligned / Nearest / Random", "fr": "Alignée / La plus proche / Aléatoire"}]
+          ]
+        }
+      ]
+    }
+    ,
+    {
+      "id": "5.2.12",
+      "narration": {
+        "en": "The Strength category controls what goes inside the part. Gyroid infill provides near-isotropic strength — equal in all directions — making it the go-to for parts that must handle multi-directional loads. Set density to fifteen to twenty percent for general use, forty percent or more for structural parts.",
+        "fr": "La catégorie Strength contrôle ce qui se trouve à l'intérieur de la pièce. Le remplissage gyroid offre une résistance quasi-isotrope — égale dans toutes les directions — ce qui en fait le choix par défaut pour les pièces devant supporter des charges multidirectionnelles. Réglez la densité à 15–20 % pour un usage général, 40 % ou plus pour les pièces structurelles."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Process Settings: Strength Category", "fr": "Paramètres de processus : catégorie Strength"}},
+        {"type": "table",
+          "headers": [{"en": "Setting", "fr": "Paramètre"}, {"en": "Recommended", "fr": "Recommandé"}],
+          "rows": [
+            [{"en": "Infill Pattern", "fr": "Infill Pattern"}, {"en": "Gyroid (multi-directional), Grid, Honeycomb", "fr": "Gyroid (multidirectionnel), Grid, Honeycomb"}],
+            [{"en": "Infill Density", "fr": "Infill Density"}, {"en": "15–20% general, 40%+ functional", "fr": "15–20 % général, 40 %+ fonctionnel"}],
+            [{"en": "Wall Order", "fr": "Wall Order"}, {"en": "Inner first (strength) / Outer first (quality)", "fr": "Intérieur d'abord (résistance) / Extérieur d'abord (qualité)"}],
+            [{"en": "Solid Infill Direction", "fr": "Solid Infill Direction"}, {"en": "45° default", "fr": "45° par défaut"}]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5.2.13",
+      "narration": {
+        "en": "Bambu Lab printers implement a speed mode system you can select during printing. Four modes apply a multiplier to the Standard baseline of one hundred percent. Silent halves the speed; Sport adds twenty-four percent; Ludicrous runs at one hundred sixty-six percent. Nozzle temperatures do not change between modes.",
+        "fr": "Les imprimantes Bambu Lab implémentent un système de modes de vitesse sélectionnable pendant l'impression. Quatre modes appliquent un multiplicateur par rapport à la référence Standard de 100 %. Silent divise la vitesse par deux ; Sport ajoute 24 % ; Ludicrous atteint 166 %. Les températures de buse ne changent pas entre les modes."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Speed Modes: Silent → Ludicrous", "fr": "Modes de vitesse : Silent → Ludicrous"}},
+        {"type": "table",
+          "headers": [{"en": "Mode", "fr": "Mode"}, {"en": "Multiplier", "fr": "Multiplicateur"}, {"en": "Best For", "fr": "Idéal pour"}],
+          "rows": [
+            ["Silent", "50%", {"en": "Quiet / overnight prints", "fr": "Impressions silencieuses / nocturnes"}],
+            ["Standard", "100%", {"en": "Daily use, good quality", "fr": "Usage quotidien, bonne qualité"}],
+            ["Sport", "124%", {"en": "Faster prints, slight quality trade-off", "fr": "Impressions plus rapides, légère compromise de qualité"}],
+            ["Ludicrous", "166%", {"en": "Speed runs, prototypes", "fr": "Tests de vitesse, prototypes"}]
+          ]
+        },
+        {"type": "callout", "variant": "note", "text": {"en": "Speed, travel, acceleration, pressure advance, and look-ahead values all change between modes. Nozzle temperatures do not.", "fr": "La vitesse, le déplacement, l'accélération, le pressure advance et les valeurs de look-ahead changent entre les modes. Les températures de buse ne changent pas."}}
+      ]
+    },
+    {
+      "id": "5.2.14",
+      "narration": {
+        "en": "Bambu Studio's 'Slow Down for Overhangs' feature automatically reduces print speed based on overhang percentage. The overhang degree is calculated as the percentage of filament width not supported by the lower layer — the more unsupported the filament, the slower the speed.",
+        "fr": "La fonctionnalité « Slow Down for Overhangs » de Bambu Studio réduit automatiquement la vitesse d'impression en fonction du pourcentage de surplomb. Le degré de surplomb est calculé comme le pourcentage de largeur de filament non soutenu par la couche inférieure — plus le filament est non soutenu, plus la vitesse est réduite."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Slow Down for Overhangs", "fr": "Ralentissement pour les surplombs"}},
+        {"type": "callout", "variant": "tip", "text": {"en": "\"Slow Down for Overhangs\" calculates the percentage of filament width unsupported by the layer below and automatically reduces speed. No manual intervention needed — the slicer handles it.", "fr": "« Slow Down for Overhangs » calcule le pourcentage de largeur de filament non soutenu par la couche inférieure et réduit automatiquement la vitesse. Aucune intervention manuelle n'est nécessaire — le trancheur s'en charge."}}
+      ]
+    },
+    {
+      "id": "5.2.15",
+      "narration": {
+        "en": "The Support category lets you choose tree or normal supports, set the overhang threshold, and tune the gap and interface layers. Tree supports are generally preferred for their material efficiency and easier removal — but standard supports remain better for heavy overhangs or maximum stability.",
+        "fr": "La catégorie Support vous permet de choisir entre supports en arbre ou normaux, de définir le seuil de surplomb, et de régler l'espace et les couches d'interface. Les supports en arbre sont généralement préférés pour leur efficacité matérielle et leur retrait plus facile — mais les supports standard restent préférables pour les surplombs importants ou lorsqu'une stabilité maximale est requise."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Process Settings: Support Category", "fr": "Paramètres de processus : catégorie Support"}},
+        {"type": "table",
+          "headers": [{"en": "Setting", "fr": "Paramètre"}, {"en": "Notes", "fr": "Notes"}],
+          "rows": [
+            [{"en": "Support Type", "fr": "Support Type"}, {"en": "Tree (organic) or Normal (grid)", "fr": "Arbre (organique) ou Normal (grille)"}],
+            [{"en": "Overhang Threshold", "fr": "Overhang Threshold"}, {"en": "55° default for PLA; 40–45° for ABS/ASA", "fr": "55° par défaut pour PLA ; 40–45° pour ABS/ASA"}],
+            [{"en": "Top Z Distance", "fr": "Top Z Distance"}, {"en": "Gap between support and model; larger = easier removal", "fr": "Espace entre support et modèle ; plus grand = retrait plus facile"}],
+            [{"en": "Interface Layers", "fr": "Interface Layers"}, {"en": "2 layers default; Lines or Concentric pattern", "fr": "2 couches par défaut ; motif Lignes ou Concentrique"}]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5.2.16",
+      "narration": {
+        "en": "The Others category holds three useful features: Brim for adhesion on warp-prone materials, the Prime Tower that purges during filament changes in multi-material prints, and Arc Fitting which converts short line segments into true arc commands for smoother curves and smaller G-code files.",
+        "fr": "La catégorie Others contient trois fonctionnalités utiles : Brim pour l'adhérence sur les matériaux sujets au gauchissement, la Prime Tower qui purge lors des changements de filament dans les impressions multi-matériaux, et Arc Fitting qui convertit de courts segments de ligne en véritables commandes d'arc pour des courbes plus lisses et des fichiers G-code plus petits."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Process Settings: Others Category", "fr": "Paramètres de processus : catégorie Others"}},
+        {"type": "cards", "items": [
+          {"title": {"en": "Brim", "fr": "Brim"}, "desc": {"en": "Single-layer adhesion extension — useful for warp-prone materials like ABS", "fr": "Extension d'adhérence monocouche — utile pour les matériaux sujets au gauchissement comme l'ABS"}},
+          {"title": {"en": "Prime / Purge Tower", "fr": "Prime/Purge Tower"}, "desc": {"en": "Purges old filament between color changes to prevent contamination", "fr": "Purge l'ancien filament entre les changements de couleur pour éviter la contamination"}, "highlight": true},
+          {"title": {"en": "Arc Fitting", "fr": "Arc Fitting"}, "desc": {"en": "Converts line segments to G2/G3 arc commands — smoother curves, smaller G-code files", "fr": "Convertit les segments de ligne en commandes d'arc G2/G3 — courbes plus lisses, fichiers G-code plus petits"}}
+        ]}
+      ]
+    },
+    {
+      "id": "5.2.17",
+      "narration": {
+        "en": "Support painting is one of Bambu Studio's most powerful features. Four tools — Circle Pen, Sphere, Fill, and Gap Fill — let you mark any surface region as an enforcer, where support is required, or a blocker, where support is forbidden. This surgical control is essential for complex geometries.",
+        "fr": "La peinture de supports est l'une des fonctionnalités les plus puissantes de Bambu Studio. Quatre outils — Crayon circulaire, Sphère, Remplissage et Remplissage des espaces — vous permettent de marquer n'importe quelle région de surface comme zone d'imposition (support requis) ou de blocage (support interdit). Ce contrôle chirurgical est essentiel pour les géométries complexes."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Support Painting: Manual Control", "fr": "Peinture de supports : contrôle manuel"}},
+        {"type": "cards", "items": [
+          {"title": {"en": "Circle Pen", "fr": "Crayon circulaire"}, "desc": {"en": "Draw curves on surfaces — paints only visible facets", "fr": "Dessiner des courbes sur les surfaces — ne peint que les facettes visibles"}},
+          {"title": {"en": "Sphere", "fr": "Sphère"}, "desc": {"en": "Colors all facets inside a sphere volume — useful for hard-to-reach areas", "fr": "Colore toutes les facettes dans un volume sphérique — utile pour les zones difficiles d'accès"}},
+          {"title": {"en": "Fill", "fr": "Remplissage"}, "desc": {"en": "Bucket-fills connected facets with angle threshold — fastest for large flat overhangs", "fr": "Remplit en cascade les facettes connectées avec seuil d'angle — le plus rapide pour les grands surplombs plats"}, "highlight": true},
+          {"title": {"en": "Gap Fill", "fr": "Remplissage des espaces"}, "desc": {"en": "Addresses gap areas from the other painting tools", "fr": "Traite les zones d'espace résultant des autres outils de peinture"}}
+        ]},
+        {"type": "callout", "variant": "tip", "text": {"en": "Use Fill for large areas and Circle Pen for fine detail. Always check the preview after painting — enforcer and blocker regions can overlap, and the slicer applies specific priority rules.", "fr": "Utilisez Remplissage pour les grandes zones et le Crayon circulaire pour le détail fin. Vérifiez toujours l'aperçu après la peinture — les régions d'imposition et de blocage peuvent se chevaucher, et le trancheur applique des règles de priorité spécifiques."}}
+      ]
+    },
+    {
+      "id": "5.2.18",
+      "narration": {
+        "en": "The AMS — Automatic Material System — is Bambu's game-changing multi-color solution. Each unit holds four spools, and four units can be chained for sixteen colors total. It features RFID-based automatic filament identification for Bambu Lab spools, integrated humidity sensing with desiccant packs, and automatic spool backup when filament runs out.",
+        "fr": "L'AMS — Automatic Material System — est la solution multi-couleurs révolutionnaire de Bambu. Chaque unité contient quatre bobines, et quatre unités peuvent être chaînées pour un total de seize couleurs. Il dispose d'une identification automatique du filament par RFID pour les bobines Bambu Lab, d'un capteur d'humidité intégré avec sachets de dessiccant, et d'une sauvegarde automatique de bobine lorsque le filament est épuisé."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "AMS: Automatic Material System", "fr": "AMS : Automatic Material System"}},
+        {"type": "stat", "value": "16", "caption": {"en": "maximum colors with 4 AMS units (4 spools each)", "fr": "couleurs maximum avec 4 unités AMS (4 bobines chacune)"}},
+        {"type": "bullets", "items": [
+          {"en": "<b>RFID identification</b> — automatic filament recognition for Bambu Lab spools", "fr": "<b>Identification RFID</b> — reconnaissance automatique du filament pour les bobines Bambu Lab"},
+          {"en": "<b>Humidity sensing</b> — integrated sensor + desiccant packs per unit", "fr": "<b>Capteur d'humidité</b> — capteur intégré + sachets de dessiccant par unité"},
+          {"en": "<b>Automatic spool backup</b> — switches to a backup spool when filament runs out", "fr": "<b>Sauvegarde automatique de bobine</b> — bascule sur une bobine de secours quand le filament est épuisé"}
+        ]}
+      ]
+    },
+    {
+      "id": "5.2.19",
+      "narration": {
+        "en": "Color painting works exactly like support painting: use a brush to paint different colors directly onto the model surface. The slicer generates toolpaths with automatic filament change commands at the right layers. Each color change triggers a purge in the prime tower to prevent contamination.",
+        "fr": "La peinture de couleurs fonctionne exactement comme la peinture de supports : utilisez un pinceau pour peindre différentes couleurs directement sur la surface du modèle. Le trancheur génère des trajectoires avec des commandes automatiques de changement de filament aux couches appropriées. Chaque changement de couleur déclenche une purge dans la tour de purge pour éviter la contamination."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Color Painting for Multi-Material Prints", "fr": "Peinture de couleurs pour les impressions multi-matériaux"}},
+        {"type": "pipeline", "steps": [
+          {"name": {"en": "Paint colors", "fr": "Peindre les couleurs"}, "sub": {"en": "Brush directly on model surface", "fr": "Pinceau sur la surface du modèle"}},
+          {"name": {"en": "Slice", "fr": "Trancher"}, "sub": {"en": "Slicer generates filament change commands", "fr": "Le trancheur génère les commandes de changement"}},
+          {"name": {"en": "Purge tower", "fr": "Tour de purge"}, "sub": {"en": "Clears old color at each switch", "fr": "Évacue l'ancienne couleur à chaque changement"}},
+          {"name": {"en": "Print", "fr": "Imprimer"}, "sub": {"en": "AMS switches spools automatically", "fr": "L'AMS change les bobines automatiquement"}}
+        ]}
+      ]
+    },
+    {
+      "id": "5.2.20",
+      "narration": {
+        "en": "Bambu Studio offers three ways to send prints to your printer. Bambu Cloud enables remote printing and camera access but requires an account. LAN Mode keeps all communication on your local network. SD Card export gives maximum privacy and offline workflows with no network required.",
+        "fr": "Bambu Studio propose trois façons d'envoyer des impressions à votre imprimante. Bambu Cloud permet l'impression à distance et l'accès à la caméra, mais nécessite un compte. Le mode LAN maintient toutes les communications sur votre réseau local. L'export carte SD offre une confidentialité maximale et des flux de travail hors ligne sans réseau."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Sending Prints: Three Methods", "fr": "Envoyer des impressions : trois méthodes"}},
+        {"type": "cards", "items": [
+          {"title": {"en": "Bambu Cloud", "fr": "Bambu Cloud"}, "desc": {"en": "Remote printing + camera access. Requires Bambu account; communicates with Bambu Lab servers.", "fr": "Impression à distance + accès caméra. Nécessite un compte Bambu ; communique avec les serveurs Bambu Lab."}},
+          {"title": {"en": "LAN Mode", "fr": "Mode LAN"}, "desc": {"en": "Local network only — no cloud dependency. Best for privacy and reliability.", "fr": "Réseau local uniquement — pas de dépendance au cloud. Idéal pour la confidentialité et la fiabilité."}, "highlight": true},
+          {"title": {"en": "SD Card Export", "fr": "Export carte SD"}, "desc": {"en": "Maximum privacy, offline workflow — no network needed; manual file transfer.", "fr": "Confidentialité maximale, flux de travail hors ligne — pas de réseau requis ; transfert de fichiers manuel."}}
+        ]}
+      ]
+    },
+    {
+      "id": "5.2.21",
+      "narration": {
+        "en": "For privacy-conscious users, Bambu Lab has obtained three independent security certifications: ISO slash IEC 27001 for information security management, ISO slash IEC 27701 for privacy management, and TRUSTe Enterprise Privacy. LAN Mode is always available as a cloud-free alternative.",
+        "fr": "Pour les utilisateurs soucieux de la confidentialité, Bambu Lab a obtenu trois certifications de sécurité indépendantes : ISO/IEC 27001 pour la gestion de la sécurité de l'information, ISO/IEC 27701 pour la gestion de la confidentialité, et TRUSTe Enterprise Privacy. Le mode LAN est toujours disponible comme alternative sans cloud."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Cloud Privacy and Security", "fr": "Confidentialité et sécurité du cloud"}},
+        {"type": "bullets", "items": [
+          {"en": "<b>ISO/IEC 27001</b> — information security management", "fr": "<b>ISO/IEC 27001</b> — gestion de la sécurité de l'information"},
+          {"en": "<b>ISO/IEC 27701</b> — privacy information management", "fr": "<b>ISO/IEC 27701</b> — gestion des informations de confidentialité"},
+          {"en": "<b>TRUSTe Enterprise Privacy</b> — third-party privacy certification", "fr": "<b>TRUSTe Enterprise Privacy</b> — certification de confidentialité tierce"}
+        ]},
+        {"type": "callout", "variant": "note", "text": {"en": "Bambu Studio requires a Bambu account login. If you prefer no cloud dependency, enable LAN Mode — all communication stays on your local network.", "fr": "Bambu Studio nécessite une connexion à un compte Bambu. Si vous préférez éviter la dépendance au cloud, activez le mode LAN — toutes les communications restent sur votre réseau local."}}
+      ]
+    },
+    {
+      "id": "5.2.22",
+      "narration": {
+        "en": "Saving your project as a 3MF file preserves everything: the 3D models, support painting data, all process settings, variable layer height information, modifier meshes and their settings, and model positions on the build plate. You can return months later and every setting is exactly as you left it.",
+        "fr": "Sauvegarder votre projet sous forme de fichier 3MF préserve tout : les modèles 3D, les données de peinture de supports, tous les paramètres de processus, les informations de hauteur de couche variable, les maillages modificateurs et leurs paramètres, ainsi que les positions des modèles sur le plateau. Vous pouvez revenir des mois plus tard et chaque paramètre est exactement tel que vous l'avez laissé."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "3MF Project Files: Complete Reproducibility", "fr": "Fichiers de projet 3MF : reproductibilité complète"}},
+        {"type": "bullets", "items": [
+          {"en": "<b>3D models</b> — geometry preserved inside the archive", "fr": "<b>Modèles 3D</b> — géométrie préservée dans l'archive"},
+          {"en": "<b>Support painting data</b> — enforcer and blocker regions saved", "fr": "<b>Données de peinture de supports</b> — régions d'imposition et de blocage sauvegardées"},
+          {"en": "<b>All process settings</b> — layer height, infill, speeds, supports", "fr": "<b>Tous les paramètres de processus</b> — hauteur de couche, remplissage, vitesses, supports"},
+          {"en": "<b>Variable layer height info</b> — curve data preserved per region", "fr": "<b>Informations de hauteur de couche variable</b> — données de courbe préservées par région"},
+          {"en": "<b>Model positions and orientations</b> — exact build plate layout", "fr": "<b>Positions et orientations des modèles</b> — disposition exacte du plateau"}
+        ]}
+      ]
+    },
+    {
+      "id": "5.2.23",
+      "narration": {
+        "en": "Bambu Studio ships a command-line interface for headless slicing — no window, no mouse. This lets you slice on a server, inside a batch script, or as part of an automated pipeline such as a print farm or a web upload-and-slice service. Because OrcaSlicer is a fork of Bambu Studio, the two share the same CLI flags.",
+        "fr": "Bambu Studio propose une interface en ligne de commande pour le tranchage sans tête — sans fenêtre, sans souris. Cela vous permet de trancher sur un serveur, dans un script par lots, ou dans le cadre d'un pipeline automatisé comme une ferme d'impression ou un service web de dépôt et tranchage. Comme OrcaSlicer est un fork de Bambu Studio, les deux partagent les mêmes options de ligne de commande."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Headless Slicing: The Bambu Studio CLI", "fr": "Tranchage sans tête : l'interface en ligne de commande"}},
+        {"type": "cards", "items": [
+          {"title": {"en": "Print farm automation", "fr": "Automatisation de ferme d'impression"}, "desc": {"en": "Slice in a batch script, no GUI required", "fr": "Trancher dans un script par lots, sans interface graphique"}},
+          {"title": {"en": "Web upload-and-slice", "fr": "Service web de dépôt-tranchage"}, "desc": {"en": "Server-side slicing from uploaded models", "fr": "Tranchage côté serveur à partir de modèles déposés"}},
+          {"title": {"en": "CI validation", "fr": "Validation en CI"}, "desc": {"en": "Validate printable models in a continuous integration pipeline", "fr": "Valider des modèles imprimables dans un pipeline d'intégration continue"}, "highlight": true}
+        ]},
+        {"type": "callout", "variant": "note", "text": {"en": "OrcaSlicer is a fork of Bambu Studio — these CLI flags work almost identically in both slicers.", "fr": "OrcaSlicer est un fork de Bambu Studio — ces options de ligne de commande fonctionnent de façon quasi identique dans les deux trancheurs."}}
+      ]
+    },
+    {
+      "id": "5.2.24",
+      "narration": {
+        "en": "The CLI needs three JSON profile files exported from the GUI: a machine profile, a process profile, and one or more filament profiles. Feed those in with your model and specify an output 3MF. Settings priority runs from command-line flags first, then the loaded profiles, then whatever is embedded in the input 3MF.",
+        "fr": "L'interface en ligne de commande nécessite trois fichiers JSON de profil exportés depuis l'interface graphique : un profil machine, un profil de processus, et un ou plusieurs profils de filament. Indiquez-les avec votre modèle et spécifiez un 3MF de sortie. La priorité des paramètres va des options en ligne de commande d'abord, puis les profils chargés, puis ce qui est intégré dans le 3MF d'entrée."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "CLI Key Flags and Priority", "fr": "Options CLI clés et priorité"}},
+        {"type": "table",
+          "headers": [{"en": "Flag", "fr": "Option"}, {"en": "What it does", "fr": "Rôle"}],
+          "rows": [
+            ["`--slice N`", {"en": "Slice plate N; 0 = all plates", "fr": "Trancher le plateau N ; 0 = tous les plateaux"}],
+            ["`--load-settings`", {"en": "Load machine.json + process.json", "fr": "Charger machine.json + process.json"}],
+            ["`--load-filaments`", {"en": "One filament profile per extruder slot", "fr": "Un profil de filament par emplacement extrudeur"}],
+            ["`--export-3mf`", {"en": "Write sliced 3MF output (G-code inside)", "fr": "Écrire le 3MF tranché en sortie (G-code inclus)"}],
+            ["`--orient` / `--arrange 1`", {"en": "Auto-orient / auto-arrange before slicing", "fr": "Auto-orientation / auto-arrangement avant tranchage"}]
+          ]
+        },
+        {"type": "callout", "variant": "note", "text": {"en": "Priority: command-line flags > --load-settings / --load-filaments > settings embedded in the input 3MF.", "fr": "Priorité : options en ligne de commande > --load-settings / --load-filaments > paramètres intégrés dans le 3MF d'entrée."}}
+      ]
+    },
+    {
+      "id": "5.2.25",
+      "narration": {
+        "en": "Two extra flags matter for batch and farm pipelines. Skip-useless-pick skips thumbnail generation to speed up slicing when you are discarding the previews. And mstpp 300 aborts any plate that runs longer than five minutes — without it a pathological model can hang the CLI indefinitely. Always export your profiles from the GUI first — hand-writing profile JSON is error-prone and unsupported.",
+        "fr": "Deux options supplémentaires sont importantes pour les pipelines de traitement par lots ou de fermes d'impression. skip-useless-pick désactive la génération de miniatures pour accélérer le tranchage lorsque les aperçus sont inutiles. Et mstpp 300 interrompt tout plateau dont le tranchage dépasse cinq minutes — sans cette option, un modèle pathologique peut bloquer l'interface indéfiniment. Commencez toujours par exporter vos profils depuis l'interface graphique — rédiger manuellement le JSON des profils est source d'erreurs et n'est pas pris en charge."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "CLI: Batch and Farm Best Practices", "fr": "CLI : bonnes pratiques pour les lots et fermes d'impression"}},
+        {"type": "bullets", "items": [
+          {"en": "<b>--skip-useless-pick</b> — skip thumbnail generation; speeds up slicing in pipelines", "fr": "<b>--skip-useless-pick</b> — désactive la génération de miniatures ; accélère le tranchage en pipeline"},
+          {"en": "<b>--mstpp 300</b> — abort any plate taking longer than 5 minutes; prevents indefinite hangs", "fr": "<b>--mstpp 300</b> — interrompt tout plateau dépassant 5 minutes ; évite les blocages indéfinis"}
+        ]},
+        {"type": "callout", "variant": "warning", "text": {"en": "Always export your profiles from the GUI first. Dial the print in visually, export machine/filament/process to .json, then point the CLI at those files. Hand-writing profile JSON from scratch is error-prone and unsupported.", "fr": "Commencez toujours par exporter vos profils depuis l'interface graphique. Réglez visuellement l'impression, exportez machine/filament/processus en .json, puis indiquez ces fichiers à l'interface en ligne de commande. Rédiger manuellement le JSON des profils depuis zéro est source d'erreurs et n'est pas pris en charge."}}
+      ]
+    },
+    {
+      "id": "5.2.26",
+      "narration": {
+        "en": "To close, here is the full chapter recap. Bambu Studio is the definitive slicer for Bambu Lab printer owners — polished, tightly integrated, and feature-rich. Its four-tab workflow, three-tier profile system, support painting, AMS multi-color, 3MF project saving, and headless CLI together cover every step from first import to automated print farm.",
+        "fr": "Pour conclure, voici le récapitulatif complet du chapitre. Bambu Studio est le trancheur de référence pour les propriétaires d'imprimantes Bambu Lab — soigné, étroitement intégré et riche en fonctionnalités. Son flux de travail en quatre onglets, son système de profils à trois niveaux, la peinture de supports, l'AMS multicolore, la sauvegarde de projets 3MF et l'interface CLI sans tête couvrent ensemble chaque étape, de la première importation à la ferme d'impression automatisée."
+      },
+      "elements": [
+        {"type": "kicker", "text": {"en": "Chapter 2 Recap", "fr": "Récapitulatif du chapitre 2"}},
+        {"type": "title", "text": {"en": "Bambu Studio: Key Takeaways", "fr": "Bambu Studio : points clés à retenir"}},
+        {"type": "bullets", "items": [
+          {"en": "<b>Forked from PrusaSlicer in 2022</b> — mature engine, modern Bambu-first interface", "fr": "<b>Forké de PrusaSlicer en 2022</b> — moteur mature, interface moderne centrée Bambu"},
+          {"en": "<b>Four tabs</b> — Prepare, Preview, Device, Project — guide every workflow step", "fr": "<b>Quatre onglets</b> — Prepare, Preview, Device, Project — guident chaque étape du flux de travail"},
+          {"en": "<b>Three-tier profiles</b> — Printer + Filament + Process, with system / user / project hierarchy", "fr": "<b>Profils à trois niveaux</b> — Imprimante + Filament + Processus, avec hiérarchie système / utilisateur / projet"},
+          {"en": "<b>Support painting</b> — Circle Pen / Sphere / Fill / Gap Fill for surgical enforcer and blocker control", "fr": "<b>Peinture de supports</b> — Crayon / Sphère / Remplissage / Espaces pour un contrôle chirurgical imposition/blocage"},
+          {"en": "<b>AMS</b> — up to 16 colors, RFID identification, humidity sensing, auto spool backup", "fr": "<b>AMS</b> — jusqu'à 16 couleurs, identification RFID, capteur d'humidité, sauvegarde automatique de bobine"},
+          {"en": "<b>3MF project files</b> — preserve every setting for complete reproducibility", "fr": "<b>Fichiers de projet 3MF</b> — préservent chaque paramètre pour une reproductibilité complète"},
+          {"en": "<b>LAN Mode</b> — cloud-free printing; Bambu holds ISO/IEC 27001, 27701, and TRUSTe certifications", "fr": "<b>Mode LAN</b> — impression sans cloud ; Bambu détient les certifications ISO/IEC 27001, 27701 et TRUSTe"},
+          {"en": "<b>CLI for headless slicing</b> — shared with OrcaSlicer; use --skip-useless-pick and --mstpp for farm pipelines", "fr": "<b>CLI pour le tranchage sans tête</b> — partagé avec OrcaSlicer ; utilisez --skip-useless-pick et --mstpp pour les pipelines de fermes"}
+        ]}
+      ]
+    }
+  ]
+}

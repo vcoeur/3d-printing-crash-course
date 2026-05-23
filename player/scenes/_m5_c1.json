@@ -1,0 +1,286 @@
+{
+  "chapter": 1,
+  "title": { "en": "Understanding Slicing", "fr": "Comprendre le tranchage" },
+  "scenes": [
+    {
+      "id": "5.1.0",
+      "narration": {
+        "en": "Welcome to Module 5, Chapter 1. The slicer is the critical bridge between your digital model and a finished physical part — master it, and you master 3D printing.",
+        "fr": "Bienvenue au module 5, chapitre 1. Le trancheur est le pont critique entre votre modèle numérique et la pièce physique finale — maîtrisez-le, et vous maîtrisez l'impression 3D."
+      },
+      "elements": [
+        { "type": "kicker", "text": { "en": "Module 5 · Chapter 1", "fr": "Module 5 · Chapitre 1" } },
+        { "type": "title", "text": { "en": "Understanding Slicing", "fr": "Comprendre le tranchage" } },
+        { "type": "lead", "text": { "en": "Imagine stacking thousands of ultra-thin pancakes, each cut to an exact shape. That is 3D printing — and the slicer is the software that decides what every single layer looks like.", "fr": "Imaginez que vous empilez des milliers de crêpes ultra-fines, chacune découpée à une forme précise. C'est l'impression 3D — et le trancheur est le logiciel qui décide à quoi ressemble chaque couche." } }
+      ]
+    },
+    {
+      "id": "5.1.1",
+      "narration": {
+        "en": "The slicer translates a 3D model into G-code — the precise language your printer understands. Every movement, every temperature change, every extrusion command originates in the slicer.",
+        "fr": "Le trancheur traduit un modèle 3D en G-code — le langage précis que votre imprimante comprend. Chaque mouvement, chaque changement de température, chaque commande d'extrusion prend naissance dans le trancheur."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Slicer = Translator", "fr": "Le trancheur = traducteur" } },
+        { "type": "compare",
+          "left":  { "title": { "en": "You speak", "fr": "Vous parlez" }, "note": { "en": "3D models (STL, 3MF, OBJ, STEP)", "fr": "Modèles 3D (STL, 3MF, OBJ, STEP)" } },
+          "right": { "title": { "en": "Printer speaks", "fr": "L'imprimante parle" }, "note": { "en": "G-code: G1 moves, M104 temps, M106 fans", "fr": "G-code : déplacements G1, températures M104, ventilateurs M106" }, "highlight": true } }
+      ]
+    },
+    {
+      "id": "5.1.2",
+      "narration": {
+        "en": "Slicing follows a clear five-step pipeline: import the model, orient it, cut it into layers, calculate toolpaths for each layer, and compile everything into G-code.",
+        "fr": "Le tranchage suit un pipeline en cinq étapes bien définies : importer le modèle, l'orienter, le découper en couches, calculer les trajectoires pour chaque couche, puis compiler le tout en G-code."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "The Slicing Pipeline", "fr": "Le pipeline de tranchage" } },
+        { "type": "pipeline", "steps": [
+          { "name": { "en": "Import", "fr": "Importation" }, "sub": { "en": "STL · 3MF · OBJ · STEP", "fr": "STL · 3MF · OBJ · STEP" } },
+          { "name": { "en": "Orient", "fr": "Orientation" }, "sub": { "en": "position · rotate · scale", "fr": "positionner · pivoter · mettre à l'échelle" } },
+          { "name": { "en": "Slice", "fr": "Tranchage" }, "sub": { "en": "horizontal layers", "fr": "couches horizontales" } },
+          { "name": { "en": "Toolpath", "fr": "Trajectoires" }, "sub": { "en": "nozzle path per layer", "fr": "chemin de buse par couche" } },
+          { "name": { "en": "G-code", "fr": "G-code" }, "sub": { "en": "compile all instructions", "fr": "compiler toutes les instructions" } }
+        ] }
+      ]
+    },
+    {
+      "id": "5.1.3",
+      "narration": {
+        "en": "In practice, every print follows eight concrete steps: import, orient, scale, configure settings, add supports, slice, preview layers, then export or send to the printer.",
+        "fr": "Dans la pratique, chaque impression suit huit étapes concrètes : importer, orienter, mettre à l'échelle, configurer les paramètres, ajouter des supports, trancher, prévisualiser les couches, puis exporter ou envoyer à l'imprimante."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Eight Steps — Every Print", "fr": "Huit étapes — chaque impression" } },
+        { "type": "bullets", "items": [
+          { "en": "<b>1 Import</b> — drag-and-drop your model file", "fr": "<b>1 Importer</b> — glisser-déposer votre fichier modèle" },
+          { "en": "<b>2 Orient</b> — flat faces down, minimize overhangs", "fr": "<b>2 Orienter</b> — faces planes vers le bas, minimiser les surplombs" },
+          { "en": "<b>3 Scale</b> — check dimensions; inches→mm = ×25.4 error", "fr": "<b>3 Mettre à l'échelle</b> — vérifier les dimensions ; pouces→mm = erreur ×25,4" },
+          { "en": "<b>4 Settings</b> — layer height, walls, infill, supports, temps", "fr": "<b>4 Paramètres</b> — hauteur couche, parois, remplissage, supports, températures" },
+          { "en": "<b>5 Supports</b> — auto-generate or paint manually", "fr": "<b>5 Supports</b> — générer automatiquement ou peindre manuellement" },
+          { "en": "<b>6–8 Slice · Preview · Export</b> — verify then send", "fr": "<b>6–8 Trancher · Prévisualiser · Exporter</b> — vérifier puis envoyer" }
+        ] }
+      ]
+    },
+    {
+      "id": "5.1.4",
+      "narration": {
+        "en": "Orientation is more important than most beginners realize. Flat surfaces should face down for stability, and you should reorient the model to minimize steep overhangs. Auto-orient tools help, but manual adjustment often gives better results.",
+        "fr": "L'orientation a plus d'importance que la plupart des débutants ne le réalisent. Les surfaces planes doivent être orientées vers le bas pour assurer la stabilité, et il faut réorienter le modèle pour minimiser les surplombs prononcés. Les outils d'orientation automatique aident, mais l'ajustement manuel donne souvent de meilleurs résultats."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Why Orientation Matters", "fr": "Pourquoi l'orientation est cruciale" } },
+        { "type": "cards", "items": [
+          { "title": { "en": "Flat faces down", "fr": "Faces planes vers le bas" }, "desc": { "en": "Maximises stability on the build plate", "fr": "Maximise la stabilité sur le plateau" } },
+          { "title": { "en": "Minimize overhangs", "fr": "Minimiser les surplombs" }, "desc": { "en": "Rotate to reduce angles above 45–55°", "fr": "Pivoter pour réduire les angles supérieurs à 45–55°" } },
+          { "title": { "en": "Auto-orient", "fr": "Orientation auto" }, "desc": { "en": "Good start — but manual tweaks often win", "fr": "Bon départ — mais les ajustements manuels gagnent souvent" } }
+        ] }
+      ]
+    },
+    {
+      "id": "5.1.5",
+      "narration": {
+        "en": "Not all 3D file formats are equal. STL has been around since 1987 but carries no color, no units, and is prone to mesh errors. The modern standard is 3MF, released in 2015 and now codified as ISO-slash-IEC 25422 colon 2025.",
+        "fr": "Tous les formats de fichiers 3D ne se valent pas. Le STL existe depuis 1987 mais ne contient aucune couleur, aucune unité, et est sujet aux erreurs de maillage. Le standard moderne est le 3MF, publié en 2015 et désormais codifié sous la norme ISO/IEC 25422:2025."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "File Formats Compared", "fr": "Comparaison des formats de fichiers" } },
+        { "type": "table",
+          "headers": [
+            { "en": "Format", "fr": "Format" },
+            { "en": "Year", "fr": "Année" },
+            { "en": "Best for", "fr": "Idéal pour" },
+            { "en": "Key limit", "fr": "Limite principale" }
+          ],
+          "rows": [
+            [ "STL", "1987", { "en": "Universal compat.", "fr": "Compat. universelle" }, { "en": "No color/units, mesh errors", "fr": "Pas couleur/unités, erreurs maillage" } ],
+            [ "3MF", "2015", { "en": "Modern standard", "fr": "Standard moderne" }, { "en": "Very old software only", "fr": "Anciens logiciels uniquement" } ],
+            [ "OBJ", { "en": "1990s", "fr": "Années 1990" }, { "en": "Color + texture", "fr": "Couleur + texture" }, { "en": "Large files, companion files", "fr": "Fichiers volumineux, fichiers complémentaires" } ],
+            [ "STEP", "1994", { "en": "CAD-native geometry", "fr": "Géométrie native CAO" }, { "en": "Needs direct-CAD slicer", "fr": "Nécessite trancheur CAO direct" } ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5.1.6",
+      "narration": {
+        "en": "3MF was created in April 2015 by a consortium including Autodesk, Dassault Systèmes, HP, Microsoft, and Shapeways — specifically to solve every one of STL's problems. It is smaller, error-free by design, and stores your slicer settings right inside the file.",
+        "fr": "Le 3MF a été créé en avril 2015 par un consortium comprenant Autodesk, Dassault Systèmes, HP, Microsoft et Shapeways — spécifiquement pour résoudre chacun des problèmes du STL. Il est plus petit, exempt d'erreurs par conception, et stocke vos paramètres de tranchage directement dans le fichier."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Use 3MF — Here Is Why", "fr": "Utilisez le 3MF — voici pourquoi" } },
+        { "type": "bullets", "items": [
+          { "en": "<b>Smaller files</b> — compresses automatically", "fr": "<b>Fichiers plus petits</b> — compresse automatiquement" },
+          { "en": "<b>Error-free</b> — no holes, no flipped normals, no non-manifold edges", "fr": "<b>Sans erreurs</b> — pas de trous, pas de normales inversées, pas d'arêtes non-manifold" },
+          { "en": "<b>Settings travel with the model</b> — reopen and everything is as you left it", "fr": "<b>Paramètres inclus</b> — rouvrir et tout est tel que vous l'avez laissé" },
+          { "en": "<b>ISO/IEC 25422:2025</b> — official industry standard successor to STL", "fr": "<b>ISO/IEC 25422:2025</b> — successeur officiel du STL comme standard industriel" }
+        ] },
+        { "type": "callout", "variant": "tip", "text": { "en": "Make 3MF your default. Use STL only when a platform forces you to. Repair mesh errors with Microsoft 3D Builder, Netfabb, or Meshmixer before slicing.", "fr": "Faites du 3MF votre format par défaut. N'utilisez le STL que lorsqu'une plateforme vous y oblige. Réparez les erreurs de maillage avec Microsoft 3D Builder, Netfabb ou Meshmixer avant de trancher." } }
+      ]
+    },
+    {
+      "id": "5.1.7",
+      "narration": {
+        "en": "Layer height is the single biggest lever for print quality and time. With a standard 0.4 millimetre nozzle you can go from 0.08 millimetres for ultra-fine detail all the way to 0.32 millimetres for draft mode. The rule: stay below 80 percent of your nozzle diameter.",
+        "fr": "La hauteur de couche est le levier le plus important pour la qualité d'impression et le temps. Avec une buse standard de 0,4 mm, vous pouvez aller de 0,08 mm pour les détails ultra-fins jusqu'à 0,32 mm en mode brouillon. La règle : rester en dessous de 80 % du diamètre de la buse."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Quality Settings", "fr": "Paramètres de qualité" } },
+        { "type": "stat", "value": "0.2 mm", "caption": { "en": "standard layer height — range 0.08–0.32 mm on a 0.4 mm nozzle (stay below 80% of nozzle Ø)", "fr": "hauteur de couche standard — plage 0,08–0,32 mm avec une buse 0,4 mm (rester sous 80 % du Ø de buse)" } },
+        { "type": "bullets", "items": [
+          { "en": "<b>Line width</b> — modern slicers use the Arachne perimeter generator (from Cura, added to PrusaSlicer 2.5 in September 2022) to auto-adjust extrusion width", "fr": "<b>Largeur de ligne</b> — les trancheurs modernes utilisent le générateur de périmètres Arachne (de Cura, ajouté à PrusaSlicer 2.5 en septembre 2022) pour ajuster automatiquement la largeur d'extrusion" },
+          { "en": "<b>Wall count</b> — more walls = stronger parts", "fr": "<b>Nombre de parois</b> — plus de parois = pièces plus solides" },
+          { "en": "<b>Top/bottom layers</b> — 3–5 solid layers each side", "fr": "<b>Couches supérieures/inférieures</b> — 3 à 5 couches pleines de chaque côté" }
+        ] }
+      ]
+    },
+    {
+      "id": "5.1.8",
+      "narration": {
+        "en": "Infill controls how solid the interior is. 15 to 20 percent is standard for general parts; zero for vases; 40 percent or more for load-bearing pieces. The infill pattern affects strength in all directions.",
+        "fr": "Le remplissage contrôle la solidité de l'intérieur. 15 à 20 % est standard pour les pièces générales ; 0 % pour les vases ; 40 % ou plus pour les pièces portant des charges. Le motif de remplissage influence la résistance dans toutes les directions."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Infill: Density and Pattern", "fr": "Remplissage : densité et motif" } },
+        { "type": "table",
+          "headers": [
+            { "en": "Pattern", "fr": "Motif" },
+            { "en": "Strength", "fr": "Résistance" },
+            { "en": "Notes", "fr": "Notes" }
+          ],
+          "rows": [
+            [ "Grid", { "en": "Moderate", "fr": "Modérée" }, { "en": "Fast; top-down loads", "fr": "Rapide ; charges du haut vers le bas" } ],
+            [ "Gyroid", { "en": "High (multi-dir.)", "fr": "Élevée (multidirect.)" }, { "en": "Near-isotropic; good shear", "fr": "Quasi-isotrope ; bonne résistance au cisaillement" } ],
+            [ "Cubic", { "en": "High (compressive)", "fr": "Élevée (compression)" }, { "en": "Best vertical compressive loads", "fr": "Idéal charges compressives verticales" } ],
+            [ "Honeycomb", { "en": "Moderate", "fr": "Modérée" }, { "en": "Classic; slower than grid", "fr": "Classique ; plus lent que grid" } ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5.1.9",
+      "narration": {
+        "en": "Gyroid infill offers near-isotropic strength — equal in all directions — and good energy absorption, making it a strong all-around default. Cubic leads for vertical compressive loads.",
+        "fr": "Le remplissage gyroid offre une résistance quasi-isotrope — égale dans toutes les directions — et une bonne absorption d'énergie, ce qui en fait un excellent choix polyvalent par défaut. Le cubic est supérieur pour les charges compressives verticales."
+      },
+      "elements": [
+        { "type": "kicker", "text": { "en": "Best all-around pick", "fr": "Meilleur choix polyvalent" } },
+        { "type": "title", "text": { "en": "Why Gyroid Wins for Multi-Directional Loads", "fr": "Pourquoi le Gyroid gagne pour les charges multidirectionnelles" } },
+        { "type": "compare",
+          "left":  { "title": "Grid / Honeycomb", "note": { "en": "Moderate; optimised for one direction", "fr": "Modéré ; optimisé pour une direction" } },
+          "right": { "title": "Gyroid", "note": { "en": "Near-isotropic — equal strength in all directions, good shear resistance", "fr": "Quasi-isotrope — résistance égale dans toutes les directions, bonne résistance au cisaillement" }, "highlight": true } }
+      ]
+    },
+    {
+      "id": "5.1.10",
+      "narration": {
+        "en": "Supports hold up overhangs steeper than roughly 45 to 55 degrees. Tree supports branch out organically and use 25 to 50 percent less material than standard grid supports on complex models, and are much easier to remove.",
+        "fr": "Les supports soutiennent les surplombs supérieurs à environ 45 à 55 degrés. Les supports en arbre se ramifient organiquement et utilisent 25 à 50 % moins de matériau que les supports standard sur les modèles complexes, et sont bien plus faciles à retirer."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Support Settings", "fr": "Paramètres de support" } },
+        { "type": "compare",
+          "left":  { "title": { "en": "Standard (grid)", "fr": "Standard (grille)" }, "note": { "en": "Rigid structure; heavy overhangs; more material", "fr": "Structure rigide ; surplombs importants ; plus de matériau" } },
+          "right": { "title": { "en": "Tree supports", "fr": "Supports en arbre" }, "note": { "en": "25–50% less material; easier removal; fewer surface marks", "fr": "25–50 % moins de matériau ; retrait plus facile ; moins de marques" }, "highlight": true } },
+        { "type": "bullets", "items": [
+          { "en": "<b>Overhang threshold</b> — PLA: 55–60° with active cooling; ABS/ASA: 40–45°", "fr": "<b>Seuil de surplomb</b> — PLA : 55–60° avec refroidissement actif ; ABS/ASA : 40–45°" },
+          { "en": "<b>Support interface</b> — 2 smooth top layers improves surface finish of supported area", "fr": "<b>Interface de support</b> — 2 couches supérieures lisses améliorent la finition de la surface supportée" }
+        ] }
+      ]
+    },
+    {
+      "id": "5.1.11",
+      "narration": {
+        "en": "Three adhesion helpers tackle first-layer challenges. A skirt is just an outline for priming; a brim attaches to the model edges to fight warping; a raft builds a multi-layer platform under the entire print for severe bed adhesion problems.",
+        "fr": "Trois aides à l'adhérence répondent aux défis de la première couche. La jupe est simplement un contour pour amorcer ; la bordure s'attache aux bords du modèle pour lutter contre le gauchissement ; le radeau construit une plateforme multi-couches sous toute l'impression pour les problèmes graves d'adhérence."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Bed Adhesion: Skirt · Brim · Raft", "fr": "Adhérence plateau : jupe · bordure · radeau" } },
+        { "type": "cards", "items": [
+          { "title": { "en": "Skirt", "fr": "Jupe" }, "desc": { "en": "Separate outline — primes nozzle, checks level. No post-processing.", "fr": "Contour séparé — amorce la buse, vérifie le niveau. Aucun post-traitement." } },
+          { "title": { "en": "Brim", "fr": "Bordure" }, "desc": { "en": "Connected to model edges (1 layer). Fights warp on tall/thin parts. Light trimming.", "fr": "Connectée aux bords du modèle (1 couche). Combat le gauchissement des pièces hautes/minces. Léger rognage." } },
+          { "title": { "en": "Raft", "fr": "Radeau" }, "desc": { "en": "Full base platform (3+ layers). Severe adhesion issues only. Requires sanding.", "fr": "Plateforme de base complète (3+ couches). Uniquement pour problèmes graves d'adhérence. Ponçage nécessaire." } }
+        ] }
+      ]
+    },
+    {
+      "id": "5.1.12",
+      "narration": {
+        "en": "Temperature, speed, and cooling form an interdependent trio. Nozzle temperature controls flow; bed temperature locks the first layer; print speed is a hierarchy from the slow outer walls to the fast infill, with the very first layer slowest of all.",
+        "fr": "La température, la vitesse et le refroidissement forment un trio interdépendant. La température de buse contrôle l'écoulement ; la température du plateau ancre la première couche ; la vitesse d'impression est une hiérarchie, des parois extérieures lentes au remplissage rapide, avec la toute première couche la plus lente de toutes."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Temperature, Speed and Cooling", "fr": "Température, vitesse et refroidissement" } },
+        { "type": "bullets", "items": [
+          { "en": "<b>Nozzle temp</b> — too cold: under-extrusion; too hot: oozing + stringing", "fr": "<b>Temp. buse</b> — trop froid : sous-extrusion ; trop chaud : suintement + fils" },
+          { "en": "<b>Bed temp</b> — PLA 50–60 °C · ABS 100–110 °C", "fr": "<b>Temp. plateau</b> — PLA 50–60 °C · ABS 100–110 °C" },
+          { "en": "<b>Speed hierarchy</b> — first layer slowest → outer walls → inner walls → infill fastest", "fr": "<b>Hiérarchie des vitesses</b> — première couche la plus lente → parois ext. → parois int. → remplissage le plus rapide" },
+          { "en": "<b>Cooling fan</b> — PLA: 80–100% (after initial layers); ABS: 0–20% (prevents warping)", "fr": "<b>Ventilateur</b> — PLA : 80–100 % (après couches initiales) ; ABS : 0–20 % (prévient le gauchissement)" }
+        ] }
+      ]
+    },
+    {
+      "id": "5.1.13",
+      "narration": {
+        "en": "Three advanced extrusion controls fine-tune travel moves. Retraction pulls filament back to prevent stringing — 1 to 2 millimetres for direct drive, 4 to 6 for Bowden. Z-hop lifts the nozzle to avoid collisions. Combing keeps travel moves inside the model.",
+        "fr": "Trois contrôles d'extrusion avancés affinent les déplacements à vide. La rétraction retire le filament pour éviter les fils — 1 à 2 mm pour l'entraînement direct, 4 à 6 mm pour les systèmes Bowden. Le Z-hop lève la buse pour éviter les collisions. Le peigne maintient les déplacements à l'intérieur du modèle."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Advanced Extrusion Controls", "fr": "Contrôles d'extrusion avancés" } },
+        { "type": "stages", "items": [
+          { "label": { "en": "Retraction", "fr": "Rétraction" }, "sub": { "en": "Direct: 1–2 mm · Bowden: 4–6 mm", "fr": "Direct : 1–2 mm · Bowden : 4–6 mm" } },
+          { "label": { "en": "Z-Hop", "fr": "Z-Hop" }, "sub": { "en": "lift 0.2–0.5 mm on travel", "fr": "lever 0,2–0,5 mm en déplacement" } },
+          { "label": { "en": "Combing", "fr": "Peigne" }, "sub": { "en": "travel inside model perimeter", "fr": "déplacements dans le périmètre du modèle" } }
+        ] },
+        { "type": "callout", "variant": "note", "text": { "en": "Z-hop reduces collisions but can slightly increase stringing. Enable it selectively for tall, complex models.", "fr": "Le Z-hop réduit les collisions mais peut légèrement augmenter les fils. Activez-le sélectivement pour les modèles hauts et complexes." } }
+      ]
+    },
+    {
+      "id": "5.1.14",
+      "narration": {
+        "en": "The layer preview is your last quality control checkpoint before committing time and filament. Look for travel moves crossing open areas, support contact points, layer transitions, and seam placement.",
+        "fr": "L'aperçu des couches est votre dernier point de contrôle qualité avant d'engager du temps et du filament. Cherchez les déplacements à vide traversant des zones ouvertes, les points de contact des supports, les transitions de couche, et le placement de la couture."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Layer Preview — What to Check", "fr": "Aperçu des couches — ce qu'il faut vérifier" } },
+        { "type": "bullets", "items": [
+          { "en": "<b>Color coding</b> — learn your slicer's legend: walls, infill, supports, travel moves", "fr": "<b>Codage couleur</b> — apprenez la légende de votre trancheur : parois, remplissage, supports, déplacements à vide" },
+          { "en": "<b>Travel moves</b> — long paths crossing open areas = stringing risk; add retraction or combing", "fr": "<b>Déplacements à vide</b> — longs trajets traversant zones ouvertes = risque de fils ; ajouter rétraction ou peigne" },
+          { "en": "<b>Support contact</b> — tree supports should touch only where strictly needed", "fr": "<b>Contact des supports</b> — les supports en arbre ne doivent toucher que là où c'est strictement nécessaire" },
+          { "en": "<b>Z-seam</b> — place it at the back or on a hidden corner to minimize visibility", "fr": "<b>Couture en Z</b> — placez-la à l'arrière ou sur un coin caché pour minimiser sa visibilité" }
+        ] }
+      ]
+    },
+    {
+      "id": "5.1.15",
+      "narration": {
+        "en": "Modern slicers give accurate estimates for print time and filament usage, accounting for acceleration and travel moves. Add a 10 to 15 percent buffer for waste, supports, and brim material — and remember that real prints often run 10 to 30 percent longer than the estimate.",
+        "fr": "Les trancheurs modernes donnent des estimations précises du temps d'impression et de la consommation de filament, tenant compte de l'accélération et des déplacements à vide. Ajoutez 10 à 15 % de marge pour les déchets, supports et matériau de jupe/bordure — et souvenez-vous que les impressions réelles prennent souvent 10 à 30 % de temps en plus que l'estimation."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Time and Filament Estimates", "fr": "Estimation du temps et du filament" } },
+        { "type": "stat", "value": "+10–15 %", "caption": { "en": "buffer to add to slicer filament estimate (waste, supports, skirt/brim)", "fr": "marge à ajouter à l'estimation de filament (déchets, supports, jupe/bordure)" } },
+        { "type": "callout", "variant": "warning", "text": { "en": "Slicer time estimates assume optimal conditions. Real prints run 10–30% longer due to heating, bed leveling, pauses, and first-layer adjustments.", "fr": "Les estimations de temps des trancheurs supposent des conditions optimales. Les impressions réelles prennent 10–30 % de plus en raison du chauffage, du nivellement, des pauses et des ajustements de la première couche." } }
+      ]
+    },
+    {
+      "id": "5.1.16",
+      "narration": {
+        "en": "To wrap up Chapter 1: the slicer pipeline runs from import through orientation, slicing, toolpath generation, and G-code output. Use 3MF whenever you can, master the five setting categories, always preview before printing, and add a filament buffer to your estimates.",
+        "fr": "Pour conclure le chapitre 1 : le pipeline du trancheur va de l'importation à l'orientation, au tranchage, à la génération des trajectoires, puis au G-code. Utilisez le 3MF autant que possible, maîtrisez les cinq catégories de paramètres, prévisualisez toujours avant d'imprimer, et ajoutez une marge à vos estimations de filament."
+      },
+      "elements": [
+        { "type": "kicker", "text": { "en": "Chapter 1 recap", "fr": "Récapitulatif du chapitre 1" } },
+        { "type": "title", "text": { "en": "Key Takeaways", "fr": "Points clés à retenir" } },
+        { "type": "bullets", "items": [
+          { "en": "<b>Slicer = translator</b> — digital model → G-code; every command originates here", "fr": "<b>Trancheur = traducteur</b> — modèle numérique → G-code ; chaque commande prend naissance ici" },
+          { "en": "<b>Use 3MF</b> — ISO/IEC 25422:2025, error-free, settings-aware; STL only when forced", "fr": "<b>Utilisez le 3MF</b> — ISO/IEC 25422:2025, sans erreurs, paramètres inclus ; STL seulement si imposé" },
+          { "en": "<b>Five setting categories</b> — Quality · Infill · Supports · Bed Adhesion · Temp/Speed", "fr": "<b>Cinq catégories de paramètres</b> — Qualité · Remplissage · Supports · Adhérence plateau · Temp/Vitesse" },
+          { "en": "<b>Gyroid infill</b> — near-isotropic; best for multi-directional loads", "fr": "<b>Remplissage Gyroid</b> — quasi-isotrope ; idéal pour les charges multidirectionnelles" },
+          { "en": "<b>Tree supports</b> — 25–50% less material, easier removal than standard", "fr": "<b>Supports en arbre</b> — 25–50 % moins de matériau, retrait plus facile que le standard" },
+          { "en": "<b>Always preview</b> — the layer preview is your last chance to catch problems before wasted filament", "fr": "<b>Toujours prévisualiser</b> — l'aperçu des couches est votre dernière chance de détecter les problèmes avant du filament gâché" }
+        ] }
+      ]
+    }
+  ]
+}

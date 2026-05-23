@@ -1,0 +1,2257 @@
+{
+ "module": 3,
+ "module_title": {
+  "en": "The Bambu Lab Ecosystem",
+  "fr": "L'écosystème Bambu Lab"
+ },
+ "chapters": [
+  {
+   "chapter": 1,
+   "title": {
+    "en": "The Bambu Lab Story and Philosophy",
+    "fr": "L'histoire et la philosophie de Bambu Lab"
+   },
+   "scenes": [
+    {
+     "id": "3.1.0",
+     "narration": {
+      "en": "Welcome to Chapter 1. We'll trace how five ex-DJI engineers went from drones to desktop manufacturing — and in the process forced the entire 3D printing industry to rethink what a printer should do out of the box.",
+      "fr": "Bienvenue au chapitre 1. Nous allons retracer comment cinq anciens ingénieurs de DJI sont passés des drones à la fabrication de bureau — et ont contraint l'ensemble du secteur de l'impression 3D à reconsidérer ce qu'une imprimante doit faire dès la sortie de la boîte."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 3 · Chapter 1",
+        "fr": "Module 3 · Chapitre 1"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "The Bambu Lab Story and Philosophy",
+        "fr": "L'histoire et la philosophie de Bambu Lab"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Few companies have reshaped an industry as rapidly as Bambu Lab. Founded in 2020, it turned CoreXY speed, auto-calibration, and multi-material printing from hobbyist luxuries into consumer expectations.",
+        "fr": "Peu d'entreprises ont remodelé un secteur aussi rapidement que Bambu Lab. Fondée en 2020, elle a transformé la vitesse CoreXY, la calibration automatique et l'impression multi-matériaux en attentes grand public."
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.1.1",
+     "narration": {
+      "en": "In August 2020, Ye Tao gathered four fellow engineers — all alumni of DJI, the world's dominant drone maker — and founded Bambu Lab in Shenzhen. Their expertise in motion control and consumer electronics proved remarkably transferable to 3D printing.",
+      "fr": "En août 2020, Ye Tao a réuni quatre collègues ingénieurs — tous anciens de DJI, le fabricant de drones dominant — et fondé Bambu Lab à Shenzhen. Leur expertise en contrôle du mouvement et en électronique grand public s'est révélée remarquablement transférable à l'impression 3D."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "From Drones to Desktop Manufacturing",
+        "fr": "Des drones à la fabrication de bureau"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "Ye Tao",
+         "desc": {
+          "en": "Founder & CEO — PhD in fluid dynamics (Germany); product manager of the DJI Mavic Pro; head of DJI consumer drone dept.",
+          "fr": "Fondateur & PDG — doctorat en dynamique des fluides (Allemagne) ; chef de produit du DJI Mavic Pro ; directeur du département drones grand public de DJI."
+         }
+        },
+        {
+         "title": {
+          "en": "The Team",
+          "fr": "L'équipe"
+         },
+         "desc": {
+          "en": "5 ex-DJI engineers — shared expertise in motion control, sensor integration, and consumer electronics manufacturing.",
+          "fr": "5 anciens ingénieurs de DJI — expertise partagée en contrôle du mouvement, intégration de capteurs et fabrication d'électronique grand public."
+         }
+        },
+        {
+         "title": {
+          "en": "The Vision",
+          "fr": "La vision"
+         },
+         "desc": {
+          "en": "Not just another 3D printer — integrate the best technologies from across the industry into a single, accessible package.",
+          "fr": "Pas seulement une imprimante de plus — intégrer les meilleures technologies du secteur dans un produit unique et accessible."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.1.2",
+     "narration": {
+      "en": "In May 2022, Bambu Lab launched the X1 and X1 Carbon on Kickstarter with audacious claims: CoreXY at 500 millimetres per second, 20,000 millimetres per second squared acceleration, a micro lidar sensor, a 1080p AI camera, and up to 16-color printing with their AMS system. The industry was deeply skeptical.",
+      "fr": "En mai 2022, Bambu Lab a lancé le X1 et le X1 Carbon sur Kickstarter avec des affirmations audacieuses : CoreXY à 500 mm/s, une accélération de 20 000 mm/s², un capteur micro lidar, une caméra IA 1080p, et jusqu'à 16 couleurs avec leur système AMS. Le secteur était profondément sceptique."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Kickstarter That Changed Everything",
+        "fr": "Le Kickstarter qui a tout changé"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "US$7M",
+       "caption": {
+        "en": "raised from 5,575 backers in May 2022 — third-most-funded 3D printing campaign on Kickstarter",
+        "fr": "levés auprès de 5 575 contributeurs en mai 2022 — troisième campagne d'impression 3D la plus financée sur Kickstarter"
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.1.3",
+     "narration": {
+      "en": "The real shock came when Bambu Lab actually delivered. The printers shipped, they worked exactly as advertised, and the 3D printing world was caught flat-footed. For the first time, an ambitious Kickstarter campaign had truly turned the market upside down.",
+      "fr": "Le véritable choc est venu quand Bambu Lab a tenu ses promesses. Les imprimantes ont été livrées et fonctionnaient exactement comme annoncé. Pour la première fois, une campagne Kickstarter ambitieuse avait vraiment renversé le marché."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "They Actually Delivered",
+        "fr": "Ils ont vraiment livré"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Industry expectation",
+         "fr": "Attente du secteur"
+        },
+        "note": {
+         "en": "Kickstarter 3D printers overpromise and underdeliver — like dozens before",
+         "fr": "Les imprimantes 3D Kickstarter promettent trop et livrent trop peu — comme des dizaines avant elles"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Reality",
+         "fr": "Réalité"
+        },
+        "note": {
+         "en": "Printers shipped, worked as claimed, established order genuinely upended",
+         "fr": "Imprimantes livrées, fonctionnant comme annoncé, l'ordre établi véritablement renversé"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.1.4",
+     "narration": {
+      "en": "Bambu Lab's disruption followed the industry's roughly five-to-seven-year cycle: the RepRap movement democratised access around 2009, the Prusa i3 refined kits into accessible machines around 2015, and Bambu Lab's 2022 arrival represented the third wave — combining existing innovations into one polished product.",
+      "fr": "La disruption de Bambu Lab a suivi le cycle d'environ cinq à sept ans du secteur : le mouvement RepRap a démocratisé l'accès vers 2009, la Prusa i3 a transformé les kits en machines accessibles vers 2015, et l'arrivée de Bambu Lab en 2022 a représenté la troisième vague — combinant des innovations existantes en un produit soigné."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "A Historical Disruption Cycle",
+        "fr": "Un cycle de disruption historique"
+       }
+      },
+      {
+       "type": "timeline",
+       "nodes": [
+        {
+         "label": "2009",
+         "text": {
+          "en": "RepRap — open-source movement democratises 3D printing",
+          "fr": "RepRap — le mouvement open source démocratise l'impression 3D"
+         }
+        },
+        {
+         "label": "2015",
+         "text": {
+          "en": "Prusa i3 — kits become refined, accessible machines",
+          "fr": "Prusa i3 — les kits deviennent des machines raffinées et accessibles"
+         }
+        },
+        {
+         "label": "2022",
+         "text": {
+          "en": "Bambu Lab — integrated CoreXY, lidar, AI, AMS in one box",
+          "fr": "Bambu Lab — CoreXY, lidar, IA, AMS intégrés dans un seul produit"
+         }
+        },
+        {
+         "label": "2024",
+         "text": {
+          "en": "CoreXY becomes the new standard; enclosures expected; auto-calibration = table stakes",
+          "fr": "CoreXY devient le nouveau standard ; les caissons sont attendus ; la calibration auto est la norme"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.1.5",
+     "narration": {
+      "en": "Bambu Lab's formula was deliberate: CoreXY kinematics, firmware motion optimisation, active vibration compensation, an enclosed chamber, the AMS multi-material system, a cloud ecosystem, and aggressive pricing — all in one package. Competitors scrambled to catch up, but none matched the tight integration.",
+      "fr": "La formule de Bambu Lab était délibérée : cinématique CoreXY, optimisation du mouvement par firmware, compensation active des vibrations, caisson fermé, système multi-matériaux AMS, écosystème cloud et tarification agressive — le tout dans un seul produit. Les concurrents se sont précipités pour rattraper, mais aucun n'a égalé l'intégration étroite."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Disruption Formula",
+        "fr": "La formule de la disruption"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": "CoreXY",
+         "sub": {
+          "en": "fast kinematics",
+          "fr": "cinématique rapide"
+         }
+        },
+        {
+         "name": {
+          "en": "Vibration comp.",
+          "fr": "Comp. vibrations"
+         },
+         "sub": {
+          "en": "quality at speed",
+          "fr": "qualité à grande vitesse"
+         }
+        },
+        {
+         "name": {
+          "en": "Enclosure",
+          "fr": "Caisson"
+         },
+         "sub": {
+          "en": "engineering filaments",
+          "fr": "filaments d'ingénierie"
+         }
+        },
+        {
+         "name": "AMS",
+         "sub": {
+          "en": "multi-material",
+          "fr": "multi-matériaux"
+         }
+        },
+        {
+         "name": {
+          "en": "Cloud + price",
+          "fr": "Cloud + prix"
+         },
+         "sub": {
+          "en": "accessible ecosystem",
+          "fr": "écosystème accessible"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.1.6",
+     "narration": {
+      "en": "Bambu Lab's core design philosophy is simple: the printer should handle complexity so the user doesn't have to. The X1 Carbon runs automatic calibration routines before every print — bed leveling via lidar, flow rate calibration, vibration compensation mapping, and first-layer inspection — all without user intervention.",
+      "fr": "La philosophie de conception centrale de Bambu Lab est simple : l'imprimante doit gérer la complexité pour que l'utilisateur n'ait pas à le faire. Le X1 Carbon exécute des routines de calibration automatique avant chaque impression — nivellement du plateau par lidar, calibration du débit, cartographie de la compensation des vibrations et inspection de la première couche — sans aucune intervention de l'utilisateur."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Design philosophy",
+        "fr": "Philosophie de conception"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Technology Should Disappear",
+        "fr": "La technologie doit s'effacer"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Auto bed leveling</b> — lidar maps the surface before every print",
+         "fr": "<b>Nivellement automatique</b> — le lidar cartographie la surface avant chaque impression"
+        },
+        {
+         "en": "<b>Flow rate calibration</b> — printer self-adjusts for filament variation",
+         "fr": "<b>Calibration du débit</b> — l'imprimante s'auto-ajuste pour les variations de filament"
+        },
+        {
+         "en": "<b>Vibration compensation</b> — mapped and corrected each session",
+         "fr": "<b>Compensation des vibrations</b> — cartographiée et corrigée à chaque session"
+        },
+        {
+         "en": "<b>Pre-tuned profiles</b> — Bambu Studio covers hundreds of materials",
+         "fr": "<b>Profils pré-réglés</b> — Bambu Studio couvre des centaines de matériaux"
+        },
+        {
+         "en": "<b>RFID filament detection</b> — AMS reads Bambu Lab spools and auto-configures",
+         "fr": "<b>Détection RFID du filament</b> — l'AMS lit les bobines Bambu Lab et se configure automatiquement"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.1.7",
+     "narration": {
+      "en": "Every Bambu Lab printer offers two network modes. Cloud mode gives you the full feature set — remote monitoring via Bambu Handy, MakerWorld integration, and over-the-air firmware updates. LAN mode keeps all data on your local network only, trading ecosystem convenience for privacy.",
+      "fr": "Chaque imprimante Bambu Lab propose deux modes réseau. Le mode Cloud vous donne l'ensemble des fonctionnalités — surveillance à distance via Bambu Handy, intégration MakerWorld et mises à jour firmware par liaison radio. Le mode LAN garde toutes les données sur votre réseau local uniquement, échangeant la commodité de l'écosystème contre la confidentialité."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Cloud Mode vs. LAN Mode",
+        "fr": "Mode Cloud vs. mode LAN"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Cloud Mode (Auto)",
+         "fr": "Mode Cloud (Auto)"
+        },
+        "note": {
+         "en": "Full features: remote monitoring, MakerWorld one-click print, OTA firmware, multi-printer dashboard",
+         "fr": "Toutes les fonctionnalités : surveillance à distance, impression en un clic MakerWorld, firmware OTA, tableau de bord multi-imprimantes"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "LAN Mode",
+         "fr": "Mode LAN"
+        },
+        "note": {
+         "en": "Privacy first: no data leaves your network — but no remote access, no cloud features",
+         "fr": "Confidentialité d'abord : aucune donnée ne quitte votre réseau — mais pas d'accès à distance, pas de fonctionnalités cloud"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.1.8",
+     "narration": {
+      "en": "LAN mode is not a simple privacy boost — it fundamentally limits what your printer can do. You cannot start prints remotely when away from home, and some ecosystem features are simply unavailable. Many users keep Cloud mode for home use while reserving LAN mode for sensitive work projects.",
+      "fr": "Le mode LAN n'est pas un simple renforcement de la confidentialité — il limite fondamentalement les capacités de votre imprimante. Vous ne pouvez pas lancer des impressions à distance lorsque vous êtes absent, et certaines fonctionnalités de l'écosystème sont simplement indisponibles. De nombreux utilisateurs gardent le mode Cloud pour un usage domestique tout en réservant le mode LAN aux projets professionnels sensibles."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "LAN mode is not a simple toggle for enhanced privacy — it fundamentally limits what your printer can do. Consider your actual needs before committing to LAN-only operation.",
+        "fr": "Le mode LAN n'est pas un simple commutateur pour renforcer la confidentialité — il limite fondamentalement les capacités de votre imprimante. Évaluez vos besoins réels avant de vous engager dans une utilisation LAN exclusivement."
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.1.9",
+     "narration": {
+      "en": "MakerWorld is Bambu Lab's model-sharing platform, tightly integrated into Bambu Studio. Unlike generic repositories, it runs a points-based creator economy where designers earn redeemable points based on downloads, prints completed, and community engagement — exchangeable for gift cards at the Bambu Lab store.",
+      "fr": "MakerWorld est la plateforme de partage de modèles de Bambu Lab, étroitement intégrée dans Bambu Studio. Contrairement aux dépôts génériques, elle fonctionne sur une économie créative basée sur les points, où les designers gagnent des points échangeables en fonction des téléchargements, des impressions réalisées et de l'engagement de la communauté — convertibles en cartes-cadeaux dans la boutique Bambu Lab."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "MakerWorld: The Integrated Model Platform",
+        "fr": "MakerWorld : la plateforme de modèles intégrée"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "One-click printing",
+          "fr": "Impression en un clic"
+         },
+         "desc": {
+          "en": "Find a model, click 'Open in Bambu Studio' — loads with designer's settings, supports, and filament profiles",
+          "fr": "Trouvez un modèle, cliquez sur « Ouvrir dans Bambu Studio » — chargé avec les paramètres du designer, supports et profils de filament"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Points economy",
+          "fr": "Économie de points"
+         },
+         "desc": {
+          "en": "Designers earn points from downloads and prints; redeemable for Bambu Lab store gift cards",
+          "fr": "Les designers gagnent des points via les téléchargements et les impressions ; échangeables contre des cartes-cadeaux Bambu Lab"
+         }
+        },
+        {
+         "title": {
+          "en": "Exclusive Model Program",
+          "fr": "Modèles exclusifs"
+         },
+         "desc": {
+          "en": "Bonus rewards for creators who keep models only on MakerWorld; 2025 overhaul curbed fake downloads and boosted originality",
+          "fr": "Récompenses supplémentaires pour les créateurs qui conservent leurs modèles uniquement sur MakerWorld ; la refonte 2025 a réduit les faux téléchargements et favorisé l'originalité"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.1.10",
+     "narration": {
+      "en": "Bambu Lab's closed-source firmware has drawn criticism from a community rooted in open-source culture. In January 2025, a firmware update introduced a mandatory Authorization Control System requiring authentication for firmware upgrades, starting prints, and remote access — sparking significant backlash from users fearing it would block third-party tools.",
+      "fr": "Le firmware à source fermée de Bambu Lab a suscité des critiques d'une communauté ancrée dans la culture open source. En janvier 2025, une mise à jour du firmware a introduit un système de contrôle d'autorisation obligatoire exigeant une authentification pour les mises à jour du firmware, le lancement d'impressions et l'accès à distance — provoquant un important retour de bâton de la part d'utilisateurs craignant le blocage des outils tiers."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Controversy: Closed-Source & Authorization Control",
+        "fr": "Controverse : source fermée et contrôle d'autorisation"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Jan 2025</b> — mandatory Authorization Control System introduced; backlash over blocked third-party tools",
+         "fr": "<b>Jan 2025</b> — système de contrôle d'autorisation obligatoire introduit ; retour de bâton contre le blocage des outils tiers"
+        },
+        {
+         "en": "<b>Response</b> — Bambu Lab added 'Developer Mode' (disables auth checks) and released Bambu Connect",
+         "fr": "<b>Réponse</b> — Bambu Lab a ajouté un « mode développeur » (désactive les vérifications) et publié Bambu Connect"
+        },
+        {
+         "en": "<b>Orca Slicer collaboration</b> — third-party slicers now officially supported",
+         "fr": "<b>Collaboration Orca Slicer</b> — les slicers tiers sont désormais officiellement pris en charge"
+        },
+        {
+         "en": "<b>Tension persists</b> — proprietary integration vs. open-source values remains unresolved",
+         "fr": "<b>La tension persiste</b> — intégration propriétaire vs. valeurs open source reste non résolue"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.1.11",
+     "narration": {
+      "en": "In June 2024, Bambu Lab recalled approximately 12,800 A1 printers in the United States after reports that a heatbed cable could short-circuit when bent, producing sparks and posing electric-shock and fire hazards. The company offered full refunds or free replacement of the heatbed and cable assembly.",
+      "fr": "En juin 2024, Bambu Lab a rappelé environ 12 800 imprimantes A1 aux États-Unis après des signalements selon lesquels un câble du plateau chauffant pouvait se mettre en court-circuit lorsqu'il était plié, produisant des étincelles et présentant des risques de choc électrique et d'incendie. La société a proposé des remboursements intégraux ou le remplacement gratuit du plateau chauffant et du faisceau de câbles."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The A1 Recall (June 2024)",
+        "fr": "Le rappel de l'A1 (juin 2024)"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "12,800",
+       "caption": {
+        "en": "A1 printers recalled in the US — heatbed cable could short-circuit, posing fire and electric-shock hazards",
+        "fr": "imprimantes A1 rappelées aux États-Unis — câble du plateau chauffant pouvant provoquer un court-circuit, risques d'incendie et de choc électrique"
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.1.12",
+     "narration": {
+      "en": "On 31 March 2026, the entire X1 series reached end-of-life and manufacturing ceased. Bambu Lab committed to spare parts and service through 2031, software and firmware bug fixes until 31 May 2027, and security patches until 31 May 2029. The handling underscores the challenge of buying technology from a rapidly evolving company.",
+      "fr": "Le 31 mars 2026, l'ensemble de la série X1 a atteint sa fin de vie et la fabrication a cessé. Bambu Lab s'est engagé à assurer la disponibilité des pièces détachées et du service jusqu'en 2031, des correctifs logiciels et firmware jusqu'au 31 mai 2027, et des correctifs de sécurité jusqu'au 31 mai 2029."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "X1 Series End-of-Life (31 March 2026)",
+        "fr": "Fin de vie de la série X1 (31 mars 2026)"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Support type",
+         "fr": "Type de support"
+        },
+        {
+         "en": "Until",
+         "fr": "Jusqu'à"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Spare parts & service",
+          "fr": "Pièces & service"
+         },
+         "2031"
+        ],
+        [
+         {
+          "en": "Bug fixes & features",
+          "fr": "Correctifs & fonctionnalités"
+         },
+         "31 May 2027"
+        ],
+        [
+         {
+          "en": "Security patches",
+          "fr": "Correctifs sécurité"
+         },
+         "31 May 2029"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.1.13",
+     "narration": {
+      "en": "Let's recap Chapter 1. Bambu Lab was founded in August 2020 by five ex-DJI engineers. Their 2022 Kickstarter raised about 7 million US dollars and they actually delivered. Their strategy was integration over invention — and by 2024, CoreXY, enclosures, and auto-calibration had become industry-wide baseline expectations.",
+      "fr": "Récapitulons le chapitre 1. Bambu Lab a été fondée en août 2020 par cinq anciens ingénieurs de DJI. Leur Kickstarter 2022 a levé environ 7 millions USD et ils ont tenu leurs promesses. Leur stratégie était l'intégration plutôt que l'invention — et d'ici 2024, le CoreXY, les caissons et la calibration automatique étaient devenus des bases attendues dans tout le secteur."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Chapter 1 recap",
+        "fr": "Récapitulatif du chapitre 1"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Key Takeaways",
+        "fr": "Points clés"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Founded Aug 2020</b> by 5 ex-DJI engineers — motion control expertise transferred to 3D printing",
+         "fr": "<b>Fondée en août 2020</b> par 5 anciens de DJI — expertise en contrôle du mouvement transférée à l'impression 3D"
+        },
+        {
+         "en": "<b>Kickstarter 2022</b> — ~US$7M from 5,575 backers; printers actually delivered as promised",
+         "fr": "<b>Kickstarter 2022</b> — ~7 millions USD auprès de 5 575 contributeurs ; imprimantes réellement livrées comme promis"
+        },
+        {
+         "en": "<b>Integration over invention</b> — CoreXY + lidar + AI + AMS in one polished box",
+         "fr": "<b>Intégration plutôt qu'invention</b> — CoreXY + lidar + IA + AMS dans un seul produit soigné"
+        },
+        {
+         "en": "<b>Philosophy</b> — technology should disappear; auto-calibration before every print",
+         "fr": "<b>Philosophie</b> — la technologie doit s'effacer ; calibration automatique avant chaque impression"
+        },
+        {
+         "en": "<b>Controversies</b> — closed-source firmware, Jan 2025 Auth Control System, A1 recall, X1 EOL",
+         "fr": "<b>Controverses</b> — firmware fermé, système de contrôle d'autorisation jan 2025, rappel A1, EOL série X1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 2,
+   "title": {
+    "en": "Printer Lineup Deep Dive",
+    "fr": "Exploration approfondie de la gamme"
+   },
+   "scenes": [
+    {
+     "id": "3.2.0",
+     "narration": {
+      "en": "Chapter 2. Bambu Lab's portfolio spans four distinct series, each targeting a different user and price point. From the entry-level A1 Mini to the modular H2D manufacturing system, we'll break down every printer — specs, strengths, and who it's really for.",
+      "fr": "Chapitre 2. La gamme de Bambu Lab couvre quatre séries distinctes, ciblant chacune un utilisateur et une tranche de prix différents. De l'A1 Mini d'entrée de gamme au système de fabrication modulaire H2D, nous analysons chaque imprimante — caractéristiques, atouts et à qui elle s'adresse vraiment."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 3 · Chapter 2",
+        "fr": "Module 3 · Chapitre 2"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Printer Lineup Deep Dive",
+        "fr": "Exploration approfondie de la gamme"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Four series, eleven models, one price range from $299 to $1,899+. Understanding the differences between these machines is essential for making an informed purchase decision.",
+        "fr": "Quatre séries, onze modèles, une plage de prix de 299 $ à 1 899 $+. Comprendre les différences entre ces machines est essentiel pour prendre une décision d'achat éclairée."
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.2.1",
+     "narration": {
+      "en": "Before diving into individual models, let's establish the two fundamental kinematic architectures in Bambu Lab's lineup. CoreXY, used in the X, P, and H series, moves only the lightweight toolhead in X and Y, enabling 20,000 millimetres per second squared acceleration. Bed-slinger kinematics, used in the A series, move the heavy bed on Y, limiting acceleration to 10,000 millimetres per second squared.",
+      "fr": "Avant d'examiner les modèles individuels, établissons les deux architectures cinématiques fondamentales de la gamme Bambu Lab. Le CoreXY, utilisé dans les séries X, P et H, déplace uniquement la tête légère en X et Y, permettant une accélération de 20 000 mm/s². La cinématique bed-slinger, utilisée dans la série A, déplace le plateau lourd en Y, limitant l'accélération à 10 000 mm/s²."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "CoreXY vs. Bed-Slinger",
+        "fr": "CoreXY vs. Bed-Slinger"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "bedslinger"
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Factor",
+         "fr": "Facteur"
+        },
+        {
+         "en": "CoreXY (X, P, H)",
+         "fr": "CoreXY (X, P, H)"
+        },
+        {
+         "en": "Bed-Slinger (A)",
+         "fr": "Bed-Slinger (A)"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Moving mass",
+          "fr": "Masse en mouvement"
+         },
+         {
+          "en": "Toolhead only",
+          "fr": "Tête uniquement"
+         },
+         {
+          "en": "Heavy bed assembly",
+          "fr": "Ensemble plateau lourd"
+         }
+        ],
+        [
+         {
+          "en": "Acceleration",
+          "fr": "Accélération"
+         },
+         "20,000 mm/s²",
+         "10,000 mm/s²"
+        ],
+        [
+         {
+          "en": "Quality at speed",
+          "fr": "Qualité à grande vitesse"
+         },
+         {
+          "en": "Less ringing/ghosting",
+          "fr": "Moins de rebonds/ghosting"
+         },
+         {
+          "en": "More vibration artifacts",
+          "fr": "Plus d'artefacts de vibration"
+         }
+        ],
+        [
+         {
+          "en": "Best for",
+          "fr": "Idéal pour"
+         },
+         {
+          "en": "Speed, engineering materials",
+          "fr": "Vitesse, matériaux d'ingénierie"
+         },
+         {
+          "en": "Beginners, PLA/PETG",
+          "fr": "Débutants, PLA/PETG"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.2.2",
+     "narration": {
+      "en": "The X1 Carbon is the printer that started it all. Its carbon fiber reinforced rails reduce moving mass, enabling 500 millimetres per second and the precision to maintain quality at those speeds. It ships with a hardened steel nozzle rated to 300 degrees Celsius and a heated bed reaching 120 degrees Celsius.",
+      "fr": "Le X1 Carbon est l'imprimante qui a tout lancé. Ses rails renforcés en fibre de carbone réduisent la masse en mouvement, permettant 500 mm/s et la précision nécessaire pour maintenir la qualité à ces vitesses. Il est livré avec une buse en acier trempé évaluée à 300°C et un plateau chauffant atteignant 120°C."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "X Series — the flagship",
+        "fr": "Série X — le haut de gamme"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "X1 Carbon: The Original Flagship",
+        "fr": "X1 Carbon : le produit phare d'origine"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Speed",
+          "fr": "Vitesse"
+         },
+         "desc": {
+          "en": "500 mm/s, 20,000 mm/s² — carbon fiber rails reduce toolhead mass",
+          "fr": "500 mm/s, 20 000 mm/s² — rails en fibre de carbone réduisent la masse de la tête"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Sensor suite",
+          "fr": "Suite de capteurs"
+         },
+         "desc": {
+          "en": "Micro lidar (7 μm) + 1080p AI camera — auto bed leveling, flow calibration, spaghetti detection",
+          "fr": "Micro lidar (7 μm) + caméra IA 1080p — nivellement automatique, calibration du débit, détection de spaghetti"
+         }
+        },
+        {
+         "title": {
+          "en": "Chamber",
+          "fr": "Caisson"
+         },
+         "desc": {
+          "en": "Passive heating, ~45–50°C during ABS/ASA — sufficient for most engineering materials in moderate ambient temps",
+          "fr": "Chauffage passif, ~45–50°C pendant ABS/ASA — suffisant pour la plupart des matériaux d'ingénierie à températures ambiantes modérées"
+         }
+        },
+        {
+         "title": "EOL",
+         "desc": {
+          "en": "31 March 2026 — spare parts guaranteed through 2031",
+          "fr": "31 mars 2026 — pièces détachées garanties jusqu'en 2031"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.2.3",
+     "narration": {
+      "en": "The X1E is the enterprise variant. It adds active chamber heating to 60 degrees Celsius with dedicated elements, a 320-degree hotend for high-temperature materials, triple-stage air filtration, wired Ethernet, WPA2-Enterprise Wi-Fi, and physical network kill switches. Like the rest of the X1 series, it reached end-of-life on 31 March 2026.",
+      "fr": "Le X1E est la variante entreprise. Il ajoute un chauffage actif du caisson jusqu'à 60°C avec des éléments dédiés, un hotend à 320°C pour les matériaux haute température, une filtration de l'air en triple étage, un Ethernet filaire, un Wi-Fi WPA2-Enterprise et des interrupteurs physiques d'isolation réseau. Comme le reste de la série X1, il a atteint sa fin de vie le 31 mars 2026."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "X1E: Enterprise Variant",
+        "fr": "X1E : variante entreprise"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Active chamber heating</b> — dedicated elements reach 60°C regardless of ambient temperature",
+         "fr": "<b>Chauffage actif du caisson</b> — éléments dédiés atteignent 60°C quelle que soit la température ambiante"
+        },
+        {
+         "en": "<b>320°C hotend</b> — handles high-temp materials beyond the X1C's range",
+         "fr": "<b>Hotend à 320°C</b> — gère les matériaux haute température au-delà de la plage du X1C"
+        },
+        {
+         "en": "<b>Triple air filtration</b> + Ethernet + WPA2-Enterprise + network kill switches",
+         "fr": "<b>Triple filtration de l'air</b> + Ethernet + WPA2-Enterprise + interrupteurs réseau physiques"
+        },
+        {
+         "en": "<b>EOL shared with X1C</b> — bug fixes until 31 May 2027; security until 31 May 2029",
+         "fr": "<b>EOL partagée avec le X1C</b> — correctifs jusqu'au 31 mai 2027 ; sécurité jusqu'au 31 mai 2029"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.2.4",
+     "narration": {
+      "en": "Announced on 14 April 2026, the X2D brings the H2D's headline dual-nozzle feature down to an X1-class body at roughly half the price. Both nozzles ride on a single shared toolhead — the left uses direct-drive and the right uses Bowden — enabling clean support removal by printing supports in a breakaway material.",
+      "fr": "Annoncé le 14 avril 2026, le X2D reprend la fonctionnalité phare de double buse du H2D dans un châssis de classe X1 à environ la moitié du prix. Les deux buses sont montées sur une seule tête partagée — la gauche en direct-drive et la droite en Bowden — permettant le retrait propre des supports en les imprimant dans un matériau cassant."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "X2D — announced April 2026",
+        "fr": "X2D — annoncé avril 2026"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "X2D: Dual Extrusion for the Rest of Us",
+        "fr": "X2D : la double extrusion accessible à tous"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "H2D IDEX",
+         "fr": "H2D IDEX"
+        },
+        "note": {
+         "en": "Fully independent dual nozzles — complex, $1,899+",
+         "fr": "Doubles buses entièrement indépendantes — complexe, 1 899 $+"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "X2D shared toolhead",
+         "fr": "X2D tête partagée"
+        },
+        "note": {
+         "en": "Left: direct-drive; Right: Bowden — clean breakaway supports, $649/$899 combo",
+         "fr": "Gauche : direct-drive ; Droite : Bowden — supports cassants propres, 649 $/899 $ combo"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.2.5",
+     "narration": {
+      "en": "The X2D specs are impressive for its price. Up to 1,000 millimetres per second with a Vision Encoder maintaining 50-micron positioning accuracy, a 65-degree Celsius active heated chamber, 3-stage air filtration under 50 decibels in silent mode, AMS 2 Pro support for up to 25 colors, and a 120-degree Celsius heatbed.",
+      "fr": "Les caractéristiques du X2D sont impressionnantes pour son prix. Jusqu'à 1 000 mm/s avec un Vision Encoder maintenant une précision de positionnement de 50 microns, un caisson chauffant actif à 65°C, une filtration en 3 étages à moins de 50 dB en mode silencieux, une compatibilité AMS 2 Pro pour jusqu'à 25 couleurs, et un plateau chauffant à 120°C."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "X2D Specifications",
+        "fr": "Caractéristiques du X2D"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Spec",
+         "fr": "Caractéristique"
+        },
+        {
+         "en": "Value",
+         "fr": "Valeur"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Build volume",
+          "fr": "Volume d'impression"
+         },
+         {
+          "en": "256×256×260 mm (235.5 mm dual)",
+          "fr": "256×256×260 mm (235,5 mm double)"
+         }
+        ],
+        [
+         {
+          "en": "Max speed",
+          "fr": "Vitesse max"
+         },
+         "1,000 mm/s"
+        ],
+        [
+         {
+          "en": "Chamber",
+          "fr": "Caisson"
+         },
+         {
+          "en": "Active, 65°C",
+          "fr": "Actif, 65°C"
+         }
+        ],
+        [
+         {
+          "en": "Precision",
+          "fr": "Précision"
+         },
+         {
+          "en": "50 μm Vision Encoder",
+          "fr": "Vision Encoder 50 μm"
+         }
+        ],
+        [
+         {
+          "en": "Price",
+          "fr": "Prix"
+         },
+         "$649 / $899 Combo"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.2.6",
+     "narration": {
+      "en": "The P series brought CoreXY speed to a broader audience at more accessible prices. The P1P was the original open-frame option — a modder's dream at around $599, sharing the X1's motion system but without the touchscreen, lidar, or AI camera. It reached end-of-life in 2026.",
+      "fr": "La série P a mis la vitesse CoreXY à la portée d'un public plus large à des prix plus accessibles. Le P1P était l'option à châssis ouvert d'origine — le rêve du bricoleur à environ 599 $, partageant le système de mouvement du X1 mais sans écran tactile, ni lidar, ni caméra IA. Il a atteint sa fin de vie en 2026."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "P Series — the workhorses",
+        "fr": "Série P — les machines de labeur"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "P1P: The Original Budget CoreXY",
+        "fr": "P1P : le CoreXY abordable d'origine"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "P1P",
+        "note": {
+         "en": "Open frame, no lidar/camera — modder-friendly, easy to add custom enclosures. EOL 2026.",
+         "fr": "Châssis ouvert, sans lidar/caméra — idéal pour la modification, facile d'ajouter des caissons personnalisés. EOL 2026."
+        }
+       },
+       "right": {
+        "title": "P1S",
+        "note": {
+         "en": "Enclosed from factory: carbon filter, aux cooling, better thermal stability — the sweet spot for most users",
+         "fr": "Fermé d'usine : filtre à charbon actif, refroidissement auxiliaire, meilleure stabilité thermique — le meilleur compromis pour la plupart"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.2.7",
+     "narration": {
+      "en": "The P1S is essentially an enclosed P1P from the factory. It prints at 500 millimetres per second with 20,000 millimetres per second squared acceleration — same as the X1C — but without the lidar, AI camera, or premium sensors. For many users, it hits the sweet spot: CoreXY speed, enclosed chamber for ABS and ASA, and AMS compatibility at roughly half the X1C's price.",
+      "fr": "Le P1S est essentiellement un P1P entièrement encapsulé d'usine. Il imprime à 500 mm/s avec 20 000 mm/s² d'accélération — identique au X1C — mais sans le lidar, la caméra IA ou les capteurs premium. Pour de nombreux utilisateurs, il représente le meilleur compromis : vitesse CoreXY, caisson fermé pour ABS et ASA, et compatibilité AMS à environ la moitié du prix du X1C."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "P1S: The Sweet Spot",
+        "fr": "P1S : le meilleur compromis"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "The P1S delivers X1C-level motion performance (500 mm/s, 20,000 mm/s²) with enclosure and AMS support — at roughly half the X1C's price. The difference: no lidar and no AI camera.",
+        "fr": "Le P1S offre les performances de mouvement du X1C (500 mm/s, 20 000 mm/s²) avec caisson et compatibilité AMS — à environ la moitié du prix du X1C. La différence : pas de lidar ni de caméra IA."
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.2.8",
+     "narration": {
+      "en": "Launched in October 2025, the P2S is a significant generational leap over the P1S. It features a 5-inch colour touchscreen, adaptive airflow cooling, a servo DynaSense extruder with about 70 percent more extrusion force and built-in clog detection, speeds up to 600 millimetres per second, and dual-band Wi-Fi. The Combo ships with AMS 2 Pro, which adds active filament drying.",
+      "fr": "Lancé en octobre 2025, le P2S représente un bond générationnel significatif par rapport au P1S. Il est équipé d'un écran tactile couleur de 5 pouces, d'un flux d'air adaptatif, d'un extrudeur servo DynaSense avec environ 70 % de force d'extrusion supplémentaire et une détection de bouchon intégrée, de vitesses jusqu'à 600 mm/s et d'un Wi-Fi bibande. Le Combo est livré avec l'AMS 2 Pro, qui ajoute le séchage actif du filament."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "P2S: The 2025 Refresh",
+        "fr": "P2S : la mise à jour 2025"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "DynaSense extruder",
+          "fr": "Extrudeur DynaSense"
+         },
+         "desc": {
+          "en": "PMSM servo motor — ~70% more extrusion force, built-in clog detection",
+          "fr": "Moteur servo PMSM — ~70 % de force d'extrusion supplémentaire, détection de bouchon intégrée"
+         },
+         "highlight": true
+        },
+        {
+         "title": "600 mm/s",
+         "desc": {
+          "en": "Top speed (up from 500 mm/s), at 20,000 mm/s² acceleration, plus auto flow dynamics calibration",
+          "fr": "Vitesse max (contre 500 mm/s), à 20 000 mm/s² d'accélération, plus calibration automatique de la dynamique de flux"
+         }
+        },
+        {
+         "title": {
+          "en": "AMS 2 Pro drying",
+          "fr": "Séchage AMS 2 Pro"
+         },
+         "desc": {
+          "en": "Active filament drying — essential for moisture-sensitive materials like nylon and PETG",
+          "fr": "Séchage actif du filament — essentiel pour les matériaux sensibles à l'humidité comme le nylon et le PETG"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.2.9",
+     "narration": {
+      "en": "A quick warning on the speed illusion. While the P2S advertises 600 millimetres per second, real-world sustained speeds are limited by your hotend's Maximum Volumetric Speed — typically 15 to 25 cubic millimetres per second with a standard 0.4-millimetre nozzle. At 0.2-millimetre layer height and 0.45-millimetre line width, you're already at 27 cubic millimetres per second at just 300 millimetres per second.",
+      "fr": "Une mise en garde rapide sur l'illusion de la vitesse. Bien que le P2S affiche 600 mm/s, les vitesses soutenues en conditions réelles sont limitées par la vitesse volumétrique maximale du hotend — typiquement 15 à 25 mm³/s avec une buse standard de 0,4 mm. À une hauteur de couche de 0,2 mm et une largeur de ligne de 0,45 mm, vous atteignez déjà 27 mm³/s à seulement 300 mm/s."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "The speed illusion: advertised top speeds require specific conditions. Real print times depend on Maximum Volumetric Speed (MVS), acceleration, and part geometry — not just the headline number. A standard 0.4 mm nozzle hits its MVS well before 600 mm/s at typical layer settings.",
+        "fr": "L'illusion de la vitesse : les vitesses maximales affichées nécessitent des conditions spécifiques. Les temps d'impression réels dépendent de la vitesse volumétrique maximale (MVS), de l'accélération et de la géométrie de la pièce — pas seulement du chiffre mis en avant. Une buse standard de 0,4 mm atteint sa MVS bien avant 600 mm/s avec des réglages de couche typiques."
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.2.10",
+     "narration": {
+      "en": "For most buyers, the real decision between enclosed CoreXY printers narrows to three machines. The P1S is the proven value pick — CoreXY speed with enclosure and AMS at the lowest price. The P2S adds the DynaSense extruder, 600 millimetres per second, and AMS 2 Pro with filament drying. The X2D adds a second nozzle for clean dual-material and breakaway-support printing.",
+      "fr": "Pour la plupart des acheteurs, le vrai choix entre les imprimantes CoreXY fermées se réduit à trois machines. Le P1S est le choix valeur éprouvé — vitesse CoreXY avec caisson et AMS au prix le plus bas. Le P2S ajoute l'extrudeur DynaSense, 600 mm/s et l'AMS 2 Pro avec séchage du filament. Le X2D ajoute une deuxième buse pour l'impression bi-matière propre et les supports cassants."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "P1S vs. P2S vs. X2D: Which Workhorse?",
+        "fr": "P1S vs. P2S vs. X2D : quelle machine choisir ?"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "P1S",
+         "desc": {
+          "en": "Best value — 500 mm/s, enclosure, AMS. Choose when budget is the priority.",
+          "fr": "Meilleur rapport qualité-prix — 500 mm/s, caisson, AMS. À choisir quand le budget est la priorité."
+         }
+        },
+        {
+         "title": "P2S",
+         "desc": {
+          "en": "Best single-nozzle — 600 mm/s, DynaSense extruder, AMS 2 Pro with filament drying. For moisture-sensitive materials.",
+          "fr": "Meilleure mono-buse — 600 mm/s, extrudeur DynaSense, AMS 2 Pro avec séchage. Pour les matériaux sensibles à l'humidité."
+         },
+         "highlight": true
+        },
+        {
+         "title": "X2D",
+         "desc": {
+          "en": "Best for dual materials — second nozzle enables clean breakaway supports. For PETG/ABS parts needing supports.",
+          "fr": "Meilleure pour les doubles matériaux — la deuxième buse permet des supports cassants propres. Pour les pièces PETG/ABS nécessitant des supports."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.2.11",
+     "narration": {
+      "en": "The A series trades CoreXY speed for affordability and simplicity, using traditional bed-slinger kinematics. The A1 Mini is Bambu Lab's most accessible printer: a 180 by 180 by 180 millimetre build volume, $299 MSRP, and remarkably quiet at about 49 decibels in silent mode — genuinely apartment-friendly. However, its small build volume and open frame limit it to PLA, PETG, and TPU.",
+      "fr": "La série A échange la vitesse CoreXY contre l'accessibilité et la simplicité, utilisant une cinématique bed-slinger traditionnelle. L'A1 Mini est l'imprimante la plus accessible de Bambu Lab : un volume d'impression de 180×180×180 mm, un MSRP de 299 $, et remarquablement silencieuse à environ 49 dB en mode silencieux — réellement adaptée aux appartements. Son volume d'impression réduit et son châssis ouvert la limitent cependant au PLA, PETG et TPU."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "A Series — entry point",
+        "fr": "Série A — point d'entrée"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "A1 Mini: Accessible and Quiet",
+        "fr": "A1 Mini : accessible et silencieuse"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Spec",
+         "fr": "Caractéristique"
+        },
+        {
+         "en": "Value",
+         "fr": "Valeur"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Build volume",
+          "fr": "Volume d'impression"
+         },
+         "180×180×180 mm"
+        ],
+        [
+         {
+          "en": "Price (MSRP)",
+          "fr": "Prix (MSRP)"
+         },
+         "$299 (as low as $219 in sales)"
+        ],
+        [
+         {
+          "en": "Acceleration",
+          "fr": "Accélération"
+         },
+         "10,000 mm/s²"
+        ],
+        [
+         {
+          "en": "Noise (silent mode)",
+          "fr": "Bruit (mode silencieux)"
+         },
+         "~49 dB"
+        ],
+        [
+         {
+          "en": "Materials",
+          "fr": "Matériaux"
+         },
+         "PLA, PETG, TPU only"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.2.12",
+     "narration": {
+      "en": "The A1 resolves the Mini's main limitation with a full 256 by 256 by 256 millimetre build area, a 3.5-inch touchscreen, quick-swap magnetic nozzles, and AMS Lite compatibility at $399 MSRP. However, the A1 suffered a significant setback: in 2024, around 12,800 units were recalled due to a heatbed cable flaw that could cause short-circuiting. Bambu Lab offered full refunds or free repairs, and the issue is resolved in current production.",
+      "fr": "L'A1 résout la principale limitation de la Mini avec une surface d'impression de 256×256×256 mm, un écran tactile de 3,5 pouces, des buses magnétiques à échange rapide et une compatibilité AMS Lite à 399 $ MSRP. Cependant, l'A1 a subi un contretemps important : en 2024, environ 12 800 unités ont été rappelées en raison d'un défaut du câble du plateau chauffant pouvant provoquer un court-circuit. Bambu Lab a proposé des remboursements intégraux ou des réparations gratuites, et le problème est résolu dans la production actuelle."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "A1: More Volume, Same Simplicity",
+        "fr": "A1 : plus de volume, même simplicité"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "A1 Mini",
+        "note": {
+         "en": "180³ mm — tight budget, apartment-friendly. Open frame: PLA/PETG/TPU only.",
+         "fr": "180³ mm — petit budget, adapté aux appartements. Châssis ouvert : PLA/PETG/TPU uniquement."
+        }
+       },
+       "right": {
+        "title": "A1",
+        "note": {
+         "en": "256³ mm — larger volume, 3.5\" touchscreen, magnetic nozzles, AMS Lite. Recalled 2024 (resolved in new units).",
+         "fr": "256³ mm — volume plus grand, écran 3,5\", buses magnétiques, AMS Lite. Rappelé en 2024 (résolu dans les nouvelles unités)."
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.2.13",
+     "narration": {
+      "en": "The H2 series, launched in 2025, represents Bambu Lab's push into professional manufacturing territory. These are not just 3D printers — they are multi-tool manufacturing platforms with laser engraving and cutting capabilities alongside 3D printing.",
+      "fr": "La série H2, lancée en 2025, représente la poussée de Bambu Lab vers le territoire de la fabrication professionnelle. Ce ne sont pas seulement des imprimantes 3D — ce sont des plateformes de fabrication multi-outils avec des capacités de gravure et de découpe laser en plus de l'impression 3D."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "H2 Series — modular manufacturing",
+        "fr": "Série H2 — fabrication modulaire"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "H2D: Dual-Extruder Flagship",
+        "fr": "H2D : produit phare à double extrudeur"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "IDEX dual nozzles",
+          "fr": "Doubles buses IDEX"
+         },
+         "desc": {
+          "en": "Fully independent nozzles — true dual-material without purge waste",
+          "fr": "Buses entièrement indépendantes — vrai bi-matière sans purge excessive"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Build volume",
+          "fr": "Volume d'impression"
+         },
+         "desc": {
+          "en": "350×320×325 mm single-nozzle, 300 mm wide with both active; 1,000 mm/s; 350°C hotend; 65°C chamber",
+          "fr": "350×320×325 mm en mono-buse, 300 mm de large avec les deux actives ; 1 000 mm/s ; hotend 350°C ; caisson 65°C"
+         }
+        },
+        {
+         "title": {
+          "en": "Laser modules",
+          "fr": "Modules laser"
+         },
+         "desc": {
+          "en": "10W and 40W laser for engraving and cutting; plus a cutting module — true multi-function platform",
+          "fr": "Laser 10W et 40W pour la gravure et la découpe ; plus un module de découpe — véritable plateforme multifonction"
+         }
+        },
+        {
+         "title": {
+          "en": "25 colors",
+          "fr": "25 couleurs"
+         },
+         "desc": {
+          "en": "4×AMS 2 Pro + 8×AMS HT + 1 external spool on second hotend",
+          "fr": "4×AMS 2 Pro + 8×AMS HT + 1 bobine externe sur le deuxième hotend"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.2.14",
+     "narration": {
+      "en": "Alongside the H2D, Bambu Lab offers two more H2 variants. The H2S is the single-nozzle pragmatist's choice with an even larger 340 by 320 by 340 millimetre build volume and the same 65-degree chamber, priced from $1,249. The H2C features the Vortek induction hotend-change system — the printer swaps hotends automatically during a print from a set of eight, enabling multiple materials with virtually no purge waste.",
+      "fr": "Aux côtés du H2D, Bambu Lab propose deux autres variantes H2. Le H2S est le choix du pragmatique à buse unique avec un volume d'impression encore plus grand de 340×320×340 mm et le même caisson à 65°C, à partir de 1 249 $. Le H2C est doté du système de changement de hotend Vortek par induction — l'imprimante échange les hotends automatiquement pendant l'impression parmi un jeu de huit, permettant plusieurs matériaux avec pratiquement aucune purge."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "H2S and H2C: Two More Variants",
+        "fr": "H2S et H2C : deux variantes supplémentaires"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "H2S",
+        "note": {
+         "en": "Single nozzle, largest build volume (340×320×340 mm), laser-ready, 65°C chamber — $1,249–$1,499",
+         "fr": "Buse unique, plus grand volume (340×320×340 mm), compatible laser, caisson 65°C — 1 249–1 499 $"
+        }
+       },
+       "right": {
+        "title": "H2C",
+        "note": {
+         "en": "Vortek induction hotend-change system — 8 swappable hotends, each dedicated to one material, minimal purge — $1,699+",
+         "fr": "Système de changement Vortek par induction — 8 hotends interchangeables, chacun dédié à un matériau, purge minimale — 1 699 $+"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.2.15",
+     "narration": {
+      "en": "A laser warning: the H2D's 40-watt laser module can permanently damage eyesight and start fires. Never leave the machine unattended during laser operations, ensure proper ventilation, and use the included protective enclosure. Treat it with the respect you would give any industrial laser equipment.",
+      "fr": "Un avertissement laser : le module laser 40W du H2D peut endommager définitivement la vue et déclencher des incendies. Ne laissez jamais la machine sans surveillance pendant les opérations laser, assurez une ventilation adéquate, et utilisez l'enclosure de protection fournie. Traitez-le avec le respect que vous accorderiez à tout équipement laser industriel."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "The H2D's laser modules (10W/40W) require serious safety precautions. Never leave the machine unattended during laser operations, ensure ventilation, use the protective enclosure. A 40W laser can permanently damage eyesight and start fires.",
+        "fr": "Les modules laser du H2D (10W/40W) nécessitent de sérieuses précautions de sécurité. Ne laissez jamais la machine sans surveillance pendant les opérations laser, assurez la ventilation, utilisez l'enclosure de protection. Un laser de 40W peut endommager définitivement la vue et déclencher des incendies."
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.2.16",
+     "narration": {
+      "en": "Let's recap Chapter 2. Bambu Lab's lineup spans four series: A for entry-level simplicity using bed-slinger kinematics, P for workhorses with CoreXY speed at accessible prices, X for sensor-rich flagships, and H2 for professional multi-tool manufacturing. The P1S and P2S hit the sweet spot for most users, while the X2D bridges the gap between workhorse and pro with its second nozzle.",
+      "fr": "Récapitulons le chapitre 2. La gamme de Bambu Lab couvre quatre séries : A pour la simplicité d'entrée de gamme avec la cinématique bed-slinger, P pour les machines de labeur CoreXY à prix accessibles, X pour les produits phares riches en capteurs, et H2 pour la fabrication professionnelle multi-outils. Le P1S et le P2S représentent le meilleur compromis pour la plupart des utilisateurs, tandis que le X2D fait le pont entre la série de labeur et la gamme pro avec sa deuxième buse."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Chapter 2 recap",
+        "fr": "Récapitulatif du chapitre 2"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Key Takeaways",
+        "fr": "Points clés"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>A series</b> — bed-slinger, 10,000 mm/s², open frame; PLA/PETG/TPU only ($299–$399)",
+         "fr": "<b>Série A</b> — bed-slinger, 10 000 mm/s², châssis ouvert ; PLA/PETG/TPU uniquement (299–399 $)"
+        },
+        {
+         "en": "<b>P series</b> — CoreXY, 20,000 mm/s², enclosed; P1S = value, P2S = 2025 refresh with drying ($699+)",
+         "fr": "<b>Série P</b> — CoreXY, 20 000 mm/s², fermé ; P1S = valeur, P2S = mise à jour 2025 avec séchage (699 $+)"
+        },
+        {
+         "en": "<b>X series</b> — micro lidar + AI camera; X1C/X1E EOL March 2026; X2D = dual nozzle at half the H2D price",
+         "fr": "<b>Série X</b> — micro lidar + caméra IA ; X1C/X1E EOL mars 2026 ; X2D = double buse à la moitié du prix du H2D"
+        },
+        {
+         "en": "<b>H2 series</b> — 1,000 mm/s, 350°C, 65°C chamber, laser modules; H2D IDEX, H2S large volume, H2C Vortek swap",
+         "fr": "<b>Série H2</b> — 1 000 mm/s, 350°C, caisson 65°C, modules laser ; H2D IDEX, H2S grand volume, H2C échange Vortek"
+        },
+        {
+         "en": "<b>Speed illusion</b> — real print time depends on MVS, acceleration, geometry — not just top speed",
+         "fr": "<b>Illusion de la vitesse</b> — le temps d'impression réel dépend de la MVS, de l'accélération, de la géométrie — pas seulement de la vitesse max"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 3,
+   "title": {
+    "en": "Key Technologies",
+    "fr": "Technologies clés"
+   },
+   "scenes": [
+    {
+     "id": "3.3.0",
+     "narration": {
+      "en": "Chapter 3. Bambu Lab printers are distinguished not by any single technology but by the integration of multiple systems working together. We'll break down the five key technologies: active vibration compensation, micro lidar, AI camera monitoring, heated chamber engineering, and the quick-swap build plate system.",
+      "fr": "Chapitre 3. Les imprimantes Bambu Lab se distinguent non pas par une technologie unique mais par l'intégration de plusieurs systèmes fonctionnant ensemble. Nous analysons les cinq technologies clés : la compensation active des vibrations, le micro lidar, la surveillance par caméra IA, l'ingénierie du caisson chauffant, et le système de plateau d'impression à échange rapide."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 3 · Chapter 3",
+        "fr": "Module 3 · Chapitre 3"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Key Technologies",
+        "fr": "Technologies clés"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Five interlocking systems — not one, but all of them together — are what make the Bambu Lab experience feel effortless. Remove any one piece and the experience degrades.",
+        "fr": "Cinq systèmes imbriqués — non pas un seul, mais tous ensemble — font que l'expérience Bambu Lab semble sans effort. Supprimez l'un de ces éléments et l'expérience se dégrade."
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.3.1",
+     "narration": {
+      "en": "When a 3D printer's toolhead accelerates to 500 millimetres per second and decelerates around a corner, mechanical vibrations ripple through the frame. On a conventional printer, these vibrations cause ringing artifacts — visible ripples on the print surface that follow sharp edges and direction changes. The faster you print, the worse the ringing becomes.",
+      "fr": "Lorsque la tête d'impression d'une imprimante 3D accélère à 500 mm/s puis décélère dans un virage, des vibrations mécaniques se propagent à travers le châssis. Sur une imprimante conventionnelle, ces vibrations causent des artefacts de rebond — des ondulations visibles sur la surface d'impression qui suivent les arêtes vives et les changements de direction. Plus vous imprimez vite, plus le rebond est prononcé."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Technology 1 of 5",
+        "fr": "Technologie 1 sur 5"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Active Vibration Compensation",
+        "fr": "Compensation active des vibrations"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Without compensation",
+         "fr": "Sans compensation"
+        },
+        "note": {
+         "en": "Ringing / ghosting — ripples on surface at every sharp edge and direction change; worsens with speed",
+         "fr": "Rebonds / ghosting — ondulations sur la surface à chaque arête et changement de direction ; s'aggrave avec la vitesse"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "With Bambu Lab compensation",
+         "fr": "Avec compensation Bambu Lab"
+        },
+        "note": {
+         "en": "Accelerometer maps machine vibrations; firmware applies inverse motion — ripples cancelled at 500 mm/s",
+         "fr": "L'accéléromètre cartographie les vibrations ; le firmware applique des mouvements inverses — ondulations annulées à 500 mm/s"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.3.2",
+     "narration": {
+      "en": "Active vibration compensation works like noise-canceling headphones but for mechanical vibrations. An accelerometer mounted on the toolhead measures vibration patterns across the build surface during an automated calibration routine. The firmware builds a compensation map and uses it during printing to actively cancel vibrations through micro-adjustments to the toolhead path.",
+      "fr": "La compensation active des vibrations fonctionne comme des écouteurs à réduction de bruit active, mais pour les vibrations mécaniques. Un accéléromètre monté sur la tête mesure les schémas de vibration sur toute la surface lors d'une routine de calibration automatique. Le firmware établit une cartographie de compensation et l'utilise pendant l'impression pour annuler activement les vibrations par des micro-ajustements de la trajectoire de la tête."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "How the Compensation Works",
+        "fr": "Comment fonctionne la compensation"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Calibrate",
+          "fr": "Calibrer"
+         },
+         "sub": {
+          "en": "Accelerometer maps vibrations across build surface",
+          "fr": "L'accéléromètre cartographie les vibrations sur la surface"
+         }
+        },
+        {
+         "name": {
+          "en": "Analyse",
+          "fr": "Analyser"
+         },
+         "sub": {
+          "en": "Firmware builds machine-specific vibration profile",
+          "fr": "Le firmware construit un profil de vibration spécifique"
+         }
+        },
+        {
+         "name": {
+          "en": "Cancel",
+          "fr": "Annuler"
+         },
+         "sub": {
+          "en": "Inverse motion micro-adjustments during printing",
+          "fr": "Micro-ajustements de mouvement inverses pendant l'impression"
+         }
+        },
+        {
+         "name": {
+          "en": "Result",
+          "fr": "Résultat"
+         },
+         "sub": {
+          "en": "500 mm/s quality comparable to slow conventional printer",
+          "fr": "Qualité à 500 mm/s comparable à une imprimante conventionnelle lente"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.3.3",
+     "narration": {
+      "en": "Vibration compensation is not set-it-and-forget-it. The calibration should be re-run after firmware updates, mechanical maintenance like belt tensioning, or if you notice the printer has been physically moved or has settled. The vibration profile is specific to each machine's individual mechanical state. The A1 series also runs compensation, but it's less effective because the moving bed generates harder-to-compensate patterns than CoreXY's lightweight toolhead.",
+      "fr": "La compensation des vibrations n'est pas un réglage configuré et oublié. La calibration doit être relancée après les mises à jour du firmware, la maintenance mécanique comme la tension des courroies, ou si vous constatez que l'imprimante a été physiquement déplacée. Le profil de vibration est spécifique à l'état mécanique individuel de chaque machine. La série A1 exécute également la compensation, mais elle est moins efficace car le plateau en mouvement génère des schémas plus difficiles à compenser."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Re-run vibration compensation after firmware updates, belt tensioning, or any physical move of the printer. The profile is machine-specific — it will go stale if the mechanical state changes.",
+        "fr": "Relancez la compensation des vibrations après les mises à jour du firmware, la tension des courroies ou tout déplacement physique de l'imprimante. Le profil est spécifique à la machine — il deviendra obsolète si l'état mécanique change."
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.3.4",
+     "narration": {
+      "en": "The Bambu Micro Lidar on X1 series printers operates at 7-micron resolution — roughly the diameter of a human red blood cell. This precision enables four critical functions that work together before and during every print.",
+      "fr": "Le Bambu Micro Lidar sur les imprimantes de la série X1 fonctionne avec une résolution de 7 microns — environ le diamètre d'un globule rouge humain. Cette précision permet quatre fonctions critiques qui travaillent ensemble avant et pendant chaque impression."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Technology 2 of 5",
+        "fr": "Technologie 2 sur 5"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Micro Lidar: Precision at the Micron Scale",
+        "fr": "Micro Lidar : précision à l'échelle du micron"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "7 μm",
+       "caption": {
+        "en": "lidar resolution — about the diameter of a human red blood cell; exclusive to X1 series",
+        "fr": "résolution du lidar — environ le diamètre d'un globule rouge humain ; exclusif à la série X1"
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.3.5",
+     "narration": {
+      "en": "The lidar performs four jobs. First, auto bed leveling: it probes the surface at multiple points, cross-checked with force sensors, creating a height map that catches variations of tens to hundreds of microns invisible to the eye. Second, Z-offset calibration: it measures the exact gap between nozzle tip and bed — too close and the nozzle scrapes; too far and filament won't adhere.",
+      "fr": "Le lidar remplit quatre fonctions. Premièrement, le nivellement automatique du plateau : il sonde la surface en plusieurs points, croisé avec des capteurs de force, créant une cartographie de hauteur qui détecte les variations de dizaines à centaines de microns invisibles à l'œil nu. Deuxièmement, la calibration du décalage Z : il mesure l'espacement exact entre l'extrémité de la buse et le plateau — trop proche et la buse racle ; trop loin et le filament n'adhère pas."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Four Things the Lidar Does",
+        "fr": "Les quatre fonctions du lidar"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Auto bed leveling</b> — height map from multi-point probing + force sensors; catches variations invisible to the eye",
+         "fr": "<b>Nivellement automatique du plateau</b> — cartographie depuis un sondage multi-points + capteurs de force ; détecte les variations invisibles à l'œil"
+        },
+        {
+         "en": "<b>Z-offset calibration</b> — measures exact nozzle-to-bed gap; too close = scraping; too far = no adhesion",
+         "fr": "<b>Calibration du décalage Z</b> — mesure l'espacement exact buse-plateau ; trop proche = raclage ; trop loin = pas d'adhérence"
+        },
+        {
+         "en": "<b>Flow rate calibration</b> — extrudes a test line and measures it; adjusts if too thin or too wide",
+         "fr": "<b>Calibration du débit</b> — extrude une ligne test et la mesure ; ajuste si trop fine ou trop large"
+        },
+        {
+         "en": "<b>First-layer inspection</b> — scans after the first layer; pauses and alerts if gaps or poor adhesion detected",
+         "fr": "<b>Inspection de la première couche</b> — scanne après la première couche ; se met en pause et alerte si lacunes ou mauvaise adhérence détectées"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.3.6",
+     "narration": {
+      "en": "The micro lidar is exclusive to the X1 series. P-series printers use eddy current sensors for bed leveling — still excellent, but without micron-level precision. A-series printers use simpler probe-based leveling. This sensor gap is one of the key differentiators justifying the X1C's price premium over the P1S.",
+      "fr": "Le micro lidar est exclusif à la série X1. Les imprimantes de la série P utilisent des capteurs à courants de Foucault pour le nivellement — toujours excellents, mais sans la précision au micron. Les imprimantes de la série A utilisent un nivellement par sonde plus simple. Cet écart de capteurs est l'un des différenciateurs clés justifiant la prime de prix du X1C par rapport au P1S."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Lidar vs. Eddy Current vs. Probe",
+        "fr": "Lidar vs. courants de Foucault vs. sonde"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Series",
+         "fr": "Série"
+        },
+        {
+         "en": "Leveling method",
+         "fr": "Méthode de nivellement"
+        },
+        {
+         "en": "Precision",
+         "fr": "Précision"
+        }
+       ],
+       "rows": [
+        [
+         "X1C / X1E",
+         {
+          "en": "Micro lidar + force sensors",
+          "fr": "Micro lidar + capteurs de force"
+         },
+         "7 μm"
+        ],
+        [
+         "P series",
+         {
+          "en": "Eddy current sensors",
+          "fr": "Capteurs à courants de Foucault"
+         },
+         {
+          "en": "Excellent, not micron-level",
+          "fr": "Excellent, mais pas au micron"
+         }
+        ],
+        [
+         "A series",
+         {
+          "en": "Probe-based leveling",
+          "fr": "Nivellement par sonde"
+         },
+         {
+          "en": "Good for PLA/PETG",
+          "fr": "Bon pour PLA/PETG"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.3.7",
+     "narration": {
+      "en": "The 1080p AI camera on X1 series printers serves three functions: real-time monitoring via the Bambu Handy app, automatic timelapse creation, and — most critically — failure detection. The spaghetti detection algorithm runs locally on the printer, not in the cloud, enabling real-time analysis even without internet access.",
+      "fr": "La caméra IA 1080p sur les imprimantes de la série X1 remplit trois fonctions : surveillance en temps réel via l'application Bambu Handy, création automatique de timelapse et — surtout — détection des défauts. L'algorithme de détection de spaghetti s'exécute localement sur l'imprimante, pas dans le cloud, permettant une analyse en temps réel même sans accès à Internet."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Technology 3 of 5",
+        "fr": "Technologie 3 sur 5"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "AI Camera: The Watchful Eye",
+        "fr": "Caméra IA : l'œil vigilant"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Real-time monitoring",
+          "fr": "Surveillance en temps réel"
+         },
+         "desc": {
+          "en": "Live feed accessible via Bambu Handy mobile app from anywhere (Cloud mode required)",
+          "fr": "Flux en direct accessible via l'application Bambu Handy depuis n'importe où (mode Cloud requis)"
+         }
+        },
+        {
+         "title": {
+          "en": "Auto timelapse",
+          "fr": "Timelapse automatique"
+         },
+         "desc": {
+          "en": "Creates a timelapse video of every print without any setup",
+          "fr": "Crée une vidéo timelapse de chaque impression sans aucune configuration"
+         }
+        },
+        {
+         "title": {
+          "en": "Failure detection",
+          "fr": "Détection des défauts"
+         },
+         "desc": {
+          "en": "Local ML algorithm — 86% confidence on spaghetti failures; auto-pauses and sends phone notification",
+          "fr": "Algorithme ML local — 86 % de confiance sur les défauts de spaghetti ; met en pause automatiquement et envoie une notification"
+         },
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.3.8",
+     "narration": {
+      "en": "The spaghetti detection AI has been trained to recognise four types of failure: spaghetti accumulation when filament tangles in mid-air after detaching from the bed, layer shifting when a step is missed and layers become offset, blob formation from excess material, and detached prints that have warped or released from the build plate.",
+      "fr": "L'IA de détection de spaghetti a été entraînée à reconnaître quatre types de défauts : l'accumulation de spaghetti lorsque le filament s'entasse en filaments enchevêtrés après s'être décroché du plateau, le décalage de couche lorsqu'un pas est manqué et les couches se décalent, la formation de globules due à un excès de matière, et les impressions décollées qui se sont gauchies ou libérées du plateau."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "What the AI Detects",
+        "fr": "Ce que l'IA détecte"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Spaghetti accumulation</b> — filament piling up in tangled strands when a print detaches from the bed (~86% confidence)",
+         "fr": "<b>Accumulation de spaghetti</b> — filament s'entassant en filaments enchevêtrés lorsqu'une impression se décroche (~86 % de confiance)"
+        },
+        {
+         "en": "<b>Layer shifting</b> — missed step causes subsequent layers to be offset from previous ones",
+         "fr": "<b>Décalage de couche</b> — un pas manqué entraîne le décalage des couches suivantes par rapport aux précédentes"
+        },
+        {
+         "en": "<b>Blob formation</b> — excess material building up on the print or nozzle",
+         "fr": "<b>Formation de globules</b> — excès de matière s'accumulant sur l'impression ou la buse"
+        },
+        {
+         "en": "<b>Detached prints</b> — warping or releasing from the build plate mid-print",
+         "fr": "<b>Impressions décollées</b> — gauchissement ou libération du plateau en cours d'impression"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.3.9",
+     "narration": {
+      "en": "For a 20-hour print using expensive engineering filament, a timely pause can save both the material cost and the time invested. The AI camera performs best in good lighting. If your printer is in a dim corner, add a small LED strip inside the chamber. Also, very dark or very transparent filaments can challenge the detection algorithm — monitor the first few layers manually when using these materials.",
+      "fr": "Pour une impression de 20 heures utilisant un filament d'ingénierie coûteux, une pause opportune peut préserver à la fois le coût du matériau et le temps investi. La caméra IA fonctionne mieux dans de bonnes conditions d'éclairage. Si votre imprimante est dans un coin sombre, ajoutez un petit ruban LED à l'intérieur du caisson. Les filaments très sombres ou très transparents peuvent aussi mettre à l'épreuve l'algorithme — surveillez les premières couches manuellement avec ces matériaux."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "For best AI detection: add LED lighting inside a dim chamber. Watch the first layers manually when printing very dark or very transparent filaments — these challenge the detection algorithm.",
+        "fr": "Pour une meilleure détection IA : ajoutez un éclairage LED à l'intérieur d'un caisson sombre. Surveillez manuellement les premières couches avec des filaments très sombres ou très transparents — ils mettent à l'épreuve l'algorithme de détection."
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.3.10",
+     "narration": {
+      "en": "The heated chamber is one of the most important and least understood technologies in engineering-material 3D printing. When thermoplastics like ABS, ASA, PC, and nylon cool, they shrink significantly. If different sections of a print cool at different rates, the resulting internal stresses cause warping — corners lifting off the build plate — and layer separation.",
+      "fr": "Le caisson chauffant est l'une des technologies les plus importantes et les moins bien comprises dans l'impression 3D de matériaux d'ingénierie. Lorsque les thermoplastiques comme l'ABS, l'ASA, le PC et le nylon refroidissent, ils se rétractent de manière significative. Si différentes sections d'une impression refroidissent à des vitesses différentes, les contraintes internes résultantes provoquent un gauchissement — les coins se soulèvent du plateau — et une séparation des couches."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Technology 4 of 5",
+        "fr": "Technologie 4 sur 5"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Heated Chamber Technology",
+        "fr": "Technologie du caisson chauffant"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "No chamber / cold room",
+         "fr": "Sans caisson / pièce froide"
+        },
+        "note": {
+         "en": "ABS/ASA/PC/Nylon: uneven cooling → internal stress → warping + layer separation",
+         "fr": "ABS/ASA/PC/Nylon : refroidissement inégal → contraintes internes → gauchissement + séparation des couches"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Heated chamber",
+         "fr": "Caisson chauffant"
+        },
+        "note": {
+         "en": "Uniform elevated temperature throughout print → reduced differential → minimal internal stress",
+         "fr": "Température élevée uniforme pendant toute l'impression → différentiel réduit → contraintes internes minimales"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.3.11",
+     "narration": {
+      "en": "Bambu Lab implements chamber heating at three levels across its lineup. Open-frame printers like the A1 and A1 Mini provide no chamber at all — ambient temperature only. Enclosed printers like the P1S, P2S, and X1C use passive heating, retaining heat from the bed and hotend to reach 45 to 50 degrees Celsius. Active heating in the X1E and H2 series uses dedicated elements to hit 60 to 65 degrees Celsius regardless of ambient conditions.",
+      "fr": "Bambu Lab implémente le chauffage du caisson à trois niveaux dans sa gamme. Les imprimantes à châssis ouvert comme l'A1 et l'A1 Mini ne fournissent pas de caisson — température ambiante uniquement. Les imprimantes fermées comme le P1S, le P2S et le X1C utilisent le chauffage passif, retenant la chaleur du plateau et du hotend pour atteindre 45 à 50°C. Le chauffage actif dans le X1E et la série H2 utilise des éléments dédiés pour atteindre 60 à 65°C quelle que soit la température ambiante."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Three Levels of Chamber Heating",
+        "fr": "Trois niveaux de chauffage du caisson"
+       }
+      },
+      {
+       "type": "stages",
+       "items": [
+        {
+         "label": {
+          "en": "Open frame",
+          "fr": "Châssis ouvert"
+         },
+         "sub": {
+          "en": "A1, A1 Mini — ambient only; PLA/PETG/TPU",
+          "fr": "A1, A1 Mini — ambiant uniquement ; PLA/PETG/TPU"
+         }
+        },
+        {
+         "label": {
+          "en": "Passive",
+          "fr": "Passif"
+         },
+         "sub": {
+          "en": "P1S, P2S, X1C — ~45–50°C; ABS/ASA/PETG",
+          "fr": "P1S, P2S, X1C — ~45–50°C ; ABS/ASA/PETG"
+         }
+        },
+        {
+         "label": {
+          "en": "Active",
+          "fr": "Actif"
+         },
+         "sub": {
+          "en": "X1E (60°C), H2/X2D (65°C) — all engineering materials",
+          "fr": "X1E (60°C), H2/X2D (65°C) — tous matériaux d'ingénierie"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.3.12",
+     "narration": {
+      "en": "Here is the full chamber temperature table across the lineup. For large PC and nylon prints, the difference between passive 45-degree and active 65-degree heating is significant — passive chambers may not maintain sufficient temperature throughout a long print, especially in a cold room. Preheating the bed before starting helps passive chambers reach a workable temperature.",
+      "fr": "Voici le tableau complet des températures de caisson dans la gamme. Pour les grandes impressions en PC et en nylon, la différence entre le chauffage passif à 45 degrés et le chauffage actif à 65 degrés est significative — les caissons passifs peuvent ne pas maintenir une température suffisante tout au long d'une longue impression, surtout dans une pièce froide. Préchauffer le plateau avant le lancement aide les caissons passifs à atteindre une température exploitable."
+     },
+     "elements": [
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Model(s)",
+         "fr": "Modèle(s)"
+        },
+        {
+         "en": "Type",
+         "fr": "Type"
+        },
+        {
+         "en": "Max temp",
+         "fr": "Temp. max"
+        },
+        {
+         "en": "Best for",
+         "fr": "Idéal pour"
+        }
+       ],
+       "rows": [
+        [
+         "A1 / A1 Mini",
+         {
+          "en": "Open frame",
+          "fr": "Châssis ouvert"
+         },
+         {
+          "en": "Ambient",
+          "fr": "Ambiante"
+         },
+         "PLA, PETG, TPU"
+        ],
+        [
+         "P1P / P1S / P2S / X1C",
+         {
+          "en": "Passive",
+          "fr": "Passif"
+         },
+         "~45–50°C",
+         "ABS, ASA, PETG"
+        ],
+        [
+         "X1E",
+         {
+          "en": "Active",
+          "fr": "Actif"
+         },
+         "60°C",
+         "ABS, ASA, PC, Nylon"
+        ],
+        [
+         "H2D / H2S / H2C / X2D",
+         {
+          "en": "Active",
+          "fr": "Actif"
+         },
+         "65°C",
+         {
+          "en": "All engineering materials",
+          "fr": "Tous matériaux d'ingénierie"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.3.13",
+     "narration": {
+      "en": "Never attempt to print ABS, ASA, PC, or nylon on an open-frame printer without a proper enclosure. The prints will warp, layer adhesion will be poor, and you will waste filament and time. If you own an A1 and need to print these materials, build or buy an enclosure first.",
+      "fr": "Ne tentez jamais d'imprimer de l'ABS, de l'ASA, du PC ou du nylon sur une imprimante à châssis ouvert sans une enclosure appropriée. Les impressions se gauchissent, l'adhérence des couches sera médiocre, et vous gaspillerez filament et temps. Si vous possédez un A1 et devez imprimer ces matériaux, construisez ou achetez une enclosure d'abord."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Never print ABS, ASA, PC, or Nylon on an open-frame printer (A1, A1 Mini, P1P) without a proper enclosure. Prints will warp, layer adhesion will be poor. Build or buy an enclosure first.",
+        "fr": "Ne tentez jamais d'imprimer de l'ABS, de l'ASA, du PC ou du Nylon sur une imprimante à châssis ouvert (A1, A1 Mini, P1P) sans une enclosure appropriée. Les impressions se gauchissent, l'adhérence des couches sera médiocre. Construisez ou achetez une enclosure d'abord."
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.3.14",
+     "narration": {
+      "en": "Bambu Lab's quick-swap build plate system uses magnetic attachment — plates snap securely into place and release easily when cool. Multiple plate types are available, each optimised for different materials and finish requirements. The Textured PEI plate is the default on most printers because it offers the best all-around performance.",
+      "fr": "Le système de plateau d'impression à échange rapide de Bambu Lab utilise une fixation magnétique — les plateaux se verrouillent solidement en place et se libèrent facilement une fois refroidis. Plusieurs types de plateaux sont disponibles, chacun optimisé pour différents matériaux et exigences de finition. Le plateau PEI texturé est le plateau par défaut sur la plupart des imprimantes car il offre les meilleures performances polyvalentes."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Technology 5 of 5",
+        "fr": "Technologie 5 sur 5"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Quick-Swap Magnetic Build Plate System",
+        "fr": "Système de plateau magnétique à échange rapide"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Plate type",
+         "fr": "Type de plateau"
+        },
+        {
+         "en": "Best for",
+         "fr": "Idéal pour"
+        },
+        {
+         "en": "Finish",
+         "fr": "Finition"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Textured PEI (default)",
+          "fr": "PEI texturé (défaut)"
+         },
+         "PLA, PETG, ABS, ASA",
+         {
+          "en": "Matte, textured",
+          "fr": "Mat, texturé"
+         }
+        ],
+        [
+         {
+          "en": "Cool Plate / Smooth PEI",
+          "fr": "Cool Plate / PEI lisse"
+         },
+         "PLA, TPU, PETG",
+         {
+          "en": "Glossy bottom",
+          "fr": "Fond brillant"
+         }
+        ],
+        [
+         {
+          "en": "Engineering Plate",
+          "fr": "Engineering Plate"
+         },
+         "ABS, ASA, PC, PA",
+         {
+          "en": "Smooth/matte",
+          "fr": "Lisse/mat"
+         }
+        ],
+        [
+         {
+          "en": "3D Effect Plates",
+          "fr": "Plateaux à effet 3D"
+         },
+         "PLA, PETG, ABS",
+         {
+          "en": "Diamond, starry, galaxy, carbon fiber",
+          "fr": "Diamant, étoilé, galaxie, fibre de carbone"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.3.15",
+     "narration": {
+      "en": "The Textured PEI plate works by spraying PEI powder onto both sides of a stainless steel sheet, creating microscopic roughness. This grips filament firmly when hot and releases cleanly when cool — no glue stick needed. The key tip: let the plate cool completely before removing parts. PEI adhesion is temperature-dependent: strong when hot, weak when cold. For stubborn parts, a quick flex of the thin steel plate will pop most prints right off.",
+      "fr": "Le plateau PEI texturé fonctionne en projetant de la poudre de PEI sur les deux faces d'une plaque en acier inoxydable, créant une rugosité microscopique. Cela accroche fermement le filament quand il est chaud et se libère proprement quand il est froid — pas de stick de colle nécessaire. Le conseil clé : laissez le plateau refroidir complètement avant de retirer les pièces. L'adhérence du PEI dépend de la température : forte quand il est chaud, faible quand il est froid. Pour les pièces récalcitrantes, une légère flexion de la plaque en acier fera sauter la plupart des impressions."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Textured PEI: How It Works",
+        "fr": "PEI texturé : comment ça fonctionne"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Microscopically rough</b> — PEI powder sprayed onto stainless steel; grips hot, releases cold",
+         "fr": "<b>Microscopiquement rugueux</b> — poudre de PEI projetée sur acier inoxydable ; accroche chaud, libère froid"
+        },
+        {
+         "en": "<b>No adhesive needed</b> — excellent adhesion across PLA, PETG, ABS, ASA without glue stick",
+         "fr": "<b>Sans adhésif</b> — excellente adhérence sur PLA, PETG, ABS, ASA sans stick de colle"
+        },
+        {
+         "en": "<b>Wait until cold</b> — removing parts while warm risks damaging part and plate surface",
+         "fr": "<b>Attendre le refroidissement complet</b> — retirer les pièces tièdes risque d'endommager la pièce et la surface du plateau"
+        },
+        {
+         "en": "<b>Flex to release</b> — a slight flex of the thin steel sheet pops stubborn prints",
+         "fr": "<b>Fléchir pour libérer</b> — une légère flexion de la fine plaque en acier fait sauter les impressions récalcitrantes"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.3.16",
+     "narration": {
+      "en": "Newer printers, including the P2S and H2 series, feature automatic plate recognition via codes printed on the plates. The printer scans the code and auto-selects the appropriate print profile. If the code is dirty or damaged, you can disable this feature and manually select your plate type in Bambu Studio.",
+      "fr": "Les imprimantes plus récentes, dont le P2S et la série H2, disposent d'une reconnaissance automatique du plateau via des codes sur les plateaux. L'imprimante scanne le code et sélectionne automatiquement le profil d'impression approprié. Si le code est sale ou endommagé, vous pouvez désactiver cette fonction et sélectionner manuellement votre type de plateau dans Bambu Studio."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Automatic Plate Recognition (P2S, H2 Series)",
+        "fr": "Reconnaissance automatique du plateau (P2S, série H2)"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Newer printers scan a code on the plate and auto-select the print profile. If the code is dirty or damaged, disable auto-recognition in Bambu Studio and select your plate type manually.",
+        "fr": "Les imprimantes plus récentes scannent un code sur le plateau et sélectionnent automatiquement le profil. Si le code est sale ou endommagé, désactivez la reconnaissance automatique dans Bambu Studio et sélectionnez votre type de plateau manuellement."
+       }
+      }
+     ]
+    },
+    {
+     "id": "3.3.17",
+     "narration": {
+      "en": "Let's close Chapter 3 with a view of how these five technologies work as an integrated system. The lidar calibrates before the print begins. Vibration compensation keeps quality high during printing. The AI camera watches for failures throughout. The heated chamber maintains the right temperature from start to finish. And the build plate provides the foundation for adhesion and clean part release. Remove any one piece and the experience degrades.",
+      "fr": "Clôturons le chapitre 3 avec une vue de la façon dont ces cinq technologies fonctionnent comme un système intégré. Le lidar calibre avant le début de l'impression. La compensation des vibrations maintient une qualité élevée pendant l'impression. La caméra IA surveille les défauts tout au long. Le caisson chauffant maintient la bonne température du début à la fin. Et le plateau d'impression fournit la base pour l'adhérence et le retrait propre des pièces. Supprimez l'un de ces éléments et l'expérience se dégrade."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Five Technologies, One System",
+        "fr": "Cinq technologies, un seul système"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Lidar",
+          "fr": "Lidar"
+         },
+         "sub": {
+          "en": "Calibrate before print",
+          "fr": "Calibre avant l'impression"
+         }
+        },
+        {
+         "name": {
+          "en": "Vibration comp.",
+          "fr": "Comp. vibrations"
+         },
+         "sub": {
+          "en": "Quality during print",
+          "fr": "Qualité pendant l'impression"
+         }
+        },
+        {
+         "name": {
+          "en": "AI camera",
+          "fr": "Caméra IA"
+         },
+         "sub": {
+          "en": "Watch for failures",
+          "fr": "Surveille les défauts"
+         }
+        },
+        {
+         "name": {
+          "en": "Heated chamber",
+          "fr": "Caisson chauffant"
+         },
+         "sub": {
+          "en": "Stable temperature",
+          "fr": "Température stable"
+         }
+        },
+        {
+         "name": {
+          "en": "Build plate",
+          "fr": "Plateau"
+         },
+         "sub": {
+          "en": "Adhesion + release",
+          "fr": "Adhérence + libération"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3.3.18",
+     "narration": {
+      "en": "To finish Module 3, here is the Chapter 3 recap. Active vibration compensation uses accelerometer data to cancel mechanical vibrations at 500 millimetres per second and above. The micro lidar, exclusive to the X1 series, provides 7-micron precision for bed leveling, Z-offset, flow rate, and first-layer inspection. The AI camera runs failure detection locally at about 86 percent confidence. The heated chamber is critical for engineering materials, with passive chambers reaching 45 to 50 degrees and active chambers reaching 60 to 65 degrees. And the magnetic build plate system's Textured PEI plate is the go-to surface for general use.",
+      "fr": "Pour terminer le module 3, voici le récapitulatif du chapitre 3. La compensation active des vibrations utilise les données d'un accéléromètre pour annuler les vibrations mécaniques à 500 mm/s et plus. Le micro lidar, exclusif à la série X1, offre une précision de 7 microns pour le nivellement du plateau, le décalage Z, le débit et l'inspection de la première couche. La caméra IA exécute la détection des défauts localement avec environ 86 % de confiance. Le caisson chauffant est essentiel pour les matériaux d'ingénierie, avec des caissons passifs atteignant 45 à 50°C et des caissons actifs atteignant 60 à 65°C. Et le plateau PEI texturé du système magnétique est la surface de référence pour un usage général."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Chapter 3 recap",
+        "fr": "Récapitulatif du chapitre 3"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Key Takeaways",
+        "fr": "Points clés"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Vibration compensation</b> — accelerometer + inverse motion; re-calibrate after belt work or physical moves",
+         "fr": "<b>Compensation des vibrations</b> — accéléromètre + mouvement inverse ; recalibrer après tension des courroies ou déplacements"
+        },
+        {
+         "en": "<b>Micro lidar (X1 only)</b> — 7 μm precision; bed leveling, Z-offset, flow rate, first-layer inspection",
+         "fr": "<b>Micro lidar (X1 uniquement)</b> — précision 7 μm ; nivellement, décalage Z, débit, inspection première couche"
+        },
+        {
+         "en": "<b>AI camera</b> — local ML, ~86% confidence; spaghetti, layer shift, blobs, detached prints",
+         "fr": "<b>Caméra IA</b> — ML local, ~86 % de confiance ; spaghetti, décalage de couche, globules, impressions décollées"
+        },
+        {
+         "en": "<b>Heated chamber</b> — passive ~45–50°C (P1S/X1C); active 60–65°C (X1E/H2/X2D); essential for ABS/PC/Nylon",
+         "fr": "<b>Caisson chauffant</b> — passif ~45–50°C (P1S/X1C) ; actif 60–65°C (X1E/H2/X2D) ; essentiel pour ABS/PC/Nylon"
+        },
+        {
+         "en": "<b>Build plate</b> — magnetic quick-swap; Textured PEI for general use; Engineering Plate for high-temp materials",
+         "fr": "<b>Plateau d'impression</b> — échange rapide magnétique ; PEI texturé usage général ; Engineering Plate pour matériaux haute température"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

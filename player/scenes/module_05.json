@@ -1,0 +1,4222 @@
+{
+ "module": 5,
+ "module_title": {
+  "en": "Slicer Software Mastery",
+  "fr": "Maîtriser les logiciels de tranchage"
+ },
+ "chapters": [
+  {
+   "chapter": 1,
+   "title": {
+    "en": "Understanding Slicing",
+    "fr": "Comprendre le tranchage"
+   },
+   "scenes": [
+    {
+     "id": "5.1.0",
+     "narration": {
+      "en": "Welcome to Module 5, Chapter 1. The slicer is the critical bridge between your digital model and a finished physical part — master it, and you master 3D printing.",
+      "fr": "Bienvenue au module 5, chapitre 1. Le trancheur est le pont critique entre votre modèle numérique et la pièce physique finale — maîtrisez-le, et vous maîtrisez l'impression 3D."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 5 · Chapter 1",
+        "fr": "Module 5 · Chapitre 1"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Understanding Slicing",
+        "fr": "Comprendre le tranchage"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Imagine stacking thousands of ultra-thin pancakes, each cut to an exact shape. That is 3D printing — and the slicer is the software that decides what every single layer looks like.",
+        "fr": "Imaginez que vous empilez des milliers de crêpes ultra-fines, chacune découpée à une forme précise. C'est l'impression 3D — et le trancheur est le logiciel qui décide à quoi ressemble chaque couche."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.1.1",
+     "narration": {
+      "en": "The slicer translates a 3D model into G-code — the precise language your printer understands. Every movement, every temperature change, every extrusion command originates in the slicer.",
+      "fr": "Le trancheur traduit un modèle 3D en G-code — le langage précis que votre imprimante comprend. Chaque mouvement, chaque changement de température, chaque commande d'extrusion prend naissance dans le trancheur."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Slicer = Translator",
+        "fr": "Le trancheur = traducteur"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "You speak",
+         "fr": "Vous parlez"
+        },
+        "note": {
+         "en": "3D models (STL, 3MF, OBJ, STEP)",
+         "fr": "Modèles 3D (STL, 3MF, OBJ, STEP)"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Printer speaks",
+         "fr": "L'imprimante parle"
+        },
+        "note": {
+         "en": "G-code: G1 moves, M104 temps, M106 fans",
+         "fr": "G-code : déplacements G1, températures M104, ventilateurs M106"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.1.2",
+     "narration": {
+      "en": "Slicing follows a clear five-step pipeline: import the model, orient it, cut it into layers, calculate toolpaths for each layer, and compile everything into G-code.",
+      "fr": "Le tranchage suit un pipeline en cinq étapes bien définies : importer le modèle, l'orienter, le découper en couches, calculer les trajectoires pour chaque couche, puis compiler le tout en G-code."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Slicing Pipeline",
+        "fr": "Le pipeline de tranchage"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Import",
+          "fr": "Importation"
+         },
+         "sub": {
+          "en": "STL · 3MF · OBJ · STEP",
+          "fr": "STL · 3MF · OBJ · STEP"
+         }
+        },
+        {
+         "name": {
+          "en": "Orient",
+          "fr": "Orientation"
+         },
+         "sub": {
+          "en": "position · rotate · scale",
+          "fr": "positionner · pivoter · mettre à l'échelle"
+         }
+        },
+        {
+         "name": {
+          "en": "Slice",
+          "fr": "Tranchage"
+         },
+         "sub": {
+          "en": "horizontal layers",
+          "fr": "couches horizontales"
+         }
+        },
+        {
+         "name": {
+          "en": "Toolpath",
+          "fr": "Trajectoires"
+         },
+         "sub": {
+          "en": "nozzle path per layer",
+          "fr": "chemin de buse par couche"
+         }
+        },
+        {
+         "name": {
+          "en": "G-code",
+          "fr": "G-code"
+         },
+         "sub": {
+          "en": "compile all instructions",
+          "fr": "compiler toutes les instructions"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.1.3",
+     "narration": {
+      "en": "In practice, every print follows eight concrete steps: import, orient, scale, configure settings, add supports, slice, preview layers, then export or send to the printer.",
+      "fr": "Dans la pratique, chaque impression suit huit étapes concrètes : importer, orienter, mettre à l'échelle, configurer les paramètres, ajouter des supports, trancher, prévisualiser les couches, puis exporter ou envoyer à l'imprimante."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Eight Steps — Every Print",
+        "fr": "Huit étapes — chaque impression"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>1 Import</b> — drag-and-drop your model file",
+         "fr": "<b>1 Importer</b> — glisser-déposer votre fichier modèle"
+        },
+        {
+         "en": "<b>2 Orient</b> — flat faces down, minimize overhangs",
+         "fr": "<b>2 Orienter</b> — faces planes vers le bas, minimiser les surplombs"
+        },
+        {
+         "en": "<b>3 Scale</b> — check dimensions; inches→mm = ×25.4 error",
+         "fr": "<b>3 Mettre à l'échelle</b> — vérifier les dimensions ; pouces→mm = erreur ×25,4"
+        },
+        {
+         "en": "<b>4 Settings</b> — layer height, walls, infill, supports, temps",
+         "fr": "<b>4 Paramètres</b> — hauteur couche, parois, remplissage, supports, températures"
+        },
+        {
+         "en": "<b>5 Supports</b> — auto-generate or paint manually",
+         "fr": "<b>5 Supports</b> — générer automatiquement ou peindre manuellement"
+        },
+        {
+         "en": "<b>6–8 Slice · Preview · Export</b> — verify then send",
+         "fr": "<b>6–8 Trancher · Prévisualiser · Exporter</b> — vérifier puis envoyer"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.1.4",
+     "narration": {
+      "en": "Orientation is more important than most beginners realize. Flat surfaces should face down for stability, and you should reorient the model to minimize steep overhangs. Auto-orient tools help, but manual adjustment often gives better results.",
+      "fr": "L'orientation a plus d'importance que la plupart des débutants ne le réalisent. Les surfaces planes doivent être orientées vers le bas pour assurer la stabilité, et il faut réorienter le modèle pour minimiser les surplombs prononcés. Les outils d'orientation automatique aident, mais l'ajustement manuel donne souvent de meilleurs résultats."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Why Orientation Matters",
+        "fr": "Pourquoi l'orientation est cruciale"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "anisotropy"
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Flat faces down",
+          "fr": "Faces planes vers le bas"
+         },
+         "desc": {
+          "en": "Maximises stability on the build plate",
+          "fr": "Maximise la stabilité sur le plateau"
+         }
+        },
+        {
+         "title": {
+          "en": "Minimize overhangs",
+          "fr": "Minimiser les surplombs"
+         },
+         "desc": {
+          "en": "Rotate to reduce angles above 45–55°",
+          "fr": "Pivoter pour réduire les angles supérieurs à 45–55°"
+         }
+        },
+        {
+         "title": {
+          "en": "Auto-orient",
+          "fr": "Orientation auto"
+         },
+         "desc": {
+          "en": "Good start — but manual tweaks often win",
+          "fr": "Bon départ — mais les ajustements manuels gagnent souvent"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.1.5",
+     "narration": {
+      "en": "Not all 3D file formats are equal. STL has been around since 1987 but carries no color, no units, and is prone to mesh errors. The modern standard is 3MF, released in 2015 and now codified as ISO-slash-IEC 25422 colon 2025.",
+      "fr": "Tous les formats de fichiers 3D ne se valent pas. Le STL existe depuis 1987 mais ne contient aucune couleur, aucune unité, et est sujet aux erreurs de maillage. Le standard moderne est le 3MF, publié en 2015 et désormais codifié sous la norme ISO/IEC 25422:2025."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "File Formats Compared",
+        "fr": "Comparaison des formats de fichiers"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Format",
+         "fr": "Format"
+        },
+        {
+         "en": "Year",
+         "fr": "Année"
+        },
+        {
+         "en": "Best for",
+         "fr": "Idéal pour"
+        },
+        {
+         "en": "Key limit",
+         "fr": "Limite principale"
+        }
+       ],
+       "rows": [
+        [
+         "STL",
+         "1987",
+         {
+          "en": "Universal compat.",
+          "fr": "Compat. universelle"
+         },
+         {
+          "en": "No color/units, mesh errors",
+          "fr": "Pas couleur/unités, erreurs maillage"
+         }
+        ],
+        [
+         "3MF",
+         "2015",
+         {
+          "en": "Modern standard",
+          "fr": "Standard moderne"
+         },
+         {
+          "en": "Very old software only",
+          "fr": "Anciens logiciels uniquement"
+         }
+        ],
+        [
+         "OBJ",
+         {
+          "en": "1990s",
+          "fr": "Années 1990"
+         },
+         {
+          "en": "Color + texture",
+          "fr": "Couleur + texture"
+         },
+         {
+          "en": "Large files, companion files",
+          "fr": "Fichiers volumineux, fichiers complémentaires"
+         }
+        ],
+        [
+         "STEP",
+         "1994",
+         {
+          "en": "CAD-native geometry",
+          "fr": "Géométrie native CAO"
+         },
+         {
+          "en": "Needs direct-CAD slicer",
+          "fr": "Nécessite trancheur CAO direct"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.1.6",
+     "narration": {
+      "en": "3MF was created in April 2015 by a consortium including Autodesk, Dassault Systèmes, HP, Microsoft, and Shapeways — specifically to solve every one of STL's problems. It is smaller, error-free by design, and stores your slicer settings right inside the file.",
+      "fr": "Le 3MF a été créé en avril 2015 par un consortium comprenant Autodesk, Dassault Systèmes, HP, Microsoft et Shapeways — spécifiquement pour résoudre chacun des problèmes du STL. Il est plus petit, exempt d'erreurs par conception, et stocke vos paramètres de tranchage directement dans le fichier."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Use 3MF — Here Is Why",
+        "fr": "Utilisez le 3MF — voici pourquoi"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Smaller files</b> — compresses automatically",
+         "fr": "<b>Fichiers plus petits</b> — compresse automatiquement"
+        },
+        {
+         "en": "<b>Error-free</b> — no holes, no flipped normals, no non-manifold edges",
+         "fr": "<b>Sans erreurs</b> — pas de trous, pas de normales inversées, pas d'arêtes non-manifold"
+        },
+        {
+         "en": "<b>Settings travel with the model</b> — reopen and everything is as you left it",
+         "fr": "<b>Paramètres inclus</b> — rouvrir et tout est tel que vous l'avez laissé"
+        },
+        {
+         "en": "<b>ISO/IEC 25422:2025</b> — official industry standard successor to STL",
+         "fr": "<b>ISO/IEC 25422:2025</b> — successeur officiel du STL comme standard industriel"
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Make 3MF your default. Use STL only when a platform forces you to. Repair mesh errors with Microsoft 3D Builder, Netfabb, or Meshmixer before slicing.",
+        "fr": "Faites du 3MF votre format par défaut. N'utilisez le STL que lorsqu'une plateforme vous y oblige. Réparez les erreurs de maillage avec Microsoft 3D Builder, Netfabb ou Meshmixer avant de trancher."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.1.7",
+     "narration": {
+      "en": "Layer height is the single biggest lever for print quality and time. With a standard 0.4 millimetre nozzle you can go from 0.08 millimetres for ultra-fine detail all the way to 0.32 millimetres for draft mode. The rule: stay below 80 percent of your nozzle diameter.",
+      "fr": "La hauteur de couche est le levier le plus important pour la qualité d'impression et le temps. Avec une buse standard de 0,4 mm, vous pouvez aller de 0,08 mm pour les détails ultra-fins jusqu'à 0,32 mm en mode brouillon. La règle : rester en dessous de 80 % du diamètre de la buse."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Quality Settings",
+        "fr": "Paramètres de qualité"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "0.2 mm",
+       "caption": {
+        "en": "standard layer height — range 0.08–0.32 mm on a 0.4 mm nozzle (stay below 80% of nozzle Ø)",
+        "fr": "hauteur de couche standard — plage 0,08–0,32 mm avec une buse 0,4 mm (rester sous 80 % du Ø de buse)"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Line width</b> — modern slicers use the Arachne perimeter generator (from Cura, added to PrusaSlicer 2.5 in September 2022) to auto-adjust extrusion width",
+         "fr": "<b>Largeur de ligne</b> — les trancheurs modernes utilisent le générateur de périmètres Arachne (de Cura, ajouté à PrusaSlicer 2.5 en septembre 2022) pour ajuster automatiquement la largeur d'extrusion"
+        },
+        {
+         "en": "<b>Wall count</b> — more walls = stronger parts",
+         "fr": "<b>Nombre de parois</b> — plus de parois = pièces plus solides"
+        },
+        {
+         "en": "<b>Top/bottom layers</b> — 3–5 solid layers each side",
+         "fr": "<b>Couches supérieures/inférieures</b> — 3 à 5 couches pleines de chaque côté"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.1.8",
+     "narration": {
+      "en": "Infill controls how solid the interior is. 15 to 20 percent is standard for general parts; zero for vases; 40 percent or more for load-bearing pieces. The infill pattern affects strength in all directions.",
+      "fr": "Le remplissage contrôle la solidité de l'intérieur. 15 à 20 % est standard pour les pièces générales ; 0 % pour les vases ; 40 % ou plus pour les pièces portant des charges. Le motif de remplissage influence la résistance dans toutes les directions."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Infill: Density and Pattern",
+        "fr": "Remplissage : densité et motif"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "infill"
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Pattern",
+         "fr": "Motif"
+        },
+        {
+         "en": "Strength",
+         "fr": "Résistance"
+        },
+        {
+         "en": "Notes",
+         "fr": "Notes"
+        }
+       ],
+       "rows": [
+        [
+         "Grid",
+         {
+          "en": "Moderate",
+          "fr": "Modérée"
+         },
+         {
+          "en": "Fast; top-down loads",
+          "fr": "Rapide ; charges du haut vers le bas"
+         }
+        ],
+        [
+         "Gyroid",
+         {
+          "en": "High (multi-dir.)",
+          "fr": "Élevée (multidirect.)"
+         },
+         {
+          "en": "Near-isotropic; good shear",
+          "fr": "Quasi-isotrope ; bonne résistance au cisaillement"
+         }
+        ],
+        [
+         "Cubic",
+         {
+          "en": "High (compressive)",
+          "fr": "Élevée (compression)"
+         },
+         {
+          "en": "Best vertical compressive loads",
+          "fr": "Idéal charges compressives verticales"
+         }
+        ],
+        [
+         "Honeycomb",
+         {
+          "en": "Moderate",
+          "fr": "Modérée"
+         },
+         {
+          "en": "Classic; slower than grid",
+          "fr": "Classique ; plus lent que grid"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.1.9",
+     "narration": {
+      "en": "Gyroid infill offers near-isotropic strength — equal in all directions — and good energy absorption, making it a strong all-around default. Cubic leads for vertical compressive loads.",
+      "fr": "Le remplissage gyroid offre une résistance quasi-isotrope — égale dans toutes les directions — et une bonne absorption d'énergie, ce qui en fait un excellent choix polyvalent par défaut. Le cubic est supérieur pour les charges compressives verticales."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Best all-around pick",
+        "fr": "Meilleur choix polyvalent"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Why Gyroid Wins for Multi-Directional Loads",
+        "fr": "Pourquoi le Gyroid gagne pour les charges multidirectionnelles"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "infill"
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "Grid / Honeycomb",
+        "note": {
+         "en": "Moderate; optimised for one direction",
+         "fr": "Modéré ; optimisé pour une direction"
+        }
+       },
+       "right": {
+        "title": "Gyroid",
+        "note": {
+         "en": "Near-isotropic — equal strength in all directions, good shear resistance",
+         "fr": "Quasi-isotrope — résistance égale dans toutes les directions, bonne résistance au cisaillement"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.1.10",
+     "narration": {
+      "en": "Supports hold up overhangs steeper than roughly 45 to 55 degrees. Tree supports branch out organically and use 25 to 50 percent less material than standard grid supports on complex models, and are much easier to remove.",
+      "fr": "Les supports soutiennent les surplombs supérieurs à environ 45 à 55 degrés. Les supports en arbre se ramifient organiquement et utilisent 25 à 50 % moins de matériau que les supports standard sur les modèles complexes, et sont bien plus faciles à retirer."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Support Settings",
+        "fr": "Paramètres de support"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Standard (grid)",
+         "fr": "Standard (grille)"
+        },
+        "note": {
+         "en": "Rigid structure; heavy overhangs; more material",
+         "fr": "Structure rigide ; surplombs importants ; plus de matériau"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Tree supports",
+         "fr": "Supports en arbre"
+        },
+        "note": {
+         "en": "25–50% less material; easier removal; fewer surface marks",
+         "fr": "25–50 % moins de matériau ; retrait plus facile ; moins de marques"
+        },
+        "highlight": true
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Overhang threshold</b> — PLA: 55–60° with active cooling; ABS/ASA: 40–45°",
+         "fr": "<b>Seuil de surplomb</b> — PLA : 55–60° avec refroidissement actif ; ABS/ASA : 40–45°"
+        },
+        {
+         "en": "<b>Support interface</b> — 2 smooth top layers improves surface finish of supported area",
+         "fr": "<b>Interface de support</b> — 2 couches supérieures lisses améliorent la finition de la surface supportée"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.1.11",
+     "narration": {
+      "en": "Three adhesion helpers tackle first-layer challenges. A skirt is just an outline for priming; a brim attaches to the model edges to fight warping; a raft builds a multi-layer platform under the entire print for severe bed adhesion problems.",
+      "fr": "Trois aides à l'adhérence répondent aux défis de la première couche. La jupe est simplement un contour pour amorcer ; la bordure s'attache aux bords du modèle pour lutter contre le gauchissement ; le radeau construit une plateforme multi-couches sous toute l'impression pour les problèmes graves d'adhérence."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Bed Adhesion: Skirt · Brim · Raft",
+        "fr": "Adhérence plateau : jupe · bordure · radeau"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "adhesion"
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Skirt",
+          "fr": "Jupe"
+         },
+         "desc": {
+          "en": "Separate outline — primes nozzle, checks level. No post-processing.",
+          "fr": "Contour séparé — amorce la buse, vérifie le niveau. Aucun post-traitement."
+         }
+        },
+        {
+         "title": {
+          "en": "Brim",
+          "fr": "Bordure"
+         },
+         "desc": {
+          "en": "Connected to model edges (1 layer). Fights warp on tall/thin parts. Light trimming.",
+          "fr": "Connectée aux bords du modèle (1 couche). Combat le gauchissement des pièces hautes/minces. Léger rognage."
+         }
+        },
+        {
+         "title": {
+          "en": "Raft",
+          "fr": "Radeau"
+         },
+         "desc": {
+          "en": "Full base platform (3+ layers). Severe adhesion issues only. Requires sanding.",
+          "fr": "Plateforme de base complète (3+ couches). Uniquement pour problèmes graves d'adhérence. Ponçage nécessaire."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.1.12",
+     "narration": {
+      "en": "Temperature, speed, and cooling form an interdependent trio. Nozzle temperature controls flow; bed temperature locks the first layer; print speed is a hierarchy from the slow outer walls to the fast infill, with the very first layer slowest of all.",
+      "fr": "La température, la vitesse et le refroidissement forment un trio interdépendant. La température de buse contrôle l'écoulement ; la température du plateau ancre la première couche ; la vitesse d'impression est une hiérarchie, des parois extérieures lentes au remplissage rapide, avec la toute première couche la plus lente de toutes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Temperature, Speed and Cooling",
+        "fr": "Température, vitesse et refroidissement"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Nozzle temp</b> — too cold: under-extrusion; too hot: oozing + stringing",
+         "fr": "<b>Temp. buse</b> — trop froid : sous-extrusion ; trop chaud : suintement + fils"
+        },
+        {
+         "en": "<b>Bed temp</b> — PLA 50–60 °C · ABS 100–110 °C",
+         "fr": "<b>Temp. plateau</b> — PLA 50–60 °C · ABS 100–110 °C"
+        },
+        {
+         "en": "<b>Speed hierarchy</b> — first layer slowest → outer walls → inner walls → infill fastest",
+         "fr": "<b>Hiérarchie des vitesses</b> — première couche la plus lente → parois ext. → parois int. → remplissage le plus rapide"
+        },
+        {
+         "en": "<b>Cooling fan</b> — PLA: 80–100% (after initial layers); ABS: 0–20% (prevents warping)",
+         "fr": "<b>Ventilateur</b> — PLA : 80–100 % (après couches initiales) ; ABS : 0–20 % (prévient le gauchissement)"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.1.13",
+     "narration": {
+      "en": "Three advanced extrusion controls fine-tune travel moves. Retraction pulls filament back to prevent stringing — 1 to 2 millimetres for direct drive, 4 to 6 for Bowden. Z-hop lifts the nozzle to avoid collisions. Combing keeps travel moves inside the model.",
+      "fr": "Trois contrôles d'extrusion avancés affinent les déplacements à vide. La rétraction retire le filament pour éviter les fils — 1 à 2 mm pour l'entraînement direct, 4 à 6 mm pour les systèmes Bowden. Le Z-hop lève la buse pour éviter les collisions. Le peigne maintient les déplacements à l'intérieur du modèle."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Advanced Extrusion Controls",
+        "fr": "Contrôles d'extrusion avancés"
+       }
+      },
+      {
+       "type": "stages",
+       "items": [
+        {
+         "label": {
+          "en": "Retraction",
+          "fr": "Rétraction"
+         },
+         "sub": {
+          "en": "Direct: 1–2 mm · Bowden: 4–6 mm",
+          "fr": "Direct : 1–2 mm · Bowden : 4–6 mm"
+         }
+        },
+        {
+         "label": {
+          "en": "Z-Hop",
+          "fr": "Z-Hop"
+         },
+         "sub": {
+          "en": "lift 0.2–0.5 mm on travel",
+          "fr": "lever 0,2–0,5 mm en déplacement"
+         }
+        },
+        {
+         "label": {
+          "en": "Combing",
+          "fr": "Peigne"
+         },
+         "sub": {
+          "en": "travel inside model perimeter",
+          "fr": "déplacements dans le périmètre du modèle"
+         }
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Z-hop reduces collisions but can slightly increase stringing. Enable it selectively for tall, complex models.",
+        "fr": "Le Z-hop réduit les collisions mais peut légèrement augmenter les fils. Activez-le sélectivement pour les modèles hauts et complexes."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.1.14",
+     "narration": {
+      "en": "The layer preview is your last quality control checkpoint before committing time and filament. Look for travel moves crossing open areas, support contact points, layer transitions, and seam placement.",
+      "fr": "L'aperçu des couches est votre dernier point de contrôle qualité avant d'engager du temps et du filament. Cherchez les déplacements à vide traversant des zones ouvertes, les points de contact des supports, les transitions de couche, et le placement de la couture."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Layer Preview — What to Check",
+        "fr": "Aperçu des couches — ce qu'il faut vérifier"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Color coding</b> — learn your slicer's legend: walls, infill, supports, travel moves",
+         "fr": "<b>Codage couleur</b> — apprenez la légende de votre trancheur : parois, remplissage, supports, déplacements à vide"
+        },
+        {
+         "en": "<b>Travel moves</b> — long paths crossing open areas = stringing risk; add retraction or combing",
+         "fr": "<b>Déplacements à vide</b> — longs trajets traversant zones ouvertes = risque de fils ; ajouter rétraction ou peigne"
+        },
+        {
+         "en": "<b>Support contact</b> — tree supports should touch only where strictly needed",
+         "fr": "<b>Contact des supports</b> — les supports en arbre ne doivent toucher que là où c'est strictement nécessaire"
+        },
+        {
+         "en": "<b>Z-seam</b> — place it at the back or on a hidden corner to minimize visibility",
+         "fr": "<b>Couture en Z</b> — placez-la à l'arrière ou sur un coin caché pour minimiser sa visibilité"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.1.15",
+     "narration": {
+      "en": "Modern slicers give accurate estimates for print time and filament usage, accounting for acceleration and travel moves. Add a 10 to 15 percent buffer for waste, supports, and brim material — and remember that real prints often run 10 to 30 percent longer than the estimate.",
+      "fr": "Les trancheurs modernes donnent des estimations précises du temps d'impression et de la consommation de filament, tenant compte de l'accélération et des déplacements à vide. Ajoutez 10 à 15 % de marge pour les déchets, supports et matériau de jupe/bordure — et souvenez-vous que les impressions réelles prennent souvent 10 à 30 % de temps en plus que l'estimation."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Time and Filament Estimates",
+        "fr": "Estimation du temps et du filament"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "+10–15 %",
+       "caption": {
+        "en": "buffer to add to slicer filament estimate (waste, supports, skirt/brim)",
+        "fr": "marge à ajouter à l'estimation de filament (déchets, supports, jupe/bordure)"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Slicer time estimates assume optimal conditions. Real prints run 10–30% longer due to heating, bed leveling, pauses, and first-layer adjustments.",
+        "fr": "Les estimations de temps des trancheurs supposent des conditions optimales. Les impressions réelles prennent 10–30 % de plus en raison du chauffage, du nivellement, des pauses et des ajustements de la première couche."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.1.16",
+     "narration": {
+      "en": "To wrap up Chapter 1: the slicer pipeline runs from import through orientation, slicing, toolpath generation, and G-code output. Use 3MF whenever you can, master the five setting categories, always preview before printing, and add a filament buffer to your estimates.",
+      "fr": "Pour conclure le chapitre 1 : le pipeline du trancheur va de l'importation à l'orientation, au tranchage, à la génération des trajectoires, puis au G-code. Utilisez le 3MF autant que possible, maîtrisez les cinq catégories de paramètres, prévisualisez toujours avant d'imprimer, et ajoutez une marge à vos estimations de filament."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Chapter 1 recap",
+        "fr": "Récapitulatif du chapitre 1"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Key Takeaways",
+        "fr": "Points clés à retenir"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Slicer = translator</b> — digital model → G-code; every command originates here",
+         "fr": "<b>Trancheur = traducteur</b> — modèle numérique → G-code ; chaque commande prend naissance ici"
+        },
+        {
+         "en": "<b>Use 3MF</b> — ISO/IEC 25422:2025, error-free, settings-aware; STL only when forced",
+         "fr": "<b>Utilisez le 3MF</b> — ISO/IEC 25422:2025, sans erreurs, paramètres inclus ; STL seulement si imposé"
+        },
+        {
+         "en": "<b>Five setting categories</b> — Quality · Infill · Supports · Bed Adhesion · Temp/Speed",
+         "fr": "<b>Cinq catégories de paramètres</b> — Qualité · Remplissage · Supports · Adhérence plateau · Temp/Vitesse"
+        },
+        {
+         "en": "<b>Gyroid infill</b> — near-isotropic; best for multi-directional loads",
+         "fr": "<b>Remplissage Gyroid</b> — quasi-isotrope ; idéal pour les charges multidirectionnelles"
+        },
+        {
+         "en": "<b>Tree supports</b> — 25–50% less material, easier removal than standard",
+         "fr": "<b>Supports en arbre</b> — 25–50 % moins de matériau, retrait plus facile que le standard"
+        },
+        {
+         "en": "<b>Always preview</b> — the layer preview is your last chance to catch problems before wasted filament",
+         "fr": "<b>Toujours prévisualiser</b> — l'aperçu des couches est votre dernière chance de détecter les problèmes avant du filament gâché"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 2,
+   "title": {
+    "en": "Bambu Studio Deep Dive",
+    "fr": "Plongée en profondeur dans Bambu Studio"
+   },
+   "scenes": [
+    {
+     "id": "5.2.0",
+     "narration": {
+      "en": "Welcome to Chapter 2. Bambu Studio is the official slicer for Bambu Lab printers — forked from PrusaSlicer in 2022 and widely regarded as one of the most polished and beginner-friendly slicers available today.",
+      "fr": "Bienvenue au chapitre 2. Bambu Studio est le trancheur officiel pour les imprimantes Bambu Lab — forké à partir de PrusaSlicer en 2022 et largement considéré comme l'une des interfaces les plus soignées et accessibles aux débutants parmi les trancheurs modernes."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 5 · Chapter 2",
+        "fr": "Module 5 · Chapitre 2"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Bambu Studio Deep Dive",
+        "fr": "Plongée en profondeur dans Bambu Studio"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "The official Bambu Lab slicer — forked from PrusaSlicer in 2022 — combines a mature, battle-tested engine with a modern interface, seamless hardware integration, and cloud-connected features.",
+        "fr": "Le trancheur officiel de Bambu Lab — forké à partir de PrusaSlicer en 2022 — combine un moteur mature et éprouvé avec une interface moderne, une intégration matérielle transparente et des fonctionnalités connectées au cloud."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.2.1",
+     "narration": {
+      "en": "Bambu Studio is designed specifically for Bambu Lab printers — the X1, P1P, P1S, and A1. Its three-panel layout puts settings on the left, the 3D view in the center, and the preview on the right. Note that support for non-Bambu printers is secondary and less polished.",
+      "fr": "Bambu Studio est conçu spécifiquement pour les imprimantes Bambu Lab — X1, P1P, P1S et A1. Sa disposition en trois panneaux place les paramètres à gauche, la vue 3D au centre et l'aperçu à droite. La prise en charge des imprimantes non-Bambu est secondaire et moins soignée."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "What Is Bambu Studio?",
+        "fr": "Qu'est-ce que Bambu Studio ?"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Built on PrusaSlicer",
+         "fr": "Fondé sur PrusaSlicer"
+        },
+        "note": {
+         "en": "Inherits the mature, battle-tested PrusaSlicer codebase (2022 fork)",
+         "fr": "Hérite de la base de code mature et éprouvée de PrusaSlicer (fork 2022)"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Bambu-first",
+         "fr": "Bambu en priorité"
+        },
+        "note": {
+         "en": "Tight hardware integration, modern UI, cloud features — designed for X1, P1P, P1S, A1",
+         "fr": "Intégration matérielle étroite, interface moderne, cloud — conçu pour X1, P1P, P1S, A1"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.2.2",
+     "narration": {
+      "en": "The interface is organized around four tabs: Prepare, Preview, Device, and Project. Each tab handles a distinct stage of the printing workflow, from model setup all the way to multi-plate management.",
+      "fr": "L'interface est organisée en quatre onglets : Prepare, Preview, Device et Project. Chaque onglet prend en charge une étape distincte du flux de travail d'impression, de la configuration du modèle jusqu'à la gestion multi-plateau."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Four Main Tabs",
+        "fr": "Les quatre onglets principaux"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Tab",
+         "fr": "Onglet"
+        },
+        {
+         "en": "Purpose",
+         "fr": "Objectif"
+        },
+        {
+         "en": "Key Actions",
+         "fr": "Actions clés"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Prepare",
+          "fr": "Prepare"
+         },
+         {
+          "en": "Model setup",
+          "fr": "Configuration du modèle"
+         },
+         {
+          "en": "Import, orient, paint supports, configure",
+          "fr": "Importer, orienter, peindre, configurer"
+         }
+        ],
+        [
+         {
+          "en": "Preview",
+          "fr": "Preview"
+         },
+         {
+          "en": "Layer inspection",
+          "fr": "Inspection des couches"
+         },
+         {
+          "en": "Verify toolpaths, check supports, estimate time",
+          "fr": "Vérifier les trajectoires, contrôler les supports, estimer le temps"
+         }
+        ],
+        [
+         {
+          "en": "Device",
+          "fr": "Device"
+         },
+         {
+          "en": "Printer control",
+          "fr": "Contrôle de l'imprimante"
+         },
+         {
+          "en": "Send prints, camera, pause/resume",
+          "fr": "Envoyer, caméra, pause/reprise"
+         }
+        ],
+        [
+         {
+          "en": "Project",
+          "fr": "Project"
+         },
+         {
+          "en": "Multi-plate",
+          "fr": "Multi-plateau"
+         },
+         {
+          "en": "Organize build plates, batch layout",
+          "fr": "Organiser les plateaux, mise en page par lots"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.3",
+     "narration": {
+      "en": "The Prepare tab is where you spend most of your time. The left panel presents Printer, Filament, and Process as simple dropdowns. The top toolbar provides six key tools for positioning, orienting, painting supports, adding text, measuring, and cutting models.",
+      "fr": "L'onglet Prepare est là où vous passez la majeure partie de votre temps. Le panneau gauche présente Imprimante, Filament et Processus sous forme de listes déroulantes simples. La barre d'outils supérieure propose six outils clés pour positionner, orienter, peindre les supports, ajouter du texte, mesurer et découper les modèles."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Prepare Tab: Key Toolbar Tools",
+        "fr": "Onglet Prepare : outils de la barre d'outils"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Auto-Arrange",
+          "fr": "Auto-Arrange"
+         },
+         "desc": {
+          "en": "Intelligently positions multiple models on the build plate",
+          "fr": "Positionne intelligemment plusieurs modèles sur le plateau"
+         }
+        },
+        {
+         "title": {
+          "en": "Auto-Orient",
+          "fr": "Auto-Orient"
+         },
+         "desc": {
+          "en": "Finds optimal orientation for overhangs and bed adhesion",
+          "fr": "Trouve l'orientation optimale pour les surplombs et l'adhérence"
+         }
+        },
+        {
+         "title": {
+          "en": "Support Painting",
+          "fr": "Peinture de supports"
+         },
+         "desc": {
+          "en": "Manually enforce or block support generation",
+          "fr": "Imposer ou bloquer manuellement la génération de supports"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Cut",
+          "fr": "Couper"
+         },
+         "desc": {
+          "en": "Slice model into parts for multi-color or assembly prints",
+          "fr": "Découper le modèle en parties pour les impressions multicolores ou d'assemblage"
+         }
+        },
+        {
+         "title": {
+          "en": "Measure / Text",
+          "fr": "Mesurer / Texte"
+         },
+         "desc": {
+          "en": "Verify dimensions or emboss text without leaving the slicer",
+          "fr": "Vérifier les dimensions ou embosser du texte sans quitter le trancheur"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.4",
+     "narration": {
+      "en": "After slicing, the Preview tab becomes your quality control center. Scrub through layers with the vertical slider, and watch for travel moves in a distinct color, support contact points, and the Z-seam placement.",
+      "fr": "Après le tranchage, l'onglet Preview devient votre centre de contrôle qualité. Faites défiler les couches avec le curseur vertical, et surveillez les déplacements à vide dans une couleur distincte, les points de contact des supports, et le placement de la couture en Z."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Preview Tab: Quality Control",
+        "fr": "Onglet Preview : contrôle qualité"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Layer slider</b> — scrub through every layer before committing filament",
+         "fr": "<b>Curseur de couche</b> — faites défiler chaque couche avant de dépenser du filament"
+        },
+        {
+         "en": "<b>Travel moves</b> — shown in a distinct color (red/orange); minimize long open-area moves",
+         "fr": "<b>Déplacements à vide</b> — affichés dans une couleur distincte (rouge/orange) ; minimisez les longs trajets en zone ouverte"
+        },
+        {
+         "en": "<b>Support contact points</b> — verify minimal, strategic placement",
+         "fr": "<b>Points de contact des supports</b> — vérifiez qu'ils sont minimaux et stratégiquement placés"
+        },
+        {
+         "en": "<b>Z-seam</b> — check it is hidden at the back or inside the model",
+         "fr": "<b>Couture en Z</b> — vérifiez qu'elle est cachée à l'arrière ou à l'intérieur du modèle"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.5",
+     "narration": {
+      "en": "The Device tab connects to your printer over your local network or Bambu Cloud. You can monitor the live camera feed, view progress and temperatures, pause or cancel prints, and manage the AMS filament system remotely.",
+      "fr": "L'onglet Device se connecte à votre imprimante via votre réseau local ou Bambu Cloud. Vous pouvez surveiller le flux caméra en direct, voir la progression et les températures, mettre en pause ou annuler des impressions, et gérer le système de filaments AMS à distance."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Device Tab: Remote Control",
+        "fr": "Onglet Device : contrôle à distance"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Live camera feed</b> — monitor your print in real time",
+         "fr": "<b>Flux caméra en direct</b> — surveillez votre impression en temps réel"
+        },
+        {
+         "en": "<b>Progress and temperatures</b> — view remaining time and thermal readings",
+         "fr": "<b>Progression et températures</b> — visualisez le temps restant et les relevés thermiques"
+        },
+        {
+         "en": "<b>Pause / resume / cancel</b> — control print flow remotely",
+         "fr": "<b>Pause / reprise / annulation</b> — contrôlez le flux d'impression à distance"
+        },
+        {
+         "en": "<b>AMS management</b> — load filament and manage spools",
+         "fr": "<b>Gestion AMS</b> — charger le filament et gérer les bobines"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.6",
+     "narration": {
+      "en": "The Project tab enables multi-plate management — organizing different models across multiple virtual build plates, each with independent settings. This is invaluable for print farms or batch production.",
+      "fr": "L'onglet Project permet la gestion multi-plateau — organiser différents modèles sur plusieurs plateaux de construction virtuels, chacun avec des paramètres indépendants. C'est indispensable pour les fermes d'impression ou la production en série."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Project Tab: Multi-Plate Management",
+        "fr": "Onglet Project : gestion multi-plateau"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Each virtual build plate can have its own independent settings — ideal for print farms or batching different parts in a single session.",
+        "fr": "Chaque plateau de construction virtuel peut avoir ses propres paramètres indépendants — idéal pour les fermes d'impression ou le regroupement de pièces différentes en une seule session."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.2.7",
+     "narration": {
+      "en": "When you first launch Bambu Studio and select your printer model — for example, 'Bambu Lab X1 Carbon 0.4mm' — the software loads a complete configuration bundle of pre-tuned presets. Switching nozzle size automatically updates all available quality presets and recommended layer heights.",
+      "fr": "Lors du premier lancement de Bambu Studio, si vous sélectionnez votre modèle d'imprimante — par exemple « Bambu Lab X1 Carbon 0.4mm » — le logiciel charge un ensemble complet de préréglages pré-réglés. Changer de taille de buse met automatiquement à jour tous les préréglages de qualité disponibles et les hauteurs de couche recommandées."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Printer Selection and Setup",
+        "fr": "Sélection et configuration de l'imprimante"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Select printer",
+          "fr": "Choisir l'imprimante"
+         },
+         "sub": {
+          "en": "e.g. X1 Carbon 0.4mm",
+          "fr": "ex. X1 Carbon 0.4mm"
+         }
+        },
+        {
+         "name": {
+          "en": "Load bundle",
+          "fr": "Charger le bundle"
+         },
+         "sub": {
+          "en": "Pre-tuned process, filament, printer presets",
+          "fr": "Préréglages processus, filament, imprimante"
+         }
+        },
+        {
+         "name": {
+          "en": "Select nozzle",
+          "fr": "Choisir la buse"
+         },
+         "sub": {
+          "en": "0.2 / 0.4 / 0.6 / 0.8mm",
+          "fr": "0,2 / 0,4 / 0,6 / 0,8mm"
+         }
+        },
+        {
+         "name": {
+          "en": "Auto-update",
+          "fr": "Mise à jour auto"
+         },
+         "sub": {
+          "en": "Layer heights and speeds adapt",
+          "fr": "Hauteurs de couche et vitesses s'adaptent"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.8",
+     "narration": {
+      "en": "Bambu Studio uses a three-tier profile system. The Printer profile defines physical limits; the Filament profile holds material-specific thermal settings; and the Process profile controls the slicing strategy. Together they organize hundreds of settings into manageable, reusable presets.",
+      "fr": "Bambu Studio utilise un système de profils à trois niveaux. Le profil Imprimante définit les limites physiques ; le profil Filament contient les paramètres thermiques spécifiques au matériau ; et le profil Processus contrôle la stratégie de tranchage. Ensemble, ils organisent des centaines de paramètres en préréglages gérables et réutilisables."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Three-Tier Profile System",
+        "fr": "Le système de profils à trois niveaux"
+       }
+      },
+      {
+       "type": "stages",
+       "items": [
+        {
+         "label": {
+          "en": "Printer / Machine",
+          "fr": "Imprimante / Machine"
+         },
+         "sub": {
+          "en": "Bed size, nozzle, firmware, safety limits (max speed/accel)",
+          "fr": "Plateau, buse, firmware, limites de sécurité (vitesse/accélération max)"
+         }
+        },
+        {
+         "label": {
+          "en": "Filament",
+          "fr": "Filament"
+         },
+         "sub": {
+          "en": "Temperatures, cooling curves, flow rate, retraction, pressure advance",
+          "fr": "Températures, courbes de refroidissement, débit, rétraction, pressure advance"
+         }
+        },
+        {
+         "label": {
+          "en": "Process",
+          "fr": "Processus"
+         },
+         "sub": {
+          "en": "Layer height, walls, infill, speeds, supports, special features",
+          "fr": "Hauteur de couche, parois, remplissage, vitesses, supports, fonctionnalités spéciales"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.9",
+     "narration": {
+      "en": "System presets are locked from editing but can be duplicated into user presets. User presets sync across devices via Bambu Cloud, up to twenty printer presets, one hundred process presets, and two hundred filament presets per account. Project presets stay inside the current 3MF file only.",
+      "fr": "Les préréglages système sont verrouillés à l'édition mais peuvent être dupliqués en préréglages utilisateur. Les préréglages utilisateur se synchronisent entre les appareils via Bambu Cloud, jusqu'à 20 préréglages d'imprimante, 100 préréglages de processus et 200 préréglages de filament par compte. Les préréglages de projet restent uniquement dans le fichier 3MF actuel."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Preset Hierarchy",
+        "fr": "Hiérarchie des préréglages"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "System presets",
+          "fr": "Préréglages système"
+         },
+         "desc": {
+          "en": "Built-in, vendor-provided — locked from editing",
+          "fr": "Intégrés, fournis par le fabricant — verrouillés à l'édition"
+         }
+        },
+        {
+         "title": {
+          "en": "User presets",
+          "fr": "Préréglages utilisateur"
+         },
+         "desc": {
+          "en": "Your custom configs — sync to Bambu Cloud (20 printer / 100 process / 200 filament max)",
+          "fr": "Vos configurations personnalisées — sync Bambu Cloud (20 imprimante / 100 processus / 200 filament max)"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Project presets",
+          "fr": "Préréglages de projet"
+         },
+         "desc": {
+          "en": "Saved only inside the current .3MF file",
+          "fr": "Sauvegardés uniquement dans le fichier .3MF actuel"
+         }
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Bambu Cloud sync does not support presets for non-Bambu Lab printers. Back up your presets locally via export files if you use third-party printers.",
+        "fr": "La synchronisation Bambu Cloud ne prend pas en charge les préréglages pour les imprimantes non-Bambu Lab. Sauvegardez vos préréglages localement via des fichiers d'exportation si vous utilisez des imprimantes tierces."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.2.10",
+     "narration": {
+      "en": "For third-party filaments from brands like eSUN, Overture, or Sunlu, Bambu Studio offers two approaches: creating a Custom Filament via the Settings menu (recommended for AMS users), or saving a modified preset as a user or project preset.",
+      "fr": "Pour les filaments tiers de marques comme eSUN, Overture ou Sunlu, Bambu Studio propose deux approches : créer un filament personnalisé via le menu Settings (recommandé pour les utilisateurs AMS), ou enregistrer un préréglage modifié comme préréglage utilisateur ou de projet."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Custom Filament Profiles",
+        "fr": "Profils de filaments personnalisés"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Method 1 — Custom Filaments",
+         "fr": "Méthode 1 — Filaments personnalisés"
+        },
+        "note": {
+         "en": "Settings → Custom Filaments → Create New. Choose vendor, type, base to inherit from. Best for AMS users.",
+         "fr": "Settings → Custom Filaments → Create New. Choisir fournisseur, type, base dont hériter. Idéal pour les utilisateurs AMS."
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Method 2 — Save As User Preset",
+         "fr": "Méthode 2 — Enregistrer comme préréglage utilisateur"
+        },
+        "note": {
+         "en": "Modify an existing filament preset, save as user or project preset. User presets sync via Bambu Cloud.",
+         "fr": "Modifier un préréglage existant, enregistrer comme préréglage utilisateur ou de projet. Les préréglages utilisateur se synchronisent via Bambu Cloud."
+        }
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "For lesser-known brands, start with Bambu Lab's generic preset for the same material type and calibrate from there — community experience consistently shows better baseline results.",
+        "fr": "Pour les marques moins connues, commencez avec le préréglage générique Bambu Lab pour le même type de matériau et calibrez à partir de là — l'expérience communautaire montre systématiquement de meilleurs résultats de base."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.2.11",
+     "narration": {
+      "en": "The Quality category in Process settings controls the main resolution parameters. Layer height runs from 0.08 to 0.32 millimetres on a 0.4mm nozzle. Wall loops and top and bottom shells set the solid shell count. Seam position determines where the visible Z-seam falls.",
+      "fr": "La catégorie Quality des paramètres de processus contrôle les principaux paramètres de résolution. La hauteur de couche va de 0,08 à 0,32 mm sur une buse de 0,4 mm. Les boucles de paroi et les couches supérieures et inférieures définissent le nombre de coques pleines. La position de la couture détermine où tombe la couture en Z visible."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Process Settings: Quality Category",
+        "fr": "Paramètres de processus : catégorie Quality"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Setting",
+         "fr": "Paramètre"
+        },
+        {
+         "en": "Typical Range",
+         "fr": "Plage typique"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Layer Height",
+          "fr": "Layer Height"
+         },
+         {
+          "en": "0.08–0.32mm (0.4mm nozzle)",
+          "fr": "0,08–0,32 mm (buse 0,4 mm)"
+         }
+        ],
+        [
+         {
+          "en": "Line Width",
+          "fr": "Line Width"
+         },
+         {
+          "en": "0.4–0.6mm",
+          "fr": "0,4–0,6 mm"
+         }
+        ],
+        [
+         {
+          "en": "Wall Loops",
+          "fr": "Wall Loops"
+         },
+         {
+          "en": "2–4 (more for strength)",
+          "fr": "2–4 (plus pour la résistance)"
+         }
+        ],
+        [
+         {
+          "en": "Top/Bottom Shells",
+          "fr": "Top/Bottom Shells"
+         },
+         {
+          "en": "3–5 layers",
+          "fr": "3–5 couches"
+         }
+        ],
+        [
+         {
+          "en": "Seam Position",
+          "fr": "Seam Position"
+         },
+         {
+          "en": "Aligned / Nearest / Random",
+          "fr": "Alignée / La plus proche / Aléatoire"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.12",
+     "narration": {
+      "en": "The Strength category controls what goes inside the part. Gyroid infill provides near-isotropic strength — equal in all directions — making it the go-to for parts that must handle multi-directional loads. Set density to fifteen to twenty percent for general use, forty percent or more for structural parts.",
+      "fr": "La catégorie Strength contrôle ce qui se trouve à l'intérieur de la pièce. Le remplissage gyroid offre une résistance quasi-isotrope — égale dans toutes les directions — ce qui en fait le choix par défaut pour les pièces devant supporter des charges multidirectionnelles. Réglez la densité à 15–20 % pour un usage général, 40 % ou plus pour les pièces structurelles."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Process Settings: Strength Category",
+        "fr": "Paramètres de processus : catégorie Strength"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Setting",
+         "fr": "Paramètre"
+        },
+        {
+         "en": "Recommended",
+         "fr": "Recommandé"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Infill Pattern",
+          "fr": "Infill Pattern"
+         },
+         {
+          "en": "Gyroid (multi-directional), Grid, Honeycomb",
+          "fr": "Gyroid (multidirectionnel), Grid, Honeycomb"
+         }
+        ],
+        [
+         {
+          "en": "Infill Density",
+          "fr": "Infill Density"
+         },
+         {
+          "en": "15–20% general, 40%+ functional",
+          "fr": "15–20 % général, 40 %+ fonctionnel"
+         }
+        ],
+        [
+         {
+          "en": "Wall Order",
+          "fr": "Wall Order"
+         },
+         {
+          "en": "Inner first (strength) / Outer first (quality)",
+          "fr": "Intérieur d'abord (résistance) / Extérieur d'abord (qualité)"
+         }
+        ],
+        [
+         {
+          "en": "Solid Infill Direction",
+          "fr": "Solid Infill Direction"
+         },
+         {
+          "en": "45° default",
+          "fr": "45° par défaut"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.13",
+     "narration": {
+      "en": "Bambu Lab printers implement a speed mode system you can select during printing. Four modes apply a multiplier to the Standard baseline of one hundred percent. Silent halves the speed; Sport adds twenty-four percent; Ludicrous runs at one hundred sixty-six percent. Nozzle temperatures do not change between modes.",
+      "fr": "Les imprimantes Bambu Lab implémentent un système de modes de vitesse sélectionnable pendant l'impression. Quatre modes appliquent un multiplicateur par rapport à la référence Standard de 100 %. Silent divise la vitesse par deux ; Sport ajoute 24 % ; Ludicrous atteint 166 %. Les températures de buse ne changent pas entre les modes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Speed Modes: Silent → Ludicrous",
+        "fr": "Modes de vitesse : Silent → Ludicrous"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Mode",
+         "fr": "Mode"
+        },
+        {
+         "en": "Multiplier",
+         "fr": "Multiplicateur"
+        },
+        {
+         "en": "Best For",
+         "fr": "Idéal pour"
+        }
+       ],
+       "rows": [
+        [
+         "Silent",
+         "50%",
+         {
+          "en": "Quiet / overnight prints",
+          "fr": "Impressions silencieuses / nocturnes"
+         }
+        ],
+        [
+         "Standard",
+         "100%",
+         {
+          "en": "Daily use, good quality",
+          "fr": "Usage quotidien, bonne qualité"
+         }
+        ],
+        [
+         "Sport",
+         "124%",
+         {
+          "en": "Faster prints, slight quality trade-off",
+          "fr": "Impressions plus rapides, légère compromise de qualité"
+         }
+        ],
+        [
+         "Ludicrous",
+         "166%",
+         {
+          "en": "Speed runs, prototypes",
+          "fr": "Tests de vitesse, prototypes"
+         }
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Speed, travel, acceleration, pressure advance, and look-ahead values all change between modes. Nozzle temperatures do not.",
+        "fr": "La vitesse, le déplacement, l'accélération, le pressure advance et les valeurs de look-ahead changent entre les modes. Les températures de buse ne changent pas."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.2.14",
+     "narration": {
+      "en": "Bambu Studio's 'Slow Down for Overhangs' feature automatically reduces print speed based on overhang percentage. The overhang degree is calculated as the percentage of filament width not supported by the lower layer — the more unsupported the filament, the slower the speed.",
+      "fr": "La fonctionnalité « Slow Down for Overhangs » de Bambu Studio réduit automatiquement la vitesse d'impression en fonction du pourcentage de surplomb. Le degré de surplomb est calculé comme le pourcentage de largeur de filament non soutenu par la couche inférieure — plus le filament est non soutenu, plus la vitesse est réduite."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Slow Down for Overhangs",
+        "fr": "Ralentissement pour les surplombs"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "overhang"
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "\"Slow Down for Overhangs\" calculates the percentage of filament width unsupported by the layer below and automatically reduces speed. No manual intervention needed — the slicer handles it.",
+        "fr": "« Slow Down for Overhangs » calcule le pourcentage de largeur de filament non soutenu par la couche inférieure et réduit automatiquement la vitesse. Aucune intervention manuelle n'est nécessaire — le trancheur s'en charge."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.2.15",
+     "narration": {
+      "en": "The Support category lets you choose tree or normal supports, set the overhang threshold, and tune the gap and interface layers. Tree supports are generally preferred for their material efficiency and easier removal — but standard supports remain better for heavy overhangs or maximum stability.",
+      "fr": "La catégorie Support vous permet de choisir entre supports en arbre ou normaux, de définir le seuil de surplomb, et de régler l'espace et les couches d'interface. Les supports en arbre sont généralement préférés pour leur efficacité matérielle et leur retrait plus facile — mais les supports standard restent préférables pour les surplombs importants ou lorsqu'une stabilité maximale est requise."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Process Settings: Support Category",
+        "fr": "Paramètres de processus : catégorie Support"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Setting",
+         "fr": "Paramètre"
+        },
+        {
+         "en": "Notes",
+         "fr": "Notes"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Support Type",
+          "fr": "Support Type"
+         },
+         {
+          "en": "Tree (organic) or Normal (grid)",
+          "fr": "Arbre (organique) ou Normal (grille)"
+         }
+        ],
+        [
+         {
+          "en": "Overhang Threshold",
+          "fr": "Overhang Threshold"
+         },
+         {
+          "en": "55° default for PLA; 40–45° for ABS/ASA",
+          "fr": "55° par défaut pour PLA ; 40–45° pour ABS/ASA"
+         }
+        ],
+        [
+         {
+          "en": "Top Z Distance",
+          "fr": "Top Z Distance"
+         },
+         {
+          "en": "Gap between support and model; larger = easier removal",
+          "fr": "Espace entre support et modèle ; plus grand = retrait plus facile"
+         }
+        ],
+        [
+         {
+          "en": "Interface Layers",
+          "fr": "Interface Layers"
+         },
+         {
+          "en": "2 layers default; Lines or Concentric pattern",
+          "fr": "2 couches par défaut ; motif Lignes ou Concentrique"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.16",
+     "narration": {
+      "en": "The Others category holds three useful features: Brim for adhesion on warp-prone materials, the Prime Tower that purges during filament changes in multi-material prints, and Arc Fitting which converts short line segments into true arc commands for smoother curves and smaller G-code files.",
+      "fr": "La catégorie Others contient trois fonctionnalités utiles : Brim pour l'adhérence sur les matériaux sujets au gauchissement, la Prime Tower qui purge lors des changements de filament dans les impressions multi-matériaux, et Arc Fitting qui convertit de courts segments de ligne en véritables commandes d'arc pour des courbes plus lisses et des fichiers G-code plus petits."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Process Settings: Others Category",
+        "fr": "Paramètres de processus : catégorie Others"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Brim",
+          "fr": "Brim"
+         },
+         "desc": {
+          "en": "Single-layer adhesion extension — useful for warp-prone materials like ABS",
+          "fr": "Extension d'adhérence monocouche — utile pour les matériaux sujets au gauchissement comme l'ABS"
+         }
+        },
+        {
+         "title": {
+          "en": "Prime / Purge Tower",
+          "fr": "Prime/Purge Tower"
+         },
+         "desc": {
+          "en": "Purges old filament between color changes to prevent contamination",
+          "fr": "Purge l'ancien filament entre les changements de couleur pour éviter la contamination"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Arc Fitting",
+          "fr": "Arc Fitting"
+         },
+         "desc": {
+          "en": "Converts line segments to G2/G3 arc commands — smoother curves, smaller G-code files",
+          "fr": "Convertit les segments de ligne en commandes d'arc G2/G3 — courbes plus lisses, fichiers G-code plus petits"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.17",
+     "narration": {
+      "en": "Support painting is one of Bambu Studio's most powerful features. Four tools — Circle Pen, Sphere, Fill, and Gap Fill — let you mark any surface region as an enforcer, where support is required, or a blocker, where support is forbidden. This surgical control is essential for complex geometries.",
+      "fr": "La peinture de supports est l'une des fonctionnalités les plus puissantes de Bambu Studio. Quatre outils — Crayon circulaire, Sphère, Remplissage et Remplissage des espaces — vous permettent de marquer n'importe quelle région de surface comme zone d'imposition (support requis) ou de blocage (support interdit). Ce contrôle chirurgical est essentiel pour les géométries complexes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Support Painting: Manual Control",
+        "fr": "Peinture de supports : contrôle manuel"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Circle Pen",
+          "fr": "Crayon circulaire"
+         },
+         "desc": {
+          "en": "Draw curves on surfaces — paints only visible facets",
+          "fr": "Dessiner des courbes sur les surfaces — ne peint que les facettes visibles"
+         }
+        },
+        {
+         "title": {
+          "en": "Sphere",
+          "fr": "Sphère"
+         },
+         "desc": {
+          "en": "Colors all facets inside a sphere volume — useful for hard-to-reach areas",
+          "fr": "Colore toutes les facettes dans un volume sphérique — utile pour les zones difficiles d'accès"
+         }
+        },
+        {
+         "title": {
+          "en": "Fill",
+          "fr": "Remplissage"
+         },
+         "desc": {
+          "en": "Bucket-fills connected facets with angle threshold — fastest for large flat overhangs",
+          "fr": "Remplit en cascade les facettes connectées avec seuil d'angle — le plus rapide pour les grands surplombs plats"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Gap Fill",
+          "fr": "Remplissage des espaces"
+         },
+         "desc": {
+          "en": "Addresses gap areas from the other painting tools",
+          "fr": "Traite les zones d'espace résultant des autres outils de peinture"
+         }
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Use Fill for large areas and Circle Pen for fine detail. Always check the preview after painting — enforcer and blocker regions can overlap, and the slicer applies specific priority rules.",
+        "fr": "Utilisez Remplissage pour les grandes zones et le Crayon circulaire pour le détail fin. Vérifiez toujours l'aperçu après la peinture — les régions d'imposition et de blocage peuvent se chevaucher, et le trancheur applique des règles de priorité spécifiques."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.2.18",
+     "narration": {
+      "en": "The AMS — Automatic Material System — is Bambu's game-changing multi-color solution. Each unit holds four spools, and four units can be chained for sixteen colors total. It features RFID-based automatic filament identification for Bambu Lab spools, integrated humidity sensing with desiccant packs, and automatic spool backup when filament runs out.",
+      "fr": "L'AMS — Automatic Material System — est la solution multi-couleurs révolutionnaire de Bambu. Chaque unité contient quatre bobines, et quatre unités peuvent être chaînées pour un total de seize couleurs. Il dispose d'une identification automatique du filament par RFID pour les bobines Bambu Lab, d'un capteur d'humidité intégré avec sachets de dessiccant, et d'une sauvegarde automatique de bobine lorsque le filament est épuisé."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "AMS: Automatic Material System",
+        "fr": "AMS : Automatic Material System"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "16",
+       "caption": {
+        "en": "maximum colors with 4 AMS units (4 spools each)",
+        "fr": "couleurs maximum avec 4 unités AMS (4 bobines chacune)"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>RFID identification</b> — automatic filament recognition for Bambu Lab spools",
+         "fr": "<b>Identification RFID</b> — reconnaissance automatique du filament pour les bobines Bambu Lab"
+        },
+        {
+         "en": "<b>Humidity sensing</b> — integrated sensor + desiccant packs per unit",
+         "fr": "<b>Capteur d'humidité</b> — capteur intégré + sachets de dessiccant par unité"
+        },
+        {
+         "en": "<b>Automatic spool backup</b> — switches to a backup spool when filament runs out",
+         "fr": "<b>Sauvegarde automatique de bobine</b> — bascule sur une bobine de secours quand le filament est épuisé"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.19",
+     "narration": {
+      "en": "Color painting works exactly like support painting: use a brush to paint different colors directly onto the model surface. The slicer generates toolpaths with automatic filament change commands at the right layers. Each color change triggers a purge in the prime tower to prevent contamination.",
+      "fr": "La peinture de couleurs fonctionne exactement comme la peinture de supports : utilisez un pinceau pour peindre différentes couleurs directement sur la surface du modèle. Le trancheur génère des trajectoires avec des commandes automatiques de changement de filament aux couches appropriées. Chaque changement de couleur déclenche une purge dans la tour de purge pour éviter la contamination."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Color Painting for Multi-Material Prints",
+        "fr": "Peinture de couleurs pour les impressions multi-matériaux"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Paint colors",
+          "fr": "Peindre les couleurs"
+         },
+         "sub": {
+          "en": "Brush directly on model surface",
+          "fr": "Pinceau sur la surface du modèle"
+         }
+        },
+        {
+         "name": {
+          "en": "Slice",
+          "fr": "Trancher"
+         },
+         "sub": {
+          "en": "Slicer generates filament change commands",
+          "fr": "Le trancheur génère les commandes de changement"
+         }
+        },
+        {
+         "name": {
+          "en": "Purge tower",
+          "fr": "Tour de purge"
+         },
+         "sub": {
+          "en": "Clears old color at each switch",
+          "fr": "Évacue l'ancienne couleur à chaque changement"
+         }
+        },
+        {
+         "name": {
+          "en": "Print",
+          "fr": "Imprimer"
+         },
+         "sub": {
+          "en": "AMS switches spools automatically",
+          "fr": "L'AMS change les bobines automatiquement"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.20",
+     "narration": {
+      "en": "Bambu Studio offers three ways to send prints to your printer. Bambu Cloud enables remote printing and camera access but requires an account. LAN Mode keeps all communication on your local network. SD Card export gives maximum privacy and offline workflows with no network required.",
+      "fr": "Bambu Studio propose trois façons d'envoyer des impressions à votre imprimante. Bambu Cloud permet l'impression à distance et l'accès à la caméra, mais nécessite un compte. Le mode LAN maintient toutes les communications sur votre réseau local. L'export carte SD offre une confidentialité maximale et des flux de travail hors ligne sans réseau."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Sending Prints: Three Methods",
+        "fr": "Envoyer des impressions : trois méthodes"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Bambu Cloud",
+          "fr": "Bambu Cloud"
+         },
+         "desc": {
+          "en": "Remote printing + camera access. Requires Bambu account; communicates with Bambu Lab servers.",
+          "fr": "Impression à distance + accès caméra. Nécessite un compte Bambu ; communique avec les serveurs Bambu Lab."
+         }
+        },
+        {
+         "title": {
+          "en": "LAN Mode",
+          "fr": "Mode LAN"
+         },
+         "desc": {
+          "en": "Local network only — no cloud dependency. Best for privacy and reliability.",
+          "fr": "Réseau local uniquement — pas de dépendance au cloud. Idéal pour la confidentialité et la fiabilité."
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "SD Card Export",
+          "fr": "Export carte SD"
+         },
+         "desc": {
+          "en": "Maximum privacy, offline workflow — no network needed; manual file transfer.",
+          "fr": "Confidentialité maximale, flux de travail hors ligne — pas de réseau requis ; transfert de fichiers manuel."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.21",
+     "narration": {
+      "en": "For privacy-conscious users, Bambu Lab has obtained three independent security certifications: ISO slash IEC 27001 for information security management, ISO slash IEC 27701 for privacy management, and TRUSTe Enterprise Privacy. LAN Mode is always available as a cloud-free alternative.",
+      "fr": "Pour les utilisateurs soucieux de la confidentialité, Bambu Lab a obtenu trois certifications de sécurité indépendantes : ISO/IEC 27001 pour la gestion de la sécurité de l'information, ISO/IEC 27701 pour la gestion de la confidentialité, et TRUSTe Enterprise Privacy. Le mode LAN est toujours disponible comme alternative sans cloud."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Cloud Privacy and Security",
+        "fr": "Confidentialité et sécurité du cloud"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>ISO/IEC 27001</b> — information security management",
+         "fr": "<b>ISO/IEC 27001</b> — gestion de la sécurité de l'information"
+        },
+        {
+         "en": "<b>ISO/IEC 27701</b> — privacy information management",
+         "fr": "<b>ISO/IEC 27701</b> — gestion des informations de confidentialité"
+        },
+        {
+         "en": "<b>TRUSTe Enterprise Privacy</b> — third-party privacy certification",
+         "fr": "<b>TRUSTe Enterprise Privacy</b> — certification de confidentialité tierce"
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Bambu Studio requires a Bambu account login. If you prefer no cloud dependency, enable LAN Mode — all communication stays on your local network.",
+        "fr": "Bambu Studio nécessite une connexion à un compte Bambu. Si vous préférez éviter la dépendance au cloud, activez le mode LAN — toutes les communications restent sur votre réseau local."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.2.22",
+     "narration": {
+      "en": "Saving your project as a 3MF file preserves everything: the 3D models, support painting data, all process settings, variable layer height information, modifier meshes and their settings, and model positions on the build plate. You can return months later and every setting is exactly as you left it.",
+      "fr": "Sauvegarder votre projet sous forme de fichier 3MF préserve tout : les modèles 3D, les données de peinture de supports, tous les paramètres de processus, les informations de hauteur de couche variable, les maillages modificateurs et leurs paramètres, ainsi que les positions des modèles sur le plateau. Vous pouvez revenir des mois plus tard et chaque paramètre est exactement tel que vous l'avez laissé."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "3MF Project Files: Complete Reproducibility",
+        "fr": "Fichiers de projet 3MF : reproductibilité complète"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>3D models</b> — geometry preserved inside the archive",
+         "fr": "<b>Modèles 3D</b> — géométrie préservée dans l'archive"
+        },
+        {
+         "en": "<b>Support painting data</b> — enforcer and blocker regions saved",
+         "fr": "<b>Données de peinture de supports</b> — régions d'imposition et de blocage sauvegardées"
+        },
+        {
+         "en": "<b>All process settings</b> — layer height, infill, speeds, supports",
+         "fr": "<b>Tous les paramètres de processus</b> — hauteur de couche, remplissage, vitesses, supports"
+        },
+        {
+         "en": "<b>Variable layer height info</b> — curve data preserved per region",
+         "fr": "<b>Informations de hauteur de couche variable</b> — données de courbe préservées par région"
+        },
+        {
+         "en": "<b>Model positions and orientations</b> — exact build plate layout",
+         "fr": "<b>Positions et orientations des modèles</b> — disposition exacte du plateau"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.2.23",
+     "narration": {
+      "en": "Bambu Studio ships a command-line interface for headless slicing — no window, no mouse. This lets you slice on a server, inside a batch script, or as part of an automated pipeline such as a print farm or a web upload-and-slice service. Because OrcaSlicer is a fork of Bambu Studio, the two share the same CLI flags.",
+      "fr": "Bambu Studio propose une interface en ligne de commande pour le tranchage sans tête — sans fenêtre, sans souris. Cela vous permet de trancher sur un serveur, dans un script par lots, ou dans le cadre d'un pipeline automatisé comme une ferme d'impression ou un service web de dépôt et tranchage. Comme OrcaSlicer est un fork de Bambu Studio, les deux partagent les mêmes options de ligne de commande."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Headless Slicing: The Bambu Studio CLI",
+        "fr": "Tranchage sans tête : l'interface en ligne de commande"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Print farm automation",
+          "fr": "Automatisation de ferme d'impression"
+         },
+         "desc": {
+          "en": "Slice in a batch script, no GUI required",
+          "fr": "Trancher dans un script par lots, sans interface graphique"
+         }
+        },
+        {
+         "title": {
+          "en": "Web upload-and-slice",
+          "fr": "Service web de dépôt-tranchage"
+         },
+         "desc": {
+          "en": "Server-side slicing from uploaded models",
+          "fr": "Tranchage côté serveur à partir de modèles déposés"
+         }
+        },
+        {
+         "title": {
+          "en": "CI validation",
+          "fr": "Validation en CI"
+         },
+         "desc": {
+          "en": "Validate printable models in a continuous integration pipeline",
+          "fr": "Valider des modèles imprimables dans un pipeline d'intégration continue"
+         },
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "OrcaSlicer is a fork of Bambu Studio — these CLI flags work almost identically in both slicers.",
+        "fr": "OrcaSlicer est un fork de Bambu Studio — ces options de ligne de commande fonctionnent de façon quasi identique dans les deux trancheurs."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.2.24",
+     "narration": {
+      "en": "The CLI needs three JSON profile files exported from the GUI: a machine profile, a process profile, and one or more filament profiles. Feed those in with your model and specify an output 3MF. Settings priority runs from command-line flags first, then the loaded profiles, then whatever is embedded in the input 3MF.",
+      "fr": "L'interface en ligne de commande nécessite trois fichiers JSON de profil exportés depuis l'interface graphique : un profil machine, un profil de processus, et un ou plusieurs profils de filament. Indiquez-les avec votre modèle et spécifiez un 3MF de sortie. La priorité des paramètres va des options en ligne de commande d'abord, puis les profils chargés, puis ce qui est intégré dans le 3MF d'entrée."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "CLI Key Flags and Priority",
+        "fr": "Options CLI clés et priorité"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Flag",
+         "fr": "Option"
+        },
+        {
+         "en": "What it does",
+         "fr": "Rôle"
+        }
+       ],
+       "rows": [
+        [
+         "`--slice N`",
+         {
+          "en": "Slice plate N; 0 = all plates",
+          "fr": "Trancher le plateau N ; 0 = tous les plateaux"
+         }
+        ],
+        [
+         "`--load-settings`",
+         {
+          "en": "Load machine.json + process.json",
+          "fr": "Charger machine.json + process.json"
+         }
+        ],
+        [
+         "`--load-filaments`",
+         {
+          "en": "One filament profile per extruder slot",
+          "fr": "Un profil de filament par emplacement extrudeur"
+         }
+        ],
+        [
+         "`--export-3mf`",
+         {
+          "en": "Write sliced 3MF output (G-code inside)",
+          "fr": "Écrire le 3MF tranché en sortie (G-code inclus)"
+         }
+        ],
+        [
+         "`--orient` / `--arrange 1`",
+         {
+          "en": "Auto-orient / auto-arrange before slicing",
+          "fr": "Auto-orientation / auto-arrangement avant tranchage"
+         }
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Priority: command-line flags > --load-settings / --load-filaments > settings embedded in the input 3MF.",
+        "fr": "Priorité : options en ligne de commande > --load-settings / --load-filaments > paramètres intégrés dans le 3MF d'entrée."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.2.25",
+     "narration": {
+      "en": "Two extra flags matter for batch and farm pipelines. Skip-useless-pick skips thumbnail generation to speed up slicing when you are discarding the previews. And mstpp 300 aborts any plate that runs longer than five minutes — without it a pathological model can hang the CLI indefinitely. Always export your profiles from the GUI first — hand-writing profile JSON is error-prone and unsupported.",
+      "fr": "Deux options supplémentaires sont importantes pour les pipelines de traitement par lots ou de fermes d'impression. skip-useless-pick désactive la génération de miniatures pour accélérer le tranchage lorsque les aperçus sont inutiles. Et mstpp 300 interrompt tout plateau dont le tranchage dépasse cinq minutes — sans cette option, un modèle pathologique peut bloquer l'interface indéfiniment. Commencez toujours par exporter vos profils depuis l'interface graphique — rédiger manuellement le JSON des profils est source d'erreurs et n'est pas pris en charge."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "CLI: Batch and Farm Best Practices",
+        "fr": "CLI : bonnes pratiques pour les lots et fermes d'impression"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>--skip-useless-pick</b> — skip thumbnail generation; speeds up slicing in pipelines",
+         "fr": "<b>--skip-useless-pick</b> — désactive la génération de miniatures ; accélère le tranchage en pipeline"
+        },
+        {
+         "en": "<b>--mstpp 300</b> — abort any plate taking longer than 5 minutes; prevents indefinite hangs",
+         "fr": "<b>--mstpp 300</b> — interrompt tout plateau dépassant 5 minutes ; évite les blocages indéfinis"
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Always export your profiles from the GUI first. Dial the print in visually, export machine/filament/process to .json, then point the CLI at those files. Hand-writing profile JSON from scratch is error-prone and unsupported.",
+        "fr": "Commencez toujours par exporter vos profils depuis l'interface graphique. Réglez visuellement l'impression, exportez machine/filament/processus en .json, puis indiquez ces fichiers à l'interface en ligne de commande. Rédiger manuellement le JSON des profils depuis zéro est source d'erreurs et n'est pas pris en charge."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.2.26",
+     "narration": {
+      "en": "To close, here is the full chapter recap. Bambu Studio is the definitive slicer for Bambu Lab printer owners — polished, tightly integrated, and feature-rich. Its four-tab workflow, three-tier profile system, support painting, AMS multi-color, 3MF project saving, and headless CLI together cover every step from first import to automated print farm.",
+      "fr": "Pour conclure, voici le récapitulatif complet du chapitre. Bambu Studio est le trancheur de référence pour les propriétaires d'imprimantes Bambu Lab — soigné, étroitement intégré et riche en fonctionnalités. Son flux de travail en quatre onglets, son système de profils à trois niveaux, la peinture de supports, l'AMS multicolore, la sauvegarde de projets 3MF et l'interface CLI sans tête couvrent ensemble chaque étape, de la première importation à la ferme d'impression automatisée."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Chapter 2 Recap",
+        "fr": "Récapitulatif du chapitre 2"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Bambu Studio: Key Takeaways",
+        "fr": "Bambu Studio : points clés à retenir"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Forked from PrusaSlicer in 2022</b> — mature engine, modern Bambu-first interface",
+         "fr": "<b>Forké de PrusaSlicer en 2022</b> — moteur mature, interface moderne centrée Bambu"
+        },
+        {
+         "en": "<b>Four tabs</b> — Prepare, Preview, Device, Project — guide every workflow step",
+         "fr": "<b>Quatre onglets</b> — Prepare, Preview, Device, Project — guident chaque étape du flux de travail"
+        },
+        {
+         "en": "<b>Three-tier profiles</b> — Printer + Filament + Process, with system / user / project hierarchy",
+         "fr": "<b>Profils à trois niveaux</b> — Imprimante + Filament + Processus, avec hiérarchie système / utilisateur / projet"
+        },
+        {
+         "en": "<b>Support painting</b> — Circle Pen / Sphere / Fill / Gap Fill for surgical enforcer and blocker control",
+         "fr": "<b>Peinture de supports</b> — Crayon / Sphère / Remplissage / Espaces pour un contrôle chirurgical imposition/blocage"
+        },
+        {
+         "en": "<b>AMS</b> — up to 16 colors, RFID identification, humidity sensing, auto spool backup",
+         "fr": "<b>AMS</b> — jusqu'à 16 couleurs, identification RFID, capteur d'humidité, sauvegarde automatique de bobine"
+        },
+        {
+         "en": "<b>3MF project files</b> — preserve every setting for complete reproducibility",
+         "fr": "<b>Fichiers de projet 3MF</b> — préservent chaque paramètre pour une reproductibilité complète"
+        },
+        {
+         "en": "<b>LAN Mode</b> — cloud-free printing; Bambu holds ISO/IEC 27001, 27701, and TRUSTe certifications",
+         "fr": "<b>Mode LAN</b> — impression sans cloud ; Bambu détient les certifications ISO/IEC 27001, 27701 et TRUSTe"
+        },
+        {
+         "en": "<b>CLI for headless slicing</b> — shared with OrcaSlicer; use --skip-useless-pick and --mstpp for farm pipelines",
+         "fr": "<b>CLI pour le tranchage sans tête</b> — partagé avec OrcaSlicer ; utilisez --skip-useless-pick et --mstpp pour les pipelines de fermes"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 3,
+   "title": {
+    "en": "OrcaSlicer and the Broader Ecosystem",
+    "fr": "OrcaSlicer et l'écosystème élargi"
+   },
+   "scenes": [
+    {
+     "id": "5.3.0",
+     "narration": {
+      "en": "Chapter 3. Bambu Studio is powerful, but it lives inside a rich slicer ecosystem with a fascinating evolutionary history. Understanding the family tree lets you choose the right tool and carry your knowledge across platforms.",
+      "fr": "Chapitre 3. Bambu Studio est puissant, mais il s'inscrit dans un riche écosystème de trancheurs avec une fascinante histoire évolutive. Comprendre l'arbre généalogique vous permet de choisir le bon outil et de transférer vos connaissances entre plateformes."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 5 · Chapter 3",
+        "fr": "Module 5 · Chapitre 3"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "OrcaSlicer and the Broader Ecosystem",
+        "fr": "OrcaSlicer et l'écosystème élargi"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "One common ancestor. Four major slicers. Nearly identical concepts. Learn one, and the others are just a short step away.",
+        "fr": "Un ancêtre commun. Quatre trancheurs majeurs. Des concepts presque identiques. Apprenez-en un, et les autres ne sont qu'à un pas."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.3.1",
+     "narration": {
+      "en": "All major FDM slicers trace back to a single open-source project: Slic3r, created in September 2011. From it grew PrusaSlicer, then Bambu Studio, then OrcaSlicer — all sharing the same core concepts and settings vocabulary.",
+      "fr": "Tous les grands trancheurs FDM remontent à un seul projet open source : Slic3r, créé en septembre 2011. De lui sont nés PrusaSlicer, puis Bambu Studio, puis OrcaSlicer — tous partageant les mêmes concepts fondamentaux et le même vocabulaire de paramètres."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Slicer Family Tree",
+        "fr": "L'arbre généalogique des trancheurs"
+       }
+      },
+      {
+       "type": "timeline",
+       "nodes": [
+        {
+         "label": "Sept. 2011",
+         "text": {
+          "en": "Slic3r — Alessandro Ranellucci and the RepRap community",
+          "fr": "Slic3r — Alessandro Ranellucci et la communauté RepRap"
+         }
+        },
+        {
+         "label": "Nov. 2016",
+         "text": {
+          "en": "Slic3r Prusa Edition → renamed PrusaSlicer in May 2019",
+          "fr": "Slic3r Prusa Edition → renommé PrusaSlicer en mai 2019"
+         }
+        },
+        {
+         "label": "2022",
+         "text": {
+          "en": "Bambu Studio — Bambu Lab fork of PrusaSlicer",
+          "fr": "Bambu Studio — fork de PrusaSlicer par Bambu Lab"
+         }
+        },
+        {
+         "label": "July 2022",
+         "text": {
+          "en": "OrcaSlicer — SoftFever fork of Bambu Studio",
+          "fr": "OrcaSlicer — fork de Bambu Studio par SoftFever"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.3.2",
+     "narration": {
+      "en": "This convergence is good news for learners: the PrusaSlicer paradigm has won broad adoption, and Cura is the only major slicer with an entirely independent codebase. Knowledge transfers almost directly between the family members.",
+      "fr": "Cette convergence est une bonne nouvelle pour les apprenants : le paradigme PrusaSlicer a remporté une large adoption, et Cura est le seul grand trancheur avec une base de code entièrement indépendante. Les connaissances se transfèrent presque directement entre les membres de la famille."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Two Distinct Lineages",
+        "fr": "Deux lignées distinctes"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "PrusaSlicer family",
+         "fr": "Famille PrusaSlicer"
+        },
+        "note": {
+         "en": "Slic3r → PrusaSlicer → Bambu Studio → OrcaSlicer + SuperSlicer. Shared concepts, near-identical settings, easy profile migration.",
+         "fr": "Slic3r → PrusaSlicer → Bambu Studio → OrcaSlicer + SuperSlicer. Concepts partagés, paramètres quasi identiques, migration de profils facile."
+        }
+       },
+       "right": {
+        "title": {
+         "en": "UltiMaker Cura",
+         "fr": "UltiMaker Cura"
+        },
+        "note": {
+         "en": "Independent C++ engine (CuraEngine) + Python/QML front-end. No profile compatibility with the PrusaSlicer family.",
+         "fr": "Moteur C++ indépendant (CuraEngine) + interface Python/QML. Aucune compatibilité de profils avec la famille PrusaSlicer."
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.3.3",
+     "narration": {
+      "en": "OrcaSlicer was first released in July 2022 by community developer SoftFever as a fork of Bambu Studio. It has since grown into one of the most widely used slicers in the maker community, addressing three specific gaps left by Bambu Studio.",
+      "fr": "OrcaSlicer a été publié pour la première fois en juillet 2022 par le développeur communautaire SoftFever comme un fork de Bambu Studio. Il est depuis devenu l'un des trancheurs les plus utilisés dans la communauté maker, comblant trois lacunes spécifiques laissées par Bambu Studio."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Why OrcaSlicer Exists",
+        "fr": "Pourquoi OrcaSlicer existe"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "No cloud dependency",
+          "fr": "Pas de dépendance au cloud"
+         },
+         "desc": {
+          "en": "No Bambu account required — fully local, privacy-friendly workflow",
+          "fr": "Aucun compte Bambu requis — flux de travail entièrement local, respectueux de la vie privée"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Broader printer support",
+          "fr": "Support d'imprimantes étendu"
+         },
+         "desc": {
+          "en": "Optimized profiles for Voron, Creality, and dozens of other brands beyond Bambu Lab",
+          "fr": "Profils optimisés pour Voron, Creality, et des dizaines d'autres marques au-delà de Bambu Lab"
+         }
+        },
+        {
+         "title": {
+          "en": "Best-in-class calibration",
+          "fr": "Calibration de premier ordre"
+         },
+         "desc": {
+          "en": "Comprehensive built-in calibration suite unmatched by any free slicer",
+          "fr": "Suite de calibration intégrée complète sans équivalent parmi les trancheurs gratuits"
+         },
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.3.4",
+     "narration": {
+      "en": "OrcaSlicer inherits Bambu Studio's three-panel layout but adds greater feature density. A dedicated Calibration tab in the menu is the standout feature, and a Simple to Advanced to Expert mode selector makes it accessible for all skill levels.",
+      "fr": "OrcaSlicer hérite de la disposition en trois panneaux de Bambu Studio mais ajoute une plus grande densité de fonctionnalités. Un onglet de calibration dédié dans le menu est la fonctionnalité phare, et un sélecteur de mode Simple, Avancé, Expert le rend accessible à tous les niveaux."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "OrcaSlicer Interface",
+        "fr": "Interface d'OrcaSlicer"
+       }
+      },
+      {
+       "type": "stages",
+       "items": [
+        {
+         "label": {
+          "en": "Simple",
+          "fr": "Simple"
+         },
+         "sub": {
+          "en": "Essential settings only — beginner-friendly",
+          "fr": "Paramètres essentiels uniquement — accessible aux débutants"
+         }
+        },
+        {
+         "label": {
+          "en": "Advanced",
+          "fr": "Avancé"
+         },
+         "sub": {
+          "en": "Extended options — experienced users",
+          "fr": "Options étendues — utilisateurs expérimentés"
+         }
+        },
+        {
+         "label": {
+          "en": "Expert",
+          "fr": "Expert"
+         },
+         "sub": {
+          "en": "Every parameter exposed — power users",
+          "fr": "Chaque paramètre accessible — utilisateurs avancés"
+         }
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "The dedicated Calibration tab is OrcaSlicer's headline feature — no other free slicer comes close.",
+        "fr": "L'onglet Calibration dédié est la fonctionnalité phare d'OrcaSlicer — aucun autre trancheur gratuit n'en approche."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.3.5",
+     "narration": {
+      "en": "OrcaSlicer's calibration menu includes built-in test prints and automated analysis for seven different parameters, covering everything from temperature optimisation to eliminating vibration artifacts.",
+      "fr": "Le menu de calibration d'OrcaSlicer inclut des impressions de test intégrées et une analyse automatisée pour sept paramètres différents, couvrant tout, de l'optimisation de la température à l'élimination des artefacts de vibration."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Calibration Test Suite",
+        "fr": "La suite de tests de calibration"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Test",
+         "fr": "Test"
+        },
+        {
+         "en": "Purpose",
+         "fr": "Objectif"
+        },
+        {
+         "en": "What to look for",
+         "fr": "Ce qu'il faut observer"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Temperature Tower",
+          "fr": "Temperature Tower"
+         },
+         {
+          "en": "Optimise melting and bonding",
+          "fr": "Optimiser la fusion et la liaison"
+         },
+         {
+          "en": "Least stringing, best adhesion",
+          "fr": "Moins de fils, meilleure adhérence"
+         }
+        ],
+        [
+         {
+          "en": "Flow Rate",
+          "fr": "Flow Rate"
+         },
+         {
+          "en": "Ensure correct extrusion",
+          "fr": "Assurer une extrusion correcte"
+         },
+         {
+          "en": "Smoothest top surface",
+          "fr": "Surface supérieure la plus lisse"
+         }
+        ],
+        [
+         {
+          "en": "Pressure Advance",
+          "fr": "Pressure Advance"
+         },
+         {
+          "en": "Reduce pressure artifacts",
+          "fr": "Réduire les artefacts de pression"
+         },
+         {
+          "en": "Sharpest corners",
+          "fr": "Coins les plus nets"
+         }
+        ],
+        [
+         {
+          "en": "Retraction",
+          "fr": "Retraction"
+         },
+         {
+          "en": "Minimise stringing",
+          "fr": "Minimiser les fils"
+         },
+         {
+          "en": "Shortest distance, clean result",
+          "fr": "Distance minimale, résultat propre"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.3.6",
+     "narration": {
+      "en": "Three more calibration tests round out the suite. Tolerance testing checks dimensional accuracy for parts that must fit together. Max Volumetric Speed finds your printer's speed ceiling before it under-extrudes. Input Shaping reduces ringing artifacts on vertical surfaces.",
+      "fr": "Trois tests de calibration supplémentaires complètent la suite. Le test de tolérance vérifie la précision dimensionnelle pour les pièces qui doivent s'assembler. Max Volumetric Speed trouve le plafond de vitesse avant la sous-extrusion. L'Input Shaping réduit les artefacts de résonance sur les surfaces verticales."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "More Calibration Tests",
+        "fr": "Tests de calibration supplémentaires"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Tolerance",
+          "fr": "Tolerance"
+         },
+         "desc": {
+          "en": "Prints pegs and holes at known dimensions — find optimal fit between mating parts",
+          "fr": "Imprime des tenons et des trous aux dimensions connues — trouver l'ajustement optimal entre pièces complémentaires"
+         }
+        },
+        {
+         "title": {
+          "en": "Max Volumetric Speed",
+          "fr": "Max Volumetric Speed"
+         },
+         "desc": {
+          "en": "Find the highest speed before under-extrusion begins",
+          "fr": "Trouver la vitesse maximale avant que la sous-extrusion ne commence"
+         }
+        },
+        {
+         "title": {
+          "en": "Input Shaping / VFA",
+          "fr": "Input Shaping / VFA"
+         },
+         "desc": {
+          "en": "Reduce vibration artifacts — look for cleanest vertical surfaces",
+          "fr": "Réduire les artefacts de vibration — rechercher les surfaces verticales les plus nettes"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.3.7",
+     "narration": {
+      "en": "The calibration order matters critically. Each test builds on the one before it. Flow rate must be correct before pressure advance can be calibrated accurately, because incorrect flow will cause PA to compensate inaccurately.",
+      "fr": "L'ordre de calibration est crucial. Chaque test s'appuie sur le précédent. Le débit doit être correct avant que le pressure advance puisse être calibré avec précision, car un débit incorrect fera compenser le PA de manière inexacte."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Calibration Order Is Critical",
+        "fr": "L'ordre de calibration est crucial"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Temperature",
+          "fr": "Température"
+         },
+         "sub": {
+          "en": "PLA ~205 °C, PETG ~240 °C, ABS ~245 °C",
+          "fr": "PLA ~205 °C, PETG ~240 °C, ABS ~245 °C"
+         }
+        },
+        {
+         "name": {
+          "en": "Flow Rate",
+          "fr": "Débit"
+         },
+         "sub": {
+          "en": "Two-pass visual test",
+          "fr": "Test visuel en deux passes"
+         }
+        },
+        {
+         "name": {
+          "en": "Pressure Advance",
+          "fr": "Pressure Advance"
+         },
+         "sub": {
+          "en": "Line, pattern, or tower method",
+          "fr": "Méthode ligne, motif ou tour"
+         }
+        },
+        {
+         "name": {
+          "en": "Retraction",
+          "fr": "Rétraction"
+         },
+         "sub": {
+          "en": "Direct 1–2 mm · Bowden 4–6 mm",
+          "fr": "Direct 1–2 mm · Bowden 4–6 mm"
+         }
+        },
+        {
+         "name": {
+          "en": "Tolerance + MVS",
+          "fr": "Tolerance + MVS"
+         },
+         "sub": {
+          "en": "Dimensional accuracy and speed ceiling",
+          "fr": "Précision dimensionnelle et plafond de vitesse"
+         }
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Always dry filament before calibrating temperature — moisture causes bubbling and stringing that mimic temperature problems.",
+        "fr": "Séchez toujours le filament avant de calibrer la température — l'humidité provoque des bulles et des fils qui imitent des problèmes de température."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.3.8",
+     "narration": {
+      "en": "Who is OrcaSlicer for? It excels for Klipper firmware users, for households with multiple printer brands, for privacy-conscious users, and for anyone who wants best-in-class calibration tools. The main caveat: it can feel overwhelming to absolute beginners due to its feature density.",
+      "fr": "À qui s'adresse OrcaSlicer ? Il excelle pour les utilisateurs du firmware Klipper, pour les ménages avec plusieurs marques d'imprimantes, pour les utilisateurs soucieux de la confidentialité, et pour quiconque veut des outils de calibration de premier ordre. La principale réserve : il peut paraître écrasant pour les débutants absolus en raison de sa densité de fonctionnalités."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "OrcaSlicer: Ideal Users and Limits",
+        "fr": "OrcaSlicer : utilisateurs idéaux et limites"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Klipper users</b> — direct control and webcam monitoring from the slicer",
+         "fr": "<b>Utilisateurs Klipper</b> — contrôle direct et surveillance par webcam depuis le trancheur"
+        },
+        {
+         "en": "<b>Multi-printer households</b> — best support for mixed printer fleets",
+         "fr": "<b>Ménages multi-imprimantes</b> — meilleur support pour les flottes d'imprimantes mixtes"
+        },
+        {
+         "en": "<b>Privacy-conscious users</b> — no account, no cloud dependency",
+         "fr": "<b>Utilisateurs soucieux de la confidentialité</b> — aucun compte, aucune dépendance au cloud"
+        },
+        {
+         "en": "<b>Limits</b> — community-driven updates, no first-party manufacturer support, can overwhelm beginners",
+         "fr": "<b>Limites</b> — mises à jour communautaires, pas de support fabricant en première partie, peut submerger les débutants"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.3.9",
+     "narration": {
+      "en": "PrusaSlicer is the stable, mature foundation that both Bambu Studio and OrcaSlicer are built on. Originally forked from Slic3r in November 2016 as Slic3r Prusa Edition, and rebranded in May 2019, it has the longest continuous development track record in the family.",
+      "fr": "PrusaSlicer est la base stable et mature sur laquelle sont construits à la fois Bambu Studio et OrcaSlicer. Initialement forké depuis Slic3r en novembre 2016 sous le nom Slic3r Prusa Edition, et rebaptisé en mai 2019, il a le plus long historique de développement continu dans la famille."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PrusaSlicer: The Original Open-Source Standard",
+        "fr": "PrusaSlicer : le standard open source original"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Variable layer height",
+          "fr": "Hauteur de couche variable"
+         },
+         "desc": {
+          "en": "Best-in-class graphical curve editor — draw the height profile directly on the model",
+          "fr": "Éditeur de courbe graphique de premier ordre — dessinez le profil de hauteur directement sur le modèle"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "SLA/MSLA support",
+          "fr": "Support SLA/MSLA"
+         },
+         "desc": {
+          "en": "The only slicer in this family with comprehensive resin printing support",
+          "fr": "Le seul trancheur de cette famille avec une prise en charge complète de l'impression résine"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "STEP file import",
+          "fr": "Import de fichiers STEP"
+         },
+         "desc": {
+          "en": "Since version 2.5 (September 2022) — bypasses mesh conversion for cleaner geometry",
+          "fr": "Depuis la version 2.5 (septembre 2022) — contourne la conversion en maillage pour une géométrie plus nette"
+         }
+        },
+        {
+         "title": {
+          "en": "Fully open-source",
+          "fr": "Entièrement open source"
+         },
+         "desc": {
+          "en": "AGPL license, most transparent development process in the family",
+          "fr": "Licence AGPL, processus de développement le plus transparent de la famille"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.3.10",
+     "narration": {
+      "en": "PrusaSlicer has a few notable limitations compared to its offspring. There are no built-in calibration prints — you must download calibration STL files separately. Third-party printer profiles are less comprehensive than OrcaSlicer's. And the interface is older and less visually polished.",
+      "fr": "PrusaSlicer a quelques limitations notables par rapport à ses descendants. Il n'y a pas d'impressions de calibration intégrées — vous devez télécharger des fichiers STL de calibration séparément. Les profils d'imprimantes tierces sont moins complets que ceux d'OrcaSlicer. Et l'interface est plus ancienne et visuellement moins soignée."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PrusaSlicer: Ideal Users",
+        "fr": "PrusaSlicer : utilisateurs idéaux"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Prusa printer owners</b> — native optimisation for MK4, MK3.5, Mini+, XL",
+         "fr": "<b>Propriétaires d'imprimantes Prusa</b> — optimisation native pour MK4, MK3.5, Mini+, XL"
+        },
+        {
+         "en": "<b>Resin printers too</b> — unique SLA/MSLA support in this family",
+         "fr": "<b>Aussi impression résine</b> — prise en charge SLA/MSLA unique dans cette famille"
+        },
+        {
+         "en": "<b>Variable layer height enthusiasts</b> — the graphical editor is the best in class",
+         "fr": "<b>Amateurs de hauteur de couche variable</b> — l'éditeur graphique est le meilleur de sa catégorie"
+        },
+        {
+         "en": "<b>Stability-focused users</b> — the most mature, battle-tested codebase in the family",
+         "fr": "<b>Utilisateurs orientés stabilité</b> — la base de code la plus mature et éprouvée de la famille"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.3.11",
+     "narration": {
+      "en": "UltiMaker Cura is the independent giant of the slicer world. Its front-end runs in Python and QML, while slicing computation happens inside CuraEngine, a separate C++ application. Its independence from the PrusaSlicer family is both its strength and its main drawback.",
+      "fr": "UltiMaker Cura est le géant indépendant du monde des trancheurs. Son interface s'exécute en Python et QML, tandis que le calcul de tranchage se fait dans CuraEngine, une application C++ séparée. Son indépendance par rapport à la famille PrusaSlicer est à la fois sa force et son principal inconvénient."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "UltiMaker Cura: The Independent Giant",
+        "fr": "UltiMaker Cura : le géant indépendant"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Cura strengths",
+         "fr": "Points forts de Cura"
+        },
+        "note": {
+         "en": "Broad printer support from many manufacturers; extensive plugin marketplace (OctoPrint, adaptive layers, post-processing scripts); largest community knowledge base",
+         "fr": "Large support d'imprimantes de nombreux fabricants ; vaste marketplace de plugins (OctoPrint, couches adaptatives, scripts de post-traitement) ; plus grande base de connaissances communautaires"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Cura limitations",
+         "fr": "Limitations de Cura"
+        },
+        "note": {
+         "en": "Slower feature development in 2024–2026 vs. PrusaSlicer family; no profile compatibility with PrusaSlicer family; some features in paid Cura Enterprise tier",
+         "fr": "Développement de fonctionnalités plus lent en 2024–2026 par rapport à la famille PrusaSlicer ; aucune compatibilité de profils avec la famille PrusaSlicer ; certaines fonctionnalités dans le niveau payant Cura Enterprise"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.3.12",
+     "narration": {
+      "en": "SuperSlicer is a fork of PrusaSlicer that adds extensive customisation options. It was an early influence on OrcaSlicer's calibration approach, and many of its innovations have since been absorbed into OrcaSlicer. Its development pace has slowed since mid-2024.",
+      "fr": "SuperSlicer est un fork de PrusaSlicer qui ajoute de nombreuses options de personnalisation. Il a été une influence majeure sur l'approche de calibration d'OrcaSlicer, et nombre de ses innovations ont depuis été absorbées par OrcaSlicer. Son rythme de développement a ralenti depuis mi-2024."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "SuperSlicer: The Enthusiast's Lab",
+        "fr": "SuperSlicer : le laboratoire de l'enthousiaste"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>PrusaSlicer fork</b> with enhanced calibration, ironing, single-perimeter tops, adaptive layer height",
+         "fr": "<b>Fork de PrusaSlicer</b> avec calibration améliorée, repassage, périmètre unique en surface, hauteur de couche adaptative"
+        },
+        {
+         "en": "<b>Early inspiration for OrcaSlicer</b> — several calibration features migrated across",
+         "fr": "<b>Inspiration précoce d'OrcaSlicer</b> — plusieurs fonctionnalités de calibration ont migré"
+        },
+        {
+         "en": "<b>Slowing development</b> — new users generally advised to choose OrcaSlicer instead",
+         "fr": "<b>Développement ralenti</b> — les nouveaux utilisateurs sont généralement conseillés de choisir OrcaSlicer à la place"
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Most SuperSlicer innovations are now in OrcaSlicer. Choose SuperSlicer only if you need a specific feature not yet in Orca.",
+        "fr": "La plupart des innovations de SuperSlicer sont maintenant dans OrcaSlicer. Choisissez SuperSlicer uniquement si vous avez besoin d'une fonctionnalité spécifique pas encore dans Orca."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.3.13",
+     "narration": {
+      "en": "Because the PrusaSlicer family shares a codebase, profiles migrate between them with varying ease. Migration within the family is straightforward. But moving from Cura to any PrusaSlicer-family slicer — or vice versa — means recreating profiles from scratch.",
+      "fr": "Parce que la famille PrusaSlicer partage une base de code, les profils migrent entre eux avec des degrés variables de facilité. La migration au sein de la famille est simple. Mais passer de Cura à n'importe quel trancheur de la famille PrusaSlicer — ou vice versa — signifie recréer les profils de zéro."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Profile Compatibility Between Slicers",
+        "fr": "Compatibilité des profils entre trancheurs"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Migration path",
+         "fr": "Chemin de migration"
+        },
+        {
+         "en": "Compatibility",
+         "fr": "Compatibilité"
+        },
+        {
+         "en": "Notes",
+         "fr": "Notes"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Bambu Studio → OrcaSlicer",
+          "fr": "Bambu Studio → OrcaSlicer"
+         },
+         {
+          "en": "Excellent",
+          "fr": "Excellente"
+         },
+         {
+          "en": "Mostly compatible, minimal changes",
+          "fr": "Principalement compatible, changements minimaux"
+         }
+        ],
+        [
+         {
+          "en": "PrusaSlicer → OrcaSlicer",
+          "fr": "PrusaSlicer → OrcaSlicer"
+         },
+         {
+          "en": "Good",
+          "fr": "Bonne"
+         },
+         {
+          "en": "Minor setting renames may be needed",
+          "fr": "Des renommages mineurs de paramètres peuvent être nécessaires"
+         }
+        ],
+        [
+         {
+          "en": "OrcaSlicer → Bambu Studio",
+          "fr": "OrcaSlicer → Bambu Studio"
+         },
+         {
+          "en": "Good",
+          "fr": "Bonne"
+         },
+         {
+          "en": "Some Orca-specific features not supported",
+          "fr": "Certaines fonctionnalités spécifiques à Orca non prises en charge"
+         }
+        ],
+        [
+         {
+          "en": "Cura ↔ Any Prusa-family",
+          "fr": "Cura ↔ Famille Prusa"
+         },
+         {
+          "en": "Poor",
+          "fr": "Mauvaise"
+         },
+         {
+          "en": "Independent codebase — must recreate from scratch",
+          "fr": "Base de code indépendante — profils à recréer de zéro"
+         }
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "When migrating within the family, check the 'inherits' field in JSON profile files — the parent profile must also be present in the destination slicer.",
+        "fr": "Lors d'une migration au sein de la famille, vérifiez le champ 'inherits' dans les fichiers de profil JSON — le profil parent doit également être présent dans le trancheur de destination."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.3.14",
+     "narration": {
+      "en": "Use this decision table to pick the right slicer. Your printer brand is the first filter; your workflow needs — calibration, privacy, plugins, resin — narrow it down from there.",
+      "fr": "Utilisez ce tableau de décision pour choisir le bon trancheur. La marque de votre imprimante est le premier filtre ; vos besoins de flux de travail — calibration, confidentialité, plugins, résine — permettent d'affiner ensuite."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "How to Choose: Decision Table",
+        "fr": "Comment choisir : tableau de décision"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Your situation",
+         "fr": "Votre situation"
+        },
+        {
+         "en": "Recommended",
+         "fr": "Recommandé"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Bambu Lab printer owner",
+          "fr": "Propriétaire d'imprimante Bambu Lab"
+         },
+         {
+          "en": "Bambu Studio",
+          "fr": "Bambu Studio"
+         }
+        ],
+        [
+         {
+          "en": "Klipper firmware user",
+          "fr": "Utilisateur du firmware Klipper"
+         },
+         {
+          "en": "OrcaSlicer",
+          "fr": "OrcaSlicer"
+         }
+        ],
+        [
+         {
+          "en": "Prusa printer owner",
+          "fr": "Propriétaire d'imprimante Prusa"
+         },
+         {
+          "en": "PrusaSlicer",
+          "fr": "PrusaSlicer"
+         }
+        ],
+        [
+         {
+          "en": "Multiple printer brands",
+          "fr": "Plusieurs marques d'imprimantes"
+         },
+         {
+          "en": "OrcaSlicer",
+          "fr": "OrcaSlicer"
+         }
+        ],
+        [
+         {
+          "en": "Privacy-focused, no cloud",
+          "fr": "Confidentialité, pas de cloud"
+         },
+         {
+          "en": "OrcaSlicer or PrusaSlicer",
+          "fr": "OrcaSlicer ou PrusaSlicer"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.3.15",
+     "narration": {
+      "en": "Two more rows in that decision table. If you need specific Cura plugins — OctoPrint, marketplace extensions — UltiMaker Cura is the answer. And if you are a complete beginner with any printer, OrcaSlicer in Simple mode offers the best balance of accessibility and power.",
+      "fr": "Deux autres lignes dans ce tableau de décision. Si vous avez besoin de plugins Cura spécifiques — OctoPrint, extensions du marketplace — UltiMaker Cura est la réponse. Et si vous êtes un débutant complet avec n'importe quelle imprimante, OrcaSlicer en mode Simple offre le meilleur équilibre entre accessibilité et puissance."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Decision Table (continued)",
+        "fr": "Tableau de décision (suite)"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Your situation",
+         "fr": "Votre situation"
+        },
+        {
+         "en": "Recommended",
+         "fr": "Recommandé"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Need specific Cura plugins",
+          "fr": "Besoin de plugins Cura spécifiques"
+         },
+         {
+          "en": "UltiMaker Cura",
+          "fr": "UltiMaker Cura"
+         }
+        ],
+        [
+         {
+          "en": "Beginner, any printer",
+          "fr": "Débutant, n'importe quelle imprimante"
+         },
+         {
+          "en": "OrcaSlicer (Simple mode)",
+          "fr": "OrcaSlicer (mode Simple)"
+         }
+        ],
+        [
+         {
+          "en": "Also do resin printing",
+          "fr": "Aussi impression résine"
+         },
+         {
+          "en": "PrusaSlicer",
+          "fr": "PrusaSlicer"
+         }
+        ],
+        [
+         {
+          "en": "Advanced calibration needs",
+          "fr": "Besoins avancés de calibration"
+         },
+         {
+          "en": "OrcaSlicer",
+          "fr": "OrcaSlicer"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.3.16",
+     "narration": {
+      "en": "Chapter 3 recap. The slicer ecosystem has converged around the PrusaSlicer paradigm. Once you know one slicer in the family, the others come quickly. Choose based on your printer, your privacy needs, and whether you need calibration tools or resin support.",
+      "fr": "Récapitulatif du chapitre 3. L'écosystème des trancheurs a convergé autour du paradigme PrusaSlicer. Une fois que vous connaissez un trancheur de la famille, les autres s'apprennent rapidement. Choisissez en fonction de votre imprimante, de vos besoins en confidentialité, et de la nécessité d'outils de calibration ou du support résine."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 3 Recap",
+        "fr": "Récapitulatif du chapitre 3"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>One family, one lineage</b> — Slic3r → PrusaSlicer → Bambu Studio → OrcaSlicer; knowledge transfers directly between members",
+         "fr": "<b>Une famille, un lignage</b> — Slic3r → PrusaSlicer → Bambu Studio → OrcaSlicer ; les connaissances se transfèrent directement entre membres"
+        },
+        {
+         "en": "<b>OrcaSlicer</b> leads in 2025–2026 for calibration tools, multi-printer support, and zero cloud dependency",
+         "fr": "<b>OrcaSlicer</b> domine en 2025–2026 pour les outils de calibration, le support multi-imprimantes et l'absence totale de dépendance au cloud"
+        },
+        {
+         "en": "<b>Bambu Studio</b> — best for Bambu Lab owners; tightest hardware integration",
+         "fr": "<b>Bambu Studio</b> — meilleur pour les propriétaires Bambu Lab ; intégration matérielle la plus étroite"
+        },
+        {
+         "en": "<b>PrusaSlicer</b> — most mature codebase; only option with resin (SLA/MSLA) support in this family",
+         "fr": "<b>PrusaSlicer</b> — base de code la plus mature ; seule option avec support résine (SLA/MSLA) dans cette famille"
+        },
+        {
+         "en": "<b>Cura</b> — large user base and plugin ecosystem, but profile migration to/from the PrusaSlicer family is not possible",
+         "fr": "<b>Cura</b> — grande base d'utilisateurs et vaste écosystème de plugins, mais la migration de profils vers/depuis la famille PrusaSlicer est impossible"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 4,
+   "title": {
+    "en": "Advanced Slicer Features",
+    "fr": "Fonctionnalités avancées des trancheurs"
+   },
+   "scenes": [
+    {
+     "id": "5.4.0",
+     "narration": {
+      "en": "Welcome to Chapter 4. Once the fundamentals are solid, a world of advanced slicer features unlocks — smooth surfaces, seamless vases, region-specific overrides, and fully automated calibration workflows.",
+      "fr": "Bienvenue au chapitre 4. Une fois les fondamentaux maîtrisés, un monde de fonctionnalités avancées s'ouvre à vous — surfaces lisses, vases sans couture, substitutions de paramètres par région et flux de calibration entièrement automatisés."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 5 · Chapter 4",
+        "fr": "Module 5 · Chapitre 4"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Advanced Slicer Features",
+        "fr": "Fonctionnalités avancées des trancheurs"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Push FDM to its limits — from glass-smooth top surfaces to single-wall vases with invisible seams.",
+        "fr": "Repoussez les limites du FDM — des surfaces supérieures lisses comme du verre aux vases à paroi unique sans couture visible."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.4.1",
+     "narration": {
+      "en": "Variable layer height lets you use fine layers on curved or detailed surfaces while keeping coarse layers on flat vertical sections — giving you smooth curves without the print time of uniformly fine settings.",
+      "fr": "La hauteur de couche variable vous permet d'utiliser des couches fines sur les surfaces courbes ou détaillées, tout en conservant des couches épaisses sur les sections plates et verticales — pour des courbes lisses sans le temps d'impression des réglages uniformément fins."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Variable Layer Height",
+        "fr": "Hauteur de couche variable"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Uniform fine layers",
+         "fr": "Couches fines uniformes"
+        },
+        "note": {
+         "en": "Smooth everywhere — very slow",
+         "fr": "Lisse partout — très lent"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Variable layer height",
+         "fr": "Hauteur de couche variable"
+        },
+        "note": {
+         "en": "Fine on curves, coarse on flat — fast AND smooth",
+         "fr": "Fines sur les courbes, épaisses sur le plat — rapide ET lisse"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.4.2",
+     "narration": {
+      "en": "PrusaSlicer has the most polished implementation — a graphical curve editor where you draw directly on the model profile. Bambu Studio and OrcaSlicer let you paint regions for finer or coarser layers.",
+      "fr": "PrusaSlicer offre l'implémentation la plus soignée — un éditeur de courbe graphique où vous dessinez directement sur le profil du modèle. Bambu Studio et OrcaSlicer permettent de peindre des régions pour des couches plus fines ou plus épaisses."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Variable Layer Height — When and How",
+        "fr": "Hauteur de couche variable — quand et comment"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Best for</b> — organic shapes, figurines, architectural models with curved and flat regions",
+         "fr": "<b>Idéal pour</b> — formes organiques, figurines, maquettes architecturales avec surfaces courbes et plates"
+        },
+        {
+         "en": "<b>Classic example</b> — 0.08 mm on a figurine's face, 0.24 mm on its flat base",
+         "fr": "<b>Exemple classique</b> — 0,08 mm sur le visage d'une figurine, 0,24 mm sur la base plate"
+        },
+        {
+         "en": "<b>PrusaSlicer</b> — graphical curve editor drawn on the model profile (best-in-class)",
+         "fr": "<b>PrusaSlicer</b> — éditeur de courbe graphique tracé sur le profil du modèle (meilleur de sa catégorie)"
+        },
+        {
+         "en": "<b>Trade-off</b> — smoothing parameter controls how gradually layer heights transition; abrupt changes are visible",
+         "fr": "<b>Compromis</b> — le paramètre de lissage contrôle la progressivité des transitions de hauteur de couche"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.4.3",
+     "narration": {
+      "en": "Fuzzy skin adds a randomized texture to model surfaces by randomly offsetting perimeter points outward. The result is a slightly rough, matte finish that hides layer lines beautifully.",
+      "fr": "La peau floue ajoute une texture aléatoire aux surfaces du modèle en décalant aléatoirement les points du périmètre vers l'extérieur. Le résultat est une finition légèrement rugueuse et mate qui masque parfaitement les lignes de couche."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Fuzzy Skin",
+        "fr": "Peau floue (Fuzzy Skin)"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Thickness",
+          "fr": "Épaisseur"
+         },
+         "desc": {
+          "en": "Max lateral offset per point — higher = rougher texture",
+          "fr": "Décalage latéral max par point — plus élevé = texture plus rugueuse"
+         }
+        },
+        {
+         "title": {
+          "en": "Point distance",
+          "fr": "Distance entre points"
+         },
+         "desc": {
+          "en": "Avg spacing between random offsets — lower = denser texture",
+          "fr": "Espacement moyen entre décalages aléatoires — plus faible = texture plus dense"
+         }
+        },
+        {
+         "title": {
+          "en": "Best uses",
+          "fr": "Meilleures utilisations"
+         },
+         "desc": {
+          "en": "Functional grips, props, matte non-slip surfaces",
+          "fr": "Poignées fonctionnelles, props, surfaces mates antidérapantes"
+         },
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.4.4",
+     "narration": {
+      "en": "Ironing passes the hot nozzle over the top surface at slow speed with minimal extrusion — re-melting and smoothing it into a glossy finish. It combines three actions: heating, physically smoothing, and filling gaps.",
+      "fr": "Le repassage passe la buse chaude sur la surface supérieure à faible vitesse avec une extrusion minimale — refondant et lissant la surface pour créer une finition brillante. Il combine trois actions : chauffer, lisser physiquement et combler les vides."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Ironing",
+        "fr": "Repassage (Ironing)"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Heat",
+          "fr": "Chauffer"
+         },
+         "sub": {
+          "en": "re-melts top layer",
+          "fr": "refond la couche sup."
+         }
+        },
+        {
+         "name": {
+          "en": "Smooth",
+          "fr": "Lisser"
+         },
+         "sub": {
+          "en": "hot nozzle flattens surface",
+          "fr": "buse chaude aplatit"
+         }
+        },
+        {
+         "name": {
+          "en": "Fill",
+          "fr": "Combler"
+         },
+         "sub": {
+          "en": "tiny extra extrusion fills gaps",
+          "fr": "micro-extrusion comble les vides"
+         }
+        },
+        {
+         "name": {
+          "en": "Result",
+          "fr": "Résultat"
+         },
+         "sub": {
+          "en": "glossy top face",
+          "fr": "face sup. brillante"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.4.5",
+     "narration": {
+      "en": "Ironing typically adds ten to thirty percent to print time but requires no extra tools. PLA is the easiest material; PETG can string during ironing so keep the flow rate low; ABS needs controlled cooling to prevent warping.",
+      "fr": "Le repassage ajoute typiquement 10 à 30 % au temps d'impression mais ne nécessite aucun outil supplémentaire. Le PLA est le plus facile ; le PETG peut créer des fils pendant le repassage, donc maintenez le débit bas ; l'ABS nécessite un refroidissement contrôlé pour éviter le gauchissement."
+     },
+     "elements": [
+      {
+       "type": "stat",
+       "value": "+10–30%",
+       "caption": {
+        "en": "typical print-time increase from ironing — no extra tools needed",
+        "fr": "augmentation typique du temps d'impression par le repassage — aucun outil supplémentaire requis"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Ironing result",
+         "fr": "Résultat repassage"
+        },
+        {
+         "en": "Watch for",
+         "fr": "Attention à"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "PLA",
+          "fr": "PLA"
+         },
+         {
+          "en": "Excellent",
+          "fr": "Excellent"
+         },
+         {
+          "en": "—",
+          "fr": "—"
+         }
+        ],
+        [
+         {
+          "en": "PETG",
+          "fr": "PETG"
+         },
+         {
+          "en": "Good — keep flow low",
+          "fr": "Bon — débit bas"
+         },
+         {
+          "en": "Stringing",
+          "fr": "Fils"
+         }
+        ],
+        [
+         {
+          "en": "ABS",
+          "fr": "ABS"
+         },
+         {
+          "en": "Possible",
+          "fr": "Possible"
+         },
+         {
+          "en": "Warping",
+          "fr": "Gauchissement"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.4.6",
+     "narration": {
+      "en": "Vase mode, also called spiralized contour, transforms a solid model into a hollow single-wall vessel with no visible Z-seam. Instead of discrete layers, the printer moves in one continuous upward spiral — like a soft-serve ice cream machine.",
+      "fr": "Le mode vase, aussi appelé contour spiralisé, transforme un modèle solide en un récipient creux à paroi unique sans couture en Z visible. Au lieu de couches discrètes, l'imprimante se déplace en une spirale continue montant progressivement — comme une machine à glace à l'italienne."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Vase Mode (Spiralize)",
+        "fr": "Mode vase (Spiralize)"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>How it works</b> — one continuous upward spiral; nozzle never stops, so there is no seam",
+         "fr": "<b>Comment ça marche</b> — une spirale continue montante ; la buse ne s'arrête jamais, donc pas de couture"
+        },
+        {
+         "en": "<b>Auto-enforced</b> — 1 perimeter, 0 % infill, 0 top solid layers, supports disabled",
+         "fr": "<b>Imposé automatiquement</b> — 1 périmètre, 0 % de remplissage, 0 couche pleine supérieure, supports désactivés"
+        },
+        {
+         "en": "<b>Perfect for</b> — decorative vessels, planters, lampshades, hollow display objects",
+         "fr": "<b>Parfait pour</b> — récipients décoratifs, jardinières, abat-jours, objets creux d'exposition"
+        },
+        {
+         "en": "<b>Limitation</b> — geometry must allow continuous upward progression; no internal islands or overhangs",
+         "fr": "<b>Limitation</b> — la géométrie doit permettre une progression ascendante continue ; pas d'îlots internes ni de surplombs"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.4.7",
+     "narration": {
+      "en": "Sequential printing completes one object fully before starting the next, instead of printing all objects layer by layer simultaneously. This is essential for print farms and for tall delicate objects.",
+      "fr": "L'impression séquentielle complète entièrement un objet avant de passer au suivant, au lieu d'imprimer tous les objets couche par couche simultanément. C'est essentiel pour les fermes d'impression et les objets hauts et délicats."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Sequential Printing",
+        "fr": "Impression séquentielle"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Print farms",
+          "fr": "Fermes d'impression"
+         },
+         "desc": {
+          "en": "Pull finished parts without stopping the whole job",
+          "fr": "Retirer les pièces terminées sans arrêter le travail"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Delicate tall parts",
+          "fr": "Pièces hautes et délicates"
+         },
+         "desc": {
+          "en": "Prevents nozzle collisions with already-printed objects",
+          "fr": "Évite les collisions de buse avec les objets déjà imprimés"
+         }
+        },
+        {
+         "title": {
+          "en": "Per-object settings",
+          "fr": "Paramètres par objet"
+         },
+         "desc": {
+          "en": "Each object can use slightly different process settings",
+          "fr": "Chaque objet peut utiliser des paramètres de processus légèrement différents"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.4.8",
+     "narration": {
+      "en": "The main constraint of sequential printing is gantry clearance. The nozzle and gantry assembly must not collide with already-printed parts — so objects must be shorter than the clearance height and arranged so the extruder never passes over a finished part.",
+      "fr": "La contrainte principale de l'impression séquentielle est la hauteur de dégagement du portique. L'ensemble buse-portique ne doit pas entrer en collision avec les pièces déjà imprimées — les objets doivent donc être moins hauts que le dégagement et disposés de sorte que l'extrudeur ne passe jamais au-dessus d'une pièce terminée."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Objects must be shorter than the gantry clearance height, and arranged so the extruder reaches each one without passing over finished parts.",
+        "fr": "Les objets doivent être moins hauts que la hauteur de dégagement du portique, et disposés de sorte que l'extrudeur atteigne chacun sans passer au-dessus des pièces terminées."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.4.9",
+     "narration": {
+      "en": "Modifier meshes are invisible geometric shapes placed over regions of your model to override specific settings in that area only. Think of them as local editing tools for your print parameters — no CAD changes needed.",
+      "fr": "Les maillages modificateurs sont des formes géométriques invisibles placées sur des régions de votre modèle pour substituer des paramètres spécifiques uniquement dans cette zone. Considérez-les comme des outils d'édition locale de vos paramètres d'impression — sans modification CAO."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Modifier Meshes",
+        "fr": "Maillages modificateurs"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Higher infill</b> around a bolt hole — without changing the whole model's infill density",
+         "fr": "<b>Remplissage plus dense</b> autour d'un trou de boulon — sans changer la densité globale"
+        },
+        {
+         "en": "<b>Local support</b> only on a specific overhang — no global support generation",
+         "fr": "<b>Support local</b> uniquement sur un surplomb spécifique — pas de génération globale de supports"
+        },
+        {
+         "en": "<b>Finer layer height</b> for a detailed region — while the rest prints at standard resolution",
+         "fr": "<b>Hauteur de couche plus fine</b> pour une région détaillée — le reste imprime à résolution standard"
+        },
+        {
+         "en": "<b>Slower speed</b> for a delicate section — without slowing the whole print",
+         "fr": "<b>Vitesse réduite</b> pour une section délicate — sans ralentir toute l'impression"
+        },
+        {
+         "en": "<b>How</b> — place a cube/cylinder/sphere over the target area; the modifier's settings override globals in that region",
+         "fr": "<b>Comment</b> — placer un cube/cylindre/sphère sur la zone cible ; les paramètres du modificateur remplacent les globaux dans cette région"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.4.10",
+     "narration": {
+      "en": "OrcaSlicer's built-in calibration suite is the most comprehensive of any free slicer. The calibration order matters critically: each step builds on the last, so you must follow temperature, flow rate, pressure advance, retraction, tolerance, then max volumetric speed.",
+      "fr": "La suite de calibration intégrée d'OrcaSlicer est la plus complète de tous les trancheurs gratuits. L'ordre de calibration est crucial : chaque étape s'appuie sur la précédente, donc il faut suivre température, débit, pressure advance, rétraction, tolérance, puis vitesse volumétrique maximale."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "OrcaSlicer Calibration Suite",
+        "fr": "Suite de calibration OrcaSlicer"
+       }
+      },
+      {
+       "type": "timeline",
+       "nodes": [
+        {
+         "label": "1",
+         "text": {
+          "en": "Temperature Tower — find optimal melt temp",
+          "fr": "Tour de température — trouver la température de fusion optimale"
+         }
+        },
+        {
+         "label": "2",
+         "text": {
+          "en": "Flow Rate — correct extrusion volume (coarse + fine passes)",
+          "fr": "Débit — corriger le volume d'extrusion (passe grossière + fine)"
+         }
+        },
+        {
+         "label": "3",
+         "text": {
+          "en": "Pressure Advance — sharpen corners and reduce artifacts",
+          "fr": "Pressure Advance — affiner les coins et réduire les artefacts"
+         }
+        },
+        {
+         "label": "4",
+         "text": {
+          "en": "Retraction → Tolerance → Max Volumetric Speed",
+          "fr": "Rétraction → Tolérance → Vitesse volumétrique max"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.4.11",
+     "narration": {
+      "en": "The temperature tower compresses a full temperature study into one print, with segments in five-degree steps. Evaluate each segment for surface finish, stringing, and layer adhesion. Typical starting points: PLA around 205 degrees, PETG around 240, ABS around 245.",
+      "fr": "La tour de température compresse une étude complète de température en une seule impression, avec des segments par paliers de 5 °C. Évaluez chaque segment pour la finition de surface, les fils et l'adhérence des couches. Points de départ typiques : PLA environ 205 °C, PETG environ 240 °C, ABS environ 245 °C."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Temperature Tower",
+        "fr": "Tour de température"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Criterion",
+         "fr": "Critère"
+        },
+        {
+         "en": "Too cold",
+         "fr": "Trop froid"
+        },
+        {
+         "en": "Optimal",
+         "fr": "Optimal"
+        },
+        {
+         "en": "Too hot",
+         "fr": "Trop chaud"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Surface finish",
+          "fr": "Finition de surface"
+         },
+         {
+          "en": "Matte, rough",
+          "fr": "Mate, rugueuse"
+         },
+         {
+          "en": "Smooth, satin",
+          "fr": "Lisse, satinée"
+         },
+         {
+          "en": "Glossy, uneven",
+          "fr": "Brillante, inégale"
+         }
+        ],
+        [
+         {
+          "en": "Stringing",
+          "fr": "Fils"
+         },
+         {
+          "en": "Minimal",
+          "fr": "Minimaux"
+         },
+         {
+          "en": "None",
+          "fr": "Aucun"
+         },
+         {
+          "en": "Excessive",
+          "fr": "Excessifs"
+         }
+        ],
+        [
+         {
+          "en": "Layer adhesion",
+          "fr": "Adhérence couches"
+         },
+         {
+          "en": "Weak, separates",
+          "fr": "Faible, se sépare"
+         },
+         {
+          "en": "Strong, fused",
+          "fr": "Forte, fusionnée"
+         },
+         {
+          "en": "Good, may ooze",
+          "fr": "Bonne, peut suinter"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.4.12",
+     "narration": {
+      "en": "A key warning before temperature calibration: always dry your filament first. Moisture causes bubbling and stringing that will be incorrectly attributed to temperature, sending you in the wrong direction.",
+      "fr": "Un avertissement important avant la calibration de température : séchez toujours votre filament en premier. L'humidité provoque des bulles et des fils qui seront incorrectement attribués à la température, vous orientant dans la mauvaise direction."
+     },
+     "elements": [
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "PLA",
+         "desc": {
+          "en": "~205 °C starting point",
+          "fr": "~205 °C comme point de départ"
+         }
+        },
+        {
+         "title": "PETG",
+         "desc": {
+          "en": "~240 °C starting point",
+          "fr": "~240 °C comme point de départ"
+         }
+        },
+        {
+         "title": "ABS",
+         "desc": {
+          "en": "~245 °C starting point",
+          "fr": "~245 °C comme point de départ"
+         }
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Always dry your filament before temperature calibration. Moisture causes bubbling and stringing that will be misattributed to temperature.",
+        "fr": "Séchez toujours votre filament avant la calibration de température. L'humidité provoque des bulles et des fils qui seront incorrectement attribués à la température."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.4.13",
+     "narration": {
+      "en": "Flow rate calibration uses a two-pass visual approach. Pass one prints nine blocks with flow modifiers from roughly minus nine to plus nine percent — pick the smoothest top surface. Pass two refines with ten blocks from minus nine to zero, and you apply the same formula each time.",
+      "fr": "La calibration du débit utilise une approche visuelle en deux passes. La passe 1 imprime neuf blocs avec des modificateurs de débit d'environ -9 % à +9 % — choisissez la surface supérieure la plus lisse. La passe 2 affine avec dix blocs de -9 à 0, et vous appliquez la même formule à chaque fois."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Flow Rate Calibration",
+        "fr": "Calibration du débit"
+       }
+      },
+      {
+       "type": "stages",
+       "items": [
+        {
+         "label": {
+          "en": "Pass 1 — coarse",
+          "fr": "Passe 1 — grossière"
+         },
+         "sub": {
+          "en": "9 blocks, −9 % to +9 % modifier; pick smoothest top",
+          "fr": "9 blocs, modificateur −9 % à +9 % ; choisir la surface la plus lisse"
+         }
+        },
+        {
+         "label": {
+          "en": "Calculate",
+          "fr": "Calculer"
+         },
+         "sub": {
+          "en": "NewFlow = OldFlow × (100 + modifier) / 100",
+          "fr": "NouveauDébit = AncienDébit × (100 + modificateur) / 100"
+         }
+        },
+        {
+         "label": {
+          "en": "Pass 2 — fine",
+          "fr": "Passe 2 — fine"
+         },
+         "sub": {
+          "en": "10 blocks, −9 to 0; apply same formula again",
+          "fr": "10 blocs, −9 à 0 ; appliquer la même formule"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.4.14",
+     "narration": {
+      "en": "Pressure advance must always be calibrated after flow rate — incorrect flow causes PA to compensate inaccurately. OrcaSlicer offers three methods: line, pattern, and tower. Each produces a different visual to read, but all target the same goal: sharpest corners with fewest artifacts.",
+      "fr": "Le pressure advance doit toujours être calibré après le débit — un débit incorrect fait compenser le PA de manière inexacte. OrcaSlicer propose trois méthodes : ligne, motif et tour. Chacune produit un visuel différent à lire, mais toutes visent le même objectif : les coins les plus nets avec le moins d'artefacts."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Pressure Advance Calibration",
+        "fr": "Calibration du pressure advance"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Line method",
+          "fr": "Méthode par ligne"
+         },
+         "desc": {
+          "en": "Quick — lines with incrementing PA values; select the most even line",
+          "fr": "Rapide — lignes avec valeurs PA incrémentales ; sélectionner la ligne la plus uniforme"
+         }
+        },
+        {
+         "title": {
+          "en": "Pattern method",
+          "fr": "Méthode par motif"
+         },
+         "desc": {
+          "en": "Visual assessment of a prism pattern — find sharpest corners with fewest artifacts",
+          "fr": "Évaluation visuelle d'un motif de prisme — trouver les coins les plus nets"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Tower method",
+          "fr": "Méthode par tour"
+         },
+         "desc": {
+          "en": "PA increases with height — examine corners at each level",
+          "fr": "Le PA augmente avec la hauteur — examiner les coins à chaque niveau"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.4.15",
+     "narration": {
+      "en": "As a rough starting point, PLA on a direct drive setup often lands around 0.04 to 0.06 for pressure advance; PETG runs slightly higher. But values vary significantly by printer, extruder type, and filament — always calibrate for your specific combination.",
+      "fr": "Comme point de départ approximatif, le PLA sur une configuration à entraînement direct se situe souvent autour de 0,04 à 0,06 pour le pressure advance ; le PETG est légèrement plus élevé. Mais les valeurs varient significativement selon l'imprimante, le type d'extrudeur et le filament — calibrez toujours pour votre combinaison spécifique."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "PA values vary by printer, extruder, and filament. PLA on direct-drive: roughly 0.04–0.06. PETG slightly higher. Always calibrate — never rely on generic values.",
+        "fr": "Les valeurs de PA varient selon l'imprimante, l'extrudeur et le filament. PLA sur entraînement direct : environ 0,04–0,06. PETG légèrement plus haut. Calibrez toujours — ne vous fiez jamais aux valeurs génériques."
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.4.16",
+     "narration": {
+      "en": "The retraction test finds the shortest retraction distance that eliminates stringing without causing clogs or pockmarks. Direct drive extruders start at one millimetre and test up to two; Bowden systems start at four millimetres and test up to six.",
+      "fr": "Le test de rétraction trouve la distance de rétraction la plus courte qui élimine les fils sans provoquer de bouchons ni de cratères. Les extrudeurs à entraînement direct commencent à 1 mm et testent jusqu'à 2 mm ; les systèmes Bowden commencent à 4 mm et testent jusqu'à 6 mm."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Retraction Test",
+        "fr": "Test de rétraction"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Direct drive",
+         "fr": "Entraînement direct"
+        },
+        "note": {
+         "en": "Start at 1 mm — test up to 2 mm",
+         "fr": "Commencer à 1 mm — tester jusqu'à 2 mm"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Bowden",
+         "fr": "Bowden"
+        },
+        "note": {
+         "en": "Start at 4 mm — test up to 6 mm",
+         "fr": "Commencer à 4 mm — tester jusqu'à 6 mm"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "5.4.17",
+     "narration": {
+      "en": "The tolerance test prints a series of pegs and holes at known dimensions. After printing, you test which peg fits which hole to determine your printer's actual dimensional accuracy. This is essential for any functional print with mating parts.",
+      "fr": "Le test de tolérance imprime une série de tenons et de trous aux dimensions connues. Après l'impression, vous testez quel tenon s'insère dans quel trou pour déterminer la précision dimensionnelle réelle de votre imprimante. C'est essentiel pour toute impression fonctionnelle avec des pièces complémentaires."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Tolerance Test",
+        "fr": "Test de tolérance"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>What it prints</b> — pegs and holes at known, precise dimensions",
+         "fr": "<b>Ce qu'il imprime</b> — tenons et trous aux dimensions précises connues"
+        },
+        {
+         "en": "<b>How to read it</b> — test which peg fits which hole after printing",
+         "fr": "<b>Comment le lire</b> — tester quel tenon s'insère dans quel trou après impression"
+        },
+        {
+         "en": "<b>Why it matters</b> — FDM parts expand slightly; dimensional offset varies by material and settings",
+         "fr": "<b>Pourquoi c'est important</b> — les pièces FDM gonflent légèrement ; le décalage dimensionnel varie selon le matériau et les paramètres"
+        },
+        {
+         "en": "<b>When to run it</b> — every new filament or whenever printing mating parts (hinges, press-fits, threaded inserts)",
+         "fr": "<b>Quand le faire</b> — à chaque nouveau filament ou lors d'impression de pièces complémentaires (charnières, emmanchements, inserts filetés)"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5.4.18",
+     "narration": {
+      "en": "Chapter 4 recap. These advanced features separate casual users from true masters of FDM — deploy them deliberately and your prints will show it every time.",
+      "fr": "Récapitulatif du chapitre 4. Ces fonctionnalités avancées distinguent les utilisateurs occasionnels des véritables maîtres du FDM — déployez-les délibérément et vos impressions s'en ressentiront à chaque fois."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Chapter 4 recap",
+        "fr": "Récapitulatif du chapitre 4"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Advanced Slicer Features — Key Points",
+        "fr": "Fonctionnalités avancées — points clés"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Variable layer height</b> — fine on curves, coarse on flat; PrusaSlicer has the best graphical editor",
+         "fr": "<b>Hauteur de couche variable</b> — fine sur les courbes, épaisse sur le plat ; PrusaSlicer a le meilleur éditeur graphique"
+        },
+        {
+         "en": "<b>Fuzzy skin</b> — randomized texture hides layer lines; tune thickness and point distance",
+         "fr": "<b>Peau floue</b> — texture aléatoire masque les lignes de couche ; ajuster l'épaisseur et la distance entre points"
+        },
+        {
+         "en": "<b>Ironing</b> — glossy top surfaces; adds 10–30 % print time; calibrate flow first",
+         "fr": "<b>Repassage</b> — surfaces supérieures brillantes ; ajoute 10–30 % de temps ; calibrer le débit d'abord"
+        },
+        {
+         "en": "<b>Vase mode</b> — seamless hollow spiral; enforces 1 wall, 0 % infill, no top layers",
+         "fr": "<b>Mode vase</b> — spirale creuse sans couture ; impose 1 paroi, 0 % de remplissage, pas de couches supérieures"
+        },
+        {
+         "en": "<b>Sequential printing</b> — one object at a time; check gantry clearance before enabling",
+         "fr": "<b>Impression séquentielle</b> — un objet à la fois ; vérifier le dégagement du portique avant d'activer"
+        },
+        {
+         "en": "<b>Modifier meshes</b> — local setting overrides without CAD edits; cube/cylinder/sphere over target region",
+         "fr": "<b>Maillages modificateurs</b> — substitutions locales sans modification CAO ; cube/cylindre/sphère sur la zone cible"
+        },
+        {
+         "en": "<b>OrcaSlicer calibration order</b> — Temperature → Flow Rate → Pressure Advance → Retraction → Tolerance → Max Volumetric Speed",
+         "fr": "<b>Ordre de calibration OrcaSlicer</b> — Température → Débit → Pressure Advance → Rétraction → Tolérance → Vitesse volumétrique max"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2673 @@
+{
+ "module": 2,
+ "module_title": {
+  "en": "Printer Hardware Deep Dive",
+  "fr": "Exploration approfondie du matériel d'impression"
+ },
+ "chapters": [
+  {
+   "chapter": 1,
+   "title": {
+    "en": "The Hotend and Nozzle",
+    "fr": "La tête d'impression et la buse"
+   },
+   "scenes": [
+    {
+     "id": "2.1.0",
+     "narration": {
+      "en": "Welcome to Chapter 1. The hotend is the beating heart of your 3D printer — a compact but precisely engineered system that transforms solid filament into molten plastic, layer by layer.",
+      "fr": "Bienvenue au chapitre 1. La tête d'impression est le cœur battant de votre imprimante 3D — un système compact mais précisément conçu qui transforme le filament solide en plastique fondu, couche par couche."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 2 · Chapter 1",
+        "fr": "Module 2 · Chapitre 1"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "The Hotend and Nozzle",
+        "fr": "La tête d'impression et la buse"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "hotend"
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Understanding your hotend — and its limits — determines which materials you can print and the quality you can achieve.",
+        "fr": "Comprendre votre tête d'impression — et ses limites — détermine quels matériaux vous pouvez imprimer et la qualité que vous pouvez atteindre."
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.1.1",
+     "narration": {
+      "en": "A modern hotend has five critical components: the heat sink, the heat break, the heater block, the heater cartridge, and the thermistor. Each plays a specific role in managing the melt zone.",
+      "fr": "Une tête d'impression moderne comporte cinq composants essentiels : le dissipateur thermique, la barrière thermique, le bloc chauffant, la cartouche chauffante et le thermistance. Chacun joue un rôle précis dans la gestion de la zone de fusion."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Hotend Anatomy: Five Components",
+        "fr": "Anatomie de la tête d'impression : cinq composants"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "hotend"
+      },
+      {
+       "type": "stages",
+       "items": [
+        {
+         "label": {
+          "en": "Heat Sink",
+          "fr": "Dissipateur"
+         },
+         "sub": {
+          "en": "Aluminum fins + fan — keeps filament solid above melt zone",
+          "fr": "Ailettes alu + ventilateur — maintient le filament solide"
+         }
+        },
+        {
+         "label": {
+          "en": "Heat Break",
+          "fr": "Barrière thermique"
+         },
+         "sub": {
+          "en": "Thin-walled tube — thermal transition zone",
+          "fr": "Tube à parois fines — zone de transition thermique"
+         }
+        },
+        {
+         "label": {
+          "en": "Heater Block",
+          "fr": "Bloc chauffant"
+         },
+         "sub": {
+          "en": "Aluminum/copper body — thermal reservoir",
+          "fr": "Corps alu/cuivre — réservoir thermique"
+         }
+        },
+        {
+         "label": {
+          "en": "Heater Cartridge",
+          "fr": "Cartouche chauffante"
+         },
+         "sub": {
+          "en": "30W standard — provides actual heat",
+          "fr": "30 W standard — fournit la chaleur"
+         }
+        },
+        {
+         "label": {
+          "en": "Thermistor",
+          "fr": "Thermistance"
+         },
+         "sub": {
+          "en": "Temperature sensor — feedback to mainboard",
+          "fr": "Capteur de temp. — retour à la carte mère"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.1.2",
+     "narration": {
+      "en": "The heat sink sits at the top and dissipates heat upward through aluminum fins and a dedicated fan. Without adequate heat sinking, heat creep causes filament to soften prematurely, leading to jams and failed prints.",
+      "fr": "Le dissipateur thermique se situe au sommet et dissipe la chaleur vers le haut à travers des ailettes en aluminium et un ventilateur dédié. Sans dissipateur adéquat, le fluage thermique provoque un ramollissement prématuré du filament, entraînant des bourrages et des impressions ratées."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Heat Sink and Heat Creep",
+        "fr": "Dissipateur et fluage thermique"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "hotend"
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Heat creep: if the heat sink fails to keep the cold zone cold, filament softens above the melt zone and jams. A working fan is non-negotiable.",
+        "fr": "Fluage thermique : si le dissipateur ne maintient pas la zone froide froide, le filament ramollit au-dessus de la zone de fusion et bourre. Un ventilateur fonctionnel est indispensable."
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.1.3",
+     "narration": {
+      "en": "The heat break is the unsung hero of hotend design. This thin-walled metal tube — typically stainless steel or titanium — must conduct enough heat to maintain the melt zone while blocking heat from reaching the heat sink above.",
+      "fr": "La barrière thermique est le héros méconnu de la conception des têtes d'impression. Ce tube métallique à parois fines — typiquement en acier inoxydable ou en titane — doit conduire suffisamment de chaleur pour maintenir la zone de fusion tout en bloquant la chaleur vers le dissipateur."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Heat Break: Thermal Gatekeeper",
+        "fr": "La barrière thermique : gardienne de la chaleur"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Standard Steel",
+         "fr": "Acier standard"
+        },
+        "note": {
+         "en": "Single material — more heat conducted upward — higher heat creep risk",
+         "fr": "Matériau unique — plus de chaleur vers le haut — risque de fluage plus élevé"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Bimetal (Cu + Ti)",
+         "fr": "Bi-métal (Cu + Ti)"
+        },
+        "note": {
+         "en": "Copper hot side for thermal performance; titanium cold side for resistance — significantly less heat creep",
+         "fr": "Cuivre côté chaud pour la performance ; titane côté froid pour la résistance — nettement moins de fluage"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.1.4",
+     "narration": {
+      "en": "The heater cartridge delivers 30 watts in standard and Volcano configurations, scaling to 60 watts or more for SuperVolcano applications. These cartridges run on 12V or 24V — and must match your power supply voltage exactly.",
+      "fr": "La cartouche chauffante délivre 30 watts dans les configurations standard et Volcano, jusqu'à 60 watts ou plus pour les applications SuperVolcano. Ces cartouches fonctionnent en 12 V ou 24 V — et doivent correspondre exactement à la tension de votre alimentation."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Heater Cartridge and Temperature Sensors",
+        "fr": "Cartouche chauffante et capteurs de température"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Standard / Volcano",
+          "fr": "Standard / Volcano"
+         },
+         "desc": {
+          "en": "30W heater cartridge — 12V or 24V",
+          "fr": "Cartouche 30 W — 12 V ou 24 V"
+         }
+        },
+        {
+         "title": "SuperVolcano",
+         "desc": {
+          "en": "60W+ cartridge for high-flow hotends",
+          "fr": "Cartouche 60 W+ pour têtes à haut débit"
+         }
+        },
+        {
+         "title": "NTC Thermistor",
+         "desc": {
+          "en": "Standard sensor — reliable to ~300°C",
+          "fr": "Capteur standard — fiable jusqu'à ~300 °C"
+         }
+        },
+        {
+         "title": "PT1000 RTD",
+         "desc": {
+          "en": "High-accuracy sensor — IEC 60751 Class B, range to 500°C",
+          "fr": "Capteur haute précision — IEC 60751 Classe B, jusqu'à 500 °C"
+         },
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Installing a 12V cartridge on a 24V system destroys it instantly. Always match cartridge voltage to your power supply.",
+        "fr": "Installer une cartouche 12 V sur un système 24 V la détruit instantanément. Faites toujours correspondre la tension de la cartouche à votre alimentation."
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.1.5",
+     "narration": {
+      "en": "The most important hotend decision is PTFE-lined versus all-metal. A PTFE tube guides the filament through the transition zone with low friction, but it begins to degrade at around 260 degrees Celsius.",
+      "fr": "La décision la plus importante concernant la tête d'impression est : tube PTFE ou tout-métal. Un tube PTFE guide le filament à travers la zone de transition avec peu de friction, mais il commence à se dégrader autour de 260 degrés Celsius."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PTFE-Lined vs. All-Metal Hotends",
+        "fr": "Tête d'impression avec tube PTFE vs. tout-métal"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "PTFE-Lined",
+         "fr": "Avec tube PTFE"
+        },
+        "note": {
+         "en": "Max ~260°C · PLA/PETG/ABS · easy PLA · replace tube ~every 500 hrs",
+         "fr": "Max ~260 °C · PLA/PETG/ABS · PLA facile · remplacer le tube ~tous les 500 h"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "All-Metal",
+         "fr": "Tout-métal"
+        },
+        "note": {
+         "en": "300°C+ · all materials incl. nylon, PC, PEEK · requires tuned retraction",
+         "fr": "300 °C+ · tous matériaux dont nylon, PC, PEEK · rétraction calibrée requise"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.1.6",
+     "narration": {
+      "en": "PTFE degradation above 260 degrees releases ultrafine fluoropolymer particulates and gases that cause flu-like symptoms — polymer fume fever — and can be fatal to pet birds. If you plan to print high-temperature materials, an all-metal hotend is non-negotiable.",
+      "fr": "La dégradation du PTFE au-delà de 260 degrés libère des particules ultrafines de fluoropolymère et des gaz pouvant provoquer des symptômes pseudo-grippaux — la fièvre des fumées de polymères — et potentiellement fatals pour les oiseaux domestiques. Si vous envisagez d'imprimer des matériaux haute température, une tête tout-métal est indispensable."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The PTFE Safety Ceiling",
+        "fr": "Le plafond de sécurité PTFE"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Feature",
+         "fr": "Caractéristique"
+        },
+        {
+         "en": "PTFE-Lined",
+         "fr": "Avec PTFE"
+        },
+        {
+         "en": "All-Metal",
+         "fr": "Tout-métal"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Max Temp",
+          "fr": "Temp. max."
+         },
+         "~260°C",
+         "300°C+"
+        ],
+        [
+         {
+          "en": "Material Range",
+          "fr": "Gamme matériaux"
+         },
+         "PLA, PETG, ABS",
+         {
+          "en": "All incl. nylon, PC, PEEK",
+          "fr": "Tous dont nylon, PC, PEEK"
+         }
+        ],
+        [
+         {
+          "en": "PLA Printing",
+          "fr": "Impression PLA"
+         },
+         {
+          "en": "Very reliable",
+          "fr": "Très fiable"
+         },
+         {
+          "en": "Tuned retraction needed",
+          "fr": "Rétraction calibrée requise"
+         }
+        ],
+        [
+         {
+          "en": "Safety",
+          "fr": "Sécurité"
+         },
+         {
+          "en": "Toxic fumes above 260°C",
+          "fr": "Fumées toxiques au-delà de 260 °C"
+         },
+         {
+          "en": "None at normal temps",
+          "fr": "Aucun aux temp. normales"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.1.7",
+     "narration": {
+      "en": "Nozzle material determines durability and cost. Brass is the standard for general use, but abrasive filaments — wood fill, carbon fiber, glow-in-the-dark — act like sandpaper on the soft brass orifice and will wear it out quickly.",
+      "fr": "Le matériau de la buse détermine la durabilité et le coût. Le laiton est la norme pour l'usage général, mais les filaments abrasifs — chargés bois, fibre de carbone, phosphorescents — agissent comme du papier de verre sur l'orifice en laiton tendre et l'usent rapidement."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Nozzle Materials: A Comparison",
+        "fr": "Matériaux de buses : comparaison"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Wear Resistance",
+         "fr": "Résistance usure"
+        },
+        {
+         "en": "Max Temp",
+         "fr": "Temp. max."
+        },
+        {
+         "en": "Approx. Cost",
+         "fr": "Coût approx."
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Brass",
+          "fr": "Laiton"
+         },
+         {
+          "en": "Baseline",
+          "fr": "Référence"
+         },
+         "300°C",
+         "$2–8"
+        ],
+        [
+         {
+          "en": "Hardened Steel",
+          "fr": "Acier trempé"
+         },
+         "~10× brass",
+         "500°C",
+         "$15–25"
+        ],
+        [
+         {
+          "en": "Tungsten Carbide",
+          "fr": "Carbure de tungstène"
+         },
+         {
+          "en": "Very high",
+          "fr": "Très élevée"
+         },
+         "550°C",
+         "$48–65"
+        ],
+        [
+         {
+          "en": "Ruby-Tipped",
+          "fr": "Pointe rubis"
+         },
+         {
+          "en": "Extreme",
+          "fr": "Extrême"
+         },
+         "550°C",
+         "~$80"
+        ],
+        [
+         "ObXidian (E3D)",
+         {
+          "en": "≥1000× hardened steel",
+          "fr": "≥1000× acier trempé"
+         },
+         "500°C",
+         "$40–75"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.1.8",
+     "narration": {
+      "en": "The E3D ObXidian uses a tool steel insert coated with Diamond-Like Carbon. Independent grinding tests found it at least 1000 times more abrasion-resistant than hardened steel nozzles — making it the choice for heavy carbon fiber or glow-in-the-dark printing.",
+      "fr": "L'ObXidian d'E3D utilise un insert en acier à outils revêtu de carbone amorphe diamant. Des tests de meulage indépendants ont confirmé une résistance à l'abrasion au moins 1000 fois supérieure à celle des buses en acier trempé — ce qui en fait le choix pour l'impression intensive de fibre de carbone ou de filaments phosphorescents."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "ObXidian: The Wear-Resistance Champion",
+        "fr": "ObXidian : le champion de la résistance à l'usure"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "≥1000×",
+       "caption": {
+        "en": "more abrasion-resistant than hardened steel (independent grinding test, Tom's 3D)",
+        "fr": "plus résistante à l'abrasion que l'acier trempé (test de meulage indépendant, Tom's 3D)"
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.1.9",
+     "narration": {
+      "en": "Nozzle diameter is a speed-versus-detail tradeoff. The 0.4 millimetre nozzle is the universal standard — most slicer profiles are built for it. The 0.6 millimetre nozzle can cut print time roughly in half for large functional parts.",
+      "fr": "Le diamètre de la buse est un compromis entre vitesse et détail. La buse de 0,4 millimètre est la norme universelle — la plupart des profils de slicer sont conçus pour elle. La buse de 0,6 millimètre peut diviser le temps d'impression environ par deux pour les grandes pièces fonctionnelles."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Nozzle Sizes and Their Impact",
+        "fr": "Tailles de buses et leur impact"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Size",
+         "fr": "Taille"
+        },
+        {
+         "en": "Layer Height Range",
+         "fr": "Plage hauteur couche"
+        },
+        {
+         "en": "Best For",
+         "fr": "Idéale pour"
+        },
+        {
+         "en": "Speed",
+         "fr": "Vitesse"
+        }
+       ],
+       "rows": [
+        [
+         "0.2mm",
+         "0.04–0.12mm",
+         {
+          "en": "Miniatures, fine detail",
+          "fr": "Figurines, détails fins"
+         },
+         {
+          "en": "Slowest",
+          "fr": "La plus lente"
+         }
+        ],
+        [
+         "0.4mm",
+         "0.08–0.28mm",
+         {
+          "en": "General purpose",
+          "fr": "Usage général"
+         },
+         {
+          "en": "Moderate",
+          "fr": "Modérée"
+         }
+        ],
+        [
+         "0.6mm",
+         "0.2–0.4mm",
+         {
+          "en": "Functional parts",
+          "fr": "Pièces fonctionnelles"
+         },
+         {
+          "en": "~2× faster than 0.4mm",
+          "fr": "~2× plus rapide que 0,4 mm"
+         }
+        ],
+        [
+         "0.8mm+",
+         "0.3–0.6mm",
+         {
+          "en": "Draft prints, large objects",
+          "fr": "Ébauches, grands objets"
+         },
+         {
+          "en": "Fastest",
+          "fr": "La plus rapide"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.1.10",
+     "narration": {
+      "en": "A standard hotend maxes out at around 12 to 15 cubic millimetres per second of volumetric flow. For an 0.8 millimetre nozzle at 0.4 millimetre layers, that is nowhere near enough — you need a high-flow hotend.",
+      "fr": "Une tête d'impression standard plafonne à environ 12 à 15 mm³/s de débit volumique. Pour une buse de 0,8 mm à des couches de 0,4 mm, c'est loin d'être suffisant — vous avez besoin d'une tête à haut débit."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Large Nozzles Demand High-Flow Hotends",
+        "fr": "Les grandes buses exigent des têtes à haut débit"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Standard hotend</b> — 12–15 mm³/s max volumetric flow",
+         "fr": "<b>Tête standard</b> — débit volumique max. 12–15 mm³/s"
+        },
+        {
+         "en": "<b>0.8mm nozzle</b> at 0.4mm layers, 60mm/s — demands significantly more flow",
+         "fr": "<b>Buse 0,8 mm</b> à couches 0,4 mm, 60 mm/s — exige nettement plus de débit"
+        },
+        {
+         "en": "<b>High-flow variants</b> — E3D Volcano, SuperVolcano: elongated heater block extends melt zone",
+         "fr": "<b>Variantes haut débit</b> — E3D Volcano, SuperVolcano : bloc chauffant allongé agrandit la zone de fusion"
+        },
+        {
+         "en": "<b>Symptom of mismatch</b> — extruder skipping, under-extrusion, stringing",
+         "fr": "<b>Symptôme de désaccord</b> — sauts de l'extrudeur, sous-extrusion, cordage"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.1.11",
+     "narration": {
+      "en": "The Bondtech CHT nozzle splits incoming filament into three thinner strands using a cloverleaf-shaped internal geometry, allowing plastic to melt from both outside-in and inside-out simultaneously. In testing by CNC Kitchen, a 0.6 millimetre CHT reached 40 cubic millimetres per second — nearly 200 percent better than a standard V6.",
+      "fr": "La buse Bondtech CHT divise le filament entrant en trois brins plus fins grâce à une géométrie interne en forme de trèfle, permettant au plastique de fondre simultanément de l'extérieur vers l'intérieur et de l'intérieur vers l'extérieur. Lors de tests par CNC Kitchen, une CHT de 0,6 mm a atteint 40 mm³/s — soit près de 200 % de mieux qu'une V6 standard."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Bondtech CHT: High-Flow Nozzle",
+        "fr": "Bondtech CHT : buse à haut débit"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Standard V6 (0.6mm)",
+         "fr": "V6 standard (0,6 mm)"
+        },
+        "note": {
+         "en": "15 mm³/s — single circular channel",
+         "fr": "15 mm³/s — canal circulaire unique"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Bondtech CHT (0.6mm)",
+         "fr": "Bondtech CHT (0,6 mm)"
+        },
+        "note": {
+         "en": "40 mm³/s — cloverleaf geometry splits filament into 3 strands",
+         "fr": "40 mm³/s — géométrie trèfle divise le filament en 3 brins"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.1.12",
+     "narration": {
+      "en": "The E3D Revo ecosystem takes a different approach to convenience. Each Revo nozzle is a preassembled nozzle and heat break in one unit — no hot-tightening, no tools needed, and nozzle swaps take seconds. The tradeoff is ecosystem lock-in and higher cost per nozzle.",
+      "fr": "L'écosystème E3D Revo adopte une approche différente de la praticité. Chaque buse Revo est un ensemble préassemblé buse et barrière thermique en une seule unité — pas de vissage à chaud, pas d'outils nécessaires, et le changement de buse prend quelques secondes. La contrepartie est un verrouillage dans l'écosystème et un coût par buse plus élevé."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "E3D Revo: Convenience by Design",
+        "fr": "E3D Revo : la praticité par conception"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Revo Nozzle",
+          "fr": "Buse Revo"
+         },
+         "desc": {
+          "en": "Nozzle + heat break in one unit — swap in seconds, cold, by hand",
+          "fr": "Buse + barrière thermique en une unité — échange en quelques secondes, à froid, à la main"
+         },
+         "highlight": true
+        },
+        {
+         "title": "HeaterCore",
+         "desc": {
+          "en": "Separate heater + thermistor — stays on the printer between swaps",
+          "fr": "Chauffage + thermistance séparés — reste sur l'imprimante entre les échanges"
+         }
+        },
+        {
+         "title": {
+          "en": "Tradeoff",
+          "fr": "Contrepartie"
+         },
+         "desc": {
+          "en": "Proprietary ecosystem — more expensive than standard V6 nozzles",
+          "fr": "Écosystème propriétaire — plus coûteux que les buses V6 standard"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.1.13",
+     "narration": {
+      "en": "Here is your practical nozzle strategy. Keep a 0.4 millimetre brass nozzle for everyday PLA and PETG. Swap to a 0.6 millimetre hardened steel or CHT nozzle for large functional parts or abrasive materials. The swap takes two to three minutes and transforms your printer's capabilities.",
+      "fr": "Voici votre stratégie pratique de buse. Gardez une buse en laiton de 0,4 mm pour le PLA et le PETG au quotidien. Passez à une buse CHT en acier trempé de 0,6 mm pour les grandes pièces fonctionnelles ou les matériaux abrasifs. L'échange prend deux à trois minutes et transforme les capacités de votre imprimante."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Pro tip",
+        "fr": "Astuce de pro"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Practical Nozzle Strategy",
+        "fr": "Stratégie pratique de buses"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Everyday printing</b> — 0.4mm brass: PLA, PETG, low-wear materials",
+         "fr": "<b>Impression quotidienne</b> — laiton 0,4 mm : PLA, PETG, matériaux peu abrasifs"
+        },
+        {
+         "en": "<b>Large functional parts</b> — 0.6mm CHT or hardened steel: ~2× faster, better layer strength",
+         "fr": "<b>Grandes pièces fonctionnelles</b> — CHT 0,6 mm ou acier trempé : ~2× plus rapide, meilleure résistance inter-couche"
+        },
+        {
+         "en": "<b>Abrasive filaments</b> — hardened steel, tungsten carbide, or ObXidian: prevents rapid bore wear",
+         "fr": "<b>Filaments abrasifs</b> — acier trempé, carbure de tungstène ou ObXidian : empêche l'usure rapide de l'orifice"
+        },
+        {
+         "en": "<b>Fine detail / miniatures</b> — 0.2mm brass: layer heights 0.04–0.12mm",
+         "fr": "<b>Détails fins / figurines</b> — laiton 0,2 mm : hauteurs de couche 0,04–0,12 mm"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.1.14",
+     "narration": {
+      "en": "To close Chapter 1: your hotend is a material capability gate. The five-component thermal system, your choice of PTFE or all-metal construction, nozzle material, and nozzle size together define what you can print and how fast.",
+      "fr": "Pour clore le chapitre 1 : votre tête d'impression est une barrière de capacité matériau. Le système thermique à cinq composants, votre choix de construction PTFE ou tout-métal, le matériau et la taille de la buse définissent ensemble ce que vous pouvez imprimer et à quelle vitesse."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 1 Recap",
+        "fr": "Récapitulatif du chapitre 1"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Five components</b> — heat sink, heat break, heater block, cartridge, thermistor all manage the melt zone",
+         "fr": "<b>Cinq composants</b> — dissipateur, barrière thermique, bloc chauffant, cartouche, thermistance gèrent la zone de fusion"
+        },
+        {
+         "en": "<b>All-metal</b> required above 260°C; PTFE-lined safe for PLA/PETG but has a hard ceiling",
+         "fr": "<b>Tout-métal</b> requis au-delà de 260 °C ; PTFE sûr pour PLA/PETG mais plafond strict"
+        },
+        {
+         "en": "<b>Nozzle material</b> — brass for everyday, hardened steel / tungsten carbide / ObXidian for abrasives",
+         "fr": "<b>Matériau de buse</b> — laiton au quotidien, acier trempé / carbure de tungstène / ObXidian pour les abrasifs"
+        },
+        {
+         "en": "<b>Nozzle size</b> — 0.4mm general, 0.6mm fast functional, 0.2mm fine detail; 0.8mm+ needs high-flow hotend",
+         "fr": "<b>Taille de buse</b> — 0,4 mm général, 0,6 mm fonctionnel rapide, 0,2 mm détails fins ; 0,8 mm+ nécessite une tête haut débit"
+        },
+        {
+         "en": "<b>CHT nozzle</b> — 40 mm³/s vs 15 mm³/s standard V6, ~200% improvement at 0.6mm",
+         "fr": "<b>Buse CHT</b> — 40 mm³/s vs 15 mm³/s V6 standard, ~200 % d'amélioration en 0,6 mm"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 2,
+   "title": {
+    "en": "Extruder, Motors, and Motion",
+    "fr": "Extrudeur, moteurs et système de déplacement"
+   },
+   "scenes": [
+    {
+     "id": "2.2.0",
+     "narration": {
+      "en": "Welcome to Chapter 2. If the hotend is the heart of your printer, the extruder is its lungs. The motors are its muscles and the motion system its skeleton — together they determine speed, accuracy, and material compatibility.",
+      "fr": "Bienvenue au chapitre 2. Si la tête d'impression est le cœur de votre imprimante, l'extrudeur en est les poumons. Les moteurs en sont les muscles et le système de déplacement le squelette — ensemble ils déterminent la vitesse, la précision et la compatibilité des matériaux."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 2 · Chapter 2",
+        "fr": "Module 2 · Chapitre 2"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Extruder, Motors, and Motion",
+        "fr": "Extrudeur, moteurs et système de déplacement"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "The fundamental choices here — direct drive or Bowden, single or dual gear, rails or wheels — cascade through every aspect of your printer's performance.",
+        "fr": "Les choix fondamentaux ici — entraînement direct ou Bowden, mono ou bi-engrenage, rails ou roues — se répercutent sur chaque aspect des performances de votre imprimante."
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.2.1",
+     "narration": {
+      "en": "The fundamental extruder question is where to mount the motor. Direct drive places it on the printhead — only 20 to 60 millimetres from the drive gears to the nozzle. Bowden mounts the motor on the frame and runs filament through a tube 300 to 700 millimetres long.",
+      "fr": "La question fondamentale de l'extrudeur est de savoir où monter le moteur. L'entraînement direct le place sur la tête d'impression — seulement 20 à 60 mm des engrenages à la buse. Le Bowden monte le moteur sur le châssis et fait passer le filament dans un tube de 300 à 700 mm de long."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Direct Drive vs. Bowden",
+        "fr": "Entraînement direct vs. Bowden"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "extruder"
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Bowden",
+         "fr": "Bowden"
+        },
+        "note": {
+         "en": "Motor on frame — 300–700mm PTFE tube — compliance causes retraction lag — 4–7mm retraction needed",
+         "fr": "Moteur sur châssis — tube PTFE 300–700 mm — compliance entraîne un délai de rétraction — 4–7 mm de rétraction requis"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Direct Drive",
+         "fr": "Entraînement direct"
+        },
+        "note": {
+         "en": "Motor on printhead — 20–60mm path — precise retraction 0.5–2mm — excellent flex filament performance",
+         "fr": "Moteur sur tête — chemin 20–60 mm — rétraction précise 0,5–2 mm — excellentes performances filaments flexibles"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.2.2",
+     "narration": {
+      "en": "The Bowden tube introduces compliance — the filament can flex and compress inside, so extruder commands do not translate immediately to nozzle movement. This makes flexible filaments nearly impossible and requires larger retraction distances to manage stringing.",
+      "fr": "Le tube Bowden introduit de la compliance — le filament peut fléchir et se comprimer à l'intérieur, les commandes de l'extrudeur ne se traduisant pas immédiatement par un mouvement à la buse. Cela rend les filaments flexibles presque impossibles et nécessite de plus grandes distances de rétraction pour gérer le cordage."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Compliance Problem in Bowden Systems",
+        "fr": "Le problème de compliance dans les systèmes Bowden"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "extruder"
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Attribute",
+         "fr": "Attribut"
+        },
+        {
+         "en": "Direct Drive",
+         "fr": "Entraînement direct"
+        },
+        {
+         "en": "Bowden",
+         "fr": "Bowden"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Retraction Distance",
+          "fr": "Distance de rétraction"
+         },
+         "0.5–2mm",
+         "4–7mm"
+        ],
+        [
+         {
+          "en": "Flexible Filament",
+          "fr": "Filaments flexibles"
+         },
+         {
+          "en": "Excellent",
+          "fr": "Excellent"
+         },
+         {
+          "en": "Poor to impossible",
+          "fr": "Médiocre à impossible"
+         }
+        ],
+        [
+         {
+          "en": "Moving Mass",
+          "fr": "Masse en mouvement"
+         },
+         {
+          "en": "Higher",
+          "fr": "Plus élevée"
+         },
+         {
+          "en": "Lower",
+          "fr": "Plus faible"
+         }
+        ],
+        [
+         {
+          "en": "Pressure Advance",
+          "fr": "Pressure advance"
+         },
+         {
+          "en": "Highly effective",
+          "fr": "Très efficace"
+         },
+         {
+          "en": "Less effective",
+          "fr": "Moins efficace"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.2.3",
+     "narration": {
+      "en": "The 2026 verdict strongly favours direct drive. Input shaping in Klipper firmware substantially eliminates the speed advantage Bowden once had — direct drive can now print fast without ghosting artifacts. Bowden retains defenders only for very large bed-slinger printers where carriage mass is critical.",
+      "fr": "Le verdict 2026 favorise nettement l'entraînement direct. L'input shaping dans le firmware Klipper annule substantiellement l'avantage de vitesse qu'avait autrefois le Bowden — l'entraînement direct peut désormais imprimer vite sans artefacts de résonance. Le Bowden conserve des défenseurs uniquement pour les très grandes imprimantes bed slinger où la masse du chariot est critique."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The 2026 Verdict: Direct Drive Wins",
+        "fr": "Le verdict 2026 : l'entraînement direct l'emporte"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Input shaping (resonance compensation) in Klipper negates the speed advantage Bowden once had. Direct drive wins for versatility and print quality in almost all scenarios.",
+        "fr": "L'input shaping (compensation de résonance) dans Klipper annule l'avantage de vitesse qu'avait autrefois le Bowden. L'entraînement direct l'emporte en polyvalence et qualité d'impression dans presque tous les cas."
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.2.4",
+     "narration": {
+      "en": "Within either system, the extruder mechanism itself comes in single-gear or dual-gear flavours. Single-gear uses one toothed drive gear pressing filament against a smooth idler. Dual-gear uses two synchronized gears gripping from both sides.",
+      "fr": "Dans l'un ou l'autre système, le mécanisme d'extrudeur lui-même se décline en mono-engrenage ou bi-engrenage. Le mono-engrenage utilise un seul engrenage denté pressant le filament contre un roulement lisse. Le bi-engrenage utilise deux engrenages synchronisés agrippant des deux côtés."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Single-Gear vs. Dual-Gear Extruders",
+        "fr": "Extrudeurs mono-engrenage vs. bi-engrenage"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Single-Gear",
+         "fr": "Mono-engrenage"
+        },
+        "note": {
+         "en": "One drive gear — simpler, cheaper — grips one side only — can slip with soft materials",
+         "fr": "Un engrenage d'entraînement — plus simple, moins cher — n'agrippe qu'un côté — peut glisser avec les matériaux mous"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Dual-Gear",
+         "fr": "Bi-engrenage"
+        },
+        "note": {
+         "en": "Two synchronized gears — equal force both sides — far less slipping — better with TPU and flexible filaments",
+         "fr": "Deux engrenages synchronisés — force égale des deux côtés — bien moins de glissement — bien meilleur avec TPU et filaments flexibles"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.2.5",
+     "narration": {
+      "en": "The Orbiter V2.0 exemplifies the modern lightweight extruder: 135 grams with a pancake motor and 11 millimetre hardened Bondtech drive gears. It offers roughly 40 percent more extrusion force than its predecessor, with extremely low backlash of about 0.06 millimetres.",
+      "fr": "L'Orbiter V2.0 illustre l'extrudeur léger moderne : 135 grammes avec un moteur pancake et des engrenages d'entraînement Bondtech en acier trempé de 11 mm. Il offre environ 40 % de force d'extrusion en plus par rapport à son prédécesseur, avec un très faible jeu d'environ 0,06 mm."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Orbiter V2.0: Lightweight Dual-Gear",
+        "fr": "Orbiter V2.0 : bi-engrenage ultraléger"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "~135g",
+         "desc": {
+          "en": "Total weight with pancake motor — minimizes carriage mass",
+          "fr": "Poids total avec moteur pancake — minimise la masse du chariot"
+         },
+         "highlight": true
+        },
+        {
+         "title": "~40%",
+         "desc": {
+          "en": "More extrusion force vs. its predecessor",
+          "fr": "Plus de force d'extrusion par rapport à son prédécesseur"
+         }
+        },
+        {
+         "title": "~0.06mm",
+         "desc": {
+          "en": "Backlash — extremely precise filament metering",
+          "fr": "Jeu — dosage du filament extrêmement précis"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.2.6",
+     "narration": {
+      "en": "Dual-gear extruders require recalibrating your E-steps when upgrading — the extruder steps per millimetre typically changes from around 100 to around 139 due to the gear ratio difference. For TPU, nylon, or any flexible material, a dual-gear extruder is strongly recommended.",
+      "fr": "Les extrudeurs bi-engrenage nécessitent de recalibrer vos pas d'extrusion lors de la mise à niveau — les pas d'extrudeur par millimètre passent typiquement d'environ 100 à environ 139 en raison des différences de rapport d'engrenage. Pour le TPU, le nylon ou tout matériau flexible, un extrudeur bi-engrenage est fortement recommandé."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "E-Steps Recalibration After Dual-Gear Upgrade",
+        "fr": "Recalibration des pas d'extrusion après mise à niveau bi-engrenage"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "After installing a dual-gear extruder, recalibrate E-steps: the value typically changes from ~100 to ~139 steps/mm. Skip this and every extrusion measurement will be wrong.",
+        "fr": "Après l'installation d'un extrudeur bi-engrenage, recalibrez les pas d'extrusion : la valeur passe typiquement de ~100 à ~139 pas/mm. Ignorer ceci rendra toutes les mesures d'extrusion incorrectes."
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.2.7",
+     "narration": {
+      "en": "3D printers use NEMA stepper motors — standardized frame sizes with a precise step angle of 1.8 degrees, giving 200 steps per revolution. NEMA 17 is the universal desktop standard at 42 by 42 millimetres.",
+      "fr": "Les imprimantes 3D utilisent des moteurs pas à pas NEMA — des tailles de cadre standardisées avec un angle de pas précis de 1,8 degré, soit 200 pas par révolution. Le NEMA 17 est la norme universelle pour les imprimantes de bureau à 42 × 42 mm."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Stepper Motors: NEMA Standards",
+        "fr": "Moteurs pas à pas : standards NEMA"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Motor Type",
+         "fr": "Type de moteur"
+        },
+        {
+         "en": "Frame Size",
+         "fr": "Taille cadre"
+        },
+        {
+         "en": "Torque",
+         "fr": "Couple"
+        },
+        {
+         "en": "Best For",
+         "fr": "Idéal pour"
+        }
+       ],
+       "rows": [
+        [
+         "NEMA 17",
+         "42×42mm",
+         "30–65 N·cm",
+         {
+          "en": "Standard desktop, all axes",
+          "fr": "Bureau standard, tous axes"
+         }
+        ],
+        [
+         "NEMA 14",
+         "35×35mm",
+         "8–20 N·cm",
+         {
+          "en": "Compact extruders",
+          "fr": "Extrudeurs compacts"
+         }
+        ],
+        [
+         "NEMA 23",
+         "57×57mm",
+         "80–180 N·cm",
+         {
+          "en": "Large-format, industrial",
+          "fr": "Grand format, industriel"
+         }
+        ],
+        [
+         {
+          "en": "Pancake (short NEMA 17)",
+          "fr": "Pancake (NEMA 17 court)"
+         },
+         "42×42mm",
+         "12–25 N·cm",
+         {
+          "en": "Lightweight direct drive",
+          "fr": "Entraînement direct léger"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.2.8",
+     "narration": {
+      "en": "The stepper driver sits between your mainboard and the motor, translating digital commands into precisely timed electrical pulses. Two drivers dominate the modern landscape: the TMC2209 and the TMC5160, both from Trinamic.",
+      "fr": "Le pilote de moteur pas à pas se situe entre votre carte mère et le moteur, traduisant les commandes numériques en impulsions électriques précisément minutées. Deux pilotes dominent le paysage moderne : le TMC2209 et le TMC5160, tous deux de Trinamic."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Stepper Drivers: TMC2209 vs. TMC5160",
+        "fr": "Pilotes de moteurs pas à pas : TMC2209 vs. TMC5160"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Feature",
+         "fr": "Caractéristique"
+        },
+        "TMC2209",
+        "TMC5160"
+       ],
+       "rows": [
+        [
+         {
+          "en": "Max Phase Current",
+          "fr": "Courant de phase max."
+         },
+         "2A RMS (2.8A peak)",
+         "3.2A RMS"
+        ],
+        [
+         "RDSon",
+         "0.60Ω",
+         "0.45Ω"
+        ],
+        [
+         {
+          "en": "Cooling",
+          "fr": "Refroidissement"
+         },
+         {
+          "en": "Active only",
+          "fr": "Actif uniquement"
+         },
+         {
+          "en": "Active + passive",
+          "fr": "Actif + passif"
+         }
+        ],
+        [
+         "StealthChop2",
+         {
+          "en": "Yes",
+          "fr": "Oui"
+         },
+         {
+          "en": "Yes",
+          "fr": "Oui"
+         }
+        ],
+        [
+         {
+          "en": "Best For",
+          "fr": "Idéal pour"
+         },
+         {
+          "en": "Standard NEMA 17 builds",
+          "fr": "Constructions NEMA 17 standard"
+         },
+         {
+          "en": "NEMA 23, high-current builds",
+          "fr": "NEMA 23, constructions haute intensité"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.2.9",
+     "narration": {
+      "en": "Both drivers feature StealthChop2 silent stepping, making your printer dramatically quieter than older A4988 or DRV8825 drivers. They also support StallGuard technology for sensorless homing and crash detection — if the carriage hits an obstacle, the driver detects the spike in resistance and can pause or re-home the printer.",
+      "fr": "Les deux pilotes sont dotés du mode pas silencieux StealthChop2, rendant votre imprimante nettement plus silencieuse que les anciens pilotes A4988 ou DRV8825. Ils supportent également la technologie StallGuard pour le référencement sans capteur et la détection de collision — si le chariot heurte un obstacle, le pilote détecte la soudaine augmentation de résistance et peut mettre en pause ou refaire la mise à l'origine."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "StealthChop2 and StallGuard",
+        "fr": "StealthChop2 et StallGuard"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "StealthChop2",
+         "desc": {
+          "en": "Silent stepping — dramatically quieter than A4988/DRV8825 drivers",
+          "fr": "Pas silencieux — nettement plus silencieux que les pilotes A4988/DRV8825"
+         },
+         "highlight": true
+        },
+        {
+         "title": "StallGuard",
+         "desc": {
+          "en": "Sensorless homing + crash detection — monitors motor load; detects obstacle hits and pauses or re-homes",
+          "fr": "Référencement sans capteur + détection de collision — surveille la charge moteur ; détecte les obstacles et met en pause ou refait la mise à l'origine"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.2.10",
+     "narration": {
+      "en": "The mechanism guiding your printhead along each axis profoundly affects accuracy and maintenance. Three options exist: linear rails with recirculating ball bearings, V-wheels riding on aluminium extrusion, and linear rods with smooth shafts.",
+      "fr": "Le mécanisme guidant votre tête d'impression le long de chaque axe affecte profondément la précision et la maintenance. Trois options existent : les rails linéaires à roulements à billes à recirculation, les roues en V roulant sur une extrusion en aluminium, et les tiges linéaires avec des arbres lisses."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Motion Systems: Rails, Wheels, and Rods",
+        "fr": "Systèmes de déplacement : rails, roues et tiges"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Linear Rails (MGN9/12/15)",
+          "fr": "Rails linéaires (MGN9/12/15)"
+         },
+         "desc": {
+          "en": "Recirculating ball bearings on precision-ground track — highest stiffness, best repeatability, lowest long-term maintenance",
+          "fr": "Roulements à billes sur piste rectifiée — rigidité maximale, meilleure répétabilité, maintenance à long terme minimale"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "V-Wheels",
+          "fr": "Roues en V"
+         },
+         "desc": {
+          "en": "Delrin rollers on V-slot aluminium — cheaper, more forgiving of alignment — wear items needing periodic adjustment",
+          "fr": "Galets en Delrin sur aluminium à rainure — moins chers, plus tolérants à l'alignement — pièces d'usure nécessitant des ajustements périodiques"
+         }
+        },
+        {
+         "title": {
+          "en": "Linear Rods",
+          "fr": "Tiges linéaires"
+         },
+         "desc": {
+          "en": "Smooth steel shafts with linear bearings — good middle ground — common on Prusa-style printers — can sag on long spans",
+          "fr": "Arbres en acier lisse avec roulements linéaires — bon compromis — courants sur les imprimantes style Prusa — peuvent fléchir sur de longues portées"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.2.11",
+     "narration": {
+      "en": "Linear rails require careful installation: a badly installed rail performs worse than a well-tuned wheel system. Squaring and preload adjustment are critical. If you upgrade, buy known-brand rails — HIWIN, CPC, or genuine MGN — and lubricate with lithium grease every few months.",
+      "fr": "Les rails linéaires exigent une installation soigneuse : un rail mal installé est moins performant qu'un système de roues bien réglé. L'équerrage et le réglage du préchargement sont critiques. Si vous effectuez une mise à niveau, achetez des rails de marque connue — HIWIN, CPC ou MGN authentique — et lubrifiez à la graisse au lithium tous les quelques mois."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Linear Rails: Performance vs. Alignment Demands",
+        "fr": "Rails linéaires : performances vs. exigences d'alignement"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Feature",
+         "fr": "Caractéristique"
+        },
+        {
+         "en": "Linear Rails (MGN12)",
+         "fr": "Rails linéaires (MGN12)"
+        },
+        {
+         "en": "V-Wheels",
+         "fr": "Roues en V"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Stiffness",
+          "fr": "Rigidité"
+         },
+         {
+          "en": "Highest",
+          "fr": "La plus élevée"
+         },
+         {
+          "en": "Moderate",
+          "fr": "Modérée"
+         }
+        ],
+        [
+         {
+          "en": "Repeatability",
+          "fr": "Répétabilité"
+         },
+         {
+          "en": "Excellent",
+          "fr": "Excellente"
+         },
+         {
+          "en": "Good (when new)",
+          "fr": "Bonne (quand neuves)"
+         }
+        ],
+        [
+         {
+          "en": "Maintenance",
+          "fr": "Maintenance"
+         },
+         {
+          "en": "Low (if clean)",
+          "fr": "Faible (si propre)"
+         },
+         {
+          "en": "Regular adjustment",
+          "fr": "Ajustement régulier"
+         }
+        ],
+        [
+         {
+          "en": "Alignment Tolerance",
+          "fr": "Tolérance d'alignement"
+         },
+         {
+          "en": "Low — must be precise",
+          "fr": "Faible — doit être précis"
+         },
+         {
+          "en": "High — forgiving",
+          "fr": "Élevée — tolérant"
+         }
+        ],
+        [
+         {
+          "en": "Cost",
+          "fr": "Coût"
+         },
+         "$15–30 per rail",
+         "$2–5 per wheel"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.2.12",
+     "narration": {
+      "en": "Motion is transferred from stepper motors to the printhead via GT2 timing belts — a 2 millimetre tooth pitch is the universal standard for desktop printers. Standard width is 6 millimetres; 9 millimetre belts offer more stiffness and are recommended for high-speed CoreXY builds.",
+      "fr": "Le mouvement est transmis des moteurs pas à pas à la tête d'impression via des courroies crantées GT2 — un pas de dent de 2 mm est la norme universelle pour les imprimantes de bureau. La largeur standard est de 6 mm ; les courroies de 9 mm offrent plus de rigidité et sont recommandées pour les constructions CoreXY haute vitesse."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Belts, Pulleys, and Idlers",
+        "fr": "Courroies, poulies et tendeurs"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>GT2 profile</b> — 2mm tooth pitch, universal standard for desktop FDM",
+         "fr": "<b>Profil GT2</b> — pas de dent 2 mm, norme universelle pour l'FDM de bureau"
+        },
+        {
+         "en": "<b>6mm width</b> — standard; <b>9mm width</b> — more stiffness, recommended for high-speed CoreXY",
+         "fr": "<b>Largeur 6 mm</b> — standard ; <b>largeur 9 mm</b> — plus rigide, recommandée pour CoreXY haute vitesse"
+        },
+        {
+         "en": "<b>Fiberglass core</b> — good strength, flexible on small pulleys — preferred for CoreXY",
+         "fr": "<b>Âme en fibre de verre</b> — bonne résistance, souple sur petites poulies — préférée pour CoreXY"
+        },
+        {
+         "en": "<b>Steel core</b> — maximum stiffness but resists bending — avoid in CoreXY systems",
+         "fr": "<b>Âme en acier</b> — rigidité maximale mais résiste à la flexion — à éviter dans les systèmes CoreXY"
+        },
+        {
+         "en": "<b>Pulleys and idlers</b> — worn pulleys cause periodic error — visible repeating artifacts on print surfaces",
+         "fr": "<b>Poulies et tendeurs</b> — les poulies usées causent une erreur périodique — artefacts répétitifs visibles sur les surfaces"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.2.13",
+     "narration": {
+      "en": "To close Chapter 2: the extruder and motion system are where speed and material versatility are born. Direct drive with dual gears, NEMA 17 or pancake motors, TMC drivers with StallGuard, quality linear rails, and GT2 fiberglass belts are the 2026 recipe for a capable machine.",
+      "fr": "Pour clore le chapitre 2 : l'extrudeur et le système de déplacement sont là où naissent la vitesse et la polyvalence des matériaux. Entraînement direct avec bi-engrenage, moteurs NEMA 17 ou pancake, pilotes TMC avec StallGuard, rails linéaires de qualité, et courroies GT2 en fibre de verre sont la recette 2026 pour une machine capable."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 2 Recap",
+        "fr": "Récapitulatif du chapitre 2"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Direct drive</b> wins in 2026 — input shaping eliminates the speed advantage Bowden once held",
+         "fr": "<b>L'entraînement direct</b> l'emporte en 2026 — l'input shaping élimine l'avantage de vitesse autrefois détenu par le Bowden"
+        },
+        {
+         "en": "<b>Dual-gear extruders</b> strongly recommended for flex filaments; recalibrate E-steps after upgrade",
+         "fr": "<b>Les extrudeurs bi-engrenage</b> fortement recommandés pour les filaments flexibles ; recalibrer les pas d'extrusion après mise à niveau"
+        },
+        {
+         "en": "<b>NEMA 17</b> is the universal standard; pancake variants minimize moving mass for high-speed direct drive",
+         "fr": "<b>NEMA 17</b> est la norme universelle ; les variantes pancake minimisent la masse en mouvement pour l'entraînement direct haute vitesse"
+        },
+        {
+         "en": "<b>TMC2209/TMC5160</b> — silent operation (StealthChop2) + sensorless homing and crash detection (StallGuard)",
+         "fr": "<b>TMC2209/TMC5160</b> — fonctionnement silencieux (StealthChop2) + référencement sans capteur et détection de collision (StallGuard)"
+        },
+        {
+         "en": "<b>Linear rails</b> best performance — require careful alignment; V-wheels forgiving but wear with time",
+         "fr": "<b>Rails linéaires</b> meilleures performances — alignement soigneux requis ; roues en V tolérantes mais s'usent avec le temps"
+        },
+        {
+         "en": "<b>GT2 fiberglass belts</b> — 9mm for CoreXY high-speed; avoid steel-core belts in CoreXY",
+         "fr": "<b>Courroies GT2 fibre de verre</b> — 9 mm pour CoreXY haute vitesse ; éviter les courroies âme acier en CoreXY"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 3,
+   "title": {
+    "en": "Bed, Frame, and Electronics",
+    "fr": "Plateau, châssis et électronique"
+   },
+   "scenes": [
+    {
+     "id": "2.3.0",
+     "narration": {
+      "en": "Welcome to Chapter 3. We now turn to the foundation and brain of your printer: the heated bed, the frame, the electronics and firmware, the cooling system, and the enclosure — each a capability gate in its own right.",
+      "fr": "Bienvenue au chapitre 3. Nous nous tournons maintenant vers la fondation et le cerveau de votre imprimante : le plateau chauffant, le châssis, l'électronique et le firmware, le système de refroidissement, et le caisson — chacun une barrière de capacité à part entière."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 2 · Chapter 3",
+        "fr": "Module 2 · Chapitre 3"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Bed, Frame, and Electronics",
+        "fr": "Plateau, châssis et électronique"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "The heated bed, frame rigidity, firmware, and enclosure choice together determine which materials you can print — and whether your prints will be accurate, safe, and reliable.",
+        "fr": "Le plateau chauffant, la rigidité du châssis, le firmware et le choix du caisson déterminent ensemble quels matériaux vous pouvez imprimer — et si vos impressions seront précises, sûres et fiables."
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.3.1",
+     "narration": {
+      "en": "The heated bed serves two purposes: keeping the first layer warm enough to adhere, and maintaining the lower portion of the print at temperature to prevent warping from differential cooling. Most consumer printers use PCB heaters bonded to an aluminium plate.",
+      "fr": "Le plateau chauffant sert deux objectifs : maintenir la première couche suffisamment chaude pour adhérer, et maintenir la partie inférieure de l'impression à température pour éviter les déformations dues à un refroidissement différentiel. La plupart des imprimantes grand public utilisent des résistances PCB collées à une plaque en aluminium."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Heated Bed: PCB Heaters and Aluminium Plates",
+        "fr": "Le plateau chauffant : résistances PCB et plaques en aluminium"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>PCB heater</b> — resistive traces bonded to an aluminium plate for flatness and thermal distribution",
+         "fr": "<b>Résistance PCB</b> — pistes résistives collées à une plaque en aluminium pour la planéité et la distribution thermique"
+        },
+        {
+         "en": "<b>Thick plate (4–6mm)</b> — more even heat distribution, slower to reach temperature",
+         "fr": "<b>Plaque épaisse (4–6 mm)</b> — distribution thermique plus uniforme, plus lente à atteindre la température"
+        },
+        {
+         "en": "<b>Thin plate (2–3mm)</b> — faster heating, may have hot spots",
+         "fr": "<b>Plaque fine (2–3 mm)</b> — chauffe plus vite, peut avoir des points chauds"
+        },
+        {
+         "en": "<b>Two purposes</b> — first layer adhesion + preventing warping from differential cooling",
+         "fr": "<b>Deux objectifs</b> — adhérence de la première couche + prévention du gauchissement par refroidissement différentiel"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.3.2",
+     "narration": {
+      "en": "Bed power source is a critical design choice. 24 volt DC is recommended over 12 volt — it draws half the current for the same power, allowing lighter-gauge wiring and reducing resistive losses. AC-powered beds heat fastest but require a solid-state relay, thermal fuses, and proper electrical isolation.",
+      "fr": "La source d'alimentation du plateau est une décision de conception critique. Le 24 V DC est recommandé par rapport au 12 V — il réduit l'intensité de moitié pour la même puissance, permettant un câblage de calibre plus léger et réduisant les pertes résistives. Les plateaux alimentés en AC chauffent le plus vite mais nécessitent un relais à semi-conducteur, des fusibles thermiques et une isolation électrique appropriée."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "AC vs. DC Bed Power",
+        "fr": "Alimentation AC vs. DC pour le plateau"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Power Type",
+         "fr": "Type d'alimentation"
+        },
+        {
+         "en": "Heating Speed",
+         "fr": "Vitesse de chauffe"
+        },
+        {
+         "en": "Safety Requirements",
+         "fr": "Exigences de sécurité"
+        }
+       ],
+       "rows": [
+        [
+         "DC 12V",
+         {
+          "en": "Slower — high current draw",
+          "fr": "Plus lente — courant élevé"
+         },
+         {
+          "en": "Standard low-voltage",
+          "fr": "Basse tension standard"
+         }
+        ],
+        [
+         "DC 24V",
+         {
+          "en": "Moderate — half the current of 12V",
+          "fr": "Modérée — moitié du courant 12 V"
+         },
+         {
+          "en": "Standard — recommended",
+          "fr": "Standard — recommandé"
+         }
+        ],
+        [
+         "AC (Mains)",
+         {
+          "en": "Fastest — highest temp capability",
+          "fr": "La plus rapide — capacité temp. max."
+         },
+         {
+          "en": "SSR + thermal fuse + proper grounding required",
+          "fr": "SSR + fusible thermique + mise à la terre requise"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.3.3",
+     "narration": {
+      "en": "The surface your first layer contacts matters as much as bed temperature. PEI sheets have become the standard because they grip well when hot and release parts easily when cool. Magnetic flexible PEI systems are the peak of convenience: flex the sheet to pop off prints, snap it back magnetically.",
+      "fr": "La surface que contacte votre première couche est aussi importante que la température du plateau. Les feuilles PEI sont devenues la norme car elles adhèrent bien quand elles sont chaudes et libèrent facilement les pièces quand elles refroidissent. Les systèmes PEI flexibles magnétiques sont le summum de la praticité : fléchissez la feuille pour détacher les impressions, remettez-la en place magnétiquement."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Build Surfaces: Finding the Right Grip",
+        "fr": "Surfaces d'impression : trouver la bonne adhérence"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Surface",
+         "fr": "Surface"
+        },
+        {
+         "en": "Adhesion",
+         "fr": "Adhérence"
+        },
+        {
+         "en": "Best For",
+         "fr": "Idéale pour"
+        },
+        {
+         "en": "Part Removal",
+         "fr": "Retrait pièce"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Glass (borosilicate)",
+          "fr": "Verre (borosilicate)"
+         },
+         {
+          "en": "Moderate",
+          "fr": "Modérée"
+         },
+         "PLA, PETG",
+         {
+          "en": "Moderate",
+          "fr": "Modéré"
+         }
+        ],
+        [
+         {
+          "en": "PEI Smooth",
+          "fr": "PEI lisse"
+         },
+         {
+          "en": "Strong when hot",
+          "fr": "Fort quand chaud"
+         },
+         "PLA, TPU, Nylon",
+         {
+          "en": "Easy (flex when cool)",
+          "fr": "Facile (fléchir refroidi)"
+         }
+        ],
+        [
+         {
+          "en": "PEI Textured",
+          "fr": "PEI texturé"
+         },
+         {
+          "en": "Moderate–Strong",
+          "fr": "Modéré–Fort"
+         },
+         "PETG, ABS, ASA",
+         {
+          "en": "Easy",
+          "fr": "Facile"
+         }
+        ],
+        [
+         {
+          "en": "Magnetic Flexible PEI",
+          "fr": "PEI flexible magnétique"
+         },
+         {
+          "en": "Moderate–Strong",
+          "fr": "Modéré–Fort"
+         },
+         {
+          "en": "General purpose",
+          "fr": "Usage général"
+         },
+         {
+          "en": "Very easy",
+          "fr": "Très facile"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.3.4",
+     "narration": {
+      "en": "PETG bonds aggressively to glass and can chip pieces out of it during removal. Always use a release agent when printing PETG on glass, or switch to PEI. A shattered glass bed is an expensive mistake that many experienced users have made.",
+      "fr": "Le PETG adhère agressivement au verre et peut en éclater des morceaux lors du retrait. Utilisez toujours un agent de démoulage lors de l'impression de PETG sur verre, ou passez au PEI. Un plateau en verre brisé est une erreur coûteuse que de nombreux utilisateurs expérimentés ont faite."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PETG on Glass: An Expensive Mistake",
+        "fr": "PETG sur verre : une erreur coûteuse"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "PETG bonds so aggressively to glass it can chip pieces out during removal. Always use a release agent (glue stick, hairspray) or switch to PEI when printing PETG.",
+        "fr": "Le PETG adhère si agressivement au verre qu'il peut en éclater des morceaux lors du retrait. Utilisez toujours un agent de démoulage (bâton de colle, laque) ou passez au PEI pour imprimer du PETG."
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.3.5",
+     "narration": {
+      "en": "Bed leveling has evolved from the paper method — feeling slight drag with a sheet of paper — through probe-based auto-leveling, to integrated strain gauges, and finally to Bambu Lab's micro lidar. Even with auto-leveling, knowing the paper method helps you diagnose problems.",
+      "fr": "La mise à niveau du plateau a évolué de la méthode du papier — sentir une légère résistance avec une feuille de papier — en passant par la mise à niveau automatique par sonde, jusqu'aux jauges de contrainte intégrées, et enfin au micro lidar de Bambu Lab. Même avec la mise à niveau automatique, connaître la méthode du papier aide à diagnostiquer les problèmes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Bed Leveling: From Paper to Lidar",
+        "fr": "Mise à niveau du plateau : du papier au lidar"
+       }
+      },
+      {
+       "type": "timeline",
+       "nodes": [
+        {
+         "label": {
+          "en": "Paper Method",
+          "fr": "Méthode papier"
+         },
+         "text": {
+          "en": "Free — user-dependent — baseline skill every printer should know",
+          "fr": "Gratuit — dépend de l'utilisateur — compétence de base que tout utilisateur doit connaître"
+         }
+        },
+        {
+         "label": "BLTouch / CR-Touch",
+         "text": {
+          "en": "$35–40 — ±0.005mm repeatability — BLTouch: Hall effect + plastic pin; CR-Touch: optical + metal pin (crash-resistant)",
+          "fr": "35–40 $ — répétabilité ±0,005 mm — BLTouch : effet Hall + broche plastique ; CR-Touch : optique + broche métallique (résistante aux collisions)"
+         }
+        },
+        {
+         "label": {
+          "en": "Strain Gauge (Prusa)",
+          "fr": "Jauge de contrainte (Prusa)"
+         },
+         "text": {
+          "en": "Integrated load cell — nozzle physically touches bed — no separate probe — requires clean nozzle tip",
+          "fr": "Cellule de charge intégrée — la buse touche physiquement le plateau — pas de sonde séparée — nécessite une buse propre"
+         }
+        },
+        {
+         "label": {
+          "en": "Micro Lidar (Bambu Lab)",
+          "fr": "Micro lidar (Bambu Lab)"
+         },
+         "text": {
+          "en": "Dual red lasers — bed leveling + automatic flow calibration + first-layer inspection",
+          "fr": "Doubles lasers rouges — mise à niveau + calibration automatique du débit + inspection de la première couche"
+         }
+        },
+        {
+         "label": {
+          "en": "Eddy Current (Beacon)",
+          "fr": "Courant de Foucault (Beacon)"
+         },
+         "text": {
+          "en": "~$80 — 0.5µm resolution — scans at 500mm/s — conductive surfaces only",
+          "fr": "~80 $ — résolution 0,5 µm — balayage à 500 mm/s — surfaces conductrices uniquement"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.3.6",
+     "narration": {
+      "en": "The Prusa strain gauge uses a load cell integrated into the hotend heatsink to detect when the nozzle physically contacts the bed. This eliminates a separate probe entirely, but requires a perfectly clean nozzle tip. Prusa addresses this by preheating the nozzle to just below the oozing point during leveling.",
+      "fr": "La jauge de contrainte Prusa utilise une cellule de charge intégrée dans le dissipateur de la tête d'impression pour détecter quand la buse touche physiquement le plateau. Cela élimine entièrement une sonde séparée, mais exige une pointe de buse parfaitement propre. Prusa résout cela en préchauffant la buse à juste en dessous du point d'écoulement lors de la mise à niveau."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Prusa Strain Gauge: Nozzle as the Probe",
+        "fr": "Jauge de contrainte Prusa : la buse comme sonde"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "The strain gauge system requires the nozzle tip to be perfectly clean — any hardened residue throws off the reading. Prusa preheats to just below oozing temperature before leveling to soften and remove residue.",
+        "fr": "Le système à jauge de contrainte exige que la pointe de la buse soit parfaitement propre — tout résidu durci fausse la mesure. Prusa préchauffe à juste en dessous du point d'écoulement avant la mise à niveau pour ramollir et éliminer les résidus."
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.3.7",
+     "narration": {
+      "en": "The frame is your printer's skeleton. If it flexes or vibrates, those movements translate directly into print artifacts. Aluminium extrusion dominates desktop 3D printing. 2040 extrusion — 20 by 40 millimetres — is recommended for high-speed or large-format applications.",
+      "fr": "Le châssis est le squelette de votre imprimante. S'il fléchit ou vibre, ces mouvements se traduisent directement en artefacts d'impression. L'extrusion en aluminium domine l'impression 3D de bureau. L'extrusion 2040 — 20 × 40 mm — est recommandée pour les applications haute vitesse ou grand format."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Frame: The Foundation of Precision",
+        "fr": "Châssis : la fondation de la précision"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Profile",
+         "fr": "Profil"
+        },
+        {
+         "en": "Dimensions",
+         "fr": "Dimensions"
+        },
+        {
+         "en": "Rigidity",
+         "fr": "Rigidité"
+        },
+        {
+         "en": "Best For",
+         "fr": "Idéal pour"
+        }
+       ],
+       "rows": [
+        [
+         "2020",
+         "20×20mm",
+         {
+          "en": "Moderate",
+          "fr": "Modérée"
+         },
+         {
+          "en": "Small printers, light duty",
+          "fr": "Petites imprimantes, usage léger"
+         }
+        ],
+        [
+         "2040",
+         "20×40mm",
+         {
+          "en": "High (2× 2020)",
+          "fr": "Élevée (2× 2020)"
+         },
+         {
+          "en": "High-speed, large volume, direct drive",
+          "fr": "Haute vitesse, grand volume, entraînement direct"
+         }
+        ],
+        [
+         "3030/3060",
+         "30×30–60mm",
+         {
+          "en": "Very High",
+          "fr": "Très élevée"
+         },
+         {
+          "en": "Large-format, CNC builds",
+          "fr": "Grand format, constructions CNC"
+         }
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "6061 and 6082 aluminium alloys offer superior strength. Further rigidity gains come from cross-bracing, reinforced corner brackets, and even load distribution.",
+        "fr": "Les alliages d'aluminium 6061 et 6082 offrent une résistance supérieure. Des gains de rigidité supplémentaires proviennent des renforts croisés, des équerres de coin renforcées et d'une distribution uniforme des charges."
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.3.8",
+     "narration": {
+      "en": "Modern printers use 32-bit mainboards. The BTT SKR Mini E3 V3 is the most popular Ender 3 upgrade board — same mounting holes as the stock Creality board, with TMC2209 drivers in UART mode, dual Z-stepper support, and an STM32G0 processor.",
+      "fr": "Les imprimantes modernes utilisent des cartes mères 32 bits. La BTT SKR Mini E3 V3 est la carte de mise à niveau Ender 3 la plus populaire — mêmes trous de fixation que la carte d'origine Creality, avec des pilotes TMC2209 en mode UART, le support de deux steppers Z, et un processeur STM32G0."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "32-Bit Mainboards",
+        "fr": "Cartes mères 32 bits"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "BTT SKR Mini E3 V3",
+         "desc": {
+          "en": "STM32G0B1 at 64MHz — 4× TMC2209 UART — drop-in Ender 3 upgrade — NeoPixel port, dual Z support",
+          "fr": "STM32G0B1 à 64 MHz — 4× TMC2209 UART — remplacement direct Ender 3 — port NeoPixel, support Z double"
+         },
+         "highlight": true
+        },
+        {
+         "title": "BTT SKR 3",
+         "desc": {
+          "en": "STM32H723 at 550MHz — 5× plug-in driver slots — high-performance bed slingers",
+          "fr": "STM32H723 à 550 MHz — 5× emplacements enfichables — bed slingers haute performance"
+         }
+        },
+        {
+         "title": "BTT Octopus V1.1",
+         "desc": {
+          "en": "STM32F446 at 180MHz — 8× driver slots — CAN bus — Voron builds, multi-extruder, 4× independent Z motors",
+          "fr": "STM32F446 à 180 MHz — 8× emplacements — bus CAN — constructions Voron, multi-extrudeur, 4 moteurs Z indépendants"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.3.9",
+     "narration": {
+      "en": "Klipper and Marlin are the two firmware ecosystems that dominate modern 3D printing. Klipper offloads computation to a host computer — even an old 8-bit microcontroller achieves over 175,000 steps per second under Klipper, and modern 32-bit MCUs reach millions.",
+      "fr": "Klipper et Marlin sont les deux écosystèmes de firmware qui dominent l'impression 3D moderne. Klipper déleste le calcul vers un ordinateur hôte — même un ancien microcontrôleur 8 bits atteint plus de 175 000 pas par seconde sous Klipper, et les MCU 32 bits modernes en atteignent des millions."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Firmware: Klipper vs. Marlin",
+        "fr": "Firmware : Klipper vs. Marlin"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "Marlin",
+        "note": {
+         "en": "Runs entirely on printer MCU — drives most of the world's printers — simpler install — stable — needs recompilation for every config change",
+         "fr": "Tourne entièrement sur le MCU de l'imprimante — fait tourner la plupart des imprimantes mondiales — installation plus simple — stable — nécessite recompilation pour chaque changement de config"
+        }
+       },
+       "right": {
+        "title": "Klipper",
+        "note": {
+         "en": "Host CPU + MCU — millions of steps/sec — full Input Shaping + Pressure Advance — config files, no recompile — web interface (Mainsail/Fluidd)",
+         "fr": "CPU hôte + MCU — millions de pas/s — Input Shaping + Pressure Advance complets — fichiers de config, sans recompilation — interface web (Mainsail/Fluidd)"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.3.10",
+     "narration": {
+      "en": "Klipper's key advantages are Input Shaping and Pressure Advance. Input Shaping measures and compensates for resonance frequencies, eliminating ringing artifacts without slowing the printer. Pressure Advance compensates for oozing and blobbing at corners. Both are configured through text files — no firmware recompilation needed.",
+      "fr": "Les avantages clés de Klipper sont l'Input Shaping et le Pressure Advance. L'Input Shaping mesure et compense les fréquences de résonance, éliminant les artefacts de résonance sans ralentir l'imprimante. Le Pressure Advance compense le suintement et les excroissances aux coins. Les deux se configurent via des fichiers texte — pas de recompilation du firmware requise."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Klipper's Key Features",
+        "fr": "Fonctionnalités clés de Klipper"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Input Shaping</b> — resonance compensation via ADXL345 accelerometer; eliminates ringing/ghosting artifacts",
+         "fr": "<b>Input Shaping</b> — compensation de résonance via accéléromètre ADXL345 ; élimine les artefacts de résonance"
+        },
+        {
+         "en": "<b>Pressure Advance</b> — compensates for oozing and corner blobbing; dramatically reduces stringing",
+         "fr": "<b>Pressure Advance</b> — compense le suintement et les excroissances aux coins ; réduit considérablement le cordage"
+        },
+        {
+         "en": "<b>Text file config</b> — change any setting without recompiling firmware; restart Klipper to apply",
+         "fr": "<b>Config en fichier texte</b> — modifier n'importe quel réglage sans recompiler le firmware ; redémarrer Klipper pour appliquer"
+        },
+        {
+         "en": "<b>Web interface</b> — Mainsail or Fluidd for remote monitoring, macros, and live tuning",
+         "fr": "<b>Interface web</b> — Mainsail ou Fluidd pour la surveillance à distance, les macros et le réglage en direct"
+        },
+        {
+         "en": "<b>Step rate</b> — 175K+ steps/sec on 8-bit AVR; 7M+ steps/sec on STM32H723",
+         "fr": "<b>Taux de pas</b> — 175 000+ pas/s sur AVR 8 bits ; 7 millions+ pas/s sur STM32H723"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.3.11",
+     "narration": {
+      "en": "The consensus: beginners should start with Marlin for simplicity and stability. Experienced users seeking high-speed performance should migrate to Klipper. Many users report that once they experience Klipper's Input Shaping and easy configurability, they rarely return to Marlin.",
+      "fr": "Le consensus : les débutants devraient commencer avec Marlin pour sa simplicité et sa stabilité. Les utilisateurs expérimentés cherchant des performances haute vitesse devraient migrer vers Klipper. De nombreux utilisateurs rapportent qu'une fois qu'ils ont expérimenté l'Input Shaping de Klipper et sa facilité de configuration, ils reviennent rarement à Marlin."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Klipper vs. Marlin: Who Should Use Which?",
+        "fr": "Klipper vs. Marlin : qui devrait utiliser lequel ?"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Feature",
+         "fr": "Caractéristique"
+        },
+        "Klipper",
+        "Marlin"
+       ],
+       "rows": [
+        [
+         {
+          "en": "Architecture",
+          "fr": "Architecture"
+         },
+         {
+          "en": "Host CPU + MCU",
+          "fr": "CPU hôte + MCU"
+         },
+         {
+          "en": "Printer MCU only",
+          "fr": "MCU imprimante uniquement"
+         }
+        ],
+        [
+         {
+          "en": "Input Shaping",
+          "fr": "Input Shaping"
+         },
+         {
+          "en": "Full support",
+          "fr": "Support complet"
+         },
+         {
+          "en": "Limited",
+          "fr": "Limité"
+         }
+        ],
+        [
+         {
+          "en": "Config Changes",
+          "fr": "Modifications config"
+         },
+         {
+          "en": "Text file, no recompile",
+          "fr": "Fichier texte, sans recompilation"
+         },
+         {
+          "en": "Recompile + flash",
+          "fr": "Recompiler + flasher"
+         }
+        ],
+        [
+         {
+          "en": "Setup Complexity",
+          "fr": "Complexité d'installation"
+         },
+         {
+          "en": "Higher — needs host",
+          "fr": "Plus élevée — nécessite un hôte"
+         },
+         {
+          "en": "Lower — standalone",
+          "fr": "Plus faible — autonome"
+         }
+        ],
+        [
+         {
+          "en": "Best For",
+          "fr": "Idéal pour"
+         },
+         {
+          "en": "Advanced, high-speed",
+          "fr": "Avancé, haute vitesse"
+         },
+         {
+          "en": "Beginners, wide compat.",
+          "fr": "Débutants, large compat."
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.3.12",
+     "narration": {
+      "en": "Cooling is essential but misunderstood — not all fans serve the same purpose. The hotend fan runs at 100 percent whenever the hotend is heated. Never disable it while the nozzle is hot, or heat creep will cause clogs.",
+      "fr": "Le refroidissement est essentiel mais souvent mal compris — tous les ventilateurs n'ont pas le même rôle. Le ventilateur de la tête d'impression tourne à 100 % chaque fois que la tête est chauffée. Ne le désactivez jamais quand la buse est chaude, sinon le fluage thermique provoquera des bourrages."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Three Fans, Three Jobs",
+        "fr": "Trois ventilateurs, trois rôles"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Hotend Fan (40mm axial)",
+          "fr": "Ventilateur tête (axial 40 mm)"
+         },
+         "desc": {
+          "en": "100% speed when hotend is heated — cools heatsink/heat break — NEVER disable while nozzle is hot",
+          "fr": "100 % vitesse quand la tête est chauffée — refroidit le dissipateur/barrière thermique — NE JAMAIS désactiver quand la buse est chaude"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Part Cooling Fan (5015 blower)",
+          "fr": "Ventilateur pièce (soufflant 5015)"
+         },
+         "desc": {
+          "en": "Centrifugal/blower type only — controlled by slicer — varies by material and layer — high static pressure for ducted airflow",
+          "fr": "Type centrifuge/soufflant uniquement — contrôlé par le slicer — varie selon le matériau et la couche — haute pression statique pour flux d'air canalisé"
+         }
+        },
+        {
+         "title": {
+          "en": "Chamber Fan",
+          "fr": "Ventilateur de caisson"
+         },
+         "desc": {
+          "en": "In enclosed printers — manages ambient temperature + ventilates VOCs — essential for ABS and other fume-producing materials",
+          "fr": "Dans les imprimantes à caisson — gère la température ambiante + ventile les COV — essentiel pour l'ABS et autres matériaux produisant des fumées"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.3.13",
+     "narration": {
+      "en": "Part cooling requirements vary dramatically by material. PLA thrives on 100 percent fan from the second layer onward. ABS and ASA require an enclosed chamber and almost no part cooling — aggressive cooling causes delamination and warping.",
+      "fr": "Les exigences de refroidissement des pièces varient considérablement selon le matériau. Le PLA se développe à 100 % de ventilateur dès la deuxième couche. L'ABS et l'ASA nécessitent un caisson fermé et presque pas de refroidissement de pièce — un refroidissement agressif cause la délamination et le gauchissement."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Part Cooling by Material",
+        "fr": "Refroidissement de pièce par matériau"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Part Cooling",
+         "fr": "Refroidissement pièce"
+        },
+        {
+         "en": "Notes",
+         "fr": "Notes"
+        }
+       ],
+       "rows": [
+        [
+         "PLA",
+         "100%",
+         {
+          "en": "Aggressive cooling from layer 2+",
+          "fr": "Refroidissement agressif dès la couche 2+"
+         }
+        ],
+        [
+         "PETG",
+         "30–50%",
+         {
+          "en": "Too much cooling → poor layer adhesion",
+          "fr": "Trop de refroidissement → mauvaise adhérence inter-couche"
+         }
+        ],
+        [
+         "ABS / ASA",
+         "0–10%",
+         {
+          "en": "Enclosed chamber required; minimize cooling",
+          "fr": "Caisson requis ; minimiser le refroidissement"
+         }
+        ],
+        [
+         "Nylon",
+         "10–30%",
+         {
+          "en": "Low cooling to prevent warping",
+          "fr": "Faible refroidissement pour éviter le gauchissement"
+         }
+        ],
+        [
+         "PC",
+         "10–20%",
+         {
+          "en": "Minimal cooling in heated chamber",
+          "fr": "Refroidissement minimal dans un caisson chauffé"
+         }
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Use a centrifugal (blower) fan for part cooling — never an axial fan. Blower fans generate the static pressure needed to push air through narrow ducts to reach the print area.",
+        "fr": "Utilisez un ventilateur centrifuge (soufflant) pour le refroidissement de pièce — jamais un ventilateur axial. Les ventilateurs soufflants génèrent la pression statique nécessaire pour pousser l'air à travers des conduits étroits jusqu'à la zone d'impression."
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.3.14",
+     "narration": {
+      "en": "The 5015 blower fan — 50 by 15 millimetres — is the gold standard for part cooling. Premium printers use dual 5015 setups for symmetrical coverage from both sides of the nozzle. Silicone socks over the heater block help maintain stable temperature and prevent radiant heat from softening nearby printed features.",
+      "fr": "Le ventilateur soufflant 5015 — 50 × 15 mm — est la référence absolue pour le refroidissement des pièces. Les imprimantes premium utilisent des configurations doubles 5015 pour une couverture symétrique des deux côtés de la buse. Les chaussettes en silicone sur le bloc chauffant aident à maintenir une température stable et empêchent la chaleur rayonnante de ramollir les éléments imprimés à proximité."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "5015 Blower: The Gold Standard",
+        "fr": "Soufflant 5015 : la référence absolue"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>5015 blower</b> (50×15mm) — gold standard for part cooling; high static pressure for ducted airflow",
+         "fr": "<b>Soufflant 5015</b> (50×15 mm) — référence absolue pour le refroidissement ; haute pression statique pour flux canalisé"
+        },
+        {
+         "en": "<b>Dual 5015 setup</b> — symmetrical coverage from both sides; used on premium printers",
+         "fr": "<b>Double 5015</b> — couverture symétrique des deux côtés ; utilisé sur les imprimantes premium"
+        },
+        {
+         "en": "<b>Duct aim</b> — target extruded filament 1–3mm below nozzle tip, not the nozzle itself",
+         "fr": "<b>Orientation du conduit</b> — viser le filament extrudé à 1–3 mm sous la pointe de la buse, pas la buse elle-même"
+        },
+        {
+         "en": "<b>Silicone socks</b> — insulating cover over heater block; stabilizes temperature, reduces radiant heat",
+         "fr": "<b>Chaussettes en silicone</b> — housse isolante sur le bloc chauffant ; stabilise la température, réduit la chaleur rayonnante"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.3.15",
+     "narration": {
+      "en": "Enclosures are not a minor upgrade — they are a material capability gate. Open-frame printers like the Ender 3 or A1 are perfect for PLA and PETG, but they create an invisible barrier to engineering materials that warp without a warm, stable chamber environment.",
+      "fr": "Les caissons ne sont pas une mise à niveau mineure — ils sont une barrière de capacité matériau. Les imprimantes à châssis ouvert comme l'Ender 3 ou l'A1 sont parfaites pour le PLA et le PETG, mais elles créent une barrière invisible aux matériaux d'ingénierie qui se déforment sans un environnement de caisson chaud et stable."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Enclosures: The Capability Gate",
+        "fr": "Caissons : la barrière de capacité"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Open-Frame Printers",
+         "fr": "Imprimantes à châssis ouvert"
+        },
+        "note": {
+         "en": "Ender 3, A1 — cheaper — perfect for PLA and PETG — blocked from ABS, ASA, nylon, PC",
+         "fr": "Ender 3, A1 — moins chers — parfaits pour PLA et PETG — bloqués pour ABS, ASA, nylon, PC"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Enclosed Printers",
+         "fr": "Imprimantes à caisson"
+        },
+        "note": {
+         "en": "Warm stable chamber — unlocks ABS, ASA, nylon, polycarbonate — enclosure costs $50–400 to add later",
+         "fr": "Caisson chaud et stable — débloque ABS, ASA, nylon, polycarbonate — coût d'ajout du caisson 50–400 $"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.3.16",
+     "narration": {
+      "en": "Each engineering material requires a specific chamber temperature. ABS needs 40 to 50 degrees; polycarbonate needs 55 to 65 degrees and benefits from active heating. Passive heating from the bed alone can reach 45 to 65 degrees in a well-insulated enclosure — often enough for ABS and ASA.",
+      "fr": "Chaque matériau d'ingénierie nécessite une température de caisson spécifique. L'ABS a besoin de 40 à 50 degrés ; le polycarbonate a besoin de 55 à 65 degrés et bénéficie d'un chauffage actif. Le chauffage passif du plateau seul peut atteindre 45 à 65 degrés dans un caisson bien isolé — souvent suffisant pour l'ABS et l'ASA."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chamber Temperature by Material",
+        "fr": "Température de caisson par matériau"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Chamber Temp",
+         "fr": "Temp. caisson"
+        },
+        {
+         "en": "Enclosure Required?",
+         "fr": "Caisson requis ?"
+        }
+       ],
+       "rows": [
+        [
+         "PLA",
+         {
+          "en": "Room temp",
+          "fr": "Temp. ambiante"
+         },
+         {
+          "en": "No (cooling preferred)",
+          "fr": "Non (refroidissement préféré)"
+         }
+        ],
+        [
+         "PETG",
+         {
+          "en": "Room temp",
+          "fr": "Temp. ambiante"
+         },
+         {
+          "en": "No",
+          "fr": "Non"
+         }
+        ],
+        [
+         "ABS",
+         "40–50°C",
+         {
+          "en": "Yes",
+          "fr": "Oui"
+         }
+        ],
+        [
+         "ASA",
+         "45–55°C",
+         {
+          "en": "Yes",
+          "fr": "Oui"
+         }
+        ],
+        [
+         "Nylon (PA6)",
+         "45–55°C",
+         {
+          "en": "Yes",
+          "fr": "Oui"
+         }
+        ],
+        [
+         "Polycarbonate",
+         "55–65°C",
+         {
+          "en": "Yes (active heating preferred)",
+          "fr": "Oui (chauffage actif préféré)"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.3.17",
+     "narration": {
+      "en": "Passive heating uses the bed alone to warm the chamber — reaching roughly 45 to 65 degrees in a well-insulated enclosure. Active heating adds dedicated 100 to 300 watt PTC ceramic heaters with PID control for higher, more consistent temperatures needed by nylon and polycarbonate.",
+      "fr": "Le chauffage passif utilise uniquement le plateau pour réchauffer le caisson — atteignant environ 45 à 65 degrés dans un caisson bien isolé. Le chauffage actif ajoute des résistances céramiques PTC dédiées de 100 à 300 watts avec contrôle PID pour des températures plus élevées et plus stables nécessaires au nylon et au polycarbonate."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Passive vs. Active Chamber Heating",
+        "fr": "Chauffage de caisson passif vs. actif"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Passive Heating",
+         "fr": "Chauffage passif"
+        },
+        "note": {
+         "en": "Bed heats chamber to ~45–65°C — sufficient for ABS/ASA — varies with part size and room temperature",
+         "fr": "Le plateau chauffe le caisson à ~45–65 °C — suffisant pour ABS/ASA — varie selon la taille de la pièce et la temp. ambiante"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Active Heating",
+         "fr": "Chauffage actif"
+        },
+        "note": {
+         "en": "100–300W PTC ceramic heaters with PID control — consistent 80–120°C+ — preferred for large nylon/PC/ABS parts",
+         "fr": "Résistances PTC céramiques 100–300 W avec contrôle PID — 80–120 °C+ stables — préféré pour les grandes pièces nylon/PC/ABS"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.3.18",
+     "narration": {
+      "en": "Enclosed printers require additional safety measures. 3D printing produces ultrafine particulates and volatile organic compounds. Studies show a sealed enclosure with HEPA and activated carbon filtration reduces UFP concentrations by 74 to 99 percent. Never print high-temperature materials unattended without remote monitoring.",
+      "fr": "Les imprimantes à caisson nécessitent des mesures de sécurité supplémentaires. L'impression 3D produit des particules ultrafines et des composés organiques volatils. Des études montrent qu'un caisson scellé avec filtration HEPA et charbon actif réduit les concentrations de particules ultrafines de 74 à 99 %. Ne laissez jamais imprimer des matériaux haute température sans surveillance à distance."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Enclosure Safety: Non-Negotiable Measures",
+        "fr": "Sécurité du caisson : mesures non négociables"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "74–99%",
+       "caption": {
+        "en": "UFP reduction with HEPA + activated carbon filtration in a sealed enclosure (multiple studies)",
+        "fr": "Réduction des UFP avec filtration HEPA + charbon actif dans un caisson scellé (plusieurs études)"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Required for enclosed printers: smoke/heat detector inside or above enclosure; automatic power cutoff via smart plug; thermal runaway protection enabled in firmware. Never leave high-temperature prints unattended.",
+        "fr": "Obligatoire pour les imprimantes à caisson : détecteur fumée/chaleur à l'intérieur ou au-dessus du caisson ; coupure automatique via prise intelligente ; protection contre les emballements thermiques activée dans le firmware. Ne laissez jamais les impressions haute température sans surveillance."
+       }
+      }
+     ]
+    },
+    {
+     "id": "2.3.19",
+     "narration": {
+      "en": "Modern printers add an expanding array of sensors as safety nets. Filament runout sensors detect empty spools or broken filament and pause the print. Smart variants using optical encoders can also detect jams by monitoring filament movement.",
+      "fr": "Les imprimantes modernes intègrent un ensemble croissant de capteurs comme filets de sécurité. Les capteurs de fin de filament détectent les bobines vides ou le filament cassé et mettent l'impression en pause. Les variantes intelligentes utilisant des encodeurs optiques peuvent également détecter les bourrages en surveillant le mouvement du filament."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Sensors: Your Safety Net",
+        "fr": "Capteurs : votre filet de sécurité"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Filament Runout",
+          "fr": "Fin de filament"
+         },
+         "desc": {
+          "en": "$5–15 — detects empty spool or broken filament — pauses print so you can reload; smart versions detect jams via optical encoder",
+          "fr": "5–15 $ — détecte bobine vide ou filament cassé — met en pause pour recharger ; versions intelligentes détectent les bourrages via encodeur optique"
+         }
+        },
+        {
+         "title": {
+          "en": "Crash Detection (StallGuard)",
+          "fr": "Détection de collision (StallGuard)"
+         },
+         "desc": {
+          "en": "Built into TMC2209/TMC5160 — monitors motor load — detects obstacle hits — pauses or re-homes rather than continuing with a shifted print",
+          "fr": "Intégré aux TMC2209/TMC5160 — surveille la charge moteur — détecte les obstacles — met en pause ou remet à l'origine plutôt que de continuer avec une impression décalée"
+         }
+        },
+        {
+         "title": {
+          "en": "Chamber Thermistor",
+          "fr": "Thermistance de caisson"
+         },
+         "desc": {
+          "en": "Monitors ambient enclosure temperature — enables PID-controlled active chamber heating in Klipper",
+          "fr": "Surveille la température ambiante du caisson — permet le chauffage actif du caisson contrôlé par PID dans Klipper"
+         }
+        },
+        {
+         "title": {
+          "en": "Camera + AI (Obico)",
+          "fr": "Caméra + IA (Obico)"
+         },
+         "desc": {
+          "en": "Analyzes webcam feed continuously — detects spaghetti, adhesion failures, layer shifts, blobs — auto-pauses on failure",
+          "fr": "Analyse en continu le flux webcam — détecte les spaghettis, défaillances d'adhérence, décalages de couche, excroissances — mise en pause automatique"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2.3.20",
+     "narration": {
+      "en": "To close Module 2: every hardware choice cascades through your printing experience. Your hotend defines your materials, your extruder defines your precision and flex-filament capability, your frame defines your accuracy, your firmware defines your speed, and your enclosure defines your engineering capability.",
+      "fr": "Pour clore le module 2 : chaque choix matériel se répercute sur toute votre expérience d'impression. Votre tête d'impression définit vos matériaux, votre extrudeur définit votre précision et votre capacité pour les filaments flexibles, votre châssis définit votre précision, votre firmware définit votre vitesse, et votre caisson définit votre capacité d'ingénierie."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 3 Recap",
+        "fr": "Récapitulatif du chapitre 3"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>24V DC bed</b> recommended — half the current of 12V for same wattage; AC beds fastest but need SSR + safety measures",
+         "fr": "<b>Plateau DC 24 V</b> recommandé — moitié du courant 12 V pour la même puissance ; plateaux AC les plus rapides mais nécessitent SSR + sécurité"
+        },
+        {
+         "en": "<b>PEI magnetic flexible sheets</b> — best combo of adhesion, convenience, and part release for most users",
+         "fr": "<b>Feuilles PEI flexibles magnétiques</b> — meilleure combinaison adhérence, praticité et retrait de pièces pour la plupart des utilisateurs"
+        },
+        {
+         "en": "<b>Auto bed leveling</b> — any auto-leveling beats manual; strain gauge (Prusa) and lidar (Bambu) are the cutting edge",
+         "fr": "<b>Mise à niveau automatique</b> — tout automatique surpasse le manuel ; jauge de contrainte (Prusa) et lidar (Bambu) sont à la pointe"
+        },
+        {
+         "en": "<b>2040 extrusion</b> for high-speed/large-format builds; 6061/6082 alloy for maximum rigidity",
+         "fr": "<b>Extrusion 2040</b> pour les constructions haute vitesse/grand format ; alliage 6061/6082 pour une rigidité maximale"
+        },
+        {
+         "en": "<b>Klipper</b> for advanced/high-speed; <b>Marlin</b> for beginners — Klipper's Input Shaping + Pressure Advance transform print quality",
+         "fr": "<b>Klipper</b> pour avancés/haute vitesse ; <b>Marlin</b> pour débutants — l'Input Shaping + Pressure Advance de Klipper transforment la qualité d'impression"
+        },
+        {
+         "en": "<b>Enclosures</b> unlock ABS/ASA/nylon/PC — HEPA + carbon filtration reduces UFPs by 74–99% — safety measures non-negotiable",
+         "fr": "<b>Les caissons</b> débloquent ABS/ASA/nylon/PC — filtration HEPA + charbon réduit les UFP de 74–99 % — sécurité non négociable"
+        },
+        {
+         "en": "<b>Sensors</b> — runout, crash detection, chamber thermistor, and AI camera monitoring form a comprehensive safety net",
+         "fr": "<b>Capteurs</b> — fin de filament, détection de collision, thermistance de caisson, et surveillance par caméra IA forment un filet de sécurité complet"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

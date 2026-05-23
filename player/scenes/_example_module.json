@@ -1,0 +1,173 @@
+{
+  "module": 1,
+  "module_title": { "en": "Introduction to 3D Printing", "fr": "Introduction à l'impression 3D" },
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": { "en": "What is 3D Printing?", "fr": "Qu'est-ce que l'impression 3D ?" },
+      "scenes": [
+        {
+          "id": "1.1.0",
+          "narration": {
+            "en": "Welcome to Chapter 1. What is 3D printing, where did it come from, and what are the technologies behind it?",
+            "fr": "Bienvenue au chapitre 1. Qu'est-ce que l'impression 3D, d'où vient-elle, et quelles sont les technologies qui la rendent possible ?"
+          },
+          "elements": [
+            { "type": "kicker", "text": { "en": "Module 1 · Chapter 1", "fr": "Module 1 · Chapitre 1" } },
+            { "type": "title", "text": { "en": "What is 3D Printing?", "fr": "Qu'est-ce que l'impression 3D ?" } },
+            { "type": "lead", "text": { "en": "Hold a digital design in your hands within hours — no factory, no tooling, no minimum order. That is the promise of 3D printing.", "fr": "Tenez un modèle numérique entre vos mains en quelques heures — sans usine, sans outillage, sans quantité minimale. C'est la promesse de l'impression 3D." } }
+          ]
+        },
+        {
+          "id": "1.1.1",
+          "narration": {
+            "en": "Traditional manufacturing is subtractive: you carve material away. 3D printing flips this. It is additive, building the object one thin layer at a time.",
+            "fr": "La fabrication traditionnelle est soustractive : on enlève de la matière. L'impression 3D inverse cette logique. Elle est additive, et construit l'objet une fine couche après l'autre."
+          },
+          "elements": [
+            { "type": "title", "text": { "en": "Additive vs. Subtractive", "fr": "Additif ou soustractif" } },
+            { "type": "compare",
+              "left":  { "title": { "en": "Subtractive", "fr": "Soustractif" }, "note": { "en": "Carve away — waste + tooling", "fr": "On enlève — gaspillage + outillage" } },
+              "right": { "title": { "en": "Additive", "fr": "Additif" }, "note": { "en": "Build up — layer by layer", "fr": "On ajoute — couche par couche" }, "highlight": true } },
+            { "type": "bullets", "items": [
+              { "en": "<b>Subtractive</b> — start with a block, cut away the rest (CNC, milling). Wastes material, needs tooling.", "fr": "<b>Soustractif</b> — partir d'un bloc et retirer le reste (CNC, fraisage). Gaspille la matière, exige de l'outillage." },
+              { "en": "<b>Additive</b> — add material layer by layer. Geometric freedom, no tooling, minimal waste.", "fr": "<b>Additif</b> — ajouter la matière couche par couche. Liberté géométrique, aucun outillage, gaspillage minimal." }
+            ] }
+          ]
+        },
+        {
+          "id": "1.1.2",
+          "narration": {
+            "en": "Because you add material instead of removing it, you gain geometric freedom, zero tooling cost, material efficiency, on-demand output, and fast iteration.",
+            "fr": "Parce qu'on ajoute de la matière au lieu d'en retirer, on gagne en liberté géométrique, en coût d'outillage nul, en efficacité matière, en production à la demande, et en itération rapide."
+          },
+          "elements": [
+            { "type": "kicker", "text": { "en": "The payoff", "fr": "Le gain" } },
+            { "type": "title", "text": { "en": "Why Additive Wins", "fr": "Pourquoi l'additif gagne" } },
+            { "type": "bullets", "items": [
+              { "en": "<b>Geometric freedom</b> — internal channels, lattices, organic shapes", "fr": "<b>Liberté géométrique</b> — canaux internes, treillis, formes organiques" },
+              { "en": "<b>No tooling</b> — file straight to part, no molds or dies", "fr": "<b>Aucun outillage</b> — du fichier à la pièce, sans moule ni matrice" },
+              { "en": "<b>Material efficiency</b> — use only what becomes the part", "fr": "<b>Efficacité matière</b> — n'utiliser que ce qui devient la pièce" },
+              { "en": "<b>On-demand</b> — one part or a hundred, same setup cost", "fr": "<b>À la demande</b> — une pièce ou cent, même coût de mise en route" },
+              { "en": "<b>Rapid iteration</b> — tweak, re-slice, reprint in hours", "fr": "<b>Itération rapide</b> — ajuster, re-trancher, réimprimer en heures" }
+            ] }
+          ]
+        },
+        {
+          "id": "1.1.3",
+          "narration": {
+            "en": "From Scott Crump's 1988 glue-gun frog, through the open-source RepRap movement, to the 2009 patent expiry, and Bambu Lab's 2022 disruption.",
+            "fr": "De la grenouille au pistolet à colle de Scott Crump en 1988, en passant par le mouvement open source RepRap, jusqu'à l'expiration du brevet en 2009, et la rupture Bambu Lab de 2022."
+          },
+          "elements": [
+            { "type": "title", "text": { "en": "A Brief History", "fr": "Petite histoire" } },
+            { "type": "timeline", "nodes": [
+              { "label": "1988", "text": { "en": "Glue-gun frog — Scott Crump's experiment → Stratasys & FDM", "fr": "La grenouille au pistolet à colle — Scott Crump → Stratasys et le FDM" } },
+              { "label": "2004", "text": { "en": "RepRap — Adrian Bowyer's self-replicating open-source printer", "fr": "RepRap — l'imprimante open source auto-réplicante d'Adrian Bowyer" } },
+              { "label": "2009", "text": { "en": "FDM patent expires → consumer price collapse", "fr": "Le brevet FDM expire → effondrement des prix grand public" } },
+              { "label": "2022", "text": { "en": "Bambu Lab X1 — CoreXY + speed, out of the box", "fr": "Bambu Lab X1 — CoreXY et vitesse, prêt à l'emploi" } }
+            ] }
+          ]
+        },
+        {
+          "id": "1.1.4",
+          "narration": {
+            "en": "FDM dominates the desktop, but it is one of several technologies: resin printing with light, powder fused by a laser, and industrial multi-jet fusion.",
+            "fr": "Le FDM domine le bureau, mais ce n'est qu'une technologie parmi d'autres : l'impression résine par la lumière, la poudre fusionnée au laser, et la fusion multi-jet industrielle."
+          },
+          "elements": [
+            { "type": "title", "text": { "en": "Types of 3D Printing", "fr": "Les types d'impression 3D" } },
+            { "type": "cards", "items": [
+              { "title": "FDM/FFF", "desc": { "en": "Melts & extrudes filament — functional parts", "fr": "Fond et extrude le filament — pièces fonctionnelles" }, "highlight": true },
+              { "title": "SLA/MSLA", "desc": { "en": "Cures resin with UV — fine detail", "fr": "Durcit la résine aux UV — grande finesse" } },
+              { "title": "SLS", "desc": { "en": "Laser-fuses powder — strong, isotropic", "fr": "Fusionne la poudre au laser — solide, isotrope" } },
+              { "title": "MJF", "desc": { "en": "Binder + IR fuse — industrial volume", "fr": "Liant + IR — volume industriel" } },
+              { "title": "DLP", "desc": { "en": "Projector cures whole layers — fast resin", "fr": "Projecteur durcit des couches entières — résine rapide" } }
+            ] }
+          ]
+        },
+        {
+          "id": "1.1.5",
+          "narration": {
+            "en": "FDM wins on cost, on cheap and varied materials, on minimal post-processing, on safety, and on its open ecosystem.",
+            "fr": "Le FDM l'emporte sur le coût, sur des matériaux variés et bon marché, sur un post-traitement minimal, sur la sécurité, et sur son écosystème ouvert."
+          },
+          "elements": [
+            { "type": "kicker", "text": { "en": "The desktop king", "fr": "Le roi du bureau" } },
+            { "type": "title", "text": { "en": "Why FDM Dominates", "fr": "Pourquoi le FDM domine" } },
+            { "type": "bullets", "items": [
+              { "en": "<b>Lowest entry cost</b> — quality printers from ~$200", "fr": "<b>Coût d'entrée le plus bas</b> — des imprimantes de qualité dès ~200 $" },
+              { "en": "<b>Cheap material</b> — PLA at $15–25/kg, dozens of prints", "fr": "<b>Matière bon marché</b> — PLA à 15–25 $/kg, des dizaines d'impressions" },
+              { "en": "<b>Minimal post-processing</b> — remove supports and done", "fr": "<b>Post-traitement minimal</b> — retirer les supports et c'est fini" },
+              { "en": "<b>Material variety</b> — PLA to engineering-grade PEEK", "fr": "<b>Variété de matériaux</b> — du PLA au PEEK de qualité technique" },
+              { "en": "<b>Safe & open</b> — no resins/powder PPE; standard 1.75 mm", "fr": "<b>Sûr et ouvert</b> — sans EPI résine/poudre ; standard 1,75 mm" }
+            ] }
+          ]
+        },
+        {
+          "id": "1.1.6",
+          "narration": {
+            "en": "Every print follows one pipeline: design, export, slice, print, and post-process. It is a feedback loop, not a one-way street.",
+            "fr": "Chaque impression suit le même pipeline : concevoir, exporter, trancher, imprimer, et post-traiter. C'est une boucle de rétroaction, pas un sens unique."
+          },
+          "elements": [
+            { "type": "title", "text": { "en": "Idea → Object", "fr": "De l'idée à l'objet" } },
+            { "type": "pipeline", "steps": [
+              { "name": { "en": "CAD", "fr": "CAO" }, "sub": { "en": "Fusion · Tinkercad", "fr": "Fusion · Tinkercad" } },
+              { "name": { "en": "Export", "fr": "Export" }, "sub": { "en": "STL · 3MF", "fr": "STL · 3MF" } },
+              { "name": { "en": "Slice", "fr": "Tranchage" }, "sub": { "en": "Bambu · Orca", "fr": "Bambu · Orca" } },
+              { "name": { "en": "Print", "fr": "Impression" }, "sub": { "en": "G-code", "fr": "G-code" } },
+              { "name": { "en": "Finish", "fr": "Finition" }, "sub": { "en": "Supports · sand", "fr": "Supports · ponçage" } }
+            ] },
+            { "type": "callout", "variant": "note", "text": { "en": "It is a loop: orient in the slicer, spot a problem, return to CAD, re-export.", "fr": "C'est une boucle : orienter dans le trancheur, repérer un problème, revenir à la CAO, ré-exporter." } }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "title": { "en": "FDM Technology Deep Dive", "fr": "Plongée dans la technologie FDM" },
+      "scenes": [
+        {
+          "id": "1.2.0",
+          "narration": {
+            "en": "Chapter 2. How does FDM actually work, from the hotend all the way to the G-code that drives every move?",
+            "fr": "Chapitre 2. Comment le FDM fonctionne-t-il réellement, de la tête chauffante jusqu'au G-code qui pilote chaque mouvement ?"
+          },
+          "elements": [
+            { "type": "kicker", "text": { "en": "Module 1 · Chapter 2", "fr": "Module 1 · Chapitre 2" } },
+            { "type": "title", "text": { "en": "FDM Technology Deep Dive", "fr": "Plongée dans la technologie FDM" } },
+            { "type": "lead", "text": { "en": "Think of FDM as a very precise, robotic hot glue gun — heat plastic, push it through a nozzle, lay it down layer by layer.", "fr": "Voyez le FDM comme un pistolet à colle robotisé très précis — chauffer le plastique, le pousser dans une buse, le déposer couche par couche." } }
+          ]
+        },
+        {
+          "id": "1.2.1",
+          "narration": {
+            "en": "The hotend has four zones: a cold end that grips the filament, a heat break that isolates, a heater block that melts, and the nozzle that deposits.",
+            "fr": "La tête chauffante comporte quatre zones : une partie froide qui saisit le filament, une barrière thermique qui isole, un bloc chauffant qui fait fondre, et la buse qui dépose."
+          },
+          "elements": [
+            { "type": "title", "text": { "en": "Hotend Anatomy", "fr": "Anatomie de la tête chauffante" } },
+            { "type": "stages", "items": [
+              { "label": { "en": "Cold end", "fr": "Partie froide" }, "sub": { "en": "heatsink + fan", "fr": "dissipateur + ventilateur" } },
+              { "label": { "en": "Heat break", "fr": "Barrière thermique" }, "sub": { "en": "thermal isolation", "fr": "isolation thermique" } },
+              { "label": { "en": "Heater block", "fr": "Bloc chauffant" }, "sub": { "en": "melt zone", "fr": "zone de fusion" } },
+              { "label": { "en": "Nozzle", "fr": "Buse" }, "sub": { "en": "0.4 mm deposit", "fr": "dépôt 0,4 mm" } }
+            ] }
+          ]
+        },
+        {
+          "id": "1.2.2",
+          "narration": {
+            "en": "Layer heights run from 0.05 to 0.4 millimetres, with 0.2 the usual quality-and-speed compromise. Keep the melt zone hot and everything above it cool, or you get heat creep and clogs.",
+            "fr": "Les hauteurs de couche vont de 0,05 à 0,4 millimètre, 0,2 étant le compromis habituel entre qualité et vitesse. Gardez la zone de fusion chaude et tout ce qui est au-dessus froid, sinon c'est la remontée de chaleur et les bouchons."
+          },
+          "elements": [
+            { "type": "stat", "value": "0.2 mm", "caption": { "en": "the common layer-height compromise (range 0.05–0.4 mm)", "fr": "le compromis courant de hauteur de couche (plage 0,05–0,4 mm)" } },
+            { "type": "callout", "variant": "warning", "text": { "en": "Heat creep: if filament softens above the melt zone, it jams. A good heatsink + fan keeps the cold end cold.", "fr": "Remontée de chaleur : si le filament ramollit au-dessus de la zone de fusion, il bloque. Un bon dissipateur + ventilateur garde la partie froide froide." } }
+          ]
+        }
+      ]
+    }
+  ]
+}

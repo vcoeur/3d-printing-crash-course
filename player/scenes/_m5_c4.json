@@ -1,0 +1,290 @@
+{
+  "chapter": 4,
+  "title": {"en": "Advanced Slicer Features", "fr": "Fonctionnalités avancées des trancheurs"},
+  "scenes": [
+    {
+      "id": "5.4.0",
+      "narration": {
+        "en": "Welcome to Chapter 4. Once the fundamentals are solid, a world of advanced slicer features unlocks — smooth surfaces, seamless vases, region-specific overrides, and fully automated calibration workflows.",
+        "fr": "Bienvenue au chapitre 4. Une fois les fondamentaux maîtrisés, un monde de fonctionnalités avancées s'ouvre à vous — surfaces lisses, vases sans couture, substitutions de paramètres par région et flux de calibration entièrement automatisés."
+      },
+      "elements": [
+        {"type": "kicker", "text": {"en": "Module 5 · Chapter 4", "fr": "Module 5 · Chapitre 4"}},
+        {"type": "title", "text": {"en": "Advanced Slicer Features", "fr": "Fonctionnalités avancées des trancheurs"}},
+        {"type": "lead", "text": {"en": "Push FDM to its limits — from glass-smooth top surfaces to single-wall vases with invisible seams.", "fr": "Repoussez les limites du FDM — des surfaces supérieures lisses comme du verre aux vases à paroi unique sans couture visible."}}
+      ]
+    },
+    {
+      "id": "5.4.1",
+      "narration": {
+        "en": "Variable layer height lets you use fine layers on curved or detailed surfaces while keeping coarse layers on flat vertical sections — giving you smooth curves without the print time of uniformly fine settings.",
+        "fr": "La hauteur de couche variable vous permet d'utiliser des couches fines sur les surfaces courbes ou détaillées, tout en conservant des couches épaisses sur les sections plates et verticales — pour des courbes lisses sans le temps d'impression des réglages uniformément fins."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Variable Layer Height", "fr": "Hauteur de couche variable"}},
+        {"type": "compare",
+          "left":  {"title": {"en": "Uniform fine layers", "fr": "Couches fines uniformes"}, "note": {"en": "Smooth everywhere — very slow", "fr": "Lisse partout — très lent"}},
+          "right": {"title": {"en": "Variable layer height", "fr": "Hauteur de couche variable"}, "note": {"en": "Fine on curves, coarse on flat — fast AND smooth", "fr": "Fines sur les courbes, épaisses sur le plat — rapide ET lisse"}, "highlight": true}}
+      ]
+    },
+    {
+      "id": "5.4.2",
+      "narration": {
+        "en": "PrusaSlicer has the most polished implementation — a graphical curve editor where you draw directly on the model profile. Bambu Studio and OrcaSlicer let you paint regions for finer or coarser layers.",
+        "fr": "PrusaSlicer offre l'implémentation la plus soignée — un éditeur de courbe graphique où vous dessinez directement sur le profil du modèle. Bambu Studio et OrcaSlicer permettent de peindre des régions pour des couches plus fines ou plus épaisses."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Variable Layer Height — When and How", "fr": "Hauteur de couche variable — quand et comment"}},
+        {"type": "bullets", "items": [
+          {"en": "<b>Best for</b> — organic shapes, figurines, architectural models with curved and flat regions", "fr": "<b>Idéal pour</b> — formes organiques, figurines, maquettes architecturales avec surfaces courbes et plates"},
+          {"en": "<b>Classic example</b> — 0.08 mm on a figurine's face, 0.24 mm on its flat base", "fr": "<b>Exemple classique</b> — 0,08 mm sur le visage d'une figurine, 0,24 mm sur la base plate"},
+          {"en": "<b>PrusaSlicer</b> — graphical curve editor drawn on the model profile (best-in-class)", "fr": "<b>PrusaSlicer</b> — éditeur de courbe graphique tracé sur le profil du modèle (meilleur de sa catégorie)"},
+          {"en": "<b>Trade-off</b> — smoothing parameter controls how gradually layer heights transition; abrupt changes are visible", "fr": "<b>Compromis</b> — le paramètre de lissage contrôle la progressivité des transitions de hauteur de couche"}
+        ]}
+      ]
+    },
+    {
+      "id": "5.4.3",
+      "narration": {
+        "en": "Fuzzy skin adds a randomized texture to model surfaces by randomly offsetting perimeter points outward. The result is a slightly rough, matte finish that hides layer lines beautifully.",
+        "fr": "La peau floue ajoute une texture aléatoire aux surfaces du modèle en décalant aléatoirement les points du périmètre vers l'extérieur. Le résultat est une finition légèrement rugueuse et mate qui masque parfaitement les lignes de couche."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Fuzzy Skin", "fr": "Peau floue (Fuzzy Skin)"}},
+        {"type": "cards", "items": [
+          {"title": {"en": "Thickness", "fr": "Épaisseur"}, "desc": {"en": "Max lateral offset per point — higher = rougher texture", "fr": "Décalage latéral max par point — plus élevé = texture plus rugueuse"}},
+          {"title": {"en": "Point distance", "fr": "Distance entre points"}, "desc": {"en": "Avg spacing between random offsets — lower = denser texture", "fr": "Espacement moyen entre décalages aléatoires — plus faible = texture plus dense"}},
+          {"title": {"en": "Best uses", "fr": "Meilleures utilisations"}, "desc": {"en": "Functional grips, props, matte non-slip surfaces", "fr": "Poignées fonctionnelles, props, surfaces mates antidérapantes"}, "highlight": true}
+        ]}
+      ]
+    },
+    {
+      "id": "5.4.4",
+      "narration": {
+        "en": "Ironing passes the hot nozzle over the top surface at slow speed with minimal extrusion — re-melting and smoothing it into a glossy finish. It combines three actions: heating, physically smoothing, and filling gaps.",
+        "fr": "Le repassage passe la buse chaude sur la surface supérieure à faible vitesse avec une extrusion minimale — refondant et lissant la surface pour créer une finition brillante. Il combine trois actions : chauffer, lisser physiquement et combler les vides."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Ironing", "fr": "Repassage (Ironing)"}},
+        {"type": "pipeline", "steps": [
+          {"name": {"en": "Heat", "fr": "Chauffer"}, "sub": {"en": "re-melts top layer", "fr": "refond la couche sup."}},
+          {"name": {"en": "Smooth", "fr": "Lisser"}, "sub": {"en": "hot nozzle flattens surface", "fr": "buse chaude aplatit"}},
+          {"name": {"en": "Fill", "fr": "Combler"}, "sub": {"en": "tiny extra extrusion fills gaps", "fr": "micro-extrusion comble les vides"}},
+          {"name": {"en": "Result", "fr": "Résultat"}, "sub": {"en": "glossy top face", "fr": "face sup. brillante"}}
+        ]}
+      ]
+    },
+    {
+      "id": "5.4.5",
+      "narration": {
+        "en": "Ironing typically adds ten to thirty percent to print time but requires no extra tools. PLA is the easiest material; PETG can string during ironing so keep the flow rate low; ABS needs controlled cooling to prevent warping.",
+        "fr": "Le repassage ajoute typiquement 10 à 30 % au temps d'impression mais ne nécessite aucun outil supplémentaire. Le PLA est le plus facile ; le PETG peut créer des fils pendant le repassage, donc maintenez le débit bas ; l'ABS nécessite un refroidissement contrôlé pour éviter le gauchissement."
+      },
+      "elements": [
+        {"type": "stat", "value": "+10–30%", "caption": {"en": "typical print-time increase from ironing — no extra tools needed", "fr": "augmentation typique du temps d'impression par le repassage — aucun outil supplémentaire requis"}},
+        {"type": "table",
+          "headers": [{"en": "Material", "fr": "Matériau"}, {"en": "Ironing result", "fr": "Résultat repassage"}, {"en": "Watch for", "fr": "Attention à"}],
+          "rows": [
+            [{"en": "PLA", "fr": "PLA"}, {"en": "Excellent", "fr": "Excellent"}, {"en": "—", "fr": "—"}],
+            [{"en": "PETG", "fr": "PETG"}, {"en": "Good — keep flow low", "fr": "Bon — débit bas"}, {"en": "Stringing", "fr": "Fils"}],
+            [{"en": "ABS", "fr": "ABS"}, {"en": "Possible", "fr": "Possible"}, {"en": "Warping", "fr": "Gauchissement"}]
+          ]}
+      ]
+    },
+    {
+      "id": "5.4.6",
+      "narration": {
+        "en": "Vase mode, also called spiralized contour, transforms a solid model into a hollow single-wall vessel with no visible Z-seam. Instead of discrete layers, the printer moves in one continuous upward spiral — like a soft-serve ice cream machine.",
+        "fr": "Le mode vase, aussi appelé contour spiralisé, transforme un modèle solide en un récipient creux à paroi unique sans couture en Z visible. Au lieu de couches discrètes, l'imprimante se déplace en une spirale continue montant progressivement — comme une machine à glace à l'italienne."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Vase Mode (Spiralize)", "fr": "Mode vase (Spiralize)"}},
+        {"type": "bullets", "items": [
+          {"en": "<b>How it works</b> — one continuous upward spiral; nozzle never stops, so there is no seam", "fr": "<b>Comment ça marche</b> — une spirale continue montante ; la buse ne s'arrête jamais, donc pas de couture"},
+          {"en": "<b>Auto-enforced</b> — 1 perimeter, 0 % infill, 0 top solid layers, supports disabled", "fr": "<b>Imposé automatiquement</b> — 1 périmètre, 0 % de remplissage, 0 couche pleine supérieure, supports désactivés"},
+          {"en": "<b>Perfect for</b> — decorative vessels, planters, lampshades, hollow display objects", "fr": "<b>Parfait pour</b> — récipients décoratifs, jardinières, abat-jours, objets creux d'exposition"},
+          {"en": "<b>Limitation</b> — geometry must allow continuous upward progression; no internal islands or overhangs", "fr": "<b>Limitation</b> — la géométrie doit permettre une progression ascendante continue ; pas d'îlots internes ni de surplombs"}
+        ]}
+      ]
+    },
+    {
+      "id": "5.4.7",
+      "narration": {
+        "en": "Sequential printing completes one object fully before starting the next, instead of printing all objects layer by layer simultaneously. This is essential for print farms and for tall delicate objects.",
+        "fr": "L'impression séquentielle complète entièrement un objet avant de passer au suivant, au lieu d'imprimer tous les objets couche par couche simultanément. C'est essentiel pour les fermes d'impression et les objets hauts et délicats."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Sequential Printing", "fr": "Impression séquentielle"}},
+        {"type": "cards", "items": [
+          {"title": {"en": "Print farms", "fr": "Fermes d'impression"}, "desc": {"en": "Pull finished parts without stopping the whole job", "fr": "Retirer les pièces terminées sans arrêter le travail"}, "highlight": true},
+          {"title": {"en": "Delicate tall parts", "fr": "Pièces hautes et délicates"}, "desc": {"en": "Prevents nozzle collisions with already-printed objects", "fr": "Évite les collisions de buse avec les objets déjà imprimés"}},
+          {"title": {"en": "Per-object settings", "fr": "Paramètres par objet"}, "desc": {"en": "Each object can use slightly different process settings", "fr": "Chaque objet peut utiliser des paramètres de processus légèrement différents"}}
+        ]}
+      ]
+    },
+    {
+      "id": "5.4.8",
+      "narration": {
+        "en": "The main constraint of sequential printing is gantry clearance. The nozzle and gantry assembly must not collide with already-printed parts — so objects must be shorter than the clearance height and arranged so the extruder never passes over a finished part.",
+        "fr": "La contrainte principale de l'impression séquentielle est la hauteur de dégagement du portique. L'ensemble buse-portique ne doit pas entrer en collision avec les pièces déjà imprimées — les objets doivent donc être moins hauts que le dégagement et disposés de sorte que l'extrudeur ne passe jamais au-dessus d'une pièce terminée."
+      },
+      "elements": [
+        {"type": "callout", "variant": "warning", "text": {"en": "Objects must be shorter than the gantry clearance height, and arranged so the extruder reaches each one without passing over finished parts.", "fr": "Les objets doivent être moins hauts que la hauteur de dégagement du portique, et disposés de sorte que l'extrudeur atteigne chacun sans passer au-dessus des pièces terminées."}}
+      ]
+    },
+    {
+      "id": "5.4.9",
+      "narration": {
+        "en": "Modifier meshes are invisible geometric shapes placed over regions of your model to override specific settings in that area only. Think of them as local editing tools for your print parameters — no CAD changes needed.",
+        "fr": "Les maillages modificateurs sont des formes géométriques invisibles placées sur des régions de votre modèle pour substituer des paramètres spécifiques uniquement dans cette zone. Considérez-les comme des outils d'édition locale de vos paramètres d'impression — sans modification CAO."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Modifier Meshes", "fr": "Maillages modificateurs"}},
+        {"type": "bullets", "items": [
+          {"en": "<b>Higher infill</b> around a bolt hole — without changing the whole model's infill density", "fr": "<b>Remplissage plus dense</b> autour d'un trou de boulon — sans changer la densité globale"},
+          {"en": "<b>Local support</b> only on a specific overhang — no global support generation", "fr": "<b>Support local</b> uniquement sur un surplomb spécifique — pas de génération globale de supports"},
+          {"en": "<b>Finer layer height</b> for a detailed region — while the rest prints at standard resolution", "fr": "<b>Hauteur de couche plus fine</b> pour une région détaillée — le reste imprime à résolution standard"},
+          {"en": "<b>Slower speed</b> for a delicate section — without slowing the whole print", "fr": "<b>Vitesse réduite</b> pour une section délicate — sans ralentir toute l'impression"},
+          {"en": "<b>How</b> — place a cube/cylinder/sphere over the target area; the modifier's settings override globals in that region", "fr": "<b>Comment</b> — placer un cube/cylindre/sphère sur la zone cible ; les paramètres du modificateur remplacent les globaux dans cette région"}
+        ]}
+      ]
+    },
+    {
+      "id": "5.4.10",
+      "narration": {
+        "en": "OrcaSlicer's built-in calibration suite is the most comprehensive of any free slicer. The calibration order matters critically: each step builds on the last, so you must follow temperature, flow rate, pressure advance, retraction, tolerance, then max volumetric speed.",
+        "fr": "La suite de calibration intégrée d'OrcaSlicer est la plus complète de tous les trancheurs gratuits. L'ordre de calibration est crucial : chaque étape s'appuie sur la précédente, donc il faut suivre température, débit, pressure advance, rétraction, tolérance, puis vitesse volumétrique maximale."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "OrcaSlicer Calibration Suite", "fr": "Suite de calibration OrcaSlicer"}},
+        {"type": "timeline", "nodes": [
+          {"label": "1", "text": {"en": "Temperature Tower — find optimal melt temp", "fr": "Tour de température — trouver la température de fusion optimale"}},
+          {"label": "2", "text": {"en": "Flow Rate — correct extrusion volume (coarse + fine passes)", "fr": "Débit — corriger le volume d'extrusion (passe grossière + fine)"}},
+          {"label": "3", "text": {"en": "Pressure Advance — sharpen corners and reduce artifacts", "fr": "Pressure Advance — affiner les coins et réduire les artefacts"}},
+          {"label": "4", "text": {"en": "Retraction → Tolerance → Max Volumetric Speed", "fr": "Rétraction → Tolérance → Vitesse volumétrique max"}}
+        ]}
+      ]
+    },
+    {
+      "id": "5.4.11",
+      "narration": {
+        "en": "The temperature tower compresses a full temperature study into one print, with segments in five-degree steps. Evaluate each segment for surface finish, stringing, and layer adhesion. Typical starting points: PLA around 205 degrees, PETG around 240, ABS around 245.",
+        "fr": "La tour de température compresse une étude complète de température en une seule impression, avec des segments par paliers de 5 °C. Évaluez chaque segment pour la finition de surface, les fils et l'adhérence des couches. Points de départ typiques : PLA environ 205 °C, PETG environ 240 °C, ABS environ 245 °C."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Temperature Tower", "fr": "Tour de température"}},
+        {"type": "table",
+          "headers": [{"en": "Criterion", "fr": "Critère"}, {"en": "Too cold", "fr": "Trop froid"}, {"en": "Optimal", "fr": "Optimal"}, {"en": "Too hot", "fr": "Trop chaud"}],
+          "rows": [
+            [{"en": "Surface finish", "fr": "Finition de surface"}, {"en": "Matte, rough", "fr": "Mate, rugueuse"}, {"en": "Smooth, satin", "fr": "Lisse, satinée"}, {"en": "Glossy, uneven", "fr": "Brillante, inégale"}],
+            [{"en": "Stringing", "fr": "Fils"}, {"en": "Minimal", "fr": "Minimaux"}, {"en": "None", "fr": "Aucun"}, {"en": "Excessive", "fr": "Excessifs"}],
+            [{"en": "Layer adhesion", "fr": "Adhérence couches"}, {"en": "Weak, separates", "fr": "Faible, se sépare"}, {"en": "Strong, fused", "fr": "Forte, fusionnée"}, {"en": "Good, may ooze", "fr": "Bonne, peut suinter"}]
+          ]}
+      ]
+    },
+    {
+      "id": "5.4.12",
+      "narration": {
+        "en": "A key warning before temperature calibration: always dry your filament first. Moisture causes bubbling and stringing that will be incorrectly attributed to temperature, sending you in the wrong direction.",
+        "fr": "Un avertissement important avant la calibration de température : séchez toujours votre filament en premier. L'humidité provoque des bulles et des fils qui seront incorrectement attribués à la température, vous orientant dans la mauvaise direction."
+      },
+      "elements": [
+        {"type": "cards", "items": [
+          {"title": "PLA", "desc": {"en": "~205 °C starting point", "fr": "~205 °C comme point de départ"}},
+          {"title": "PETG", "desc": {"en": "~240 °C starting point", "fr": "~240 °C comme point de départ"}},
+          {"title": "ABS", "desc": {"en": "~245 °C starting point", "fr": "~245 °C comme point de départ"}}
+        ]},
+        {"type": "callout", "variant": "warning", "text": {"en": "Always dry your filament before temperature calibration. Moisture causes bubbling and stringing that will be misattributed to temperature.", "fr": "Séchez toujours votre filament avant la calibration de température. L'humidité provoque des bulles et des fils qui seront incorrectement attribués à la température."}}
+      ]
+    },
+    {
+      "id": "5.4.13",
+      "narration": {
+        "en": "Flow rate calibration uses a two-pass visual approach. Pass one prints nine blocks with flow modifiers from roughly minus nine to plus nine percent — pick the smoothest top surface. Pass two refines with ten blocks from minus nine to zero, and you apply the same formula each time.",
+        "fr": "La calibration du débit utilise une approche visuelle en deux passes. La passe 1 imprime neuf blocs avec des modificateurs de débit d'environ -9 % à +9 % — choisissez la surface supérieure la plus lisse. La passe 2 affine avec dix blocs de -9 à 0, et vous appliquez la même formule à chaque fois."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Flow Rate Calibration", "fr": "Calibration du débit"}},
+        {"type": "stages", "items": [
+          {"label": {"en": "Pass 1 — coarse", "fr": "Passe 1 — grossière"}, "sub": {"en": "9 blocks, −9 % to +9 % modifier; pick smoothest top", "fr": "9 blocs, modificateur −9 % à +9 % ; choisir la surface la plus lisse"}},
+          {"label": {"en": "Calculate", "fr": "Calculer"}, "sub": {"en": "NewFlow = OldFlow × (100 + modifier) / 100", "fr": "NouveauDébit = AncienDébit × (100 + modificateur) / 100"}},
+          {"label": {"en": "Pass 2 — fine", "fr": "Passe 2 — fine"}, "sub": {"en": "10 blocks, −9 to 0; apply same formula again", "fr": "10 blocs, −9 à 0 ; appliquer la même formule"}}
+        ]}
+      ]
+    },
+    {
+      "id": "5.4.14",
+      "narration": {
+        "en": "Pressure advance must always be calibrated after flow rate — incorrect flow causes PA to compensate inaccurately. OrcaSlicer offers three methods: line, pattern, and tower. Each produces a different visual to read, but all target the same goal: sharpest corners with fewest artifacts.",
+        "fr": "Le pressure advance doit toujours être calibré après le débit — un débit incorrect fait compenser le PA de manière inexacte. OrcaSlicer propose trois méthodes : ligne, motif et tour. Chacune produit un visuel différent à lire, mais toutes visent le même objectif : les coins les plus nets avec le moins d'artefacts."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Pressure Advance Calibration", "fr": "Calibration du pressure advance"}},
+        {"type": "cards", "items": [
+          {"title": {"en": "Line method", "fr": "Méthode par ligne"}, "desc": {"en": "Quick — lines with incrementing PA values; select the most even line", "fr": "Rapide — lignes avec valeurs PA incrémentales ; sélectionner la ligne la plus uniforme"}},
+          {"title": {"en": "Pattern method", "fr": "Méthode par motif"}, "desc": {"en": "Visual assessment of a prism pattern — find sharpest corners with fewest artifacts", "fr": "Évaluation visuelle d'un motif de prisme — trouver les coins les plus nets"}, "highlight": true},
+          {"title": {"en": "Tower method", "fr": "Méthode par tour"}, "desc": {"en": "PA increases with height — examine corners at each level", "fr": "Le PA augmente avec la hauteur — examiner les coins à chaque niveau"}}
+        ]}
+      ]
+    },
+    {
+      "id": "5.4.15",
+      "narration": {
+        "en": "As a rough starting point, PLA on a direct drive setup often lands around 0.04 to 0.06 for pressure advance; PETG runs slightly higher. But values vary significantly by printer, extruder type, and filament — always calibrate for your specific combination.",
+        "fr": "Comme point de départ approximatif, le PLA sur une configuration à entraînement direct se situe souvent autour de 0,04 à 0,06 pour le pressure advance ; le PETG est légèrement plus élevé. Mais les valeurs varient significativement selon l'imprimante, le type d'extrudeur et le filament — calibrez toujours pour votre combinaison spécifique."
+      },
+      "elements": [
+        {"type": "callout", "variant": "note", "text": {"en": "PA values vary by printer, extruder, and filament. PLA on direct-drive: roughly 0.04–0.06. PETG slightly higher. Always calibrate — never rely on generic values.", "fr": "Les valeurs de PA varient selon l'imprimante, l'extrudeur et le filament. PLA sur entraînement direct : environ 0,04–0,06. PETG légèrement plus haut. Calibrez toujours — ne vous fiez jamais aux valeurs génériques."}}
+      ]
+    },
+    {
+      "id": "5.4.16",
+      "narration": {
+        "en": "The retraction test finds the shortest retraction distance that eliminates stringing without causing clogs or pockmarks. Direct drive extruders start at one millimetre and test up to two; Bowden systems start at four millimetres and test up to six.",
+        "fr": "Le test de rétraction trouve la distance de rétraction la plus courte qui élimine les fils sans provoquer de bouchons ni de cratères. Les extrudeurs à entraînement direct commencent à 1 mm et testent jusqu'à 2 mm ; les systèmes Bowden commencent à 4 mm et testent jusqu'à 6 mm."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Retraction Test", "fr": "Test de rétraction"}},
+        {"type": "compare",
+          "left":  {"title": {"en": "Direct drive", "fr": "Entraînement direct"}, "note": {"en": "Start at 1 mm — test up to 2 mm", "fr": "Commencer à 1 mm — tester jusqu'à 2 mm"}},
+          "right": {"title": {"en": "Bowden", "fr": "Bowden"}, "note": {"en": "Start at 4 mm — test up to 6 mm", "fr": "Commencer à 4 mm — tester jusqu'à 6 mm"}}}
+      ]
+    },
+    {
+      "id": "5.4.17",
+      "narration": {
+        "en": "The tolerance test prints a series of pegs and holes at known dimensions. After printing, you test which peg fits which hole to determine your printer's actual dimensional accuracy. This is essential for any functional print with mating parts.",
+        "fr": "Le test de tolérance imprime une série de tenons et de trous aux dimensions connues. Après l'impression, vous testez quel tenon s'insère dans quel trou pour déterminer la précision dimensionnelle réelle de votre imprimante. C'est essentiel pour toute impression fonctionnelle avec des pièces complémentaires."
+      },
+      "elements": [
+        {"type": "title", "text": {"en": "Tolerance Test", "fr": "Test de tolérance"}},
+        {"type": "bullets", "items": [
+          {"en": "<b>What it prints</b> — pegs and holes at known, precise dimensions", "fr": "<b>Ce qu'il imprime</b> — tenons et trous aux dimensions précises connues"},
+          {"en": "<b>How to read it</b> — test which peg fits which hole after printing", "fr": "<b>Comment le lire</b> — tester quel tenon s'insère dans quel trou après impression"},
+          {"en": "<b>Why it matters</b> — FDM parts expand slightly; dimensional offset varies by material and settings", "fr": "<b>Pourquoi c'est important</b> — les pièces FDM gonflent légèrement ; le décalage dimensionnel varie selon le matériau et les paramètres"},
+          {"en": "<b>When to run it</b> — every new filament or whenever printing mating parts (hinges, press-fits, threaded inserts)", "fr": "<b>Quand le faire</b> — à chaque nouveau filament ou lors d'impression de pièces complémentaires (charnières, emmanchements, inserts filetés)"}
+        ]}
+      ]
+    },
+    {
+      "id": "5.4.18",
+      "narration": {
+        "en": "Chapter 4 recap. These advanced features separate casual users from true masters of FDM — deploy them deliberately and your prints will show it every time.",
+        "fr": "Récapitulatif du chapitre 4. Ces fonctionnalités avancées distinguent les utilisateurs occasionnels des véritables maîtres du FDM — déployez-les délibérément et vos impressions s'en ressentiront à chaque fois."
+      },
+      "elements": [
+        {"type": "kicker", "text": {"en": "Chapter 4 recap", "fr": "Récapitulatif du chapitre 4"}},
+        {"type": "title", "text": {"en": "Advanced Slicer Features — Key Points", "fr": "Fonctionnalités avancées — points clés"}},
+        {"type": "bullets", "items": [
+          {"en": "<b>Variable layer height</b> — fine on curves, coarse on flat; PrusaSlicer has the best graphical editor", "fr": "<b>Hauteur de couche variable</b> — fine sur les courbes, épaisse sur le plat ; PrusaSlicer a le meilleur éditeur graphique"},
+          {"en": "<b>Fuzzy skin</b> — randomized texture hides layer lines; tune thickness and point distance", "fr": "<b>Peau floue</b> — texture aléatoire masque les lignes de couche ; ajuster l'épaisseur et la distance entre points"},
+          {"en": "<b>Ironing</b> — glossy top surfaces; adds 10–30 % print time; calibrate flow first", "fr": "<b>Repassage</b> — surfaces supérieures brillantes ; ajoute 10–30 % de temps ; calibrer le débit d'abord"},
+          {"en": "<b>Vase mode</b> — seamless hollow spiral; enforces 1 wall, 0 % infill, no top layers", "fr": "<b>Mode vase</b> — spirale creuse sans couture ; impose 1 paroi, 0 % de remplissage, pas de couches supérieures"},
+          {"en": "<b>Sequential printing</b> — one object at a time; check gantry clearance before enabling", "fr": "<b>Impression séquentielle</b> — un objet à la fois ; vérifier le dégagement du portique avant d'activer"},
+          {"en": "<b>Modifier meshes</b> — local setting overrides without CAD edits; cube/cylinder/sphere over target region", "fr": "<b>Maillages modificateurs</b> — substitutions locales sans modification CAO ; cube/cylindre/sphère sur la zone cible"},
+          {"en": "<b>OrcaSlicer calibration order</b> — Temperature → Flow Rate → Pressure Advance → Retraction → Tolerance → Max Volumetric Speed", "fr": "<b>Ordre de calibration OrcaSlicer</b> — Température → Débit → Pressure Advance → Rétraction → Tolérance → Vitesse volumétrique max"}
+        ]}
+      ]
+    }
+  ]
+}

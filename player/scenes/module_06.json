@@ -1,0 +1,2808 @@
+{
+ "module": 6,
+ "module_title": {
+  "en": "Profile Configuration and Tuning",
+  "fr": "Configuration et réglage des profils"
+ },
+ "chapters": [
+  {
+   "chapter": 1,
+   "title": {
+    "en": "Understanding Print Profiles",
+    "fr": "Comprendre les profils d'impression"
+   },
+   "scenes": [
+    {
+     "id": "6.1.0",
+     "narration": {
+      "en": "Welcome to Chapter 1. A print profile is the complete recipe that tells your printer how to transform filament into a finished object — temperatures, speeds, cooling, retraction, all of it.",
+      "fr": "Bienvenue au chapitre 1. Un profil d'impression est la recette complète qui indique à votre imprimante comment transformer le filament en objet fini — températures, vitesses, refroidissement, rétraction, tout."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 6 · Chapter 1",
+        "fr": "Module 6 · Chapitre 1"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Understanding Print Profiles",
+        "fr": "Comprendre les profils d'impression"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "A print profile is a complete recipe — hundreds of parameters bundled into a reusable preset so you never have to start from scratch.",
+        "fr": "Un profil d'impression est une recette complète — des centaines de paramètres regroupés dans un préréglage réutilisable pour ne jamais repartir de zéro."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.1.1",
+     "narration": {
+      "en": "Think of a profile like a recipe in a cookbook. Just as a cake recipe specifies oven temperature and baking time, a print profile specifies nozzle temperature, layer height, print speed, and cooling strategy.",
+      "fr": "Imaginez un profil comme une recette dans un livre de cuisine. De même qu'une recette de gâteau spécifie la température du four et le temps de cuisson, un profil spécifie la température de la buse, la hauteur de couche et la stratégie de refroidissement."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Profile as Recipe",
+        "fr": "Le profil comme recette"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Cake recipe",
+         "fr": "Recette de gâteau"
+        },
+        "note": {
+         "en": "Oven temp · baking time · ingredient ratios",
+         "fr": "Temp. four · durée · proportions"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Print profile",
+         "fr": "Profil d'impression"
+        },
+        "note": {
+         "en": "Nozzle temp · layer height · speed · cooling",
+         "fr": "Temp. buse · hauteur de couche · vitesse · refroidissement"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.1.2",
+     "narration": {
+      "en": "The same 3D model printed with different profiles can vary dramatically — in strength, surface finish, print time, and dimensional accuracy. Profiles are the lever that controls all of this.",
+      "fr": "Le même modèle 3D imprimé avec différents profils peut varier considérablement en résistance, finition de surface, durée d'impression et précision dimensionnelle. Les profils sont le levier qui contrôle tout cela."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Why Profiles Matter",
+        "fr": "Pourquoi les profils importent"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Strength</b> — wall count, infill density, layer adhesion temperature",
+         "fr": "<b>Résistance</b> — nombre de parois, densité de remplissage, température d'adhérence"
+        },
+        {
+         "en": "<b>Surface finish</b> — layer height, speed, cooling strategy",
+         "fr": "<b>Finition de surface</b> — hauteur de couche, vitesse, stratégie de refroidissement"
+        },
+        {
+         "en": "<b>Print time</b> — layer height and speed together multiply or divide time",
+         "fr": "<b>Durée d'impression</b> — hauteur de couche et vitesse multiplient ou divisent la durée"
+        },
+        {
+         "en": "<b>Dimensional accuracy</b> — flow rate, pressure advance, temperature",
+         "fr": "<b>Précision dimensionnelle</b> — débit, pressure advance, température"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.1.3",
+     "narration": {
+      "en": "Every major slicer — Cura, PrusaSlicer, Bambu Studio, OrcaSlicer — organizes profiles into three fundamental tiers that work together as a system. Understanding this structure is essential.",
+      "fr": "Tous les grands logiciels de découpe — Cura, PrusaSlicer, Bambu Studio, OrcaSlicer — organisent les profils en trois niveaux fondamentaux qui fonctionnent ensemble comme un système. Comprendre cette structure est essentiel."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Three-Tier Structure",
+        "fr": "La structure à trois niveaux"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Printer / Machine",
+          "fr": "Imprimante / Machine"
+         },
+         "sub": {
+          "en": "Hardware limits",
+          "fr": "Limites matérielles"
+         }
+        },
+        {
+         "name": {
+          "en": "Filament / Material",
+          "fr": "Filament / Matériau"
+         },
+         "sub": {
+          "en": "Thermal & extrusion",
+          "fr": "Thermique & extrusion"
+         }
+        },
+        {
+         "name": {
+          "en": "Process / Quality",
+          "fr": "Processus / Qualité"
+         },
+         "sub": {
+          "en": "Slicing strategy",
+          "fr": "Stratégie de découpe"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.1.4",
+     "narration": {
+      "en": "The printer profile defines your hardware's capabilities and constraints — the physical limits your machine cannot exceed. These settings rarely change unless you modify the printer's hardware.",
+      "fr": "Le profil d'imprimante définit les capacités et les contraintes de votre matériel — les limites physiques que votre machine ne peut pas dépasser. Ces paramètres changent rarement, sauf si vous modifiez le matériel."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Tier 1: Printer / Machine",
+        "fr": "Niveau 1 : Imprimante / Machine"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Core specs</b> — bed dimensions, nozzle diameter, extruder count, firmware type",
+         "fr": "<b>Spécifications de base</b> — dimensions du plateau, diamètre de buse, nombre d'extrudeurs, firmware"
+        },
+        {
+         "en": "<b>Safety limits</b> — max speed, acceleration, and jerk to prevent mechanical damage",
+         "fr": "<b>Limites de sécurité</b> — vitesse max, accélération et saccade pour éviter les dommages"
+        },
+        {
+         "en": "<b>Motion sequences</b> — start G-code, end G-code, homing, mesh leveling (G29)",
+         "fr": "<b>Séquences de mouvement</b> — G-code de début/fin, mise à zéro, mise à niveau par maillage (G29)"
+        },
+        {
+         "en": "<b>Multi-tool setups</b> — tool offsets, wipe towers, ooze shields",
+         "fr": "<b>Multi-outils</b> — décalages d'outils, tours de purge, boucliers anti-suintement"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.1.5",
+     "narration": {
+      "en": "The filament profile contains the thermal and extrusion settings unique to each material. This is where the personality of each filament lives — temperatures, cooling, retraction, and pressure advance.",
+      "fr": "Le profil de filament contient les paramètres thermiques et d'extrusion propres à chaque matériau. C'est là que réside la personnalité de chaque filament — températures, refroidissement, rétraction et pressure advance."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Tier 2: Filament / Material",
+        "fr": "Niveau 2 : Filament / Matériau"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Temperature</b> — nozzle and bed temps; first layer often printed slightly hotter",
+         "fr": "<b>Température</b> — buse et plateau ; première couche souvent imprimée légèrement plus chaude"
+        },
+        {
+         "en": "<b>Cooling</b> — fan speed curves, first-layer cooling off, bridge overrides",
+         "fr": "<b>Refroidissement</b> — courbes de vitesse ventilateur, premières couches sans refroidissement, ponts"
+        },
+        {
+         "en": "<b>Flow & extrusion</b> — extrusion multiplier and max volumetric speed limit",
+         "fr": "<b>Débit & extrusion</b> — multiplicateur d'extrusion et limite de vitesse volumétrique maximale"
+        },
+        {
+         "en": "<b>Retraction</b> — distance, speed, and Z-hop to prevent oozing",
+         "fr": "<b>Rétraction</b> — distance, vitesse et Z-hop pour éviter le suintement"
+        },
+        {
+         "en": "<b>Pressure advance</b> — K-value compensating for extrusion lag in corners",
+         "fr": "<b>Pressure advance</b> — valeur K compensant le retard d'extrusion dans les virages"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.1.6",
+     "narration": {
+      "en": "Always create a separate filament preset for each brand and type you use. Even two PLA filaments from different manufacturers can require different temperatures and flow rates — pigment loading affects effective filament diameter.",
+      "fr": "Créez toujours un préréglage de filament séparé pour chaque marque et type que vous utilisez. Même deux filaments PLA de fabricants différents peuvent nécessiter des températures et débits différents — la charge en pigment affecte le diamètre effectif."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "One preset per brand and type. A red PLA and white PLA from the same brand may need different flow settings due to pigment loading.",
+        "fr": "Un préréglage par marque et type. Un PLA rouge et un PLA blanc de la même marque peuvent nécessiter des paramètres de débit différents en raison de la charge en pigment."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.1.7",
+     "narration": {
+      "en": "The process profile defines the slicing strategy and geometry of the print itself — layer height, walls, infill, speeds, supports, seam control, and special features like ironing.",
+      "fr": "Le profil de processus définit la stratégie de découpe et la géométrie de l'impression — hauteur de couche, parois, remplissage, vitesses, supports, contrôle de couture et fonctions spéciales comme le repassage."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Tier 3: Process / Quality",
+        "fr": "Niveau 3 : Processus / Qualité"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Layer definition</b> — layer height (25–75% of nozzle diameter), first layer height",
+         "fr": "<b>Définition des couches</b> — hauteur de couche (25–75 % du diamètre de buse), première couche"
+        },
+        {
+         "en": "<b>Walls & shells</b> — perimeter count, top and bottom solid layer count",
+         "fr": "<b>Parois & enveloppes</b> — nombre de périmètres, couches solides supérieures et inférieures"
+        },
+        {
+         "en": "<b>Infill</b> — density percentage, pattern type, angle",
+         "fr": "<b>Remplissage</b> — pourcentage de densité, type de motif, angle"
+        },
+        {
+         "en": "<b>Speeds</b> — independent speeds for perimeters, infill, travel, first layer, bridges",
+         "fr": "<b>Vitesses</b> — vitesses indépendantes pour périmètres, remplissage, déplacements, première couche, ponts"
+        },
+        {
+         "en": "<b>Special features</b> — ironing, fuzzy skin, variable layer height",
+         "fr": "<b>Fonctions spéciales</b> — repassage (ironing), peau floue (fuzzy skin), hauteur de couche variable"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.1.8",
+     "narration": {
+      "en": "The three tiers are not independent — they form a system. Printer capabilities constrain filament options, and both constrain process settings. Change your nozzle from 0.4 to 0.6 mm and the available process presets automatically update.",
+      "fr": "Les trois niveaux ne sont pas indépendants — ils forment un système. Les capacités de l'imprimante contraignent les options de filament, et les deux contraignent les paramètres de processus. Changez votre buse de 0,4 à 0,6 mm et les préréglages de processus disponibles se mettent automatiquement à jour."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "How the Tiers Interact",
+        "fr": "Comment les niveaux interagissent"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Bambu Studio: selecting 'X1C 0.4 nozzle' shows different process presets than 'X1C 0.2 nozzle'. This automatic adjustment prevents mismatched settings — but can surprise you if you do not understand the inheritance system.",
+        "fr": "Bambu Studio : sélectionner « X1C 0.4 nozzle » affiche des préréglages de processus différents de « X1C 0.2 nozzle ». Cet ajustement automatique prévient les paramètres inadaptés — mais peut surprendre si vous ne comprenez pas le système d'héritage."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.1.9",
+     "narration": {
+      "en": "Bambu Studio organizes presets into three categories based on ownership. System presets are locked built-in baselines. User presets are your custom configurations, synced to the cloud. Project presets travel inside the dot-3MF file.",
+      "fr": "Bambu Studio organise les préréglages en trois catégories selon leur propriété. Les préréglages système sont des bases verrouillées. Les préréglages utilisateur sont vos configurations personnalisées, synchronisées avec le cloud. Les préréglages de projet voyagent dans le fichier .3MF."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Bambu Lab: Three Preset Categories",
+        "fr": "Bambu Lab : trois catégories de préréglages"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "System Presets",
+          "fr": "Préréglages système"
+         },
+         "desc": {
+          "en": "Built-in, locked — copy before editing",
+          "fr": "Intégrés, verrouillés — copier avant de modifier"
+         }
+        },
+        {
+         "title": {
+          "en": "User Presets",
+          "fr": "Préréglages utilisateur"
+         },
+         "desc": {
+          "en": "Your custom configs — synced to Bambu Cloud",
+          "fr": "Vos configs personnalisées — synchronisées avec Bambu Cloud"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Project Presets",
+          "fr": "Préréglages de projet"
+         },
+         "desc": {
+          "en": "Saved in .3MF — travel with that file only",
+          "fr": "Enregistrés dans .3MF — liés à ce fichier uniquement"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.1.10",
+     "narration": {
+      "en": "Bambu Cloud user preset limits are 20 printer presets, 100 process presets, and 200 filament presets per account. And note: non-Bambu printer presets are not supported for cloud sync — keep local backups if you use third-party printers.",
+      "fr": "Les limites de préréglages utilisateur Bambu Cloud sont de 20 préréglages d'imprimante, 100 préréglages de processus et 200 préréglages de filament par compte. Les préréglages pour imprimantes non-Bambu ne sont pas pris en charge pour la synchronisation — conservez des sauvegardes locales."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Cloud Preset Limits",
+        "fr": "Limites des préréglages cloud"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Category",
+         "fr": "Catégorie"
+        },
+        {
+         "en": "Cloud limit",
+         "fr": "Limite cloud"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Printer presets",
+          "fr": "Préréglages imprimante"
+         },
+         "20"
+        ],
+        [
+         {
+          "en": "Process presets",
+          "fr": "Préréglages processus"
+         },
+         "100"
+        ],
+        [
+         {
+          "en": "Filament presets",
+          "fr": "Préréglages filament"
+         },
+         "200"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.1.11",
+     "narration": {
+      "en": "OrcaSlicer follows the same three-tier structure as Bambu Studio — it was forked from it — but with broader printer support, especially for Klipper-based machines, and no cloud dependency.",
+      "fr": "OrcaSlicer suit la même structure à trois niveaux que Bambu Studio — dont il est un fork — mais avec une prise en charge d'imprimante plus large, notamment pour les machines Klipper, et sans dépendance au cloud."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "OrcaSlicer Profile System",
+        "fr": "Système de profils OrcaSlicer"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Keep stock profiles untouched</b> — always duplicate before modifying",
+         "fr": "<b>Conserver les profils d'origine intacts</b> — toujours dupliquer avant de modifier"
+        },
+        {
+         "en": "<b>Create filament profiles per brand and type</b> — pre-tune temperature, cooling, flow, pressure advance",
+         "fr": "<b>Créer des profils de filament par marque et type</b> — pré-régler température, refroidissement, débit, pressure advance"
+        },
+        {
+         "en": "<b>Two machine profile versions</b> — a 'Stock' and a 'Tuned' version; document hardware changes in notes",
+         "fr": "<b>Deux versions du profil machine</b> — une version « Stock » et une version « Tuned » ; documenter les modifications matérielles dans les notes"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.1.12",
+     "narration": {
+      "en": "Both slicers support exporting presets to local files. OrcaSlicer uses dot-orca-printer and dot-orca-filament bundles. When transferring presets between printer models, the inherited parent profile must exist on the target machine or the preset will not load.",
+      "fr": "Les deux logiciels prennent en charge l'exportation des préréglages vers des fichiers locaux. OrcaSlicer utilise des bundles .orca_printer et .orca_filament. Lors du transfert de préréglages entre modèles, le profil parent hérité doit exister sur la machine cible sinon le préréglage ne se chargera pas."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Import, Export & Sharing",
+        "fr": "Importer, exporter et partager"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "When importing OrcaSlicer profiles, check the 'inherits' field in the JSON. The parent profile must be present in its correct location on the target machine.",
+        "fr": "Lors de l'importation de profils OrcaSlicer, vérifiez le champ « inherits » dans le JSON. Le profil parent doit être présent à son emplacement correct sur la machine cible."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.1.13",
+     "narration": {
+      "en": "Cross-slicer migration: PrusaSlicer profiles work in OrcaSlicer with minor adjustments. Bambu Studio profiles are mostly compatible with OrcaSlicer. Cura profiles do not migrate cleanly due to fundamentally different architecture.",
+      "fr": "Migration entre logiciels : les profils PrusaSlicer fonctionnent dans OrcaSlicer avec des ajustements mineurs. Les profils Bambu Studio sont pour la plupart compatibles avec OrcaSlicer. Les profils Cura ne migrent pas proprement en raison d'une architecture fondamentalement différente."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Cross-Slicer Compatibility",
+        "fr": "Compatibilité entre logiciels de découpe"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Source",
+         "fr": "Source"
+        },
+        {
+         "en": "Target",
+         "fr": "Cible"
+        },
+        {
+         "en": "Result",
+         "fr": "Résultat"
+        }
+       ],
+       "rows": [
+        [
+         "PrusaSlicer",
+         "OrcaSlicer",
+         {
+          "en": "Minor adjustments",
+          "fr": "Ajustements mineurs"
+         }
+        ],
+        [
+         "Bambu Studio",
+         "OrcaSlicer",
+         {
+          "en": "Mostly compatible",
+          "fr": "Principalement compatible"
+         }
+        ],
+        [
+         "Cura",
+         {
+          "en": "Any",
+          "fr": "N'importe lequel"
+         },
+         {
+          "en": "Does not migrate cleanly",
+          "fr": "Ne migre pas proprement"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.1.14",
+     "narration": {
+      "en": "The golden rule: start from a working baseline and change one thing at a time. Begin with a generic preset matching your printer and material, verify it works, then calibrate systematically.",
+      "fr": "La règle d'or : commencer par une base de référence fonctionnelle et ne modifier qu'un élément à la fois. Commencez par un préréglage générique correspondant à votre imprimante et votre matériau, vérifiez qu'il fonctionne, puis étalonnez systématiquement."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Golden Rule",
+        "fr": "La règle d'or"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Never begin tuning with multiple custom changes simultaneously. If the print fails, you will not know which change caused the problem. One variable at a time — always.",
+        "fr": "Ne commencez jamais le réglage avec plusieurs modifications simultanées. Si l'impression échoue, vous ne saurez pas quelle modification en est la cause. Une variable à la fois — toujours."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.1.15",
+     "narration": {
+      "en": "Chapter 1 recap. Profiles are three-tier systems — printer, filament, process — that interact and constrain each other. Always duplicate before editing, use cloud limits wisely, and start every tuning session from a proven baseline.",
+      "fr": "Récapitulatif du chapitre 1. Les profils sont des systèmes à trois niveaux — imprimante, filament, processus — qui interagissent et se contraignent mutuellement. Toujours dupliquer avant de modifier, utiliser les limites cloud avec sagesse, et commencer chaque réglage depuis une base éprouvée."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 1 Recap",
+        "fr": "Récapitulatif du chapitre 1"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Three tiers:</b> Printer (hardware limits) · Filament (thermal/extrusion) · Process (slicing strategy)",
+         "fr": "<b>Trois niveaux :</b> Imprimante (limites matérielles) · Filament (thermique/extrusion) · Processus (stratégie de découpe)"
+        },
+        {
+         "en": "<b>Tiers are interdependent</b> — nozzle change ripples through all presets",
+         "fr": "<b>Les niveaux sont interdépendants</b> — un changement de buse se répercute sur tous les préréglages"
+        },
+        {
+         "en": "<b>Bambu:</b> System (locked) / User (cloud, 20/100/200 limit) / Project (.3MF)",
+         "fr": "<b>Bambu :</b> Système (verrouillé) / Utilisateur (cloud, limite 20/100/200) / Projet (.3MF)"
+        },
+        {
+         "en": "<b>OrcaSlicer:</b> same structure, no cloud dependency, broader printer support",
+         "fr": "<b>OrcaSlicer :</b> même structure, sans dépendance cloud, prise en charge d'imprimante plus large"
+        },
+        {
+         "en": "<b>Golden rule:</b> proven baseline first, one change at a time",
+         "fr": "<b>Règle d'or :</b> base éprouvée d'abord, une modification à la fois"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 2,
+   "title": {
+    "en": "Generic Profile Configuration",
+    "fr": "Configuration des profils génériques"
+   },
+   "scenes": [
+    {
+     "id": "6.2.0",
+     "narration": {
+      "en": "Chapter 2. Now that you understand the profile structure, it is time to configure the settings that control print quality, speed, and material compatibility — starting with layer height.",
+      "fr": "Chapitre 2. Maintenant que vous comprenez la structure des profils, il est temps de configurer les paramètres qui contrôlent la qualité d'impression, la vitesse et la compatibilité des matériaux — en commençant par la hauteur de couche."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 6 · Chapter 2",
+        "fr": "Module 6 · Chapitre 2"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Generic Profile Configuration",
+        "fr": "Configuration des profils génériques"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Layer height, speed, temperature, cooling, supports, and first-layer settings — the universal controls that apply to every FDM printer regardless of brand.",
+        "fr": "Hauteur de couche, vitesse, température, refroidissement, supports et paramètres de première couche — les réglages universels qui s'appliquent à toute imprimante FDM quelle que soit la marque."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.2.1",
+     "narration": {
+      "en": "Layer height is the primary quality control knob in 3D printing. Think of it as the Z-axis resolution — smaller layers mean finer detail but dramatically longer print times.",
+      "fr": "La hauteur de couche est le principal réglage de qualité en impression 3D. Pensez-y comme à la résolution sur l'axe Z — des couches plus petites signifient plus de détails, mais des durées d'impression considérablement plus longues."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Layer Height: The Quality Lever",
+        "fr": "Hauteur de couche : le levier qualité"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Profile",
+         "fr": "Profil"
+        },
+        {
+         "en": "Height",
+         "fr": "Hauteur"
+        },
+        {
+         "en": "Use case",
+         "fr": "Cas d'usage"
+        },
+        {
+         "en": "Time",
+         "fr": "Durée"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Ultra-Detail",
+          "fr": "Ultra-détail"
+         },
+         "0.06–0.10 mm",
+         {
+          "en": "Miniatures, jewelry",
+          "fr": "Figurines, bijoux"
+         },
+         "3–4x"
+        ],
+        [
+         {
+          "en": "High Quality",
+          "fr": "Haute qualité"
+         },
+         "0.10–0.16 mm",
+         {
+          "en": "Functional visible parts",
+          "fr": "Pièces fonctionnelles visibles"
+         },
+         "~2x"
+        ],
+        [
+         {
+          "en": "Standard",
+          "fr": "Standard"
+         },
+         "0.16–0.24 mm",
+         {
+          "en": "General purpose",
+          "fr": "Usage général"
+         },
+         "1x"
+        ],
+        [
+         {
+          "en": "Draft",
+          "fr": "Brouillon"
+         },
+         "0.25–0.32 mm",
+         {
+          "en": "Fit checks, large objects",
+          "fr": "Vérifications d'ajustement, grands objets"
+         },
+         "~0.7x"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.2.2",
+     "narration": {
+      "en": "A standard 0.4 mm nozzle can reliably print layer heights from about 0.08 mm — 25 percent of nozzle diameter — up to about 0.32 mm, which is 80 percent. Going outside this range risks poor extrusion and potential nozzle damage.",
+      "fr": "Une buse standard de 0,4 mm peut imprimer de manière fiable des hauteurs de couche d'environ 0,08 mm — 25 % du diamètre de la buse — jusqu'à environ 0,32 mm, soit 80 %. Dépasser cette plage risque une extrusion médiocre et des dommages potentiels à la buse."
+     },
+     "elements": [
+      {
+       "type": "stat",
+       "value": "25–80%",
+       "caption": {
+        "en": "of nozzle diameter = reliable layer height range (0.08–0.32 mm for a 0.4 mm nozzle)",
+        "fr": "du diamètre de buse = plage de hauteur de couche fiable (0,08–0,32 mm pour une buse 0,4 mm)"
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.2.3",
+     "narration": {
+      "en": "Ultra-detail at 0.08 mm is the realm of miniatures and dental models — layers nearly invisible to the naked eye, but a 4-hour print becomes 12 to 16 hours. High quality at 0.12 mm hits the sweet spot for functional parts that still look professional.",
+      "fr": "L'ultra-détail à 0,08 mm est le domaine des figurines et des modèles dentaires — des couches presque invisibles à l'œil nu, mais une impression de 4 heures devient 12 à 16 heures. La haute qualité à 0,12 mm atteint le point idéal pour les pièces fonctionnelles qui nécessitent un aspect professionnel."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Choosing Your Profile",
+        "fr": "Choisir son profil"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>0.08 mm Ultra-Detail</b> — nearly invisible layers; 12–16 h for a typical 4 h print; pair with 0.2 mm nozzle",
+         "fr": "<b>0,08 mm Ultra-détail</b> — couches presque invisibles ; 12–16 h pour une impression typique de 4 h ; associer à une buse 0,2 mm"
+        },
+        {
+         "en": "<b>0.12 mm High Quality</b> — minimal layer lines; reasonable time; comfortable for 0.4 mm nozzles",
+         "fr": "<b>0,12 mm Haute qualité</b> — lignes de couche minimales ; durée raisonnable ; confortable pour les buses 0,4 mm"
+        },
+        {
+         "en": "<b>0.20 mm Standard</b> — visible but neat lines; predictable time; ideal starting point for beginners",
+         "fr": "<b>0,20 mm Standard</b> — lignes visibles mais nettes ; durée prévisible ; point de départ idéal pour les débutants"
+        },
+        {
+         "en": "<b>0.28 mm+ Draft</b> — speed over beauty; perfect for fit checks and large objects",
+         "fr": "<b>0,28 mm+ Brouillon</b> — vitesse avant beauté ; parfait pour les vérifications d'ajustement et les grands objets"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.2.4",
+     "narration": {
+      "en": "Bambu Lab printers offer four selectable speed modes that adjust all motion parameters proportionally. The naming is Bambu-specific, but the underlying principle — trading noise and time against quality — applies to any printer.",
+      "fr": "Les imprimantes Bambu Lab proposent quatre modes de vitesse sélectionnables qui ajustent tous les paramètres de mouvement proportionnellement. Les noms sont propres à Bambu, mais le principe — arbitrer entre bruit, durée et qualité — s'applique à toute imprimante."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Speed Modes",
+        "fr": "Modes de vitesse"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Mode",
+         "fr": "Mode"
+        },
+        {
+         "en": "Speed",
+         "fr": "Vitesse"
+        },
+        {
+         "en": "Best for",
+         "fr": "Idéal pour"
+        }
+       ],
+       "rows": [
+        [
+         "Silent",
+         "≈50%",
+         {
+          "en": "Overnight, office",
+          "fr": "Nuit, bureau"
+         }
+        ],
+        [
+         "Standard",
+         "100%",
+         {
+          "en": "Daily general use",
+          "fr": "Usage quotidien"
+         }
+        ],
+        [
+         "Sport",
+         "≈124%",
+         {
+          "en": "Faster iteration",
+          "fr": "Itération rapide"
+         }
+        ],
+        [
+         "Ludicrous",
+         "≈166%",
+         {
+          "en": "Emergency / large infill",
+          "fr": "Urgence / grand remplissage"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.2.5",
+     "narration": {
+      "en": "Community analysis confirms that basically everything changes between speed modes — speed limits, travel speed, acceleration, pressure advance, and look-ahead parameters. Nozzle temperatures do not adjust automatically, so higher speed modes may require manually raising temperature to maintain flow.",
+      "fr": "L'analyse de la communauté confirme que pratiquement tout change entre les modes de vitesse — limites de vitesse, vitesse de déplacement, accélération, pressure advance et paramètres de look-ahead. Les températures de buse ne s'ajustent pas automatiquement, donc des modes plus rapides peuvent nécessiter d'augmenter manuellement la température."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Higher speeds require higher temperatures to maintain consistent extrusion. For quality-critical outer walls, stay under 100 mm/s — approximately 80 mm/s offers the best balance of speed, quality, and strength.",
+        "fr": "Des vitesses plus élevées nécessitent des températures plus élevées pour maintenir une extrusion constante. Pour les parois extérieures importantes, restez en dessous de 100 mm/s — environ 80 mm/s offre le meilleur équilibre vitesse/qualité/résistance."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.2.6",
+     "narration": {
+      "en": "Nozzle temperature is one of the most impactful settings in 3D printing. It affects viscosity, layer adhesion, surface gloss, stringing, and the quality of bridges and overhangs. Here are the community-standard starting-point ranges for seven common materials.",
+      "fr": "La température de buse est l'un des paramètres les plus influents de l'impression 3D. Elle affecte la viscosité, l'adhérence des couches, le brillant de surface, le filage et la qualité des ponts et porte-à-faux. Voici les plages standard de départ de la communauté pour sept matériaux courants."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Temperature by Material",
+        "fr": "Température par matériau"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Nozzle",
+         "fr": "Buse"
+        },
+        {
+         "en": "Bed",
+         "fr": "Plateau"
+        },
+        {
+         "en": "Fan",
+         "fr": "Ventilateur"
+        }
+       ],
+       "rows": [
+        [
+         "PLA",
+         "190–220°C",
+         "45–60°C",
+         "100%"
+        ],
+        [
+         "PETG",
+         "230–250°C",
+         "70–90°C",
+         "30–50%"
+        ],
+        [
+         "ABS",
+         "240–260°C",
+         "90–110°C",
+         "0–20%"
+        ],
+        [
+         "ASA",
+         "250–270°C",
+         "90–110°C",
+         "0–20%"
+        ],
+        [
+         "TPU",
+         "210–240°C",
+         "30–60°C",
+         "50%"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.2.7",
+     "narration": {
+      "en": "For high-temperature materials — Nylon at 250 to 300 degrees and polycarbonate at 260 to 310 degrees — an actively heated enclosure is critical. Maintaining elevated chamber temperature prevents warping and layer separation on larger prints.",
+      "fr": "Pour les matériaux à haute température — le Nylon à 250-300 degrés et le polycarbonate à 260-310 degrés — une enceinte chauffée activement est essentielle. Maintenir une température d'enceinte élevée prévient le gauchissement et la séparation des couches sur les grandes impressions."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "High-Temperature Materials",
+        "fr": "Matériaux haute température"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Nozzle",
+         "fr": "Buse"
+        },
+        {
+         "en": "Bed",
+         "fr": "Plateau"
+        },
+        {
+         "en": "Chamber",
+         "fr": "Enceinte"
+        }
+       ],
+       "rows": [
+        [
+         "Nylon",
+         "250–300°C",
+         "70–110°C",
+         "45–60°C"
+        ],
+        [
+         "PC",
+         "260–310°C",
+         "100–120°C",
+         "55–65°C"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.2.8",
+     "narration": {
+      "en": "Different materials need radically different cooling strategies. PLA loves aggressive cooling — 80 to 100 percent fan after the first few layers. PETG needs a middle ground. ABS and ASA need almost no fan at all; the heated enclosure does the work.",
+      "fr": "Différents matériaux nécessitent des stratégies de refroidissement radicalement différentes. Le PLA aime le refroidissement intensif — 80 à 100 % de ventilateur après les premières couches. Le PETG a besoin d'un terrain intermédiaire. L'ABS et l'ASA n'ont besoin de presque aucun ventilateur ; l'enceinte chauffée fait le travail."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Cooling Strategy by Material",
+        "fr": "Stratégie de refroidissement par matériau"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "PLA",
+         "desc": {
+          "en": "80–100% fan after layers 2–3. Faster solidification improves overhangs and bridges.",
+          "fr": "80–100 % de ventilateur après les couches 2–3. La solidification rapide améliore les porte-à-faux et les ponts."
+         },
+         "highlight": true
+        },
+        {
+         "title": "PETG",
+         "desc": {
+          "en": "30–50% fan. Too much = weak brittle layers. Too little = overhang sag.",
+          "fr": "30–50 % de ventilateur. Trop = couches faibles et fragiles. Trop peu = affaissement des porte-à-faux."
+         }
+        },
+        {
+         "title": "ABS / ASA",
+         "desc": {
+          "en": "0–20% fan. Enclosure does the work. Fan causes warping and layer cracking.",
+          "fr": "0–20 % de ventilateur. L'enceinte fait le travail. Le ventilateur provoque gauchissement et fissures."
+         }
+        },
+        {
+         "title": "TPU",
+         "desc": {
+          "en": "Minimal fan. Flexible material needs bonding time; excess cooling causes delamination.",
+          "fr": "Ventilateur minimal. Matériau flexible nécessitant du temps de liaison ; un refroidissement excessif cause la délamination."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.2.9",
+     "narration": {
+      "en": "Modern slicers implement dynamic cooling — automatically adjusting fan speed based on layer print time and overhang percentage. When a layer prints very quickly, the slicer may slow speed or increase fan to ensure adequate cooling before the next layer is deposited.",
+      "fr": "Les logiciels modernes implémentent le refroidissement dynamique — ajustant automatiquement la vitesse du ventilateur selon la durée d'impression des couches et le pourcentage de porte-à-faux. Lorsqu'une couche s'imprime très rapidement, le logiciel peut ralentir ou augmenter le ventilateur."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Dynamic cooling: for very short layers (small cross-section), the slicer slows print speed or boosts fan speed to guarantee the layer is solid before the next one lands on top.",
+        "fr": "Refroidissement dynamique : pour les couches très courtes (petite section transversale), le logiciel ralentit la vitesse d'impression ou augmente le ventilateur pour garantir que la couche est solide avant que la suivante ne soit déposée."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.2.10",
+     "narration": {
+      "en": "Support settings balance printability against removal difficulty. The 45-degree overhang threshold is the standard default — surfaces angled more than 45 degrees from vertical receive supports. Well-tuned printers with good cooling can often push this to 55 or 60 degrees.",
+      "fr": "Les paramètres de support équilibrent l'imprimabilité par rapport à la difficulté de retrait. Le seuil de 45 degrés est la valeur par défaut standard — les surfaces inclinées de plus de 45 degrés par rapport à la verticale reçoivent des supports. Les imprimantes bien réglées peuvent souvent pousser ce seuil à 55 ou 60 degrés."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Support Settings",
+        "fr": "Paramètres de support"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Overhang threshold</b> — 45° default; well-tuned printers can push to 55–60°",
+         "fr": "<b>Seuil de porte-à-faux</b> — 45° par défaut ; imprimantes bien réglées peuvent pousser à 55–60°"
+        },
+        {
+         "en": "<b>Interface layers</b> — 2–3 dense layers between support and model; more = easier removal, more material",
+         "fr": "<b>Couches d'interface</b> — 2–3 couches denses entre support et modèle ; plus = retrait plus facile, plus de matériau"
+        },
+        {
+         "en": "<b>Grid pattern</b> — strongest supports",
+         "fr": "<b>Motif grille</b> — supports les plus solides"
+        },
+        {
+         "en": "<b>Tree supports</b> — less material, easier removal, but slower to slice",
+         "fr": "<b>Supports arborescents</b> — moins de matériau, retrait plus facile, mais plus longs à découper"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.2.11",
+     "narration": {
+      "en": "The first layer is the foundation of every print. Getting it right is non-negotiable. Print slower, print hotter, keep the fan off for the first two to four layers.",
+      "fr": "La première couche est le fondement de chaque impression. La réussir n'est pas négociable. Imprimez plus lentement, plus chaud, gardez le ventilateur éteint pour les 2 à 4 premières couches."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "First Layer Settings",
+        "fr": "Paramètres de la première couche"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "first_layer"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Slower speed</b> — reduce 30–50% of normal speed (~15–25 mm/s absolute) for extra bonding time",
+         "fr": "<b>Vitesse plus lente</b> — réduire de 30–50 % de la vitesse normale (~15–25 mm/s absolu) pour plus de temps de liaison"
+        },
+        {
+         "en": "<b>Hotter temperature</b> — raise nozzle by 5–10°C for improved adhesion and flow",
+         "fr": "<b>Température plus élevée</b> — augmenter la buse de 5–10°C pour une meilleure adhérence et un meilleur débit"
+        },
+        {
+         "en": "<b>No part cooling</b> — fan off for first 2–4 layers; early cooling causes warping",
+         "fr": "<b>Pas de refroidissement</b> — ventilateur éteint pour les 2–4 premières couches ; un refroidissement précoce cause le gauchissement"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.2.12",
+     "narration": {
+      "en": "Elephant foot is the slight bulge at the base of a print caused by excessive first-layer squish or high bed temperature. Slicer compensation reduces first-layer perimeter dimensions automatically. Recommended correction values are 0.1 to 0.2 mm.",
+      "fr": "Le pied d'éléphant est le léger renflement à la base d'une impression causé par un écrasement excessif de la première couche ou une température de plateau élevée. La compensation du slicer réduit automatiquement les dimensions des périmètres de la première couche. Les valeurs recommandées sont 0,1 à 0,2 mm."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Elephant Foot Compensation",
+        "fr": "Compensation du pied d'éléphant"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "For 0.2 mm layer height, set a Z-offset of approximately -0.05 mm — about 25% squish. This forces extrusion into 75% of the layer height, maximising bed adhesion without causing excessive elephant foot.",
+        "fr": "Pour une hauteur de couche de 0,2 mm, définissez un décalage Z d'environ -0,05 mm — environ 25 % d'écrasement. Cela force l'extrusion dans 75 % de la hauteur de couche, maximisant l'adhérence au plateau sans provoquer un pied d'éléphant excessif."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.2.13",
+     "narration": {
+      "en": "Chapter 2 recap. Layer height is the primary quality control. Speed profiles trade noise and time for quality. Temperature and cooling strategy are material-dependent. First layer settings are sacrosanct.",
+      "fr": "Récapitulatif du chapitre 2. La hauteur de couche est le principal contrôle de qualité. Les profils de vitesse arbitrent entre bruit, durée et qualité. La température et la stratégie de refroidissement dépendent du matériau. Les paramètres de première couche sont sacrés."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 2 Recap",
+        "fr": "Récapitulatif du chapitre 2"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Layer height:</b> 0.08 mm miniatures · 0.12 mm detailed · 0.20 mm standard · 0.28 mm+ draft",
+         "fr": "<b>Hauteur de couche :</b> 0,08 mm figurines · 0,12 mm détaillé · 0,20 mm standard · 0,28 mm+ brouillon"
+        },
+        {
+         "en": "<b>Speed:</b> stay under 100 mm/s for quality outer walls; ~80 mm/s is the sweet spot",
+         "fr": "<b>Vitesse :</b> rester sous 100 mm/s pour les parois extérieures qualité ; ~80 mm/s est le point idéal"
+        },
+        {
+         "en": "<b>Temperature:</b> PLA 190–220°C / ABS 240–260°C / PC 260–310°C — always verify with a temp tower",
+         "fr": "<b>Température :</b> PLA 190–220°C / ABS 240–260°C / PC 260–310°C — toujours vérifier avec une tour de température"
+        },
+        {
+         "en": "<b>Cooling:</b> PLA loves it; ABS hates it — wrong cooling ruins otherwise perfect prints",
+         "fr": "<b>Refroidissement :</b> le PLA l'aime ; l'ABS ne le supporte pas — un mauvais refroidissement ruine des impressions par ailleurs parfaites"
+        },
+        {
+         "en": "<b>First layer:</b> slower · hotter · no fan · elephant foot compensation if needed",
+         "fr": "<b>Première couche :</b> plus lente · plus chaude · sans ventilateur · compensation pied d'éléphant si nécessaire"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 3,
+   "title": {
+    "en": "Bambu Lab Specific Profiles",
+    "fr": "Profils spécifiques à Bambu Lab"
+   },
+   "scenes": [
+    {
+     "id": "6.3.0",
+     "narration": {
+      "en": "Chapter 3 focuses on the Bambu Lab ecosystem — Bambu Studio, Bambu printers, and the AMS. The interfaces described here are Bambu-specific, but the underlying concepts apply to any well-integrated slicer-hardware combination.",
+      "fr": "Le chapitre 3 se concentre sur l'écosystème Bambu Lab — Bambu Studio, les imprimantes Bambu et l'AMS. Les interfaces décrites ici sont propres à Bambu, mais les concepts sous-jacents s'appliquent à toute combinaison logiciel-matériel bien intégrée."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 6 · Chapter 3",
+        "fr": "Module 6 · Chapitre 3"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Bambu Lab Specific Profiles",
+        "fr": "Profils spécifiques à Bambu Lab"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Bambu Lab integrates hardware, software, and cloud services in ways that streamline profile management — but also introduce unique workflows you need to understand.",
+        "fr": "Bambu Lab intègre matériel, logiciel et services cloud d'une manière qui simplifie la gestion des profils — mais introduit aussi des flux de travail uniques qu'il faut comprendre."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.3.1",
+     "narration": {
+      "en": "When you first launch Bambu Studio, it downloads configuration bundles for each supported printer. These bundles contain pre-tuned process, filament, and printer presets optimized for each specific model. The available presets depend entirely on which printer and nozzle you have selected.",
+      "fr": "Lorsque vous lancez Bambu Studio pour la première fois, il télécharge des bundles de configuration pour chaque imprimante prise en charge. Ces bundles contiennent des préréglages pré-réglés optimisés pour chaque modèle spécifique. Les préréglages disponibles dépendent entièrement de l'imprimante et de la buse sélectionnées."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "System Presets by Printer Model",
+        "fr": "Préréglages système par modèle d'imprimante"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Printer",
+         "fr": "Imprimante"
+        },
+        {
+         "en": "Build vol.",
+         "fr": "Vol. construction"
+        },
+        {
+         "en": "Enclosed",
+         "fr": "Enceinte"
+        },
+        {
+         "en": "Key features",
+         "fr": "Caractéristiques clés"
+        }
+       ],
+       "rows": [
+        [
+         "X1 Carbon",
+         "256³ mm",
+         {
+          "en": "Yes",
+          "fr": "Oui"
+         },
+         {
+          "en": "Lidar, vib. comp., AMS",
+          "fr": "Lidar, comp. vibrations, AMS"
+         }
+        ],
+        [
+         "P1S",
+         "256³ mm",
+         {
+          "en": "Yes",
+          "fr": "Oui"
+         },
+         {
+          "en": "Like X1C, no lidar",
+          "fr": "Comme X1C, sans lidar"
+         }
+        ],
+        [
+         "P1P",
+         "256³ mm",
+         {
+          "en": "Add-on",
+          "fr": "En option"
+         },
+         {
+          "en": "Open frame",
+          "fr": "Cadre ouvert"
+         }
+        ],
+        [
+         "A1",
+         "256³ mm",
+         {
+          "en": "No",
+          "fr": "Non"
+         },
+         {
+          "en": "Bed slinger, PLA/PETG",
+          "fr": "Plateau mobile, PLA/PETG"
+         }
+        ],
+        [
+         "A1 Mini",
+         "180³ mm",
+         {
+          "en": "No",
+          "fr": "Non"
+         },
+         {
+          "en": "Compact, entry-level",
+          "fr": "Compact, entrée de gamme"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.3.2",
+     "narration": {
+      "en": "When you select a different printer model or nozzle diameter, system presets automatically update. This prevents accidentally applying X1C-specific acceleration values to an A1 Mini — but it also means you must pay attention to which printer is currently selected when creating or modifying presets.",
+      "fr": "Lorsque vous sélectionnez un modèle d'imprimante ou un diamètre de buse différent, les préréglages système se mettent automatiquement à jour. Cela empêche d'appliquer accidentellement des valeurs d'accélération X1C à un A1 Mini — mais cela signifie aussi que vous devez faire attention à l'imprimante sélectionnée lors de la création de préréglages."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Always verify which printer and nozzle diameter are currently selected in Bambu Studio before creating or modifying a preset — the available options and safe parameter ranges change with your selection.",
+        "fr": "Vérifiez toujours l'imprimante et le diamètre de buse actuellement sélectionnés dans Bambu Studio avant de créer ou modifier un préréglage — les options disponibles et les plages de paramètres sûrs changent avec votre sélection."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.3.3",
+     "narration": {
+      "en": "Bambu Studio offers two categories of filament presets. Generic filament profiles work with any brand but are not optimized for any specific one. Bambu Lab filament profiles are tuned for Bambu's own products and include RFID tag data for automatic AMS selection.",
+      "fr": "Bambu Studio propose deux catégories de préréglages de filament. Les profils de filament génériques fonctionnent avec n'importe quelle marque mais ne sont pas optimisés pour une marque spécifique. Les profils Bambu Lab sont réglés pour les produits Bambu et incluent des données d'étiquette RFID pour la sélection automatique AMS."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Generic vs. Bambu Filament Profiles",
+        "fr": "Profils filament génériques vs. Bambu Lab"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Generic profiles",
+         "fr": "Profils génériques"
+        },
+        "note": {
+         "en": "Starting-point configs for any brand. Your calibration baseline.",
+         "fr": "Configs de départ pour toute marque. Votre base d'étalonnage."
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Bambu Lab profiles",
+         "fr": "Profils Bambu Lab"
+        },
+        "note": {
+         "en": "Tuned for Bambu spools. RFID auto-select in AMS. Community-tested.",
+         "fr": "Réglés pour les bobines Bambu. Auto-sélection RFID dans l'AMS. Testés par la communauté."
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.3.4",
+     "narration": {
+      "en": "Community testing shows that generic Bambu Lab profiles can actually outperform manufacturer-provided profiles for third-party filaments of the same material type. The brand on the spool matters less than the calibration you perform.",
+      "fr": "Les tests de la communauté montrent que les profils Bambu Lab génériques peuvent surpasser les profils fournis par des fabricants tiers pour le même type de matériau. La marque sur la bobine importe moins que l'étalonnage que vous effectuez."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "The filament brand on the spool matters less than the calibration you perform. When in doubt, start with a Generic Bambu profile and tune from there — it may outperform the manufacturer-provided preset.",
+        "fr": "La marque du filament sur la bobine importe moins que l'étalonnage que vous effectuez. En cas de doute, commencez avec un profil Bambu générique et réglez à partir de là — il peut surpasser le préréglage fourni par le fabricant."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.3.5",
+     "narration": {
+      "en": "For third-party filaments, Bambu Studio provides two methods to create custom profiles. Method 1 — Custom Filaments — is recommended for AMS users because it creates a system-level preset visible on the printer's touchscreen. It requires firmware 1.6.6 or later.",
+      "fr": "Pour les filaments tiers, Bambu Studio propose deux méthodes pour créer des profils personnalisés. La méthode 1 — Filaments personnalisés — est recommandée pour les utilisateurs AMS car elle crée un préréglage au niveau système visible sur l'écran tactile de l'imprimante. Elle nécessite le firmware 1.6.6 ou ultérieur."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Method 1: Custom Filaments (AMS)",
+        "fr": "Méthode 1 : filaments personnalisés (AMS)"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Settings",
+          "fr": "Paramètres"
+         },
+         "sub": {
+          "en": "→ Custom Filaments → Create New",
+          "fr": "→ Filaments personnalisés → Créer nouveau"
+         }
+        },
+        {
+         "name": {
+          "en": "Fill info",
+          "fr": "Renseigner"
+         },
+         "sub": {
+          "en": "Vendor · type · name",
+          "fr": "Fournisseur · type · nom"
+         }
+        },
+        {
+         "name": {
+          "en": "Inherit",
+          "fr": "Hériter"
+         },
+         "sub": {
+          "en": "Base: Generic PLA",
+          "fr": "Base : Generic PLA"
+         }
+        },
+        {
+         "name": {
+          "en": "Select printers",
+          "fr": "Sélectionner imprimantes"
+         },
+         "sub": {
+          "en": "Batch creation",
+          "fr": "Création par lot"
+         }
+        },
+        {
+         "name": {
+          "en": "Assign AMS slot",
+          "fr": "Attribuer emplacement AMS"
+         },
+         "sub": {
+          "en": "Appears on touchscreen",
+          "fr": "Apparaît sur l'écran tactile"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.3.6",
+     "narration": {
+      "en": "Method 2 is simpler: modify an existing filament preset, then click Save and choose User Preset for cloud-synced reuse across projects, or Project Preset to save it only within the current dot-3MF file.",
+      "fr": "La méthode 2 est plus simple : modifiez un préréglage de filament existant, puis cliquez sur Enregistrer et choisissez Préréglage utilisateur pour une réutilisation synchronisée avec le cloud, ou Préréglage de projet pour l'enregistrer uniquement dans le fichier .3MF courant."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Method 2: Save As User Preset",
+        "fr": "Méthode 2 : enregistrer comme préréglage utilisateur"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "User Preset",
+         "fr": "Préréglage utilisateur"
+        },
+        "note": {
+         "en": "Reusable across projects — can sync to Bambu Cloud",
+         "fr": "Réutilisable entre projets — peut se synchroniser avec Bambu Cloud"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Project Preset",
+         "fr": "Préréglage de projet"
+        },
+        "note": {
+         "en": "Saved in this .3MF only — travels with the file",
+         "fr": "Enregistré dans ce .3MF uniquement — voyage avec le fichier"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.3.7",
+     "narration": {
+      "en": "For any new filament, follow this five-step workflow: select the base material type, adjust temperatures with a temperature tower, set flow rate by calibration, configure cooling for your material, then save as a custom preset.",
+      "fr": "Pour tout nouveau filament, suivez ce flux de travail en cinq étapes : sélectionnez le type de matériau de base, ajustez les températures avec une tour de température, définissez le débit par étalonnage, configurez le refroidissement pour votre matériau, puis enregistrez comme préréglage personnalisé."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Custom Filament Workflow: Five Steps",
+        "fr": "Flux de travail pour filament personnalisé : cinq étapes"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>1. Base material type</b> — start with Generic PLA, Generic PETG, etc.",
+         "fr": "<b>1. Type de matériau de base</b> — commencez avec Generic PLA, Generic PETG, etc."
+        },
+        {
+         "en": "<b>2. Temperature tower</b> — find the lowest temperature that gives good results",
+         "fr": "<b>2. Tour de température</b> — trouver la température la plus basse qui donne de bons résultats"
+        },
+        {
+         "en": "<b>3. Flow rate calibration</b> — single-wall cube or OrcaSlicer visual method",
+         "fr": "<b>3. Étalonnage du débit</b> — cube à paroi unique ou méthode visuelle OrcaSlicer"
+        },
+        {
+         "en": "<b>4. Cooling configuration</b> — match fan speeds to material requirements",
+         "fr": "<b>4. Configuration du refroidissement</b> — adapter les vitesses de ventilateur aux exigences du matériau"
+        },
+        {
+         "en": "<b>5. Save as custom preset</b> — Method 1 for AMS, Method 2 for user preset",
+         "fr": "<b>5. Enregistrer comme préréglage personnalisé</b> — Méthode 1 pour l'AMS, Méthode 2 pour le préréglage utilisateur"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.3.8",
+     "narration": {
+      "en": "When using the AMS for multi-material printing, profiles gain extra dimensions: filament mapping assigns a filament profile to each slot, flush volumes control how much is purged between color changes, and all filaments must share compatible temperature ranges.",
+      "fr": "Lors de l'utilisation de l'AMS pour l'impression multi-matériaux, les profils acquièrent des dimensions supplémentaires : le mappage des filaments attribue un profil à chaque emplacement, les volumes de purge contrôlent la quantité purgée entre les changements de couleur, et tous les filaments doivent partager des plages de températures compatibles."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "AMS vs. Single-Material Profiles",
+        "fr": "Profils AMS vs. mono-matériau"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Filament mapping</b> — each AMS slot assigned a filament profile; drives purge towers and toolpaths",
+         "fr": "<b>Mappage des filaments</b> — chaque emplacement AMS associé à un profil de filament ; pilote les tours de purge et trajectoires"
+        },
+        {
+         "en": "<b>Flush volumes</b> — opaque filaments require more purging than translucent ones",
+         "fr": "<b>Volumes de purge</b> — les filaments opaques nécessitent plus de purge que les filaments translucides"
+        },
+        {
+         "en": "<b>Temperature compatibility</b> — PLA + ABS in same print is problematic; temperature ranges barely overlap",
+         "fr": "<b>Compatibilité des températures</b> — PLA + ABS dans la même impression est problématique ; les plages se chevauchent à peine"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.3.9",
+     "narration": {
+      "en": "Bambu Lab printers support four nozzle sizes. Larger nozzles extrude more plastic per second, so max volumetric speed becomes the governing factor. A 0.6 mm nozzle prints about 1.5 times faster than a 0.4 mm at the same layer height.",
+      "fr": "Les imprimantes Bambu Lab prennent en charge quatre tailles de buse. Les buses plus grandes extrudent plus de plastique par seconde, donc la vitesse volumétrique maximale devient le facteur limitant. Une buse de 0,6 mm imprime environ 1,5 fois plus vite qu'une buse de 0,4 mm à la même hauteur de couche."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Nozzle Diameter Profiles",
+        "fr": "Profils de diamètre de buse"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Nozzle",
+         "fr": "Buse"
+        },
+        {
+         "en": "Best for",
+         "fr": "Idéal pour"
+        },
+        {
+         "en": "Line width",
+         "fr": "Largeur de ligne"
+        }
+       ],
+       "rows": [
+        [
+         "0.2 mm",
+         {
+          "en": "Ultra-fine detail, text",
+          "fr": "Détails ultra-fins, texte"
+         },
+         "0.2–0.25 mm"
+        ],
+        [
+         "0.4 mm",
+         {
+          "en": "General purpose (default)",
+          "fr": "Usage général (défaut)"
+         },
+         "0.4–0.5 mm"
+        ],
+        [
+         "0.6 mm",
+         {
+          "en": "Stronger parts, faster",
+          "fr": "Pièces plus solides, plus rapide"
+         },
+         "0.6–0.72 mm"
+        ],
+        [
+         "0.8 mm",
+         {
+          "en": "Structural, vases",
+          "fr": "Structurel, vases"
+         },
+         "0.8–1.0 mm"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.3.10",
+     "narration": {
+      "en": "When evaluating a community profile, check the source and its testing history, verify exact printer model and nozzle size compatibility, review the inherits field in the JSON, and always test with a calibration print before committing to a long production run.",
+      "fr": "Lors de l'évaluation d'un profil communautaire, vérifiez la source et son historique de tests, confirmez la compatibilité exacte du modèle d'imprimante et de la taille de buse, examinez le champ inherits dans le JSON, et toujours tester avec une impression d'étalonnage avant une longue production."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Evaluating Community Profiles",
+        "fr": "Évaluer les profils communautaires"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Check the source</b> — documented testing history from known community members",
+         "fr": "<b>Vérifiez la source</b> — historique de tests documenté de membres connus de la communauté"
+        },
+        {
+         "en": "<b>Verify compatibility</b> — exact printer model and nozzle size must match",
+         "fr": "<b>Vérifiez la compatibilité</b> — le modèle d'imprimante et la taille de buse doivent correspondre exactement"
+        },
+        {
+         "en": "<b>Review the inherits field</b> — parent profile must exist in the correct location",
+         "fr": "<b>Examinez le champ inherits</b> — le profil parent doit exister à l'emplacement correct"
+        },
+        {
+         "en": "<b>Test before trusting</b> — verify with a calibration print before a long production run",
+         "fr": "<b>Testez avant de faire confiance</b> — vérifiez avec une impression d'étalonnage avant une longue production"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.3.11",
+     "narration": {
+      "en": "Chapter 3 recap. System presets are locked baselines — copy before editing. Custom filaments for the AMS need the Settings menu approach and firmware 1.6.6 or later. Nozzle diameter changes all available presets. Generic profiles often outperform manufacturer parameters.",
+      "fr": "Récapitulatif du chapitre 3. Les préréglages système sont des bases verrouillées — copier avant de modifier. Les filaments personnalisés pour l'AMS nécessitent le menu Paramètres et le firmware 1.6.6 ou ultérieur. Le diamètre de buse change tous les préréglages disponibles. Les profils génériques surpassent souvent les paramètres du fabricant."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 3 Recap",
+        "fr": "Récapitulatif du chapitre 3"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>System presets</b> are locked, printer-specific. Copy to user preset before editing.",
+         "fr": "<b>Les préréglages système</b> sont verrouillés et spécifiques à l'imprimante. Copier vers préréglage utilisateur avant de modifier."
+        },
+        {
+         "en": "<b>Custom AMS filaments</b> — Settings → Custom Filaments; requires firmware 1.6.6+",
+         "fr": "<b>Filaments AMS personnalisés</b> — Paramètres → Filaments personnalisés ; requiert firmware 1.6.6+"
+        },
+        {
+         "en": "<b>Nozzle diameter</b> affects all available presets; line width and speed limits scale accordingly",
+         "fr": "<b>Le diamètre de buse</b> affecte tous les préréglages disponibles ; la largeur de ligne et les limites de vitesse s'adaptent"
+        },
+        {
+         "en": "<b>Generic Bambu profiles</b> often outperform manufacturer presets — always test and calibrate",
+         "fr": "<b>Les profils Bambu génériques</b> surpassent souvent les préréglages fabricant — toujours tester et étalonner"
+        },
+        {
+         "en": "<b>Cloud sync</b> limited to Bambu printers; 20/100/200 preset limits apply",
+         "fr": "<b>La synchronisation cloud</b> limitée aux imprimantes Bambu ; limites de 20/100/200 préréglages s'appliquent"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 4,
+   "title": {
+    "en": "Calibration and Fine-Tuning",
+    "fr": "Étalonnage et réglage fin"
+   },
+   "scenes": [
+    {
+     "id": "6.4.0",
+     "narration": {
+      "en": "Chapter 4 is where good prints become great prints. Calibration is the systematic process of measuring your printer's actual behavior and adjusting profiles to match reality. Even a perfectly assembled printer with factory defaults will produce suboptimal results until calibrated.",
+      "fr": "Le chapitre 4, c'est là où les bonnes impressions deviennent excellentes. L'étalonnage est le processus systématique qui consiste à mesurer le comportement réel de votre imprimante et à ajuster les profils en conséquence. Même une imprimante parfaitement assemblée avec les paramètres d'usine produira des résultats sous-optimaux tant qu'elle n'est pas étalonnée."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 6 · Chapter 4",
+        "fr": "Module 6 · Chapitre 4"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Calibration and Fine-Tuning",
+        "fr": "Étalonnage et réglage fin"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Calibration is not optional — it is the systematic bridge between factory defaults and the results your specific filament and environment can actually achieve.",
+        "fr": "L'étalonnage n'est pas facultatif — c'est le pont systématique entre les paramètres d'usine et les résultats que votre filament et votre environnement spécifiques peuvent réellement atteindre."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.4.1",
+     "narration": {
+      "en": "Calibration parameters form a dependency chain. Temperature affects flow rate; flow rate affects pressure advance; pressure advance affects retraction; retraction quality determines stringing; and stringing plus flow rate determine surface quality. Changing one without re-verifying downstream is the most common cause of mystery print quality issues.",
+      "fr": "Les paramètres d'étalonnage forment une chaîne de dépendance. La température affecte le débit ; le débit affecte le pressure advance ; le pressure advance affecte la rétraction ; la qualité de la rétraction détermine le filage ; et le filage plus le débit déterminent la qualité de la surface. Modifier l'un sans re-vérifier l'aval est la cause la plus fréquente de problèmes mystérieux."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Calibration Dependency Chain",
+        "fr": "La chaîne d'interdépendance des étalonnages"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Calibration parameters form a dependency chain. Changing one parameter without re-verifying downstream parameters is the most common cause of mystery print quality issues.",
+        "fr": "Les paramètres d'étalonnage forment une chaîne de dépendance. Modifier un paramètre sans re-vérifier les paramètres en aval est la cause la plus fréquente de problèmes de qualité d'impression mystérieux."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.4.2",
+     "narration": {
+      "en": "Follow this calibration order exactly. Temperature first, because it affects flow viscosity. Flow rate second, because it must be accurate before pressure advance. Pressure advance third. Retraction fourth. Max volumetric speed last, setting the ceiling for all speeds.",
+      "fr": "Suivez cet ordre d'étalonnage exactement. La température en premier, car elle affecte la viscosité du débit. Le débit en deuxième, car il doit être précis avant le pressure advance. Le pressure advance en troisième. La rétraction en quatrième. La vitesse volumétrique maximale en dernier, définissant le plafond de toutes les vitesses."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Calibration Order",
+        "fr": "L'ordre d'étalonnage"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "1 · Temperature",
+          "fr": "1 · Température"
+         },
+         "sub": {
+          "en": "Viscosity baseline",
+          "fr": "Viscosité de base"
+         }
+        },
+        {
+         "name": {
+          "en": "2 · Flow Rate",
+          "fr": "2 · Débit"
+         },
+         "sub": {
+          "en": "Extrusion amount",
+          "fr": "Quantité d'extrusion"
+         }
+        },
+        {
+         "name": {
+          "en": "3 · Pressure Adv.",
+          "fr": "3 · Pressure Adv."
+         },
+         "sub": {
+          "en": "Corner quality",
+          "fr": "Qualité des angles"
+         }
+        },
+        {
+         "name": {
+          "en": "4 · Retraction",
+          "fr": "4 · Rétraction"
+         },
+         "sub": {
+          "en": "Stringing control",
+          "fr": "Contrôle du filage"
+         }
+        },
+        {
+         "name": {
+          "en": "5 · MVS",
+          "fr": "5 · MVS"
+         },
+         "sub": {
+          "en": "Speed ceiling",
+          "fr": "Plafond de vitesse"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.4.3",
+     "narration": {
+      "en": "A temperature tower is a calibration model divided into vertical sections, each printed at a different nozzle temperature — typically in 5-degree steps. It compresses a full temperature study into a single controlled print.",
+      "fr": "Une tour de température est un modèle d'étalonnage divisé en sections verticales, chacune imprimée à une température de buse différente — typiquement par pas de 5 degrés. Elle concentre une étude complète de température en une seule impression contrôlée."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Step 1: Temperature Tower",
+        "fr": "Étape 1 : tour de température"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Generate STL",
+          "fr": "Générer STL"
+         },
+         "sub": {
+          "en": "Bridges, overhangs, posts",
+          "fr": "Ponts, porte-à-faux, tiges"
+         }
+        },
+        {
+         "name": {
+          "en": "Set G-code",
+          "fr": "Régler G-code"
+         },
+         "sub": {
+          "en": "M104 Sxxx per section",
+          "fr": "M104 Sxxx par section"
+         }
+        },
+        {
+         "name": {
+          "en": "Dwell / purge",
+          "fr": "Pause / purge"
+         },
+         "sub": {
+          "en": "20–30 s or 3–5 mm",
+          "fr": "20–30 s ou 3–5 mm"
+         }
+        },
+        {
+         "name": {
+          "en": "Print & cool",
+          "fr": "Imprimer & refroidir"
+         },
+         "sub": {
+          "en": "Wait before handling",
+          "fr": "Attendre avant de manipuler"
+         }
+        },
+        {
+         "name": {
+          "en": "Evaluate",
+          "fr": "Évaluer"
+         },
+         "sub": {
+          "en": "Surface · strings · bridges",
+          "fr": "Surface · filage · ponts"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.4.4",
+     "narration": {
+      "en": "Evaluate each tower section across five criteria. Too cold gives matte rough surface, weak layers, bridge failures. Too hot gives glossy uneven surface, excessive stringing, droop. Optimal is smooth satin surface, minimal stringing, flat bridges, clean overhang edges.",
+      "fr": "Évaluez chaque section de la tour selon cinq critères. Trop froid donne une surface mate et rugueuse, des couches faibles, des échecs de ponts. Trop chaud donne une surface brillante et inégale, du filage excessif, un affaissement. L'optimal donne une surface lisse et satinée, un filage minimal, des ponts plats, des bords de porte-à-faux nets."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Reading the Temperature Tower",
+        "fr": "Lire la tour de température"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Criterion",
+         "fr": "Critère"
+        },
+        {
+         "en": "Too cold",
+         "fr": "Trop froid"
+        },
+        {
+         "en": "Optimal",
+         "fr": "Optimal"
+        },
+        {
+         "en": "Too hot",
+         "fr": "Trop chaud"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Surface",
+          "fr": "Surface"
+         },
+         {
+          "en": "Matte, rough",
+          "fr": "Mate, rugueuse"
+         },
+         {
+          "en": "Smooth, satin",
+          "fr": "Lisse, satinée"
+         },
+         {
+          "en": "Glossy, uneven",
+          "fr": "Brillante, inégale"
+         }
+        ],
+        [
+         {
+          "en": "Stringing",
+          "fr": "Filage"
+         },
+         {
+          "en": "Minimal",
+          "fr": "Minimal"
+         },
+         {
+          "en": "None",
+          "fr": "Nul"
+         },
+         {
+          "en": "Excessive",
+          "fr": "Excessif"
+         }
+        ],
+        [
+         {
+          "en": "Bridging",
+          "fr": "Ponts"
+         },
+         {
+          "en": "May fail",
+          "fr": "Peut échouer"
+         },
+         {
+          "en": "Flat, good",
+          "fr": "Plats, bons"
+         },
+         {
+          "en": "Sags from heat",
+          "fr": "Affaissement"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.4.5",
+     "narration": {
+      "en": "Perform a bend test on thin walls of the tower. Sections printed too cold produce brittle layers that split under light bending. Choose the lowest temperature that gives good results — this minimises stringing and maximises detail while ensuring adequate layer adhesion.",
+      "fr": "Effectuez un test de flexion sur les parois minces de la tour. Les sections imprimées trop froid produisent des couches fragiles qui se fendent sous une légère flexion. Choisissez la température la plus basse qui donne de bons résultats — cela minimise le filage et maximise les détails tout en assurant une adhérence adéquate."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Bend test: sections too cold split under light bending; sections too hot show drooping and stringing. Always dry your filament before temperature testing — moisture causes bubbling that mimics temperature problems.",
+        "fr": "Test de flexion : les sections trop froides se fendent sous une légère flexion ; les sections trop chaudes montrent des affaissements et du filage. Séchez toujours votre filament avant les tests de température — l'humidité cause des bulles qui imitent les problèmes de température."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.4.6",
+     "narration": {
+      "en": "Recommended temperature test ranges: PLA 185 to 220 degrees, optimal 200 to 210. PETG 230 to 250, optimal 240. ABS 230 to 260, optimal 245. TPU 210 to 230, optimal 220.",
+      "fr": "Plages de test de température recommandées : PLA 185 à 220 degrés, optimal 200 à 210. PETG 230 à 250, optimal 240. ABS 230 à 260, optimal 245. TPU 210 à 230, optimal 220."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Temperature Test Ranges",
+        "fr": "Plages de test de température"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Test range",
+         "fr": "Plage de test"
+        },
+        {
+         "en": "Typical optimal",
+         "fr": "Optimal typique"
+        }
+       ],
+       "rows": [
+        [
+         "PLA",
+         "185–220°C",
+         "200–210°C"
+        ],
+        [
+         "PETG",
+         "230–250°C",
+         "240°C"
+        ],
+        [
+         "ABS",
+         "230–260°C",
+         "245°C"
+        ],
+        [
+         "TPU",
+         "210–230°C",
+         "220°C"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.4.7",
+     "narration": {
+      "en": "If flow rate is wrong, every wall in every print is wrong by the same proportion. Flow rate — also called the extrusion multiplier — controls how much filament is extruded relative to the slicer's theoretical calculation.",
+      "fr": "Si le débit est mauvais, chaque paroi de chaque impression est incorrecte dans la même proportion. Le débit — aussi appelé multiplicateur d'extrusion — contrôle la quantité de filament extrudée par rapport au calcul théorique du logiciel de découpe."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Step 2: Flow Rate Calibration",
+        "fr": "Étape 2 : étalonnage du débit"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "If flow rate is wrong, every wall in every print is wrong by the same proportion. Dimensions are off, walls are weak or rough.",
+        "fr": "Si le débit est mauvais, chaque paroi de chaque impression est incorrecte dans la même proportion. Les dimensions sont fausses, les parois sont faibles ou rugueuses."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.4.8",
+     "narration": {
+      "en": "The single-wall method is the most precise. Print a 20 by 20 by 20 millimetre cube with single-wall, zero infill, zero top layers, and line width equal to nozzle diameter. Measure wall thickness with digital calipers at the center of each wall, take three to four measurements, and average them.",
+      "fr": "La méthode du cube à paroi unique est la plus précise. Imprimez un cube de 20 × 20 × 20 mm à paroi unique, 0 % de remplissage, 0 couche supérieure, avec une largeur de ligne égale au diamètre de la buse. Mesurez l'épaisseur de la paroi avec un pied à coulisse numérique au centre de chaque paroi, prenez 3 à 4 mesures et faites la moyenne."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Single-Wall Method",
+        "fr": "Méthode du cube à paroi unique"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Setup",
+          "fr": "Configuration"
+         },
+         "sub": {
+          "en": "1 wall · 0% infill · 0 top layers",
+          "fr": "1 paroi · 0 % remplissage · 0 couche sup."
+         }
+        },
+        {
+         "name": {
+          "en": "Print",
+          "fr": "Impression"
+         },
+         "sub": {
+          "en": "20×20×20 mm cube",
+          "fr": "Cube 20×20×20 mm"
+         }
+        },
+        {
+         "name": {
+          "en": "Measure",
+          "fr": "Mesure"
+         },
+         "sub": {
+          "en": "Calipers at wall center",
+          "fr": "Pied à coulisse au centre"
+         }
+        },
+        {
+         "name": {
+          "en": "Average",
+          "fr": "Moyenne"
+         },
+         "sub": {
+          "en": "3–4 readings per wall",
+          "fr": "3–4 mesures par paroi"
+         }
+        },
+        {
+         "name": {
+          "en": "Apply",
+          "fr": "Appliquer"
+         },
+         "sub": {
+          "en": "New = Old × (target/measured)",
+          "fr": "Nouveau = Ancien × (cible/mesuré)"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.4.9",
+     "narration": {
+      "en": "The formula is: new flow equals old flow times expected thickness divided by measured thickness. For example, if you targeted 0.4 mm and measured 0.36 mm, new flow equals 1.00 times 0.4 divided by 0.36, which equals 1.11 — increase flow by about 11 percent.",
+      "fr": "La formule est : nouveau débit = ancien débit × (épaisseur cible / épaisseur mesurée). Par exemple, si vous visez 0,4 mm et mesurez 0,36 mm, nouveau débit = 1,00 × 0,4 / 0,36 = 1,11 — augmentez le débit d'environ 11 %."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Flow Rate Formula",
+        "fr": "Formule du débit"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "New Flow = Old Flow × (target ÷ measured)",
+       "caption": {
+        "en": "Example: target 0.4 mm, measured 0.36 mm → 1.00 × (0.4/0.36) = 1.11 (increase by 11%)",
+        "fr": "Exemple : cible 0,4 mm, mesuré 0,36 mm → 1,00 × (0,4/0,36) = 1,11 (augmenter de 11 %)"
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.4.10",
+     "narration": {
+      "en": "OrcaSlicer offers a built-in two-pass visual approach. Pass 1 prints nine blocks — pick the smoothest top surface. Pass 2 prints ten blocks with modifiers from minus nine to zero — pick the best again. Then calculate new flow as old flow times 100 plus the modifier divided by 100.",
+      "fr": "OrcaSlicer propose une approche visuelle intégrée en deux passes. La passe 1 imprime neuf blocs — choisissez la surface supérieure la plus lisse. La passe 2 imprime dix blocs avec des modificateurs de -9 à 0 — choisissez à nouveau le meilleur. Calculez : nouveau débit = ancien débit × (100 + modificateur) / 100."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "OrcaSlicer Visual Method",
+        "fr": "Méthode visuelle OrcaSlicer"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Pass 1 (coarse)</b> — 9 blocks with flow modifiers; select the block with smoothest top surface",
+         "fr": "<b>Passe 1 (grossière)</b> — 9 blocs avec modificateurs de débit ; sélectionner le bloc avec la surface supérieure la plus lisse"
+        },
+        {
+         "en": "<b>Pass 2 (fine)</b> — 10 blocks with modifiers –9 to 0; select the best surface again",
+         "fr": "<b>Passe 2 (fine)</b> — 10 blocs avec modificateurs –9 à 0 ; sélectionner à nouveau la meilleure surface"
+        },
+        {
+         "en": "<b>Formula:</b> NewFlow = OldFlow × (100 + modifier) / 100",
+         "fr": "<b>Formule :</b> NouveauDébit = AncienDébit × (100 + modificateur) / 100"
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Bambu X1/X1C users: do NOT select the printer's built-in Flow Calibration when using OrcaSlicer's calibration. Running both simultaneously produces unreliable results.",
+        "fr": "Utilisateurs Bambu X1/X1C : ne sélectionnez PAS la « Calibration du débit » intégrée de l'imprimante lorsque vous utilisez l'étalonnage d'OrcaSlicer. Les exécuter simultanément produit des résultats peu fiables."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.4.11",
+     "narration": {
+      "en": "Pressure advance compensates for the lag in extrusion pressure when the print head changes speed. Without it, corners bulge due to excess pressure at deceleration and under-extrude at acceleration. Different firmwares call it different names.",
+      "fr": "Le pressure advance compense le retard de la pression d'extrusion lorsque la tête d'impression change de vitesse. Sans lui, les coins gonflent en raison d'une pression excessive lors de la décélération et sous-extrudent lors de l'accélération. Différents firmwares l'appellent différemment."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Step 3: Pressure Advance",
+        "fr": "Étape 3 : pressure advance"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Firmware",
+         "fr": "Firmware"
+        },
+        {
+         "en": "Name",
+         "fr": "Nom"
+        },
+        {
+         "en": "Typical range",
+         "fr": "Plage typique"
+        }
+       ],
+       "rows": [
+        [
+         "Marlin",
+         "Linear Advance (K)",
+         "0.0–2.0+ (direct < 0.2)"
+        ],
+        [
+         "Klipper",
+         "Pressure Advance",
+         "0.050–1.000 (direct 0.02–0.08)"
+        ],
+        [
+         "Bambu Lab",
+         "Flow Dynamics",
+         {
+          "en": "Auto-calibrated by printer",
+          "fr": "Auto-étalonné par l'imprimante"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.4.12",
+     "narration": {
+      "en": "OrcaSlicer's pattern method prints a prism with incrementing pressure advance values. You visually identify the section with the sharpest corners and fewest artifacts. This is more robust than the line method, which is sensitive to first-layer quality.",
+      "fr": "La méthode par motif d'OrcaSlicer imprime un prisme avec des valeurs de pressure advance croissantes. Vous identifiez visuellement la section avec les coins les plus nets et le moins d'artefacts. C'est plus robuste que la méthode en ligne, qui est sensible à la qualité de la première couche."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PA Calibration: Klipper Tower Method",
+        "fr": "Étalonnage PA : méthode tour Klipper"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>1.</b> Print a hollow square at high speed, 0% infill",
+         "fr": "<b>1.</b> Imprimer un carré creux à haute vitesse, 0 % de remplissage"
+        },
+        {
+         "en": "<b>2.</b> Set conservative limits: SQUARE_CORNER_VELOCITY=1, ACCEL=500",
+         "fr": "<b>2.</b> Définir des limites conservatrices : SQUARE_CORNER_VELOCITY=1, ACCEL=500"
+        },
+        {
+         "en": "<b>3.</b> Run tuning tower: direct drive FACTOR=.005, Bowden FACTOR=.020",
+         "fr": "<b>3.</b> Exécuter la tour de réglage : entraînement direct FACTOR=.005, Bowden FACTOR=.020"
+        },
+        {
+         "en": "<b>4.</b> Inspect corners; calculate: PA = start + (height × factor). Example: 0 + 12.90 × .020 = 0.258",
+         "fr": "<b>4.</b> Inspecter les coins ; calculer : PA = début + (hauteur × facteur). Exemple : 0 + 12,90 × .020 = 0,258"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.4.13",
+     "narration": {
+      "en": "Direct drive systems typically need pressure advance values between 0.020 and 0.080. Bowden systems need much more — 0.150 to 1.000 or higher. And remember: PA values need adjustment when changing print speed significantly.",
+      "fr": "Les systèmes à entraînement direct nécessitent généralement des valeurs de pressure advance entre 0,020 et 0,080. Les systèmes Bowden ont besoin de beaucoup plus — 0,150 à 1,000 ou plus. Et rappelez-vous : les valeurs de PA nécessitent un ajustement lors de changements significatifs de vitesse d'impression."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PA Values by Extruder Type",
+        "fr": "Valeurs PA selon le type d'extrudeur"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Direct Drive",
+         "fr": "Entraînement direct"
+        },
+        "note": {
+         "en": "Typical PA: 0.020 — 0.080",
+         "fr": "PA typique : 0,020 — 0,080"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Bowden",
+         "fr": "Bowden"
+        },
+        "note": {
+         "en": "Typical PA: 0.150 — 1.000+",
+         "fr": "PA typique : 0,150 — 1,000+"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.4.14",
+     "narration": {
+      "en": "Retraction pulls filament back before travel moves, creating negative pressure to prevent oozing and stringing. Proper retraction depends on your extruder type. Direct drive needs much shorter retraction distances than Bowden setups.",
+      "fr": "La rétraction tire le filament vers l'arrière avant les déplacements, créant une pression négative pour éviter le suintement et le filage. Une rétraction correcte dépend du type d'extrudeur. L'entraînement direct nécessite des distances de rétraction bien plus courtes que les configurations Bowden."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Step 4: Retraction Calibration",
+        "fr": "Étape 4 : étalonnage de la rétraction"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "retraction"
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Parameter",
+         "fr": "Paramètre"
+        },
+        {
+         "en": "Direct Drive",
+         "fr": "Entraînement direct"
+        },
+        {
+         "en": "Bowden",
+         "fr": "Bowden"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Distance",
+          "fr": "Distance"
+         },
+         "0.5–2.0 mm",
+         "4–6 mm"
+        ],
+        [
+         {
+          "en": "Speed",
+          "fr": "Vitesse"
+         },
+         "25–45 mm/s",
+         "40–45 mm/s"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.4.15",
+     "narration": {
+      "en": "Use the retraction test in OrcaSlicer or a retraction tower STL. For direct drive, start at 0.5 mm and increment by 0.25 mm. For Bowden, start at 1.0 mm and increment by 0.5 mm. Look for the shortest retraction distance that produces minimal stringing without causing clogs or under-extrusion.",
+      "fr": "Utilisez le test de rétraction d'OrcaSlicer ou un fichier STL de tour de rétraction. Pour l'entraînement direct, commencez à 0,5 mm et incrémentez de 0,25 mm. Pour Bowden, commencez à 1,0 mm et incrémentez de 0,5 mm. Recherchez la distance de rétraction la plus courte qui produit un filage minimal sans provoquer de bouchons ou de sous-extrusion."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Retraction Calibration Tips",
+        "fr": "Conseils pour l'étalonnage de la rétraction"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Higher temperatures</b> increase oozing — may need more aggressive retraction",
+         "fr": "<b>Des températures plus élevées</b> augmentent le suintement — peut nécessiter une rétraction plus agressive"
+        },
+        {
+         "en": "<b>Faster travel speed</b> (120–250 mm/s) reduces stringing — less time to ooze during moves",
+         "fr": "<b>Une vitesse de déplacement plus rapide</b> (120–250 mm/s) réduit le filage — moins de temps pour suinter"
+        },
+        {
+         "en": "<b>Z-hop</b> lifts nozzle 0.2–0.5 mm during travel — avoids dragging but can worsen oozing",
+         "fr": "<b>Le Z-hop</b> soulève la buse de 0,2–0,5 mm pendant les déplacements — évite les traînées mais peut aggraver le suintement"
+        },
+        {
+         "en": "<b>Wet filament causes stringing regardless of retraction</b> — dry your filament first",
+         "fr": "<b>Le filament humide cause du filage quels que soient les paramètres</b> — séchez d'abord votre filament"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.4.16",
+     "narration": {
+      "en": "Max volumetric speed is the most important concept in speed calibration — and the one most beginners overlook. It is the rate at which your hotend can reliably melt and extrude filament, measured in cubic millimetres per second. No matter how fast the motion system moves, the hotend can only melt so much plastic per second.",
+      "fr": "La vitesse volumétrique maximale est le concept le plus important dans l'étalonnage de vitesse — et celui que les débutants ignorent le plus souvent. C'est le débit auquel votre tête d'impression peut fondre et extruder le filament de manière fiable, mesurée en mm³/s. Quelle que soit la rapidité du système de déplacement, la tête d'impression ne peut fondre qu'une certaine quantité de plastique par seconde."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Step 5: Max Volumetric Speed",
+        "fr": "Étape 5 : vitesse volumétrique maximale"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "MVS is the fundamental speed limit of any 3D printer — more important than the headline speed on the box.",
+        "fr": "La MVS est la limite de vitesse fondamentale de toute imprimante 3D — plus importante que la vitesse annoncée sur la boîte."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.4.17",
+     "narration": {
+      "en": "This is what creates the speed illusion. At 0.2 mm layer height and 0.45 mm line width, 300 millimetres per second already demands 27 cubic millimetres per second of melt capacity — beyond what even many high-flow hotends can sustain continuously.",
+      "fr": "C'est ce qui crée l'illusion de vitesse. À une hauteur de couche de 0,2 mm et une largeur de ligne de 0,45 mm, 300 mm/s exige déjà 27 mm³/s de capacité de fusion — au-delà de ce que même de nombreuses têtes à haut débit peuvent soutenir en continu."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Speed Illusion",
+        "fr": "L'illusion de vitesse"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "At 0.2 mm layer height × 0.45 mm line width, 300 mm/s demands 27 mm³/s. Manufacturers advertise 500–1000 mm/s, achievable only under very specific, narrow conditions.",
+        "fr": "À 0,2 mm de hauteur de couche × 0,45 mm de largeur de ligne, 300 mm/s exige 27 mm³/s. Les fabricants annoncent 500–1000 mm/s, atteignable uniquement dans des conditions très spécifiques et étroites."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.4.18",
+     "narration": {
+      "en": "The MVS formula is: print speed equals MVS divided by layer height times line width. At 0.2 mm layer height, 0.4 mm line width, and 10 cubic millimetres per second, speed equals 10 divided by 0.08, which is 125 millimetres per second. Thicker layers mean slower maximum speed for the same hotend.",
+      "fr": "La formule MVS est : vitesse d'impression = MVS / (hauteur de couche × largeur de ligne). À 0,2 mm de hauteur, 0,4 mm de largeur et 10 mm³/s, vitesse = 10 / 0,08 = 125 mm/s. Des couches plus épaisses signifient une vitesse maximale plus lente pour la même tête d'impression."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The MVS Formula",
+        "fr": "La formule MVS"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "Speed = MVS ÷ (H × W)",
+       "caption": {
+        "en": "At MVS=10, H=0.2 mm, W=0.4 mm → 125 mm/s max. At H=0.3 mm same MVS → 83 mm/s max.",
+        "fr": "À MVS=10, H=0,2 mm, L=0,4 mm → 125 mm/s max. À H=0,3 mm même MVS → 83 mm/s max."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.4.19",
+     "narration": {
+      "en": "Typical MVS limits: a standard V6-style hotend reaches about 11.5 to 15 cubic millimetres per second for PLA, dropping to around 8 for PETG. The E3D Volcano extends this to around 25. The Bambu Lab X1C stock hotend reaches about 20 to 22 in community testing.",
+      "fr": "Limites MVS typiques : une tête V6 standard atteint environ 11,5 à 15 mm³/s pour le PLA, tombant à environ 8 pour le PETG. L'E3D Volcano étend cela à environ 25. La tête standard du Bambu Lab X1C atteint environ 20 à 22 selon les tests communautaires."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "MVS Limits by Hotend",
+        "fr": "Limites MVS par tête d'impression"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Hotend",
+         "fr": "Tête d'impression"
+        },
+        {
+         "en": "Max MVS",
+         "fr": "MVS max"
+        },
+        {
+         "en": "Notes",
+         "fr": "Remarques"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "V6-style (PLA)",
+          "fr": "Type V6 (PLA)"
+         },
+         "~11.5–15 mm³/s",
+         {
+          "en": "Drops to ~8 for PETG",
+          "fr": "Descend à ~8 pour le PETG"
+         }
+        ],
+        [
+         "E3D Volcano",
+         "~25 mm³/s",
+         {
+          "en": "Larger melt zone",
+          "fr": "Zone de fusion plus grande"
+         }
+        ],
+        [
+         "Bambu X1C stock",
+         "~20–22 mm³/s",
+         {
+          "en": "Community-tested for PLA",
+          "fr": "Testé par la communauté pour PLA"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.4.20",
+     "narration": {
+      "en": "To calibrate MVS using OrcaSlicer: use defaults of 5 start, 20 end, 0.5 step. Print the test model and observe where layers begin to show under-extrusion. Measure the height at the failure point and calculate MVS as start plus height times step. Reduce by 5 to 10 percent for a safety margin.",
+      "fr": "Pour étalonner la MVS avec OrcaSlicer : utilisez les valeurs par défaut de 5 en départ, 20 en fin, 0,5 en pas. Imprimez le modèle de test et observez où les couches commencent à montrer une sous-extrusion. Mesurez la hauteur au point de défaillance et calculez MVS = départ + (hauteur × pas). Réduisez de 5 à 10 % pour une marge de sécurité."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "How to Calibrate MVS",
+        "fr": "Comment étalonner la MVS"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Set defaults",
+          "fr": "Valeurs par défaut"
+         },
+         "sub": {
+          "en": "5 start · 20 end · 0.5 step",
+          "fr": "5 départ · 20 fin · 0,5 pas"
+         }
+        },
+        {
+         "name": {
+          "en": "Print test",
+          "fr": "Imprimer"
+         },
+         "sub": {
+          "en": "Observe under-extrusion",
+          "fr": "Observer la sous-extrusion"
+         }
+        },
+        {
+         "name": {
+          "en": "Measure height",
+          "fr": "Mesurer hauteur"
+         },
+         "sub": {
+          "en": "At failure point (calipers)",
+          "fr": "Au point de défaillance (pied à coulisse)"
+         }
+        },
+        {
+         "name": {
+          "en": "Calculate",
+          "fr": "Calculer"
+         },
+         "sub": {
+          "en": "MVS = start + (height × step)",
+          "fr": "MVS = départ + (hauteur × pas)"
+         }
+        },
+        {
+         "name": {
+          "en": "Apply margin",
+          "fr": "Appliquer marge"
+         },
+         "sub": {
+          "en": "Reduce 5–10% for safety",
+          "fr": "Réduire de 5–10 % par sécurité"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.4.21",
+     "narration": {
+      "en": "Calibration is not set and forget. Recalibrate when you introduce a new filament — even different colors of the same brand can need different temperatures and flow rates. Also recalibrate after hardware changes, when print quality degrades unexpectedly, or when speed targets change significantly.",
+      "fr": "L'étalonnage n'est pas « réglé et oublié ». Recalibrez lors de l'introduction d'un nouveau filament — même différentes couleurs de la même marque peuvent nécessiter des températures et débits différents. Recalibrez aussi après des modifications matérielles, lorsque la qualité se dégrade inexplicablement, ou lorsque les objectifs de vitesse changent significativement."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "When to Recalibrate",
+        "fr": "Quand recalibrer"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>New filament</b> — even different colors of the same brand may need different settings",
+         "fr": "<b>Nouveau filament</b> — même différentes couleurs de la même marque peuvent nécessiter des paramètres différents"
+        },
+        {
+         "en": "<b>Hardware changes</b> — new hotend, extruder, Bowden tube, or nozzle",
+         "fr": "<b>Modifications matérielles</b> — nouvelle tête d'impression, extrudeur, tube Bowden ou buse"
+        },
+        {
+         "en": "<b>Unexplained quality degradation</b> — often indicates a parameter has drifted",
+         "fr": "<b>Dégradation inexpliquée de la qualité</b> — indique souvent qu'un paramètre a dérivé"
+        },
+        {
+         "en": "<b>Significant speed change</b> — PA values especially need adjustment at different speeds",
+         "fr": "<b>Changement significatif de vitesse</b> — les valeurs de PA nécessitent notamment un ajustement à différentes vitesses"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6.4.22",
+     "narration": {
+      "en": "Keep a calibration log — a simple spreadsheet with dates, filament brands, and your calibrated values. When you return to a filament after months, you will have your proven settings ready instead of starting from scratch.",
+      "fr": "Tenez un journal d'étalonnage — une simple feuille de calcul avec les dates, les marques de filament et vos valeurs étalonnées. Lorsque vous revenez à un filament après des mois, vous aurez vos paramètres éprouvés à disposition au lieu de recommencer de zéro."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Keep a calibration log: date, filament brand and color, calibrated temperature, flow rate, PA value, and MVS. When you return to a filament after months, your proven settings are ready.",
+        "fr": "Tenez un journal d'étalonnage : date, marque et couleur du filament, température étalonnée, débit, valeur PA et MVS. Lorsque vous revenez à un filament après des mois, vos paramètres éprouvés sont prêts."
+       }
+      }
+     ]
+    },
+    {
+     "id": "6.4.23",
+     "narration": {
+      "en": "Chapter 4 recap. Calibration order is critical: temperature, then flow rate, then pressure advance, then retraction, then max volumetric speed. Each step depends on the previous being correct. MVS is the true speed limit — not the marketing number on the box.",
+      "fr": "Récapitulatif du chapitre 4. L'ordre d'étalonnage est critique : température, puis débit, puis pressure advance, puis rétraction, puis vitesse volumétrique maximale. Chaque étape dépend de la précision de la précédente. La MVS est la vraie limite de vitesse — pas le chiffre marketing sur la boîte."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 4 Recap",
+        "fr": "Récapitulatif du chapitre 4"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Order is critical:</b> Temperature → Flow Rate → Pressure Advance → Retraction → MVS",
+         "fr": "<b>L'ordre est critique :</b> Température → Débit → Pressure Advance → Rétraction → MVS"
+        },
+        {
+         "en": "<b>Temperature tower:</b> choose the lowest temp giving good bridges, overhangs, and surface finish",
+         "fr": "<b>Tour de température :</b> choisir la température la plus basse donnant de bons ponts, porte-à-faux et finition de surface"
+        },
+        {
+         "en": "<b>Flow rate:</b> single-wall cube (precise) or OrcaSlicer two-pass visual (convenient)",
+         "fr": "<b>Débit :</b> cube à paroi unique (précis) ou méthode visuelle OrcaSlicer en deux passes (pratique)"
+        },
+        {
+         "en": "<b>PA:</b> direct drive 0.02–0.08; Bowden 0.15–1.0+; calibrate only after flow rate is correct",
+         "fr": "<b>PA :</b> entraînement direct 0,02–0,08 ; Bowden 0,15–1,0+ ; étalonner seulement après que le débit est correct"
+        },
+        {
+         "en": "<b>Retraction:</b> direct drive 0.5–2.0 mm / 25–45 mm/s; Bowden 4–6 mm / 40–45 mm/s",
+         "fr": "<b>Rétraction :</b> entraînement direct 0,5–2,0 mm / 25–45 mm/s ; Bowden 4–6 mm / 40–45 mm/s"
+        },
+        {
+         "en": "<b>MVS:</b> V6 ~11.5–15 mm³/s (PLA); X1C ~20–22 mm³/s — recalibrate with every new filament or hardware change",
+         "fr": "<b>MVS :</b> V6 ~11,5–15 mm³/s (PLA) ; X1C ~20–22 mm³/s — recalibrer à chaque nouveau filament ou modification matérielle"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,299 @@
+{
+  "chapter": 3,
+  "title": { "en": "OrcaSlicer and the Broader Ecosystem", "fr": "OrcaSlicer et l'écosystème élargi" },
+  "scenes": [
+    {
+      "id": "5.3.0",
+      "narration": {
+        "en": "Chapter 3. Bambu Studio is powerful, but it lives inside a rich slicer ecosystem with a fascinating evolutionary history. Understanding the family tree lets you choose the right tool and carry your knowledge across platforms.",
+        "fr": "Chapitre 3. Bambu Studio est puissant, mais il s'inscrit dans un riche écosystème de trancheurs avec une fascinante histoire évolutive. Comprendre l'arbre généalogique vous permet de choisir le bon outil et de transférer vos connaissances entre plateformes."
+      },
+      "elements": [
+        { "type": "kicker", "text": { "en": "Module 5 · Chapter 3", "fr": "Module 5 · Chapitre 3" } },
+        { "type": "title", "text": { "en": "OrcaSlicer and the Broader Ecosystem", "fr": "OrcaSlicer et l'écosystème élargi" } },
+        { "type": "lead", "text": { "en": "One common ancestor. Four major slicers. Nearly identical concepts. Learn one, and the others are just a short step away.", "fr": "Un ancêtre commun. Quatre trancheurs majeurs. Des concepts presque identiques. Apprenez-en un, et les autres ne sont qu'à un pas." } }
+      ]
+    },
+    {
+      "id": "5.3.1",
+      "narration": {
+        "en": "All major FDM slicers trace back to a single open-source project: Slic3r, created in September 2011. From it grew PrusaSlicer, then Bambu Studio, then OrcaSlicer — all sharing the same core concepts and settings vocabulary.",
+        "fr": "Tous les grands trancheurs FDM remontent à un seul projet open source : Slic3r, créé en septembre 2011. De lui sont nés PrusaSlicer, puis Bambu Studio, puis OrcaSlicer — tous partageant les mêmes concepts fondamentaux et le même vocabulaire de paramètres."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "The Slicer Family Tree", "fr": "L'arbre généalogique des trancheurs" } },
+        { "type": "timeline", "nodes": [
+          { "label": "Sept. 2011", "text": { "en": "Slic3r — Alessandro Ranellucci and the RepRap community", "fr": "Slic3r — Alessandro Ranellucci et la communauté RepRap" } },
+          { "label": "Nov. 2016", "text": { "en": "Slic3r Prusa Edition → renamed PrusaSlicer in May 2019", "fr": "Slic3r Prusa Edition → renommé PrusaSlicer en mai 2019" } },
+          { "label": "2022", "text": { "en": "Bambu Studio — Bambu Lab fork of PrusaSlicer", "fr": "Bambu Studio — fork de PrusaSlicer par Bambu Lab" } },
+          { "label": "July 2022", "text": { "en": "OrcaSlicer — SoftFever fork of Bambu Studio", "fr": "OrcaSlicer — fork de Bambu Studio par SoftFever" } }
+        ] }
+      ]
+    },
+    {
+      "id": "5.3.2",
+      "narration": {
+        "en": "This convergence is good news for learners: the PrusaSlicer paradigm has won broad adoption, and Cura is the only major slicer with an entirely independent codebase. Knowledge transfers almost directly between the family members.",
+        "fr": "Cette convergence est une bonne nouvelle pour les apprenants : le paradigme PrusaSlicer a remporté une large adoption, et Cura est le seul grand trancheur avec une base de code entièrement indépendante. Les connaissances se transfèrent presque directement entre les membres de la famille."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Two Distinct Lineages", "fr": "Deux lignées distinctes" } },
+        { "type": "compare",
+          "left":  { "title": { "en": "PrusaSlicer family", "fr": "Famille PrusaSlicer" }, "note": { "en": "Slic3r → PrusaSlicer → Bambu Studio → OrcaSlicer + SuperSlicer. Shared concepts, near-identical settings, easy profile migration.", "fr": "Slic3r → PrusaSlicer → Bambu Studio → OrcaSlicer + SuperSlicer. Concepts partagés, paramètres quasi identiques, migration de profils facile." } },
+          "right": { "title": { "en": "UltiMaker Cura", "fr": "UltiMaker Cura" }, "note": { "en": "Independent C++ engine (CuraEngine) + Python/QML front-end. No profile compatibility with the PrusaSlicer family.", "fr": "Moteur C++ indépendant (CuraEngine) + interface Python/QML. Aucune compatibilité de profils avec la famille PrusaSlicer." } }
+        }
+      ]
+    },
+    {
+      "id": "5.3.3",
+      "narration": {
+        "en": "OrcaSlicer was first released in July 2022 by community developer SoftFever as a fork of Bambu Studio. It has since grown into one of the most widely used slicers in the maker community, addressing three specific gaps left by Bambu Studio.",
+        "fr": "OrcaSlicer a été publié pour la première fois en juillet 2022 par le développeur communautaire SoftFever comme un fork de Bambu Studio. Il est depuis devenu l'un des trancheurs les plus utilisés dans la communauté maker, comblant trois lacunes spécifiques laissées par Bambu Studio."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Why OrcaSlicer Exists", "fr": "Pourquoi OrcaSlicer existe" } },
+        { "type": "cards", "items": [
+          { "title": { "en": "No cloud dependency", "fr": "Pas de dépendance au cloud" }, "desc": { "en": "No Bambu account required — fully local, privacy-friendly workflow", "fr": "Aucun compte Bambu requis — flux de travail entièrement local, respectueux de la vie privée" }, "highlight": true },
+          { "title": { "en": "Broader printer support", "fr": "Support d'imprimantes étendu" }, "desc": { "en": "Optimized profiles for Voron, Creality, and dozens of other brands beyond Bambu Lab", "fr": "Profils optimisés pour Voron, Creality, et des dizaines d'autres marques au-delà de Bambu Lab" } },
+          { "title": { "en": "Best-in-class calibration", "fr": "Calibration de premier ordre" }, "desc": { "en": "Comprehensive built-in calibration suite unmatched by any free slicer", "fr": "Suite de calibration intégrée complète sans équivalent parmi les trancheurs gratuits" }, "highlight": true }
+        ] }
+      ]
+    },
+    {
+      "id": "5.3.4",
+      "narration": {
+        "en": "OrcaSlicer inherits Bambu Studio's three-panel layout but adds greater feature density. A dedicated Calibration tab in the menu is the standout feature, and a Simple to Advanced to Expert mode selector makes it accessible for all skill levels.",
+        "fr": "OrcaSlicer hérite de la disposition en trois panneaux de Bambu Studio mais ajoute une plus grande densité de fonctionnalités. Un onglet de calibration dédié dans le menu est la fonctionnalité phare, et un sélecteur de mode Simple, Avancé, Expert le rend accessible à tous les niveaux."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "OrcaSlicer Interface", "fr": "Interface d'OrcaSlicer" } },
+        { "type": "stages", "items": [
+          { "label": { "en": "Simple", "fr": "Simple" }, "sub": { "en": "Essential settings only — beginner-friendly", "fr": "Paramètres essentiels uniquement — accessible aux débutants" } },
+          { "label": { "en": "Advanced", "fr": "Avancé" }, "sub": { "en": "Extended options — experienced users", "fr": "Options étendues — utilisateurs expérimentés" } },
+          { "label": { "en": "Expert", "fr": "Expert" }, "sub": { "en": "Every parameter exposed — power users", "fr": "Chaque paramètre accessible — utilisateurs avancés" } }
+        ] },
+        { "type": "callout", "variant": "tip", "text": { "en": "The dedicated Calibration tab is OrcaSlicer's headline feature — no other free slicer comes close.", "fr": "L'onglet Calibration dédié est la fonctionnalité phare d'OrcaSlicer — aucun autre trancheur gratuit n'en approche." } }
+      ]
+    },
+    {
+      "id": "5.3.5",
+      "narration": {
+        "en": "OrcaSlicer's calibration menu includes built-in test prints and automated analysis for seven different parameters, covering everything from temperature optimisation to eliminating vibration artifacts.",
+        "fr": "Le menu de calibration d'OrcaSlicer inclut des impressions de test intégrées et une analyse automatisée pour sept paramètres différents, couvrant tout, de l'optimisation de la température à l'élimination des artefacts de vibration."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "The Calibration Test Suite", "fr": "La suite de tests de calibration" } },
+        { "type": "table",
+          "headers": [
+            { "en": "Test", "fr": "Test" },
+            { "en": "Purpose", "fr": "Objectif" },
+            { "en": "What to look for", "fr": "Ce qu'il faut observer" }
+          ],
+          "rows": [
+            [{ "en": "Temperature Tower", "fr": "Temperature Tower" }, { "en": "Optimise melting and bonding", "fr": "Optimiser la fusion et la liaison" }, { "en": "Least stringing, best adhesion", "fr": "Moins de fils, meilleure adhérence" }],
+            [{ "en": "Flow Rate", "fr": "Flow Rate" }, { "en": "Ensure correct extrusion", "fr": "Assurer une extrusion correcte" }, { "en": "Smoothest top surface", "fr": "Surface supérieure la plus lisse" }],
+            [{ "en": "Pressure Advance", "fr": "Pressure Advance" }, { "en": "Reduce pressure artifacts", "fr": "Réduire les artefacts de pression" }, { "en": "Sharpest corners", "fr": "Coins les plus nets" }],
+            [{ "en": "Retraction", "fr": "Retraction" }, { "en": "Minimise stringing", "fr": "Minimiser les fils" }, { "en": "Shortest distance, clean result", "fr": "Distance minimale, résultat propre" }]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5.3.6",
+      "narration": {
+        "en": "Three more calibration tests round out the suite. Tolerance testing checks dimensional accuracy for parts that must fit together. Max Volumetric Speed finds your printer's speed ceiling before it under-extrudes. Input Shaping reduces ringing artifacts on vertical surfaces.",
+        "fr": "Trois tests de calibration supplémentaires complètent la suite. Le test de tolérance vérifie la précision dimensionnelle pour les pièces qui doivent s'assembler. Max Volumetric Speed trouve le plafond de vitesse avant la sous-extrusion. L'Input Shaping réduit les artefacts de résonance sur les surfaces verticales."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "More Calibration Tests", "fr": "Tests de calibration supplémentaires" } },
+        { "type": "cards", "items": [
+          { "title": { "en": "Tolerance", "fr": "Tolerance" }, "desc": { "en": "Prints pegs and holes at known dimensions — find optimal fit between mating parts", "fr": "Imprime des tenons et des trous aux dimensions connues — trouver l'ajustement optimal entre pièces complémentaires" } },
+          { "title": { "en": "Max Volumetric Speed", "fr": "Max Volumetric Speed" }, "desc": { "en": "Find the highest speed before under-extrusion begins", "fr": "Trouver la vitesse maximale avant que la sous-extrusion ne commence" } },
+          { "title": { "en": "Input Shaping / VFA", "fr": "Input Shaping / VFA" }, "desc": { "en": "Reduce vibration artifacts — look for cleanest vertical surfaces", "fr": "Réduire les artefacts de vibration — rechercher les surfaces verticales les plus nettes" } }
+        ] }
+      ]
+    },
+    {
+      "id": "5.3.7",
+      "narration": {
+        "en": "The calibration order matters critically. Each test builds on the one before it. Flow rate must be correct before pressure advance can be calibrated accurately, because incorrect flow will cause PA to compensate inaccurately.",
+        "fr": "L'ordre de calibration est crucial. Chaque test s'appuie sur le précédent. Le débit doit être correct avant que le pressure advance puisse être calibré avec précision, car un débit incorrect fera compenser le PA de manière inexacte."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Calibration Order Is Critical", "fr": "L'ordre de calibration est crucial" } },
+        { "type": "pipeline", "steps": [
+          { "name": { "en": "Temperature", "fr": "Température" }, "sub": { "en": "PLA ~205 °C, PETG ~240 °C, ABS ~245 °C", "fr": "PLA ~205 °C, PETG ~240 °C, ABS ~245 °C" } },
+          { "name": { "en": "Flow Rate", "fr": "Débit" }, "sub": { "en": "Two-pass visual test", "fr": "Test visuel en deux passes" } },
+          { "name": { "en": "Pressure Advance", "fr": "Pressure Advance" }, "sub": { "en": "Line, pattern, or tower method", "fr": "Méthode ligne, motif ou tour" } },
+          { "name": { "en": "Retraction", "fr": "Rétraction" }, "sub": { "en": "Direct 1–2 mm · Bowden 4–6 mm", "fr": "Direct 1–2 mm · Bowden 4–6 mm" } },
+          { "name": { "en": "Tolerance + MVS", "fr": "Tolerance + MVS" }, "sub": { "en": "Dimensional accuracy and speed ceiling", "fr": "Précision dimensionnelle et plafond de vitesse" } }
+        ] },
+        { "type": "callout", "variant": "warning", "text": { "en": "Always dry filament before calibrating temperature — moisture causes bubbling and stringing that mimic temperature problems.", "fr": "Séchez toujours le filament avant de calibrer la température — l'humidité provoque des bulles et des fils qui imitent des problèmes de température." } }
+      ]
+    },
+    {
+      "id": "5.3.8",
+      "narration": {
+        "en": "Who is OrcaSlicer for? It excels for Klipper firmware users, for households with multiple printer brands, for privacy-conscious users, and for anyone who wants best-in-class calibration tools. The main caveat: it can feel overwhelming to absolute beginners due to its feature density.",
+        "fr": "À qui s'adresse OrcaSlicer ? Il excelle pour les utilisateurs du firmware Klipper, pour les ménages avec plusieurs marques d'imprimantes, pour les utilisateurs soucieux de la confidentialité, et pour quiconque veut des outils de calibration de premier ordre. La principale réserve : il peut paraître écrasant pour les débutants absolus en raison de sa densité de fonctionnalités."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "OrcaSlicer: Ideal Users and Limits", "fr": "OrcaSlicer : utilisateurs idéaux et limites" } },
+        { "type": "bullets", "items": [
+          { "en": "<b>Klipper users</b> — direct control and webcam monitoring from the slicer", "fr": "<b>Utilisateurs Klipper</b> — contrôle direct et surveillance par webcam depuis le trancheur" },
+          { "en": "<b>Multi-printer households</b> — best support for mixed printer fleets", "fr": "<b>Ménages multi-imprimantes</b> — meilleur support pour les flottes d'imprimantes mixtes" },
+          { "en": "<b>Privacy-conscious users</b> — no account, no cloud dependency", "fr": "<b>Utilisateurs soucieux de la confidentialité</b> — aucun compte, aucune dépendance au cloud" },
+          { "en": "<b>Limits</b> — community-driven updates, no first-party manufacturer support, can overwhelm beginners", "fr": "<b>Limites</b> — mises à jour communautaires, pas de support fabricant en première partie, peut submerger les débutants" }
+        ] }
+      ]
+    },
+    {
+      "id": "5.3.9",
+      "narration": {
+        "en": "PrusaSlicer is the stable, mature foundation that both Bambu Studio and OrcaSlicer are built on. Originally forked from Slic3r in November 2016 as Slic3r Prusa Edition, and rebranded in May 2019, it has the longest continuous development track record in the family.",
+        "fr": "PrusaSlicer est la base stable et mature sur laquelle sont construits à la fois Bambu Studio et OrcaSlicer. Initialement forké depuis Slic3r en novembre 2016 sous le nom Slic3r Prusa Edition, et rebaptisé en mai 2019, il a le plus long historique de développement continu dans la famille."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "PrusaSlicer: The Original Open-Source Standard", "fr": "PrusaSlicer : le standard open source original" } },
+        { "type": "cards", "items": [
+          { "title": { "en": "Variable layer height", "fr": "Hauteur de couche variable" }, "desc": { "en": "Best-in-class graphical curve editor — draw the height profile directly on the model", "fr": "Éditeur de courbe graphique de premier ordre — dessinez le profil de hauteur directement sur le modèle" }, "highlight": true },
+          { "title": { "en": "SLA/MSLA support", "fr": "Support SLA/MSLA" }, "desc": { "en": "The only slicer in this family with comprehensive resin printing support", "fr": "Le seul trancheur de cette famille avec une prise en charge complète de l'impression résine" }, "highlight": true },
+          { "title": { "en": "STEP file import", "fr": "Import de fichiers STEP" }, "desc": { "en": "Since version 2.5 (September 2022) — bypasses mesh conversion for cleaner geometry", "fr": "Depuis la version 2.5 (septembre 2022) — contourne la conversion en maillage pour une géométrie plus nette" } },
+          { "title": { "en": "Fully open-source", "fr": "Entièrement open source" }, "desc": { "en": "AGPL license, most transparent development process in the family", "fr": "Licence AGPL, processus de développement le plus transparent de la famille" } }
+        ] }
+      ]
+    },
+    {
+      "id": "5.3.10",
+      "narration": {
+        "en": "PrusaSlicer has a few notable limitations compared to its offspring. There are no built-in calibration prints — you must download calibration STL files separately. Third-party printer profiles are less comprehensive than OrcaSlicer's. And the interface is older and less visually polished.",
+        "fr": "PrusaSlicer a quelques limitations notables par rapport à ses descendants. Il n'y a pas d'impressions de calibration intégrées — vous devez télécharger des fichiers STL de calibration séparément. Les profils d'imprimantes tierces sont moins complets que ceux d'OrcaSlicer. Et l'interface est plus ancienne et visuellement moins soignée."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "PrusaSlicer: Ideal Users", "fr": "PrusaSlicer : utilisateurs idéaux" } },
+        { "type": "bullets", "items": [
+          { "en": "<b>Prusa printer owners</b> — native optimisation for MK4, MK3.5, Mini+, XL", "fr": "<b>Propriétaires d'imprimantes Prusa</b> — optimisation native pour MK4, MK3.5, Mini+, XL" },
+          { "en": "<b>Resin printers too</b> — unique SLA/MSLA support in this family", "fr": "<b>Aussi impression résine</b> — prise en charge SLA/MSLA unique dans cette famille" },
+          { "en": "<b>Variable layer height enthusiasts</b> — the graphical editor is the best in class", "fr": "<b>Amateurs de hauteur de couche variable</b> — l'éditeur graphique est le meilleur de sa catégorie" },
+          { "en": "<b>Stability-focused users</b> — the most mature, battle-tested codebase in the family", "fr": "<b>Utilisateurs orientés stabilité</b> — la base de code la plus mature et éprouvée de la famille" }
+        ] }
+      ]
+    },
+    {
+      "id": "5.3.11",
+      "narration": {
+        "en": "UltiMaker Cura is the independent giant of the slicer world. Its front-end runs in Python and QML, while slicing computation happens inside CuraEngine, a separate C++ application. Its independence from the PrusaSlicer family is both its strength and its main drawback.",
+        "fr": "UltiMaker Cura est le géant indépendant du monde des trancheurs. Son interface s'exécute en Python et QML, tandis que le calcul de tranchage se fait dans CuraEngine, une application C++ séparée. Son indépendance par rapport à la famille PrusaSlicer est à la fois sa force et son principal inconvénient."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "UltiMaker Cura: The Independent Giant", "fr": "UltiMaker Cura : le géant indépendant" } },
+        { "type": "compare",
+          "left":  { "title": { "en": "Cura strengths", "fr": "Points forts de Cura" }, "note": { "en": "Broad printer support from many manufacturers; extensive plugin marketplace (OctoPrint, adaptive layers, post-processing scripts); largest community knowledge base", "fr": "Large support d'imprimantes de nombreux fabricants ; vaste marketplace de plugins (OctoPrint, couches adaptatives, scripts de post-traitement) ; plus grande base de connaissances communautaires" } },
+          "right": { "title": { "en": "Cura limitations", "fr": "Limitations de Cura" }, "note": { "en": "Slower feature development in 2024–2026 vs. PrusaSlicer family; no profile compatibility with PrusaSlicer family; some features in paid Cura Enterprise tier", "fr": "Développement de fonctionnalités plus lent en 2024–2026 par rapport à la famille PrusaSlicer ; aucune compatibilité de profils avec la famille PrusaSlicer ; certaines fonctionnalités dans le niveau payant Cura Enterprise" } }
+        }
+      ]
+    },
+    {
+      "id": "5.3.12",
+      "narration": {
+        "en": "SuperSlicer is a fork of PrusaSlicer that adds extensive customisation options. It was an early influence on OrcaSlicer's calibration approach, and many of its innovations have since been absorbed into OrcaSlicer. Its development pace has slowed since mid-2024.",
+        "fr": "SuperSlicer est un fork de PrusaSlicer qui ajoute de nombreuses options de personnalisation. Il a été une influence majeure sur l'approche de calibration d'OrcaSlicer, et nombre de ses innovations ont depuis été absorbées par OrcaSlicer. Son rythme de développement a ralenti depuis mi-2024."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "SuperSlicer: The Enthusiast's Lab", "fr": "SuperSlicer : le laboratoire de l'enthousiaste" } },
+        { "type": "bullets", "items": [
+          { "en": "<b>PrusaSlicer fork</b> with enhanced calibration, ironing, single-perimeter tops, adaptive layer height", "fr": "<b>Fork de PrusaSlicer</b> avec calibration améliorée, repassage, périmètre unique en surface, hauteur de couche adaptative" },
+          { "en": "<b>Early inspiration for OrcaSlicer</b> — several calibration features migrated across", "fr": "<b>Inspiration précoce d'OrcaSlicer</b> — plusieurs fonctionnalités de calibration ont migré" },
+          { "en": "<b>Slowing development</b> — new users generally advised to choose OrcaSlicer instead", "fr": "<b>Développement ralenti</b> — les nouveaux utilisateurs sont généralement conseillés de choisir OrcaSlicer à la place" }
+        ] },
+        { "type": "callout", "variant": "note", "text": { "en": "Most SuperSlicer innovations are now in OrcaSlicer. Choose SuperSlicer only if you need a specific feature not yet in Orca.", "fr": "La plupart des innovations de SuperSlicer sont maintenant dans OrcaSlicer. Choisissez SuperSlicer uniquement si vous avez besoin d'une fonctionnalité spécifique pas encore dans Orca." } }
+      ]
+    },
+    {
+      "id": "5.3.13",
+      "narration": {
+        "en": "Because the PrusaSlicer family shares a codebase, profiles migrate between them with varying ease. Migration within the family is straightforward. But moving from Cura to any PrusaSlicer-family slicer — or vice versa — means recreating profiles from scratch.",
+        "fr": "Parce que la famille PrusaSlicer partage une base de code, les profils migrent entre eux avec des degrés variables de facilité. La migration au sein de la famille est simple. Mais passer de Cura à n'importe quel trancheur de la famille PrusaSlicer — ou vice versa — signifie recréer les profils de zéro."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Profile Compatibility Between Slicers", "fr": "Compatibilité des profils entre trancheurs" } },
+        { "type": "table",
+          "headers": [
+            { "en": "Migration path", "fr": "Chemin de migration" },
+            { "en": "Compatibility", "fr": "Compatibilité" },
+            { "en": "Notes", "fr": "Notes" }
+          ],
+          "rows": [
+            [{ "en": "Bambu Studio → OrcaSlicer", "fr": "Bambu Studio → OrcaSlicer" }, { "en": "Excellent", "fr": "Excellente" }, { "en": "Mostly compatible, minimal changes", "fr": "Principalement compatible, changements minimaux" }],
+            [{ "en": "PrusaSlicer → OrcaSlicer", "fr": "PrusaSlicer → OrcaSlicer" }, { "en": "Good", "fr": "Bonne" }, { "en": "Minor setting renames may be needed", "fr": "Des renommages mineurs de paramètres peuvent être nécessaires" }],
+            [{ "en": "OrcaSlicer → Bambu Studio", "fr": "OrcaSlicer → Bambu Studio" }, { "en": "Good", "fr": "Bonne" }, { "en": "Some Orca-specific features not supported", "fr": "Certaines fonctionnalités spécifiques à Orca non prises en charge" }],
+            [{ "en": "Cura ↔ Any Prusa-family", "fr": "Cura ↔ Famille Prusa" }, { "en": "Poor", "fr": "Mauvaise" }, { "en": "Independent codebase — must recreate from scratch", "fr": "Base de code indépendante — profils à recréer de zéro" }]
+          ]
+        },
+        { "type": "callout", "variant": "tip", "text": { "en": "When migrating within the family, check the 'inherits' field in JSON profile files — the parent profile must also be present in the destination slicer.", "fr": "Lors d'une migration au sein de la famille, vérifiez le champ 'inherits' dans les fichiers de profil JSON — le profil parent doit également être présent dans le trancheur de destination." } }
+      ]
+    },
+    {
+      "id": "5.3.14",
+      "narration": {
+        "en": "Use this decision table to pick the right slicer. Your printer brand is the first filter; your workflow needs — calibration, privacy, plugins, resin — narrow it down from there.",
+        "fr": "Utilisez ce tableau de décision pour choisir le bon trancheur. La marque de votre imprimante est le premier filtre ; vos besoins de flux de travail — calibration, confidentialité, plugins, résine — permettent d'affiner ensuite."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "How to Choose: Decision Table", "fr": "Comment choisir : tableau de décision" } },
+        { "type": "table",
+          "headers": [
+            { "en": "Your situation", "fr": "Votre situation" },
+            { "en": "Recommended", "fr": "Recommandé" }
+          ],
+          "rows": [
+            [{ "en": "Bambu Lab printer owner", "fr": "Propriétaire d'imprimante Bambu Lab" }, { "en": "Bambu Studio", "fr": "Bambu Studio" }],
+            [{ "en": "Klipper firmware user", "fr": "Utilisateur du firmware Klipper" }, { "en": "OrcaSlicer", "fr": "OrcaSlicer" }],
+            [{ "en": "Prusa printer owner", "fr": "Propriétaire d'imprimante Prusa" }, { "en": "PrusaSlicer", "fr": "PrusaSlicer" }],
+            [{ "en": "Multiple printer brands", "fr": "Plusieurs marques d'imprimantes" }, { "en": "OrcaSlicer", "fr": "OrcaSlicer" }],
+            [{ "en": "Privacy-focused, no cloud", "fr": "Confidentialité, pas de cloud" }, { "en": "OrcaSlicer or PrusaSlicer", "fr": "OrcaSlicer ou PrusaSlicer" }]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5.3.15",
+      "narration": {
+        "en": "Two more rows in that decision table. If you need specific Cura plugins — OctoPrint, marketplace extensions — UltiMaker Cura is the answer. And if you are a complete beginner with any printer, OrcaSlicer in Simple mode offers the best balance of accessibility and power.",
+        "fr": "Deux autres lignes dans ce tableau de décision. Si vous avez besoin de plugins Cura spécifiques — OctoPrint, extensions du marketplace — UltiMaker Cura est la réponse. Et si vous êtes un débutant complet avec n'importe quelle imprimante, OrcaSlicer en mode Simple offre le meilleur équilibre entre accessibilité et puissance."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Decision Table (continued)", "fr": "Tableau de décision (suite)" } },
+        { "type": "table",
+          "headers": [
+            { "en": "Your situation", "fr": "Votre situation" },
+            { "en": "Recommended", "fr": "Recommandé" }
+          ],
+          "rows": [
+            [{ "en": "Need specific Cura plugins", "fr": "Besoin de plugins Cura spécifiques" }, { "en": "UltiMaker Cura", "fr": "UltiMaker Cura" }],
+            [{ "en": "Beginner, any printer", "fr": "Débutant, n'importe quelle imprimante" }, { "en": "OrcaSlicer (Simple mode)", "fr": "OrcaSlicer (mode Simple)" }],
+            [{ "en": "Also do resin printing", "fr": "Aussi impression résine" }, { "en": "PrusaSlicer", "fr": "PrusaSlicer" }],
+            [{ "en": "Advanced calibration needs", "fr": "Besoins avancés de calibration" }, { "en": "OrcaSlicer", "fr": "OrcaSlicer" }]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5.3.16",
+      "narration": {
+        "en": "Chapter 3 recap. The slicer ecosystem has converged around the PrusaSlicer paradigm. Once you know one slicer in the family, the others come quickly. Choose based on your printer, your privacy needs, and whether you need calibration tools or resin support.",
+        "fr": "Récapitulatif du chapitre 3. L'écosystème des trancheurs a convergé autour du paradigme PrusaSlicer. Une fois que vous connaissez un trancheur de la famille, les autres s'apprennent rapidement. Choisissez en fonction de votre imprimante, de vos besoins en confidentialité, et de la nécessité d'outils de calibration ou du support résine."
+      },
+      "elements": [
+        { "type": "title", "text": { "en": "Chapter 3 Recap", "fr": "Récapitulatif du chapitre 3" } },
+        { "type": "bullets", "items": [
+          { "en": "<b>One family, one lineage</b> — Slic3r → PrusaSlicer → Bambu Studio → OrcaSlicer; knowledge transfers directly between members", "fr": "<b>Une famille, un lignage</b> — Slic3r → PrusaSlicer → Bambu Studio → OrcaSlicer ; les connaissances se transfèrent directement entre membres" },
+          { "en": "<b>OrcaSlicer</b> leads in 2025–2026 for calibration tools, multi-printer support, and zero cloud dependency", "fr": "<b>OrcaSlicer</b> domine en 2025–2026 pour les outils de calibration, le support multi-imprimantes et l'absence totale de dépendance au cloud" },
+          { "en": "<b>Bambu Studio</b> — best for Bambu Lab owners; tightest hardware integration", "fr": "<b>Bambu Studio</b> — meilleur pour les propriétaires Bambu Lab ; intégration matérielle la plus étroite" },
+          { "en": "<b>PrusaSlicer</b> — most mature codebase; only option with resin (SLA/MSLA) support in this family", "fr": "<b>PrusaSlicer</b> — base de code la plus mature ; seule option avec support résine (SLA/MSLA) dans cette famille" },
+          { "en": "<b>Cura</b> — large user base and plugin ecosystem, but profile migration to/from the PrusaSlicer family is not possible", "fr": "<b>Cura</b> — grande base d'utilisateurs et vaste écosystème de plugins, mais la migration de profils vers/depuis la famille PrusaSlicer est impossible" }
+        ] }
+      ]
+    }
+  ]
+}

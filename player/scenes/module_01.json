@@ -1,0 +1,2783 @@
+{
+ "module": 1,
+ "module_title": {
+  "en": "Introduction to 3D Printing",
+  "fr": "Introduction à l'impression 3D"
+ },
+ "chapters": [
+  {
+   "chapter": 1,
+   "title": {
+    "en": "What is 3D Printing?",
+    "fr": "Qu'est-ce que l'impression 3D ?"
+   },
+   "scenes": [
+    {
+     "id": "1.1.0",
+     "narration": {
+      "en": "Welcome to Chapter 1. What is 3D printing, where did it come from, and what are the technologies behind it?",
+      "fr": "Bienvenue au chapitre 1. Qu'est-ce que l'impression 3D, d'où vient-elle, et quelles sont les technologies qui la rendent possible ?"
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 1 · Chapter 1",
+        "fr": "Module 1 · Chapitre 1"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "What is 3D Printing?",
+        "fr": "Qu'est-ce que l'impression 3D ?"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Hold a digital design in your hands within hours — no factory, no tooling, no minimum order. That is the promise of 3D printing.",
+        "fr": "Tenez un modèle numérique entre vos mains en quelques heures — sans usine, sans outillage, sans quantité minimale. C'est la promesse de l'impression 3D."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.1.1",
+     "narration": {
+      "en": "Traditional manufacturing is subtractive: you carve material away. 3D printing flips this. It is additive, building the object one thin layer at a time.",
+      "fr": "La fabrication traditionnelle est soustractive : on enlève de la matière. L'impression 3D inverse cette logique. Elle est additive, et construit l'objet une fine couche après l'autre."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Additive vs. Subtractive",
+        "fr": "Additif ou soustractif"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Subtractive",
+         "fr": "Soustractif"
+        },
+        "note": {
+         "en": "Start with a block, cut away the rest — CNC, milling. Wastes material, needs tooling.",
+         "fr": "Partir d'un bloc et retirer le reste — CNC, fraisage. Gaspille la matière, exige de l'outillage."
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Additive",
+         "fr": "Additif"
+        },
+        "note": {
+         "en": "Add material layer by layer. Geometric freedom, no tooling, minimal waste.",
+         "fr": "Ajouter la matière couche par couche. Liberté géométrique, aucun outillage, gaspillage minimal."
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.1.2",
+     "narration": {
+      "en": "Because you add material instead of removing it, you gain geometric freedom, zero tooling cost, material efficiency, on-demand output, and fast iteration.",
+      "fr": "Parce qu'on ajoute de la matière au lieu d'en retirer, on gagne en liberté géométrique, en coût d'outillage nul, en efficacité matière, en production à la demande, et en itération rapide."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "The payoff",
+        "fr": "Le gain"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Why Additive Wins",
+        "fr": "Pourquoi l'additif gagne"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Geometric freedom</b> — internal channels, lattices, organic shapes",
+         "fr": "<b>Liberté géométrique</b> — canaux internes, structures en treillis, formes organiques"
+        },
+        {
+         "en": "<b>No tooling</b> — file straight to part, no molds or dies",
+         "fr": "<b>Pas d'outillage</b> — du fichier à la pièce, sans moule ni matrice"
+        },
+        {
+         "en": "<b>Material efficiency</b> — use only what becomes the part",
+         "fr": "<b>Efficacité matière</b> — n'utiliser que ce qui compose l'objet final"
+        },
+        {
+         "en": "<b>On-demand</b> — one part or a hundred, same setup cost",
+         "fr": "<b>À la demande</b> — une pièce ou cent, même coût de mise en route"
+        },
+        {
+         "en": "<b>Rapid iteration</b> — modify, re-slice, reprint in hours",
+         "fr": "<b>Itération rapide</b> — modifiez, re-tranchez, relancez l'impression en quelques heures"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.1.3",
+     "narration": {
+      "en": "A quick word on naming: 3D printing is also called additive manufacturing. Do not confuse it with ordinary 2D inkjet printing — this process fabricates solid three-dimensional objects, not documents.",
+      "fr": "Un mot sur la terminologie : l'impression 3D est aussi appelée fabrication additive. Ne la confondez pas avec l'impression 2D classique — ce procédé fabrique des objets solides en trois dimensions, pas des documents."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "3D printing ≠ 2D inkjet printing. A 3D printer fabricates solid three-dimensional objects. The word \"printing\" stuck because early technologies used inkjet-like mechanisms, but the process is fundamentally manufacturing.",
+        "fr": "L'impression 3D n'est pas de l'impression jet d'encre. Une imprimante 3D fabrique des objets solides en trois dimensions. Le terme « impression » s'est imposé parce que les premières technologies utilisaient des mécanismes semblables à ceux des imprimantes jet d'encre, mais le procédé relève fondamentalement de la fabrication."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.1.4",
+     "narration": {
+      "en": "From Scott Crump's 1988 glue-gun frog, through the open-source RepRap movement, to the 2009 patent expiry, and Bambu Lab's 2022 disruption — each wave combined previously separate innovations into a more integrated package.",
+      "fr": "De la grenouille au pistolet à colle de Scott Crump en 1988, en passant par le mouvement open source RepRap, jusqu'à l'expiration du brevet en 2009, et la disruption Bambu Lab de 2022 — chaque vague a combiné des innovations jusqu'alors séparées en un ensemble plus intégré."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "A Brief History",
+        "fr": "Brève histoire"
+       }
+      },
+      {
+       "type": "timeline",
+       "nodes": [
+        {
+         "label": "1988",
+         "text": {
+          "en": "Scott Crump's glue-gun frog experiment → Stratasys founded 1989, first machine April 1992 at $130,000",
+          "fr": "Expérience de grenouille au pistolet à colle de Scott Crump → Stratasys fondée en 1989, première machine en avril 1992 à 130 000 $"
+         }
+        },
+        {
+         "label": "2004",
+         "text": {
+          "en": "RepRap launched by Adrian Bowyer — self-replicating open-source printer; Darwin self-replicated May 29, 2008",
+          "fr": "RepRap lancé par Adrian Bowyer — imprimante open source auto-réplicante ; Darwin s'est auto-répliqué le 29 mai 2008"
+         }
+        },
+        {
+         "label": "2009",
+         "text": {
+          "en": "FDM patent US5121329A expires Oct 30 → MakerBot Cupcake CNC kit, consumer price collapse to ~$200",
+          "fr": "Le brevet FDM US5121329A expire le 30 octobre → kit MakerBot Cupcake CNC, effondrement des prix grand public vers 200 $"
+         }
+        },
+        {
+         "label": "2022",
+         "text": {
+          "en": "Bambu Lab X1 on Kickstarter — CoreXY + vibration compensation + out-of-the-box experience",
+          "fr": "Bambu Lab X1 sur Kickstarter — CoreXY + compensation des vibrations + expérience clé en main"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.1.5",
+     "narration": {
+      "en": "In 1988, Scott Crump loaded a hot glue gun with polyethylene and candle wax, built a toy frog layer by layer, and realized this could be automated. That experiment became the foundation of the entire FDM industry.",
+      "fr": "En 1988, Scott Crump chargea un pistolet à colle d'un mélange de polyéthylène et de cire de bougie, construisit une grenouille en jouet couche par couche, et réalisa que ce procédé pouvait être automatisé. Cette expérience devint le fondement de toute l'industrie FDM."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "The garage experiment (1988)",
+        "fr": "L'expérience de cuisine (1988)"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Scott Crump and Stratasys",
+        "fr": "Scott Crump et Stratasys"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>1988</b> — polyethylene + candle wax in a glue gun → toy frog for his daughter",
+         "fr": "<b>1988</b> — polyéthylène + cire de bougie dans un pistolet à colle → grenouille en jouet pour sa fille"
+        },
+        {
+         "en": "<b>1989</b> — Stratasys co-founded with wife Lisa; patent US5121329A filed Oct 30",
+         "fr": "<b>1989</b> — Stratasys co-fondée avec sa femme Lisa ; brevet US5121329A déposé le 30 octobre"
+        },
+        {
+         "en": "<b>1992</b> — first commercial machine, the 3D Modeler, shipped in April at $130,000; patent granted June 9 with 44 claims",
+         "fr": "<b>1992</b> — première machine commerciale, le 3D Modeler, commercialisée en avril à 130 000 $ ; brevet accordé le 9 juin avec 44 revendications"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.1.6",
+     "narration": {
+      "en": "Dr. Adrian Bowyer at the University of Bath launched RepRap in February 2004 — a self-replicating 3D printer. Its three generations were named after biologists: Darwin, Mendel, and Huxley.",
+      "fr": "Le Dr Adrian Bowyer à l'Université de Bath lança RepRap en février 2004 — une imprimante 3D auto-réplicante. Ses trois générations furent nommées d'après des biologistes : Darwin, Mendel et Huxley."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "The RepRap movement (2004–2009)",
+        "fr": "Le mouvement RepRap (2004–2009)"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "RepRap: Open-Source Self-Replication",
+        "fr": "RepRap : auto-réplication open source"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "Darwin",
+         "desc": {
+          "en": "2007–2008 · First generation · Self-replicated May 29, 2008",
+          "fr": "2007–2008 · Première génération · Auto-réplication le 29 mai 2008"
+         }
+        },
+        {
+         "title": "Mendel",
+         "desc": {
+          "en": "2009 · Second generation",
+          "fr": "2009 · Deuxième génération"
+         }
+        },
+        {
+         "title": "Huxley",
+         "desc": {
+          "en": "2010 · Third generation",
+          "fr": "2010 · Troisième génération"
+         }
+        },
+        {
+         "title": "Prusa i3",
+         "desc": {
+          "en": "Designed 2012 · Commercial kit 2015 · Most-used printer worldwide 2016",
+          "fr": "Conception 2012 · Kit commercial 2015 · Imprimante la plus utilisée au monde en 2016"
+         },
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.1.7",
+     "narration": {
+      "en": "When Crump's patent expired on October 30, 2009, consumer prices collapsed. Desktop FDM printers eventually dropped from thousands of dollars to as little as two hundred dollars. Thingiverse had already launched in November 2008, and MakerBot's Cupcake CNC kit arrived in 2009.",
+      "fr": "Lorsque le brevet de Crump expira le 30 octobre 2009, les prix grand public s'effondrèrent. Les imprimantes FDM de bureau descendirent finalement de plusieurs milliers de dollars à aussi peu que 200 $. Thingiverse avait déjà été lancé en novembre 2008, et le kit Cupcake CNC de MakerBot arriva en 2009."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "The consumer boom",
+        "fr": "L'essor grand public"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Patent Expiry → Consumer Boom",
+        "fr": "Expiration du brevet → essor grand public"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "$200",
+       "caption": {
+        "en": "eventual desktop FDM price floor after patent expiry (down from thousands)",
+        "fr": "plancher de prix des imprimantes FDM de bureau après l'expiration du brevet (contre plusieurs milliers de dollars)"
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.1.8",
+     "narration": {
+      "en": "In 2022, Bambu Lab launched the X1 series on Kickstarter, combining CoreXY kinematics, vibration compensation, an enclosed chamber, and a polished out-of-the-box experience. High-speed printing no longer required weeks of tinkering.",
+      "fr": "En 2022, Bambu Lab lança la série X1 sur Kickstarter, combinant la cinématique CoreXY, la compensation des vibrations, une chambre close et une expérience clé en main soignée. L'impression haute vitesse n'exigeait plus des semaines de réglage."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "The Bambu Lab disruption (2022)",
+        "fr": "La disruption Bambu Lab (2022)"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Bambu Lab X1: High Speed, Out of the Box",
+        "fr": "Bambu Lab X1 : haute vitesse, clé en main"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>CoreXY kinematics</b> — low moving mass, high speed",
+         "fr": "<b>Cinématique CoreXY</b> — faible masse en mouvement, haute vitesse"
+        },
+        {
+         "en": "<b>Vibration compensation</b> — active input shaping for cleaner prints",
+         "fr": "<b>Compensation des vibrations</b> — façonnage d'entrée actif pour des impressions plus nettes"
+        },
+        {
+         "en": "<b>Enclosed chamber</b> — engineering materials, multi-material support",
+         "fr": "<b>Chambre close</b> — matériaux de qualité industrielle, multi-matériaux"
+        },
+        {
+         "en": "<b>Polished UX</b> — no weeks of calibration required",
+         "fr": "<b>Expérience soignée</b> — aucune semaine de calibration requise"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.1.9",
+     "narration": {
+      "en": "FDM is the dominant desktop technology, but it shares the landscape with resin-based SLA and MSLA, powder-based SLS, and industrial MJF. Each has distinct strengths.",
+      "fr": "Le FDM est la technologie de bureau dominante, mais il partage le paysage avec la résine SLA et MSLA, le SLS à base de poudre, et le MJF industriel. Chacun a des points forts distincts."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Types of 3D Printing",
+        "fr": "Les types d'impression 3D"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "FDM/FFF",
+         "desc": {
+          "en": "Melts and extrudes thermoplastic filament — functional parts, prototypes. Low cost.",
+          "fr": "Fond et extrude le filament thermoplastique — pièces fonctionnelles, prototypes. Coût faible."
+         },
+         "highlight": true
+        },
+        {
+         "title": "SLA/MSLA",
+         "desc": {
+          "en": "Cures liquid resin with UV light — miniatures, jewelry, dental. Medium cost.",
+          "fr": "Durcit la résine liquide aux UV — figurines, bijoux, dentaire. Coût moyen."
+         }
+        },
+        {
+         "title": "SLS",
+         "desc": {
+          "en": "Laser-fuses polymer powder — strong isotropic parts, no supports needed. High cost.",
+          "fr": "Fritte la poudre polymère au laser — pièces isotropes solides, sans supports. Coût élevé."
+         }
+        },
+        {
+         "title": "MJF",
+         "desc": {
+          "en": "Binder agent + IR fusion — industrial production volumes. Very high cost.",
+          "fr": "Agent liant + fusion IR — volumes industriels. Coût très élevé."
+         }
+        },
+        {
+         "title": "DLP",
+         "desc": {
+          "en": "UV projector cures whole resin layers — detailed models, faster than SLA. Medium cost.",
+          "fr": "Projecteur UV durcit des couches entières — modèles détaillés, plus rapide que la SLA. Coût moyen."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.1.10",
+     "narration": {
+      "en": "SLA and MSLA achieve layers as thin as 25 to 50 micrometres versus FDM's typical 100 to 400, but parts are brittle and require washing and UV curing. SLS parts are largely isotropic — mechanical properties are consistent regardless of print orientation — a major advantage over FDM.",
+      "fr": "La SLA et la MSLA atteignent des couches aussi fines que 25 à 50 micromètres contre 100 à 400 pour le FDM, mais les pièces sont fragiles et nécessitent lavage et durcissement UV. Les pièces SLS sont largement isotropes — les propriétés mécaniques sont uniformes quelle que soit l'orientation d'impression — un avantage majeur sur le FDM."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "SLA and SLS: Key Differences",
+        "fr": "SLA et SLS : différences clés"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Technology",
+         "fr": "Technologie"
+        },
+        {
+         "en": "Layer thickness",
+         "fr": "Épaisseur de couche"
+        },
+        {
+         "en": "Post-process",
+         "fr": "Post-traitement"
+        },
+        {
+         "en": "Strength",
+         "fr": "Résistance"
+        }
+       ],
+       "rows": [
+        [
+         "FDM",
+         "100–400 µm",
+         {
+          "en": "Remove supports",
+          "fr": "Retirer supports"
+         },
+         {
+          "en": "Anisotropic",
+          "fr": "Anisotrope"
+         }
+        ],
+        [
+         "SLA/MSLA",
+         "25–50 µm",
+         {
+          "en": "Wash + cure",
+          "fr": "Laver + durcir"
+         },
+         {
+          "en": "Brittle",
+          "fr": "Fragile"
+         }
+        ],
+        [
+         "SLS",
+         "80–120 µm",
+         {
+          "en": "None (powder supports)",
+          "fr": "Aucun (poudre = support)"
+         },
+         {
+          "en": "Isotropic",
+          "fr": "Isotrope"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.1.11",
+     "narration": {
+      "en": "FDM accounts for the largest installed base worldwide. Quality printers start around two hundred dollars, PLA filament costs fifteen to twenty-five dollars per kilogram, and post-processing is just removing supports.",
+      "fr": "Le FDM représente le plus grand parc installé mondial. Les imprimantes de qualité débutent autour de 200 $, le filament PLA coûte 15 à 25 $ par kilo, et le post-traitement se limite à retirer les supports."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "The desktop king",
+        "fr": "Le roi du bureau"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Why FDM Dominates",
+        "fr": "Pourquoi le FDM domine"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Lowest entry cost</b> — quality printers from ~$200",
+         "fr": "<b>Coût d'entrée le plus bas</b> — imprimantes de qualité dès ~200 $"
+        },
+        {
+         "en": "<b>Cheap material</b> — 1 kg PLA spool at $15–25, dozens of prints",
+         "fr": "<b>Matière bon marché</b> — bobine PLA 1 kg à 15–25 $, des dizaines d'impressions"
+        },
+        {
+         "en": "<b>Minimal post-processing</b> — remove supports and done, no washing or curing",
+         "fr": "<b>Post-traitement minimal</b> — retirer les supports et c'est terminé, pas de lavage ni de durcissement"
+        },
+        {
+         "en": "<b>Material variety</b> — hundreds of filament types from PLA to engineering-grade PEEK",
+         "fr": "<b>Variété de matériaux</b> — des centaines de types de filaments du PLA au PEEK de qualité industrielle"
+        },
+        {
+         "en": "<b>Safe and open</b> — no liquid resins or powdered materials needing PPE; standardized 1.75 mm filament",
+         "fr": "<b>Sûr et ouvert</b> — pas de résines liquides ni poudres nécessitant des EPI ; filament standardisé à 1,75 mm"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.1.12",
+     "narration": {
+      "en": "Every 3D print follows the same pipeline: design, export, slice, print, post-process. And it is a feedback loop, not a one-way street — you may go back to CAD after spotting a problem in the slicer.",
+      "fr": "Chaque impression 3D suit le même pipeline : concevoir, exporter, trancher, imprimer, post-traiter. Et c'est une boucle de rétroaction, pas un sens unique — vous pouvez retourner à la CAO après avoir repéré un problème dans le trancheur."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Idea to Object: The Full Pipeline",
+        "fr": "De l'idée à l'objet : le pipeline complet"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Design (CAD)",
+          "fr": "Conception (CAO)"
+         },
+         "sub": {
+          "en": "Tinkercad · Fusion 360 · Blender",
+          "fr": "Tinkercad · Fusion 360 · Blender"
+         }
+        },
+        {
+         "name": {
+          "en": "Export",
+          "fr": "Export"
+         },
+         "sub": {
+          "en": "STL · 3MF · OBJ",
+          "fr": "STL · 3MF · OBJ"
+         }
+        },
+        {
+         "name": {
+          "en": "Slice",
+          "fr": "Tranchage"
+         },
+         "sub": {
+          "en": "Cura · PrusaSlicer · Bambu Studio",
+          "fr": "Cura · PrusaSlicer · Bambu Studio"
+         }
+        },
+        {
+         "name": {
+          "en": "Print",
+          "fr": "Impression"
+         },
+         "sub": {
+          "en": "SD card · USB · Wi-Fi",
+          "fr": "Carte SD · USB · Wi-Fi"
+         }
+        },
+        {
+         "name": {
+          "en": "Post-process",
+          "fr": "Post-traitement"
+         },
+         "sub": {
+          "en": "Supports · sand · paint",
+          "fr": "Supports · ponçage · peinture"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.1.13",
+     "narration": {
+      "en": "The design stage starts with a watertight 3D model — no holes, no non-manifold edges. Tinkercad is ideal for beginners. Fusion 360 is free for hobbyists and covers most advanced needs.",
+      "fr": "L'étape de conception commence avec un modèle 3D étanche — sans trou ni arête non-manifold. Tinkercad est idéal pour les débutants. Fusion 360 est gratuit pour les hobbyistes et couvre la plupart des besoins avancés."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Stage 1",
+        "fr": "Étape 1"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "CAD Design",
+        "fr": "Conception CAO"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "Tinkercad",
+         "desc": {
+          "en": "Browser-based, intuitive — ideal for beginners",
+          "fr": "Basé sur navigateur, intuitif — idéal pour les débutants"
+         },
+         "highlight": true
+        },
+        {
+         "title": "Fusion 360",
+         "desc": {
+          "en": "Free for hobbyists — powerful parametric modeling",
+          "fr": "Gratuit pour les hobbyistes — modélisation paramétrique puissante"
+         }
+        },
+        {
+         "title": "Blender",
+         "desc": {
+          "en": "Free, open-source — organic shapes and sculpting",
+          "fr": "Gratuit, open source — formes organiques et sculpture"
+         }
+        },
+        {
+         "title": "SolidWorks",
+         "desc": {
+          "en": "Industry standard — professional engineering",
+          "fr": "Standard industriel — ingénierie professionnelle"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.1.14",
+     "narration": {
+      "en": "STL, developed by 3D Systems in 1987, is still universally compatible but stores only surface triangles — no color, no units. 3MF, introduced in 2015 and published as ISO/IEC 25422:2025 in June 2025, is technically superior and stores settings, color, and multi-part assemblies.",
+      "fr": "Le STL, développé par 3D Systems en 1987, est encore universellement compatible mais ne stocke que les triangles de surface — pas de couleur, pas d'unités. Le 3MF, introduit en 2015 et publié sous la norme ISO/IEC 25422:2025 en juin 2025, est techniquement supérieur et stocke les réglages, la couleur et les assemblages multi-pièces."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Stage 2",
+        "fr": "Étape 2"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "File Export: STL vs. 3MF",
+        "fr": "Export de fichier : STL vs 3MF"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "STL",
+        "note": {
+         "en": "Developed 1987 · surface triangles only · no color, units, or settings · universally compatible",
+         "fr": "Développé en 1987 · triangles de surface uniquement · pas de couleur, unités ni réglages · universellement compatible"
+        }
+       },
+       "right": {
+        "title": "3MF",
+        "note": {
+         "en": "Introduced 2015 · stores settings, color, assemblies · ISO/IEC 25422:2025 (June 2025)",
+         "fr": "Introduit en 2015 · stocke réglages, couleur, assemblages · ISO/IEC 25422:2025 (juin 2025)"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.1.15",
+     "narration": {
+      "en": "The slicer converts your mesh into G-code. It divides the model into horizontal layers, generates toolpaths for perimeters, infill, and supports, calculates extrusion amounts, and outputs all movement and temperature commands.",
+      "fr": "Le trancheur convertit votre maillage en G-code. Il divise le modèle en couches horizontales, génère les trajectoires pour les périmètres, le remplissage et les supports, calcule les quantités d'extrusion, et produit toutes les commandes de déplacement et de température."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Stage 3",
+        "fr": "Étape 3"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Slicing: Mesh to G-Code",
+        "fr": "Tranchage : du maillage au G-code"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Step 1</b> — divide model into horizontal layers at chosen layer height",
+         "fr": "<b>Étape 1</b> — diviser le modèle en couches horizontales selon la hauteur de couche choisie"
+        },
+        {
+         "en": "<b>Step 2</b> — generate toolpaths: perimeters, infill, supports, top/bottom layers",
+         "fr": "<b>Étape 2</b> — générer les trajectoires : périmètres, remplissage, supports, couches dessus/dessous"
+        },
+        {
+         "en": "<b>Step 3</b> — calculate extrusion amounts from line width, layer height, filament diameter",
+         "fr": "<b>Étape 3</b> — calculer les quantités d'extrusion selon largeur de ligne, hauteur de couche, diamètre de filament"
+        },
+        {
+         "en": "<b>Step 4</b> — output G-code with all movement, temperature, and extrusion commands",
+         "fr": "<b>Étape 4</b> — produire le G-code avec toutes les commandes de déplacement, de température et d'extrusion"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.1.16",
+     "narration": {
+      "en": "Stages 4 and 5 are print and post-process. G-code is sent via SD card, USB, or Wi-Fi. Post-processing may include support removal, sanding, painting, or acetone vapor smoothing for ABS.",
+      "fr": "Les étapes 4 et 5 sont l'impression et le post-traitement. Le G-code est envoyé par carte SD, USB ou Wi-Fi. Le post-traitement peut inclure le retrait des supports, le ponçage, la peinture ou le lissage aux vapeurs d'acétone pour l'ABS."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Stages 4–5",
+        "fr": "Étapes 4–5"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Print and Post-Process",
+        "fr": "Impression et post-traitement"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "The pipeline is a feedback loop: orient in the slicer, spot a problem, return to CAD, re-export, re-slice. This is not failure — it is the process working correctly.",
+        "fr": "Le pipeline est une boucle de rétroaction : orienter dans le trancheur, repérer un problème, retourner à la CAO, ré-exporter, re-trancher. Ce n'est pas un échec — c'est le processus qui fonctionne correctement."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.1.17",
+     "narration": {
+      "en": "Chapter 1 recap: 3D printing is additive manufacturing that builds objects layer by layer from digital designs. FDM dominates the desktop thanks to low cost, material variety, and minimal post-processing. The complete workflow is an iterative feedback loop from CAD all the way to the finished part.",
+      "fr": "Récapitulatif du chapitre 1 : l'impression 3D est de la fabrication additive qui construit des objets couche par couche à partir de modèles numériques. Le FDM domine le bureau grâce à son faible coût, sa variété de matériaux et son post-traitement minimal. Le flux de travail complet est une boucle de rétroaction itérative de la CAO à la pièce terminée."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Chapter 1 recap",
+        "fr": "Récapitulatif du chapitre 1"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Key Takeaways",
+        "fr": "Points clés à retenir"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Additive manufacturing</b> — build layer by layer, not carve away",
+         "fr": "<b>Fabrication additive</b> — construire couche par couche, pas enlever la matière"
+        },
+        {
+         "en": "<b>History</b> — Crump 1988 → RepRap 2004 → patent expiry 2009 → Bambu Lab 2022",
+         "fr": "<b>Histoire</b> — Crump 1988 → RepRap 2004 → expiration du brevet 2009 → Bambu Lab 2022"
+        },
+        {
+         "en": "<b>FDM dominates</b> — cost, safety, material variety, minimal post-processing",
+         "fr": "<b>FDM domine</b> — coût, sécurité, variété de matériaux, post-traitement minimal"
+        },
+        {
+         "en": "<b>Other technologies</b> — SLA fine detail, SLS isotropic strength, MJF industrial volume",
+         "fr": "<b>Autres technologies</b> — SLA détail fin, SLS résistance isotrope, MJF volume industriel"
+        },
+        {
+         "en": "<b>Workflow</b> — CAD → Export → Slice → Print → Post-process, an iterative feedback loop",
+         "fr": "<b>Flux de travail</b> — CAO → Export → Tranchage → Impression → Post-traitement, une boucle de rétroaction itérative"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 2,
+   "title": {
+    "en": "FDM Technology Deep Dive",
+    "fr": "Plongée en profondeur dans la technologie FDM"
+   },
+   "scenes": [
+    {
+     "id": "1.2.0",
+     "narration": {
+      "en": "Chapter 2 pulls back the curtain on how FDM actually works — from the hotend mechanics, through the key slicer parameters, to the G-code language that controls every move.",
+      "fr": "Le chapitre 2 lève le voile sur le fonctionnement réel du FDM — de la mécanique du hotend, en passant par les paramètres clés du trancheur, jusqu'au langage G-code qui contrôle chaque mouvement."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 1 · Chapter 2",
+        "fr": "Module 1 · Chapitre 2"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "FDM Technology Deep Dive",
+        "fr": "Plongée en profondeur dans la technologie FDM"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "fdm_layers"
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Think of FDM as a very precise, robotic hot glue gun — heat plastic, push it through a nozzle, lay it down layer by layer.",
+        "fr": "Voyez le FDM comme un pistolet à colle robotisé très précis — chauffer le plastique, le pousser dans une buse, le déposer couche par couche."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.2.1",
+     "narration": {
+      "en": "FDM follows seven repeating steps: load filament, heat nozzle and bed, extrude through the hotend, deposit strands along the toolpath, cool and fuse each layer, lower the Z axis by one layer height, and repeat until the part is complete.",
+      "fr": "Le FDM suit sept étapes répétées : charger le filament, chauffer la buse et le plateau, extruder dans le hotend, déposer les cordons le long de la trajectoire, refroidir et fusionner chaque couche, abaisser l'axe Z d'une hauteur de couche, et répéter jusqu'à ce que la pièce soit terminée."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "How FDM Works: Step by Step",
+        "fr": "Comment fonctionne le FDM : étape par étape"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "fdm_layers"
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Load",
+          "fr": "Chargement"
+         },
+         "sub": {
+          "en": "1.75 mm spool",
+          "fr": "Bobine 1,75 mm"
+         }
+        },
+        {
+         "name": {
+          "en": "Heat",
+          "fr": "Chauffage"
+         },
+         "sub": {
+          "en": "Nozzle + bed",
+          "fr": "Buse + plateau"
+         }
+        },
+        {
+         "name": {
+          "en": "Extrude",
+          "fr": "Extrusion"
+         },
+         "sub": {
+          "en": "Extruder motor",
+          "fr": "Moteur extrudeur"
+         }
+        },
+        {
+         "name": {
+          "en": "Deposit",
+          "fr": "Dépôt"
+         },
+         "sub": {
+          "en": "X-Y toolpath",
+          "fr": "Trajectoire X-Y"
+         }
+        },
+        {
+         "name": {
+          "en": "Advance Z",
+          "fr": "Avance Z"
+         },
+         "sub": {
+          "en": "Cool + next layer",
+          "fr": "Refroidir + couche suivante"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.2",
+     "narration": {
+      "en": "Layer heights run from 0.05 to 0.4 millimetres. 0.2 mm is the most common compromise between quality and speed. XY resolution is set by nozzle diameter and motion accuracy, not by layer height — a 0.4 mm nozzle produces features around 400 micrometres wide.",
+      "fr": "Les hauteurs de couche vont de 0,05 à 0,4 millimètre. 0,2 mm est le compromis le plus courant entre qualité et vitesse. La résolution XY est déterminée par le diamètre de la buse et la précision du mouvement, non par la hauteur de couche — une buse de 0,4 mm produit des éléments d'environ 400 micromètres de largeur."
+     },
+     "elements": [
+      {
+       "type": "stat",
+       "value": "0.2 mm",
+       "caption": {
+        "en": "standard layer height — range is 0.05 to 0.4 mm; halving layer height doubles print time",
+        "fr": "hauteur de couche standard — plage de 0,05 à 0,4 mm ; diviser par deux la hauteur de couche double le temps d'impression"
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.2.3",
+     "narration": {
+      "en": "The hotend is the heart of the printer. It has four main zones: the heatsink and fan that keep the cold end cold, the heat break that isolates, the heater block that melts the filament, and the nozzle that deposits it.",
+      "fr": "Le hotend est le cœur de l'imprimante. Il comporte quatre zones principales : le dissipateur et le ventilateur qui maintiennent la partie froide froide, le séparateur thermique qui isole, le bloc chauffant qui fait fondre le filament, et la buse qui le dépose."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Hotend Anatomy",
+        "fr": "Anatomie du hotend"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "hotend"
+      },
+      {
+       "type": "stages",
+       "items": [
+        {
+         "label": {
+          "en": "Heat sink",
+          "fr": "Dissipateur"
+         },
+         "sub": {
+          "en": "Aluminum + fan — keep cold end cold",
+          "fr": "Aluminium + ventilateur — maintient la partie froide froide"
+         }
+        },
+        {
+         "label": {
+          "en": "Heat break",
+          "fr": "Séparateur thermique"
+         },
+         "sub": {
+          "en": "Titanium or bimetallic — thermal isolation",
+          "fr": "Titane ou bimétallique — isolation thermique"
+         }
+        },
+        {
+         "label": {
+          "en": "Heater block",
+          "fr": "Bloc chauffant"
+         },
+         "sub": {
+          "en": "Brass · 30–40 W cartridge heater",
+          "fr": "Laiton · résistance cartouche 30–40 W"
+         }
+        },
+        {
+         "label": {
+          "en": "Nozzle",
+          "fr": "Buse"
+         },
+         "sub": {
+          "en": "Standard 0.4 mm — range 0.25–2.0 mm",
+          "fr": "Standard 0,4 mm — plage 0,25–2,0 mm"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.4",
+     "narration": {
+      "en": "Heat creep is the main failure mode: if filament softens above the melt zone, it jams the cold end. A well-cooled heatsink is your defence. Keep everything above the heat break cold.",
+      "fr": "Le fluage thermique est le principal mode de défaillance : si le filament ramollit au-dessus de la zone de fusion, il bloque la partie froide. Un dissipateur bien refroidi est votre défense. Maintenez tout ce qui est au-dessus du séparateur thermique froid."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Heat creep: filament softening above the heat break jams the cold zone. A good heatsink and fan are non-negotiable — not optional accessories.",
+        "fr": "Fluage thermique : le ramollissement du filament au-dessus du séparateur thermique bloque la zone froide. Un bon dissipateur et un ventilateur sont indispensables — pas des accessoires optionnels."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.2.5",
+     "narration": {
+      "en": "Nozzle size is a trade-off between detail and speed. A 0.25 mm nozzle gives you fine miniature work; a 0.8 mm nozzle cuts print time dramatically for large functional parts.",
+      "fr": "La taille de la buse est un compromis entre détail et vitesse. Une buse de 0,25 mm convient au travail fin sur figurines ; une buse de 0,8 mm réduit considérablement le temps d'impression pour les grandes pièces fonctionnelles."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Nozzle Size Guide",
+        "fr": "Guide de taille de buse"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Nozzle",
+         "fr": "Buse"
+        },
+        {
+         "en": "Std layer",
+         "fr": "Couche std"
+        },
+        {
+         "en": "Max layer",
+         "fr": "Couche max"
+        },
+        {
+         "en": "Best for",
+         "fr": "Idéal pour"
+        }
+       ],
+       "rows": [
+        [
+         "0.25 mm",
+         "0.13 mm",
+         "0.2 mm",
+         {
+          "en": "Fine details, miniatures",
+          "fr": "Détails fins, figurines"
+         }
+        ],
+        [
+         "0.4 mm",
+         "0.2 mm",
+         "0.32 mm",
+         {
+          "en": "General purpose (default)",
+          "fr": "Usage général (défaut)"
+         }
+        ],
+        [
+         "0.6 mm",
+         "0.3 mm",
+         "0.48 mm",
+         {
+          "en": "Faster printing, larger parts",
+          "fr": "Impression plus rapide, grandes pièces"
+         }
+        ],
+        [
+         "0.8 mm",
+         "0.4 mm",
+         "0.64 mm",
+         {
+          "en": "Rapid prototyping, large layers",
+          "fr": "Prototypage rapide, grandes couches"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.6",
+     "narration": {
+      "en": "All-metal hotends replace the PTFE liner in the heat break with metal, enabling nozzle temperatures of 350 to 500 degrees. Standard PTFE-lined hotends are limited to about 240 to 260 degrees before the PTFE degrades and may release harmful fumes.",
+      "fr": "Les hotends tout métal remplacent le liner PTFE du séparateur thermique par du métal, permettant des températures de buse de 350 à 500 degrés. Les hotends standard avec revêtement PTFE sont limités à environ 240 à 260 degrés avant que le PTFE ne se dégrade et ne libère potentiellement des vapeurs nocives."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "All-Metal vs. PTFE-Lined Hotends",
+        "fr": "Hotend tout métal vs revêtement PTFE"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "PTFE-lined",
+         "fr": "Revêtement PTFE"
+        },
+        "note": {
+         "en": "Max ~240–260°C · PLA, PETG, TPU — PTFE degrades above 260°C",
+         "fr": "Max ~240–260°C · PLA, PETG, TPU — le PTFE se dégrade au-dessus de 260°C"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "All-metal",
+         "fr": "Tout métal"
+        },
+        "note": {
+         "en": "350–500°C capable · Nylon, PC, PEEK, PEI — essential for high-temp materials",
+         "fr": "Capable de 350–500°C · Nylon, PC, PEEK, PEI — indispensable pour les matériaux haute température"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.2.7",
+     "narration": {
+      "en": "Movement is driven by stepper motors — brushless DC motors that rotate at 1.8 degrees per step, giving 200 steps per revolution. GT2 timing belts with a 2 mm pitch translate the rotation into smooth linear travel.",
+      "fr": "Le mouvement est entraîné par des moteurs pas à pas — des moteurs CC sans balai qui tournent par incréments de 1,8 degré par pas, soit 200 pas par tour. Des courroies de distribution GT2 au pas de 2 mm traduisent la rotation en déplacement linéaire fluide."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Motion System: X, Y, and Z",
+        "fr": "Système de mouvement : X, Y et Z"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>X-axis</b> — left-right movement of the printhead (or occasionally the bed)",
+         "fr": "<b>Axe X</b> — déplacement gauche-droite de la tête d'impression (ou parfois du plateau)"
+        },
+        {
+         "en": "<b>Y-axis</b> — front-back movement",
+         "fr": "<b>Axe Y</b> — déplacement avant-arrière"
+        },
+        {
+         "en": "<b>Z-axis</b> — vertical movement, one layer per step",
+         "fr": "<b>Axe Z</b> — déplacement vertical, une couche par pas"
+        },
+        {
+         "en": "<b>Stepper motors</b> — 1.8°/step, 200 steps/revolution; GT2 belts at 2 mm pitch",
+         "fr": "<b>Moteurs pas à pas</b> — 1,8°/pas, 200 pas/tour ; courroies GT2 au pas de 2 mm"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.8",
+     "narration": {
+      "en": "Nozzle temperature is the single most important parameter. Too cold and layers will not bond; too hot and you get stringing, blobs, and material degradation. Use a temperature tower to dial in each filament brand.",
+      "fr": "La température de la buse est le paramètre unique le plus important. Trop froide, les couches ne se lieront pas ; trop chaude, vous obtiendrez des fils, des gouttes et une dégradation du matériau. Utilisez une tour de température pour régler chaque marque de filament."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Nozzle Temperature by Material",
+        "fr": "Température de buse par matériau"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Nozzle temp",
+         "fr": "Température buse"
+        },
+        {
+         "en": "Notes",
+         "fr": "Notes"
+        }
+       ],
+       "rows": [
+        [
+         "PLA",
+         "180–220°C",
+         {
+          "en": "Easiest; start at 200°C",
+          "fr": "Le plus facile ; commencer à 200°C"
+         }
+        ],
+        [
+         "ABS",
+         "220–250°C",
+         {
+          "en": "Enclosure required; minimal fan",
+          "fr": "Enceinte requise ; ventilateur minimal"
+         }
+        ],
+        [
+         "PETG",
+         "230–250°C",
+         {
+          "en": "Higher temp = better adhesion",
+          "fr": "Temp plus élevée = meilleure adhérence"
+         }
+        ],
+        [
+         "Nylon",
+         "240–300°C",
+         {
+          "en": "All-metal hotend required",
+          "fr": "Hotend tout métal requis"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.9",
+     "narration": {
+      "en": "These temperature ranges are starting points, not absolutes. Every filament brand and even every color within a brand can behave differently. A temperature tower test is one of the best calibration prints you can run.",
+      "fr": "Ces plages de température sont des points de départ, pas des valeurs absolues. Chaque marque de filament et même chaque couleur au sein d'une marque peut se comporter différemment. Une tour de température est l'un des meilleurs tests de calibration que vous puissiez effectuer."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Run a temperature tower for every new filament brand or color. Print a tower with a different temperature at each level — the best surface finish shows you the optimal setting in one print.",
+        "fr": "Effectuez une tour de température pour chaque nouvelle marque ou couleur de filament. Imprimez une tour avec une température différente à chaque niveau — la meilleure finesse de surface vous indique le réglage optimal en une seule impression."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.2.10",
+     "narration": {
+      "en": "The heated bed prevents warping — corners curling upward from uneven cooling. PLA needs 50 to 60 degrees and is often optional. ABS needs 90 to 110 degrees to prevent warping.",
+      "fr": "Le plateau chauffant prévient le gauchissement — les coins qui se recroquevillent vers le haut en raison d'un refroidissement inégal. Le PLA a besoin de 50 à 60 degrés et est souvent optionnel. L'ABS nécessite 90 à 110 degrés pour éviter le gauchissement."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Bed Temperature",
+        "fr": "Température du plateau"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Bed temp",
+         "fr": "Temp. plateau"
+        }
+       ],
+       "rows": [
+        [
+         "PLA",
+         "50–60°C"
+        ],
+        [
+         "ABS",
+         "90–110°C"
+        ],
+        [
+         "PETG",
+         "65–90°C"
+        ],
+        [
+         "TPU",
+         "40–60°C"
+        ],
+        [
+         "Nylon",
+         "70–90°C"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.11",
+     "narration": {
+      "en": "Print speed affects quality directly. Higher speeds cause under-extrusion, poor layer bonding, and ringing — vibration waves near sharp corners. For functional parts, slower printing maximises strength.",
+      "fr": "La vitesse d'impression affecte directement la qualité. Des vitesses plus élevées causent la sous-extrusion, une mauvaise liaison entre couches et le ringing — des vagues de vibration près des angles vifs. Pour les pièces fonctionnelles, une impression plus lente maximise la résistance."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Print Speed by Material",
+        "fr": "Vitesse d'impression par matériau"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Recommended speed",
+         "fr": "Vitesse recommandée"
+        }
+       ],
+       "rows": [
+        [
+         "PLA",
+         "40–80 mm/s"
+        ],
+        [
+         "ABS",
+         "40–60 mm/s"
+        ],
+        [
+         "PETG",
+         "30–50 mm/s"
+        ],
+        [
+         "TPU",
+         "15–30 mm/s"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.12",
+     "narration": {
+      "en": "The real speed limit is the hotend's Maximum Volumetric Speed — how much plastic it can melt per second. A standard V6-style hotend tops out at 10 to 15 cubic millimetres per second. High-flow hotends reach 30 to 60. At 0.2 mm layer height and 0.45 mm line width, 300 millimetres per second already demands 27 cubic millimetres per second.",
+      "fr": "La vraie limite de vitesse est la Vitesse Volumétrique Maximale du hotend — la quantité de plastique qu'il peut faire fondre par seconde. Un hotend de style V6 standard plafonne à 10 à 15 mm³/s. Les hotends à haut débit atteignent 30 à 60 mm³/s. À une hauteur de couche de 0,2 mm et une largeur de ligne de 0,45 mm, 300 mm/s exige déjà 27 mm³/s."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "The real speed limit",
+        "fr": "La vraie limite de vitesse"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Maximum Volumetric Speed (MVS)",
+        "fr": "Vitesse volumétrique maximale (VVM)"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Standard V6 hotend",
+         "fr": "Hotend V6 standard"
+        },
+        "note": {
+         "en": "~10–15 mm³/s max melt rate",
+         "fr": "~10–15 mm³/s débit de fusion max"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "High-flow hotend",
+         "fr": "Hotend haut débit"
+        },
+        "note": {
+         "en": "30–60 mm³/s — needed for 300+ mm/s travel",
+         "fr": "30–60 mm³/s — nécessaire pour des déplacements à 300+ mm/s"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.2.13",
+     "narration": {
+      "en": "Part cooling fans accelerate solidification, improving overhangs and bridging. But excessive cooling weakens interlayer adhesion. PLA runs at 100 percent after the first layer. ABS needs nearly no cooling — 0 to 25 percent.",
+      "fr": "Les ventilateurs de refroidissement de pièce accélèrent la solidification, améliorant les surplombs et le pontage. Mais un refroidissement excessif affaiblit l'adhérence entre couches. Le PLA tourne à 100 % après la première couche. L'ABS a besoin de presque pas de refroidissement — 0 à 25 %."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Fan Cooling: Balance is Key",
+        "fr": "Refroidissement par ventilateur : l'équilibre est essentiel"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>PLA</b> — 100% fan after first layer: better overhangs, crisp bridges",
+         "fr": "<b>PLA</b> — 100 % de ventilateur après la première couche : meilleurs surplombs, pontage net"
+        },
+        {
+         "en": "<b>ABS</b> — 0–25% minimal: high fan causes warping and delamination",
+         "fr": "<b>ABS</b> — 0–25 % minimal : un ventilateur élevé cause gauchissement et délaminage"
+        },
+        {
+         "en": "<b>PETG / TPU</b> — 20–50%: moderate cooling balances adhesion and surface quality",
+         "fr": "<b>PETG / TPU</b> — 20–50 % : refroidissement modéré équilibre adhérence et qualité de surface"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.14",
+     "narration": {
+      "en": "The extrusion multiplier, also called flow rate, adjusts how much filament the printer actually extrudes relative to the slicer's calculation. Calibrating it for a specific filament and printer takes about 20 minutes and can resolve an entire category of print quality issues.",
+      "fr": "Le multiplicateur d'extrusion, aussi appelé taux de flux, ajuste la quantité de filament que l'imprimante extrude réellement par rapport au calcul du trancheur. Le calibrer pour un filament et une imprimante spécifiques prend environ 20 minutes et peut résoudre toute une catégorie de problèmes de qualité d'impression."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Flow Rate Calibration",
+        "fr": "Calibration du taux de flux"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Flow rate calibration is one of the quickest, highest-impact tuning steps — 20 minutes for a specific filament and setup resolves over-extrusion blobs, under-extrusion gaps, and dimensional errors simultaneously.",
+        "fr": "La calibration du taux de flux est l'une des étapes de réglage les plus rapides et les plus impactantes — 20 minutes pour un filament et une configuration spécifiques résout simultanément les gouttes de sur-extrusion, les lacunes de sous-extrusion et les erreurs dimensionnelles."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.2.15",
+     "narration": {
+      "en": "G-code is the language your printer speaks — a series of text commands for movement, temperature, and extrusion. Most lines follow a common format where G sets the motion type, X, Y, Z set position, F sets feed rate, S sets temperature or fan speed, and E sets the extrusion amount.",
+      "fr": "Le G-code est le langage que parle votre imprimante — une série de commandes textuelles pour le mouvement, la température et l'extrusion. La plupart des lignes suivent un format commun où G définit le type de mouvement, X, Y, Z la position, F le taux d'avance, S la température ou la vitesse du ventilateur, et E la quantité d'extrusion."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "G-Code Fundamentals",
+        "fr": "Fondamentaux du G-code"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>G0</b> — rapid travel move (no extrusion)",
+         "fr": "<b>G0</b> — déplacement de transit rapide (sans extrusion)"
+        },
+        {
+         "en": "<b>G1</b> — controlled printing move with optional extrusion",
+         "fr": "<b>G1</b> — déplacement d'impression contrôlé avec extrusion optionnelle"
+        },
+        {
+         "en": "<b>G28</b> — home all axes to zero position",
+         "fr": "<b>G28</b> — retour à l'origine de tous les axes"
+        },
+        {
+         "en": "<b>X Y Z</b> = coordinates; <b>F</b> = feed rate (mm/min); <b>E</b> = extrusion (mm)",
+         "fr": "<b>X Y Z</b> = coordonnées ; <b>F</b> = taux d'avance (mm/min) ; <b>E</b> = extrusion (mm)"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.16",
+     "narration": {
+      "en": "Temperature commands come in blocking and non-blocking variants. M104 sets nozzle temperature and immediately continues. M109 pauses until the target is reached. Start G-code must use M109 and M190 to ensure temperatures are reached before printing begins.",
+      "fr": "Les commandes de température existent en variantes bloquantes et non bloquantes. M104 définit la température de la buse et continue immédiatement. M109 attend que la cible soit atteinte. Le G-code de démarrage doit utiliser M109 et M190 pour s'assurer que les températures sont atteintes avant que l'impression commence."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Temperature Commands",
+        "fr": "Commandes de température"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Non-blocking (M104/M140)",
+         "fr": "Non bloquant (M104/M140)"
+        },
+        "note": {
+         "en": "Set temperature and immediately continue — printer moves while nozzle is still heating",
+         "fr": "Définit la température et continue immédiatement — l'imprimante se déplace pendant que la buse chauffe encore"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Blocking (M109/M190)",
+         "fr": "Bloquant (M109/M190)"
+        },
+        "note": {
+         "en": "Wait until target temperature reached — use these in start G-code",
+         "fr": "Attend que la température cible soit atteinte — à utiliser dans le G-code de démarrage"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.2.17",
+     "narration": {
+      "en": "Three firmware families power most FDM printers. Marlin is the most widely supported open-source option. Klipper enables higher speeds, custom macros, input shaping, and pressure advance. Bambu Lab uses a proprietary firmware based on modified open-source code.",
+      "fr": "Trois familles de firmware alimentent la plupart des imprimantes FDM. Marlin est l'option open source la plus largement supportée. Klipper permet des vitesses plus élevées, des macros personnalisées, le façonnage d'entrée et l'avance de pression. Bambu Lab utilise un firmware propriétaire basé sur du code open source modifié."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Firmware: Marlin, Klipper, RepRap",
+        "fr": "Firmware : Marlin, Klipper, RepRap"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "Marlin",
+         "desc": {
+          "en": "Most widely supported open-source firmware; works with virtually all slicers",
+          "fr": "Firmware open source le plus largement supporté ; fonctionne avec pratiquement tous les trancheurs"
+         }
+        },
+        {
+         "title": "Klipper",
+         "desc": {
+          "en": "Higher speeds, custom macros, input shaping, pressure advance",
+          "fr": "Vitesses plus élevées, macros personnalisées, façonnage d'entrée, avance de pression"
+         },
+         "highlight": true
+        },
+        {
+         "title": "RepRap",
+         "desc": {
+          "en": "Unique commands like G10/G11 for firmware-controlled retraction",
+          "fr": "Commandes uniques comme G10/G11 pour la rétraction gérée par le firmware"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.18",
+     "narration": {
+      "en": "Layer height, wall count, and infill are your three biggest quality levers. Halving layer height doubles print time but smooths surfaces. Three walls at 1.2 mm total is the default; four to five walls for structural parts.",
+      "fr": "La hauteur de couche, le nombre de parois et le remplissage sont vos trois principaux leviers de qualité. Diviser par deux la hauteur de couche double le temps d'impression mais lisse les surfaces. Trois parois soit 1,2 mm au total est la valeur par défaut ; quatre à cinq parois pour les pièces structurelles."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Layer Height, Walls, and Infill",
+        "fr": "Hauteur de couche, parois et remplissage"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "infill"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Layer height</b> — lower = smoother surfaces, longer print time; 0.2 mm is the sweet spot with a 0.4 mm nozzle",
+         "fr": "<b>Hauteur de couche</b> — plus basse = surfaces plus lisses, temps d'impression plus long ; 0,2 mm est le point d'équilibre avec une buse de 0,4 mm"
+        },
+        {
+         "en": "<b>Walls (perimeters)</b> — 3 walls = ~1.2 mm total; 4–5 walls for structural parts",
+         "fr": "<b>Parois (périmètres)</b> — 3 parois = ~1,2 mm au total ; 4–5 parois pour les pièces structurelles"
+        },
+        {
+         "en": "<b>Infill density</b> — 10–30% for non-structural; 20–50% for functional parts",
+         "fr": "<b>Densité de remplissage</b> — 10–30 % pour les pièces non structurelles ; 20–50 % pour les pièces fonctionnelles"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.19",
+     "narration": {
+      "en": "Infill pattern determines strength distribution. Gyroid and Cubic provide the best isotropic strength — uniform in all directions — ideal for parts under multi-directional loads. Lines and Lightning are fast but weak, suited only for decorative prints.",
+      "fr": "Le motif de remplissage détermine la distribution de la résistance. Le gyroïde et le cubique offrent la meilleure résistance isotrope — uniforme dans toutes les directions — idéale pour les pièces soumises à des charges multidirectionnelles. Les lignes et la foudre sont rapides mais faibles, adaptées uniquement aux impressions décoratives."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Infill Patterns",
+        "fr": "Motifs de remplissage"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "infill"
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Pattern",
+         "fr": "Motif"
+        },
+        {
+         "en": "Strength",
+         "fr": "Résistance"
+        },
+        {
+         "en": "Speed",
+         "fr": "Vitesse"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Gyroid",
+          "fr": "Gyroïde"
+         },
+         {
+          "en": "High isotropic",
+          "fr": "Élevée isotrope"
+         },
+         {
+          "en": "Med-high",
+          "fr": "Moy-élevée"
+         }
+        ],
+        [
+         {
+          "en": "Cubic",
+          "fr": "Cubique"
+         },
+         {
+          "en": "High isotropic",
+          "fr": "Élevée isotrope"
+         },
+         {
+          "en": "Medium",
+          "fr": "Moyenne"
+         }
+        ],
+        [
+         {
+          "en": "Grid",
+          "fr": "Grille"
+         },
+         {
+          "en": "Medium",
+          "fr": "Moyenne"
+         },
+         {
+          "en": "High",
+          "fr": "Élevée"
+         }
+        ],
+        [
+         {
+          "en": "Lines",
+          "fr": "Lignes"
+         },
+         {
+          "en": "Low",
+          "fr": "Faible"
+         },
+         {
+          "en": "Very high",
+          "fr": "Très élevée"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.20",
+     "narration": {
+      "en": "FDM printers handle overhangs up to about 45 degrees from vertical without support. Beyond that, supports are needed. Bridging spans horizontal gaps between two supported points — it depends on fast cooling to pull the strand taut before it droops.",
+      "fr": "Les imprimantes FDM gèrent les surplombs jusqu'à environ 45 degrés par rapport à la verticale sans support. Au-delà, des supports sont nécessaires. Le pontage enjambe des lacunes horizontales entre deux points supportés — il dépend d'un refroidissement rapide pour maintenir le cordon tendu avant qu'il ne s'affaisse."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Supports and Bridging",
+        "fr": "Supports et pontage"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "overhang"
+      },
+      {
+       "type": "stat",
+       "value": "45°",
+       "caption": {
+        "en": "maximum overhang angle without support — beyond this, molten material droops before solidifying",
+        "fr": "angle de surplomb maximal sans support — au-delà, la matière fondue s'affaisse avant de se solidifier"
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.2.21",
+     "narration": {
+      "en": "Before adding supports automatically, consider redesigning the model. A small chamfer or fillet can eliminate supports entirely. Support removal is tedious, leaves marks, and wastes time and material.",
+      "fr": "Avant d'ajouter des supports automatiquement, envisagez de remodeler le modèle. Un petit chanfrein ou un congé peut éliminer entièrement les supports. Le retrait des supports est fastidieux, laisse des marques, et gaspille temps et matière."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Design to avoid supports: a chamfer or fillet under a problematic feature is almost always faster and cleaner than adding supports. Supports should be your last resort, not your first.",
+        "fr": "Concevez pour éviter les supports : un chanfrein ou un congé sous un élément problématique est presque toujours plus rapide et plus propre que d'ajouter des supports. Les supports doivent être votre dernier recours, pas votre premier choix."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.2.22",
+     "narration": {
+      "en": "Direct drive mounts the extruder motor on the printhead. This gives precise, short retractions of 0.5 to 2 mm and excellent flexible filament handling but adds moving mass. Bowden mounts the motor on the frame and needs 3 to 7 mm retractions — better speed potential but difficult with flexible filaments.",
+      "fr": "Le direct drive monte le moteur de l'extrudeur sur la tête d'impression. Cela donne des rétractions précises et courtes de 0,5 à 2 mm et une excellente gestion des filaments flexibles, mais ajoute de la masse en mouvement. Le Bowden monte le moteur sur le châssis et nécessite des rétractions de 3 à 7 mm — meilleur potentiel de vitesse mais difficile avec les filaments flexibles."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Direct Drive vs. Bowden",
+        "fr": "Direct drive vs Bowden"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "extruder"
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Bowden",
+         "fr": "Bowden"
+        },
+        "note": {
+         "en": "Motor on frame · 3–7 mm retraction · lower moving mass, better speed potential · flexible filaments difficult",
+         "fr": "Moteur sur châssis · rétraction 3–7 mm · masse en mouvement plus faible, meilleur potentiel de vitesse · filaments flexibles difficiles"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Direct Drive",
+         "fr": "Direct Drive"
+        },
+        "note": {
+         "en": "Motor on head · 0.5–2 mm retraction · excellent TPU/flexible control · higher moving mass",
+         "fr": "Moteur sur tête · rétraction 0,5–2 mm · excellent contrôle TPU/flexible · masse en mouvement plus élevée"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.2.23",
+     "narration": {
+      "en": "Print orientation is the single most consequential decision in the pipeline. It determines surface quality, strength direction, support needs, and print time simultaneously. FDM parts are anisotropic — they are strongest along the XY plane and weakest in Z.",
+      "fr": "L'orientation d'impression est la décision unique la plus déterminante dans le pipeline. Elle détermine simultanément la qualité de surface, la direction de résistance, les besoins en supports et le temps d'impression. Les pièces FDM sont anisotropes — elles sont les plus résistantes dans le plan XY et les plus faibles en Z."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Print Quality Factors",
+        "fr": "Facteurs de qualité d'impression"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Orientation</b> — the most consequential decision: affects surface, strength, supports, and time",
+         "fr": "<b>Orientation</b> — la décision la plus déterminante : affecte surface, résistance, supports et temps"
+        },
+        {
+         "en": "<b>Layer height</b> — lower = smoother; <b>Nozzle</b> — smaller = finer XY detail",
+         "fr": "<b>Hauteur de couche</b> — plus basse = plus lisse ; <b>Buse</b> — plus petite = détail XY plus fin"
+        },
+        {
+         "en": "<b>Temperature</b> — affects flow, adhesion, surface finish",
+         "fr": "<b>Température</b> — affecte flux, adhérence, rendu de surface"
+        },
+        {
+         "en": "<b>Dimensional accuracy</b> — typically ±0.1–0.3 mm, varies by geometry and calibration",
+         "fr": "<b>Précision dimensionnelle</b> — typiquement ±0,1–0,3 mm, varie selon géométrie et calibration"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.2.24",
+     "narration": {
+      "en": "Chapter 2 recap: FDM works like a precise robotic hot glue gun. The hotend's four zones must stay thermally separated. Nozzle temperature is the top parameter, G-code drives every movement, and print orientation is your most powerful quality decision.",
+      "fr": "Récapitulatif du chapitre 2 : le FDM fonctionne comme un pistolet à colle robotisé de précision. Les quatre zones du hotend doivent rester thermiquement séparées. La température de la buse est le paramètre principal, le G-code pilote chaque mouvement, et l'orientation d'impression est votre décision de qualité la plus puissante."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Chapter 2 recap",
+        "fr": "Récapitulatif du chapitre 2"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Key Takeaways",
+        "fr": "Points clés à retenir"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Hot glue gun analogy</b> — melts filament, deposits layer by layer; 0.2 mm standard layer height",
+         "fr": "<b>Analogie pistolet à colle</b> — fond le filament, dépose couche par couche ; 0,2 mm hauteur de couche standard"
+        },
+        {
+         "en": "<b>Hotend anatomy</b> — heatsink, heat break, heater block, nozzle; all-metal for 350–500°C",
+         "fr": "<b>Anatomie du hotend</b> — dissipateur, séparateur thermique, bloc chauffant, buse ; tout métal pour 350–500°C"
+        },
+        {
+         "en": "<b>Nozzle temp</b> — most important parameter; 180–220°C PLA to 240–300°C Nylon",
+         "fr": "<b>Température buse</b> — paramètre le plus important ; 180–220°C PLA à 240–300°C Nylon"
+        },
+        {
+         "en": "<b>G-code</b> — G0/G1 move; G28 home; M109/M190 blocking temperature wait",
+         "fr": "<b>G-code</b> — G0/G1 déplacement ; G28 origine ; M109/M190 attente bloquante de température"
+        },
+        {
+         "en": "<b>Orientation</b> — single most consequential decision; MVS is the true speed limit",
+         "fr": "<b>Orientation</b> — décision unique la plus déterminante ; la VVM est la vraie limite de vitesse"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 3,
+   "title": {
+    "en": "CoreXY — The High-Performance Kinematic System",
+    "fr": "CoreXY — Le système cinématique haute performance"
+   },
+   "scenes": [
+    {
+     "id": "1.3.0",
+     "narration": {
+      "en": "Chapter 3 dives deep into CoreXY — the kinematic architecture that powers today's fastest printers, from open-source Voron builds to the consumer-friendly Bambu Lab X1.",
+      "fr": "Le chapitre 3 plonge dans le CoreXY — l'architecture cinématique qui équipe les imprimantes les plus rapides d'aujourd'hui, des constructions open source Voron aux Bambu Lab X1 grand public."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 1 · Chapter 3",
+        "fr": "Module 1 · Chapitre 3"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "CoreXY — The High-Performance Kinematic System",
+        "fr": "CoreXY — Le système cinématique haute performance"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "corexy"
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "CoreXY keeps both motors fixed and moves only the lightweight toolhead — enabling speeds and accelerations no bedslinger can match.",
+        "fr": "CoreXY maintient les deux moteurs fixes et ne déplace que la tête d'outil légère — permettant des vitesses et des accélérations qu'aucun bedslinger ne peut égaler."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.3.1",
+     "narration": {
+      "en": "In a traditional Cartesian bedslinger like the Ender 3 or Prusa i3, the entire print bed moves in Y. That assembly weighs 1 to 3 kilograms. Every direction change must accelerate and decelerate that mass, limiting speed and causing vibration.",
+      "fr": "Dans un Cartésien bedslinger traditionnel comme l'Ender 3 ou le Prusa i3, le plateau d'impression entier se déplace en Y. Cet ensemble pèse 1 à 3 kilogrammes. Chaque changement de direction doit accélérer et décélérer cette masse, limitant la vitesse et causant des vibrations."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Problem with Bedslingers",
+        "fr": "Le problème des bedslingers"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "bedslinger"
+      },
+      {
+       "type": "stat",
+       "value": "1–3 kg",
+       "caption": {
+        "en": "typical Y-axis moving mass in a bedslinger — the bed accelerates and decelerates on every direction change",
+        "fr": "masse en mouvement typique sur l'axe Y d'un bedslinger — le plateau accélère et décélère à chaque changement de direction"
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.3.2",
+     "narration": {
+      "en": "CoreXY solves this with two stationary motors and a pair of crossed belts on stacked planes 8 to 12 millimetres apart. Only the lightweight toolhead carriage moves in XY. The low inertia enables much higher speeds and accelerations.",
+      "fr": "CoreXY résout ce problème avec deux moteurs fixes et une paire de courroies croisées sur des plans empilés espacés de 8 à 12 millimètres. Seul le chariot léger de la tête d'outil se déplace en XY. La faible inertie permet des vitesses et des accélérations bien plus élevées."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "How CoreXY Solves It",
+        "fr": "Comment CoreXY résout le problème"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "corexy"
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Bedslinger",
+         "fr": "Bedslinger"
+        },
+        "note": {
+         "en": "Head moves X, bed moves Y — 1–3 kg bed inertia limits speed to ~150 mm/s",
+         "fr": "Tête se déplace en X, plateau en Y — inertie plateau 1–3 kg limite la vitesse à ~150 mm/s"
+        }
+       },
+       "right": {
+        "title": "CoreXY",
+        "note": {
+         "en": "Both motors fixed, only lightweight toolhead moves — enables up to 500 mm/s",
+         "fr": "Les deux moteurs sont fixes, seule la tête légère se déplace — permet jusqu'à 500 mm/s"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.3.3",
+     "narration": {
+      "en": "Two motors, A and B, each drive one belt. The firmware converts their combined rotation into Cartesian motion using two equations: X equals half of A plus B, and Y equals half of A minus B.",
+      "fr": "Deux moteurs, A et B, entraînent chacun une courroie. Le firmware convertit leur rotation combinée en mouvement cartésien à l'aide de deux équations : X est égal à la moitié de A plus B, et Y est égal à la moitié de A moins B."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The CoreXY Math",
+        "fr": "Les mathématiques du CoreXY"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "corexy"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>dx = 0.5 × (da + db)</b> — X motion from sum of both motors",
+         "fr": "<b>dx = 0,5 × (da + db)</b> — mouvement X depuis la somme des deux moteurs"
+        },
+        {
+         "en": "<b>dy = 0.5 × (da − db)</b> — Y motion from difference of both motors",
+         "fr": "<b>dy = 0,5 × (da − db)</b> — mouvement Y depuis la différence des deux moteurs"
+        },
+        {
+         "en": "<b>Pure X</b> — both motors move same amount in same direction",
+         "fr": "<b>X pur</b> — les deux moteurs se déplacent de la même quantité dans la même direction"
+        },
+        {
+         "en": "<b>Pure Y</b> — both motors move same amount in opposite directions",
+         "fr": "<b>Y pur</b> — les deux moteurs se déplacent de la même quantité dans des directions opposées"
+        },
+        {
+         "en": "<b>Diagonal</b> — only one motor moves",
+         "fr": "<b>Diagonal</b> — un seul moteur se déplace"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.3.4",
+     "narration": {
+      "en": "Neither motor alone controls a single axis — they always work together. This is what makes CoreXY a parallel-kinematic system, fundamentally different from Cartesian machines where one motor owns X and another owns Y independently.",
+      "fr": "Ni l'un ni l'autre des moteurs ne contrôle seul un seul axe — ils travaillent toujours ensemble. C'est ce qui fait du CoreXY un système cinématique parallèle, fondamentalement différent des machines Cartésiennes où un moteur pilote X et un autre pilote Y indépendamment."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "CoreXY is parallel kinematics: both motors always contribute to every move. In Klipper: stepper_a = X + Y, stepper_b = X − Y. A misconfigured firmware shows up as a 45-degree skew, not an X-only or Y-only error.",
+        "fr": "CoreXY est une cinématique parallèle : les deux moteurs contribuent toujours à chaque mouvement. Dans Klipper : stepper_a = X + Y, stepper_b = X − Y. Un firmware mal configuré se manifeste par une inclinaison à 45 degrés, pas par une erreur uniquement en X ou en Y."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.3.5",
+     "narration": {
+      "en": "The performance gap between CoreXY and bedslinger designs is dramatic. The Bambu Lab X1 reaches 500 mm/s at 20,000 mm/s squared acceleration. A typical bedslinger tops out at 150 mm/s with 2,000 to 5,000 mm/s squared.",
+      "fr": "L'écart de performance entre les conceptions CoreXY et bedslinger est dramatique. Le Bambu Lab X1 atteint 500 mm/s à 20 000 mm/s² d'accélération. Un bedslinger typique plafonne à 150 mm/s avec 2 000 à 5 000 mm/s²."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "CoreXY vs. Bedslinger: By the Numbers",
+        "fr": "CoreXY vs bedslinger : les chiffres"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "bedslinger"
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Metric",
+         "fr": "Métrique"
+        },
+        "CoreXY",
+        {
+         "en": "Bedslinger",
+         "fr": "Bedslinger"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Max practical speed",
+          "fr": "Vitesse pratique max."
+         },
+         "500 mm/s",
+         "~150 mm/s"
+        ],
+        [
+         {
+          "en": "Max acceleration",
+          "fr": "Accélération max."
+         },
+         "10,000–20,000 mm/s²",
+         "2,000–5,000 mm/s²"
+        ],
+        [
+         {
+          "en": "Frame squareness",
+          "fr": "Équerrage châssis"
+         },
+         "≤0.3 mm diagonal",
+         "≤1.0 mm diagonal"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.3.6",
+     "narration": {
+      "en": "Modern CoreXY printers achieve remarkable speeds. The Bambu Lab X1 Carbon and P1P reach 500 mm/s. The Creality K1 claims 600 mm/s. The Voron 2.4 tuned can hit 25,000 mm/s squared acceleration.",
+      "fr": "Les imprimantes CoreXY modernes atteignent des vitesses remarquables. Le Bambu Lab X1 Carbon et le P1P atteignent 500 mm/s. Le Creality K1 annonce 600 mm/s. Le Voron 2.4 réglé peut atteindre 25 000 mm/s² d'accélération."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "CoreXY Printer Performance",
+        "fr": "Performances des imprimantes CoreXY"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Printer",
+         "fr": "Imprimante"
+        },
+        {
+         "en": "Max speed",
+         "fr": "Vitesse max."
+        },
+        {
+         "en": "Max accel.",
+         "fr": "Accél. max."
+        }
+       ],
+       "rows": [
+        [
+         "Bambu Lab X1 Carbon",
+         "500 mm/s",
+         "20,000 mm/s²"
+        ],
+        [
+         "Bambu Lab P1P/P1S",
+         "500 mm/s",
+         "20,000 mm/s²"
+        ],
+        [
+         "Creality K1/K1C",
+         "600 mm/s",
+         "20,000 mm/s²"
+        ],
+        [
+         "Voron 2.4 (tuned)",
+         "500 mm/s",
+         "25,000 mm/s²"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.3.7",
+     "narration": {
+      "en": "These are advertised maximums. Real sustainable print speeds depend on hotend volumetric capacity, material, and quality requirements. A Bambu Lab X1 may reach 500 mm/s on travel moves and infill but slows to 100 to 200 mm/s for detailed perimeters.",
+      "fr": "Ce sont des maximums annoncés. Les vitesses d'impression réelles et durables dépendent de la capacité volumétrique du hotend, du matériau et des exigences de qualité. Un Bambu Lab X1 peut atteindre 500 mm/s en déplacements de transit et en remplissage, mais ralentit à 100 à 200 mm/s pour les périmètres détaillés."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Advertised max speeds apply only under specific conditions. The real sustained speed is still limited by hotend volumetric flow capacity — the same constraint as any other FDM printer.",
+        "fr": "Les vitesses maximales annoncées ne s'appliquent que dans des conditions spécifiques. La vitesse réelle et durable est toujours limitée par la capacité de débit volumétrique du hotend — la même contrainte que toute autre imprimante FDM."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.3.8",
+     "narration": {
+      "en": "CoreXY has four structural advantages beyond speed. Low moving mass enables high acceleration. Z-axis stability means the build plate never moves in X or Y. And the compact footprint makes full enclosures natural.",
+      "fr": "Le CoreXY a quatre avantages structurels au-delà de la vitesse. La faible masse en mouvement permet une haute accélération. La stabilité de l'axe Z signifie que le plateau de construction ne se déplace jamais en X ou en Y. Et le faible encombrement rend les enceintes complètes naturelles."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "CoreXY Advantages",
+        "fr": "Avantages du CoreXY"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Low moving mass",
+          "fr": "Faible masse en mouvement"
+         },
+         "desc": {
+          "en": "Only toolhead moves — rapid acceleration and deceleration without frame-shaking vibration",
+          "fr": "Seule la tête d'outil se déplace — accélération et décélération rapides sans vibrations secouant le châssis"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "High speed",
+          "fr": "Haute vitesse"
+         },
+         "desc": {
+          "en": "300–500 mm/s — impossible with bedslinger inertia",
+          "fr": "300–500 mm/s — impossible avec l'inertie du bedslinger"
+         }
+        },
+        {
+         "title": {
+          "en": "Z-axis stability",
+          "fr": "Stabilité de l'axe Z"
+         },
+         "desc": {
+          "en": "Build plate moves only vertically — part stays perfectly still relative to frame",
+          "fr": "Le plateau ne se déplace que verticalement — la pièce reste parfaitement immobile par rapport au châssis"
+         }
+        },
+        {
+         "title": {
+          "en": "Enclosure friendly",
+          "fr": "Compatible enceinte"
+         },
+         "desc": {
+          "en": "Bed does not sweep outside frame — compact, easy to fully enclose for ABS/ASA/Nylon",
+          "fr": "Le plateau ne dépasse pas du châssis — compact, facile à fermer pour l'ABS/ASA/Nylon"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.3.9",
+     "narration": {
+      "en": "Compared to Cartesian bedslingers and Delta printers, CoreXY offers the best combination of speed, precision, and build volume. Delta printers offer fast fluid motion but suffer from complex trigonometric calibration and declining edge precision.",
+      "fr": "Comparé aux Cartésiens bedslingers et aux imprimantes Delta, le CoreXY offre la meilleure combinaison de vitesse, précision et volume de construction. Les imprimantes Delta offrent un mouvement rapide et fluide mais souffrent d'une calibration trigonométrique complexe et d'une précision décroissante aux bords."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "CoreXY vs. Cartesian vs. Delta",
+        "fr": "CoreXY vs Cartésien vs Delta"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "bedslinger"
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Feature",
+         "fr": "Caractéristique"
+        },
+        "CoreXY",
+        {
+         "en": "Cartesian",
+         "fr": "Cartésien"
+        },
+        "Delta"
+       ],
+       "rows": [
+        [
+         {
+          "en": "Max speed",
+          "fr": "Vitesse max."
+         },
+         "300–500 mm/s",
+         "100–200 mm/s",
+         "200–300 mm/s"
+        ],
+        [
+         {
+          "en": "Calibration",
+          "fr": "Calibration"
+         },
+         {
+          "en": "Moderate",
+          "fr": "Modérée"
+         },
+         {
+          "en": "Low",
+          "fr": "Faible"
+         },
+         {
+          "en": "High (trig.)",
+          "fr": "Élevée (trigo.)"
+         }
+        ],
+        [
+         {
+          "en": "Edge precision",
+          "fr": "Précision aux bords"
+         },
+         {
+          "en": "Consistent",
+          "fr": "Constante"
+         },
+         {
+          "en": "Consistent",
+          "fr": "Constante"
+         },
+         {
+          "en": "Decreases",
+          "fr": "Diminue"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.3.10",
+     "narration": {
+      "en": "CoreXY systems use GT2 timing belts with a 2 mm pitch. The standard width is 6 mm, as on the Voron 2.4. The Rat Rig V-Core 3 uses 9 mm belts for 50 percent more tooth engagement and greater stiffness.",
+      "fr": "Les systèmes CoreXY utilisent des courroies de distribution GT2 au pas de 2 mm. La largeur standard est de 6 mm, comme sur le Voron 2.4. Le Rat Rig V-Core 3 utilise des courroies de 9 mm pour 50 % de surface d'engagement des dents en plus et une rigidité accrue."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "GT2 Belts: Width and Core Material",
+        "fr": "Courroies GT2 : largeur et matériau d'âme"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>GT2 belts</b> — 2 mm pitch, teeth mesh with pulleys for positive engagement without slippage",
+         "fr": "<b>Courroies GT2</b> — pas de 2 mm, dents engrenant avec les poulies pour un engagement positif sans glissement"
+        },
+        {
+         "en": "<b>6 mm width</b> — standard, lighter, more flexible; used on Voron 2.4",
+         "fr": "<b>Largeur 6 mm</b> — standard, plus légère, plus flexible ; utilisée sur le Voron 2.4"
+        },
+        {
+         "en": "<b>9 mm width</b> — 50% more tooth area, greater stiffness; used on Rat Rig V-Core 3",
+         "fr": "<b>Largeur 9 mm</b> — 50 % de surface de dent en plus, rigidité accrue ; utilisée sur le Rat Rig V-Core 3"
+        },
+        {
+         "en": "<b>Fiberglass core</b> — more flexible, standard; <b>Steel core</b> — stiffer but can fatigue around small pulleys",
+         "fr": "<b>Âme fibre de verre</b> — plus flexible, standard ; <b>Âme acier</b> — plus rigide mais peut rompre par fatigue autour des petites poulies"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.3.11",
+     "narration": {
+      "en": "Belt tension is critical. The target is 110 plus or minus 5 Hz on a 150 mm span — measure by plucking the belt like a guitar string and using a phone tuning app. Below 95 Hz belts skip teeth. Above 125 Hz you side-load the motor bearings.",
+      "fr": "La tension des courroies est critique. La cible est de 110 plus ou moins 5 Hz sur une portée de 150 mm — mesurez en pinçant la courroie comme une corde de guitare et en utilisant une application d'accordage sur smartphone. En dessous de 95 Hz les courroies sautent des dents. Au-dessus de 125 Hz vous soumettez les roulements moteur à des charges latérales."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Belt Tensioning",
+        "fr": "Tension des courroies"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Specification",
+         "fr": "Spécification"
+        },
+        {
+         "en": "Target",
+         "fr": "Cible"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Standard tension",
+          "fr": "Tension standard"
+         },
+         "110 ± 5 Hz (150 mm span)"
+        ],
+        [
+         {
+          "en": "Minimum (prevent skip)",
+          "fr": "Minimum (éviter saut)"
+         },
+         "95 Hz"
+        ],
+        [
+         {
+          "en": "Maximum (protect bearings)",
+          "fr": "Maximum (protéger roulements)"
+         },
+         "125 Hz"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.3.12",
+     "narration": {
+      "en": "Below 95 Hz, belts skip teeth on the motor pulley during hard cornering. Above 125 Hz, you start side-loading the motor shaft bearings, leading to premature wear. Even a small difference between A and B belt tension skews the gantry visibly under acceleration.",
+      "fr": "En dessous de 95 Hz, les courroies sautent des dents sur la poulie moteur lors de virages serrés. Au-dessus de 125 Hz, vous commencez à soumettre les roulements de l'arbre moteur à des charges latérales, entraînant une usure prématurée. Même une petite différence entre la tension des courroies A et B fait incliner le portique de manière visible sous accélération."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Uneven tension between A and B belts is the most common cause of geometric distortion in CoreXY prints. Match both belts to the same frequency — not just to the target range, but to each other.",
+        "fr": "La tension inégale entre les courroies A et B est la cause la plus fréquente de distorsion géométrique dans les impressions CoreXY. Faites correspondre les deux courroies à la même fréquence — pas seulement dans la plage cible, mais l'une par rapport à l'autre."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.3.13",
+     "narration": {
+      "en": "Maintenance for a CoreXY printer covers five areas: inspect belts monthly for wear and fraying, check pulleys for wobble, lubricate linear rails periodically, re-measure belt tension quarterly or after moving the printer, and verify frame squareness annually.",
+      "fr": "La maintenance d'une imprimante CoreXY couvre cinq domaines : inspecter les courroies mensuellement pour l'usure et l'effilochage, vérifier le vacillement des poulies, lubrifier périodiquement les glissières linéaires, re-mesurer la tension des courroies trimestriellement ou après avoir déplacé l'imprimante, et vérifier l'équerrage du châssis annuellement."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Maintenance Checklist",
+        "fr": "Liste de contrôle de maintenance"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Monthly</b> — inspect belts for wear, fraying, or stretching",
+         "fr": "<b>Mensuel</b> — inspecter les courroies pour usure, effilochage ou étirement"
+        },
+        {
+         "en": "<b>Monthly</b> — check pulleys for wobble; verify grub screws",
+         "fr": "<b>Mensuel</b> — vérifier le vacillement des poulies ; contrôler les vis sans tête"
+        },
+        {
+         "en": "<b>Periodic</b> — lubricate linear rails with quality grease",
+         "fr": "<b>Périodique</b> — lubrifier les glissières linéaires avec une graisse de qualité"
+        },
+        {
+         "en": "<b>Quarterly</b> — re-measure belt tension frequency; re-measure after moving printer",
+         "fr": "<b>Trimestriel</b> — re-mesurer la fréquence de tension des courroies ; re-mesurer après avoir déplacé l'imprimante"
+        },
+        {
+         "en": "<b>Annual</b> — verify diagonal frame measurements for squareness",
+         "fr": "<b>Annuel</b> — vérifier les mesures diagonales du châssis pour l'équerrage"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.3.14",
+     "narration": {
+      "en": "Frame squareness is non-negotiable in CoreXY. The gantry rides on parallel rails that depend on parallelism, so the frame must be square within 0.3 mm across the diagonal. An out-of-square frame produces prints distorted into diamond shapes rather than squares.",
+      "fr": "L'équerrage du châssis est non négociable dans le CoreXY. Le portique repose sur des rails parallèles qui dépendent du parallélisme, donc le châssis doit être équerre à 0,3 mm sur la diagonale. Un châssis non équerre produit des impressions déformées en formes de losange plutôt qu'en carrés."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Frame Squareness",
+        "fr": "Équerrage du châssis"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "0.3 mm",
+       "caption": {
+        "en": "maximum diagonal error — a quick test: print a large square and measure both diagonals. If they match, you are square.",
+        "fr": "erreur diagonale maximale — test rapide : imprimez un grand carré et mesurez les deux diagonales. Si elles correspondent, votre châssis est équerre."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.3.15",
+     "narration": {
+      "en": "The open-source CoreXY ecosystem is led by two flagship designs. The Voron 2.4 offers a 350 mm build volume and is highly configurable but requires significant assembly. The Rat Rig V-Core 3 is a commercialized kit with professional documentation.",
+      "fr": "L'écosystème CoreXY open source est mené par deux conceptions phares. Le Voron 2.4 offre un volume de construction de 350 mm et est très configurable mais nécessite un assemblage significatif. Le Rat Rig V-Core 3 est un kit commercialisé avec une documentation professionnelle."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Open-Source CoreXY Ecosystem",
+        "fr": "Écosystème CoreXY open source"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "Voron 2.4",
+        "note": {
+         "en": "350 mm build volume · highly configurable · significant assembly time and tuning required",
+         "fr": "Volume de construction 350 mm · très configurable · temps d'assemblage et de réglage significatif"
+        }
+       },
+       "right": {
+        "title": "Rat Rig V-Core 3",
+        "note": {
+         "en": "Commercialized kit · professional documentation · excellent build quality and reliability",
+         "fr": "Kit commercialisé · documentation professionnelle · excellente qualité de construction et fiabilité"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.3.16",
+     "narration": {
+      "en": "The commercial CoreXY market is led by Bambu Lab. The X1 Carbon launched in 2022 combines a welded steel chassis, active vibration compensation via input shaping, micro lidar for first-layer inspection, and AI-powered quality monitoring.",
+      "fr": "Le marché commercial CoreXY est mené par Bambu Lab. Le X1 Carbon lancé en 2022 combine un châssis en acier soudé, une compensation active des vibrations par façonnage d'entrée, un micro lidar pour l'inspection de la première couche, et une surveillance qualité assistée par IA."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Commercial CoreXY: Bambu Lab and Others",
+        "fr": "CoreXY commercial : Bambu Lab et autres"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "Bambu X1 Carbon",
+         "desc": {
+          "en": "2022 · welded steel · input shaping · micro lidar · AI monitoring",
+          "fr": "2022 · acier soudé · façonnage d'entrée · micro lidar · surveillance IA"
+         },
+         "highlight": true
+        },
+        {
+         "title": "Bambu P1P/P1S",
+         "desc": {
+          "en": "Same CoreXY motion system at lower price",
+          "fr": "Même système de mouvement CoreXY à prix inférieur"
+         }
+        },
+        {
+         "title": "Creality K1",
+         "desc": {
+          "en": "600 mm/s claimed · budget-friendly CoreXY",
+          "fr": "600 mm/s annoncé · CoreXY accessible"
+         }
+        },
+        {
+         "title": "Prusa XL",
+         "desc": {
+          "en": "CoreXY with toolchanger, up to 5 independent tool heads",
+          "fr": "CoreXY avec changeur d'outil, jusqu'à 5 têtes indépendantes"
+         }
+        },
+        {
+         "title": "Prusa Core One (2024)",
+         "desc": {
+          "en": "Fully enclosed · active chamber temp to 55°C · cast steel top frame",
+          "fr": "Entièrement fermé · temp. chambre active jusqu'à 55°C · cadre supérieur en acier coulé"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.3.17",
+     "narration": {
+      "en": "Building a CoreXY from scratch or a kit is significantly more complex than a Cartesian machine. The two belts must be routed through multiple idlers on two separate planes while maintaining perfect parallelism to the guide rails throughout.",
+      "fr": "Construire un CoreXY de toutes pièces ou à partir d'un kit est nettement plus complexe qu'une machine Cartésienne. Les deux courroies doivent être acheminées à travers plusieurs galets sur deux plans séparés tout en maintenant un parallélisme parfait avec les guides linéaires."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Setup Complexity",
+        "fr": "Complexité de montage"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "For beginners, a modern Cartesian printer is perfectly adequate. CoreXY becomes worth the complexity when you want to print faster while maintaining quality, or when you need an enclosed chamber for engineering materials like ABS, ASA, or Nylon.",
+        "fr": "Pour les débutants, une imprimante Cartésienne moderne est parfaitement adéquate. Le CoreXY vaut la complexité lorsque vous souhaitez imprimer plus vite tout en maintenant la qualité, ou lorsque vous avez besoin d'une enceinte pour les matériaux de qualité industrielle comme l'ABS, l'ASA ou le Nylon."
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.3.18",
+     "narration": {
+      "en": "Firmware must be explicitly configured for CoreXY kinematics. In Klipper, add kinematics colon corexy to the printer config. In Marlin, compile with CoreXY support enabled. A misconfigured machine with correct mechanics will show a 45-degree skew across all prints.",
+      "fr": "Le firmware doit être explicitement configuré pour la cinématique CoreXY. Dans Klipper, ajoutez kinematics : corexy à la configuration. Dans Marlin, compilez avec le support CoreXY activé. Une machine mal configurée avec une mécanique correcte montrera une inclinaison à 45 degrés sur toutes les impressions."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Firmware Configuration",
+        "fr": "Configuration du firmware"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Klipper</b> — add `kinematics: corexy` to printer.cfg",
+         "fr": "<b>Klipper</b> — ajouter `kinematics: corexy` à printer.cfg"
+        },
+        {
+         "en": "<b>Marlin</b> — compile with CoreXY support enabled",
+         "fr": "<b>Marlin</b> — compiler avec le support CoreXY activé"
+        },
+        {
+         "en": "<b>Misconfiguration symptom</b> — 45-degree skew on all prints (not X-only or Y-only error)",
+         "fr": "<b>Symptôme de mauvaise configuration</b> — inclinaison à 45 degrés sur toutes les impressions (pas d'erreur uniquement en X ou Y)"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1.3.19",
+     "narration": {
+      "en": "CoreXY printers typically cost more than equivalent Cartesian machines, but the performance gains in speed and acceleration justify the investment for serious users.",
+      "fr": "Les imprimantes CoreXY coûtent généralement plus cher que les machines Cartésiennes équivalentes, mais les gains de performance en vitesse et en accélération justifient l'investissement pour les utilisateurs sérieux."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "CoreXY Trade-offs",
+        "fr": "Compromis du CoreXY"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Costs more, harder to set up",
+         "fr": "Plus cher, plus difficile à monter"
+        },
+        "note": {
+         "en": "Higher price, belt routing on two planes, 0.3 mm frame squareness, moderate calibration complexity",
+         "fr": "Prix plus élevé, routage des courroies sur deux plans, équerrage châssis 0,3 mm, complexité de calibration modérée"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Worth it for serious use",
+         "fr": "Justifié pour une utilisation sérieuse"
+        },
+        "note": {
+         "en": "300–500 mm/s, 10,000–20,000 mm/s² acceleration, Z stability, enclosure-ready for engineering materials",
+         "fr": "300–500 mm/s, 10 000–20 000 mm/s² d'accélération, stabilité Z, prêt pour enceinte pour matériaux techniques"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "1.3.20",
+     "narration": {
+      "en": "Chapter 3 recap: CoreXY is a parallel-kinematic system using two stationary motors and crossed belts on stacked planes. It achieves 300 to 500 mm/s and 10,000 to 20,000 mm/s squared — far beyond bedslingers. Belt tension at 110 Hz and frame squareness within 0.3 mm are non-negotiable.",
+      "fr": "Récapitulatif du chapitre 3 : CoreXY est un système cinématique parallèle utilisant deux moteurs fixes et des courroies croisées sur des plans empilés. Il atteint 300 à 500 mm/s et 10 000 à 20 000 mm/s² — bien au-delà des bedslingers. La tension des courroies à 110 Hz et l'équerrage du châssis à moins de 0,3 mm sont non négociables."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Chapter 3 recap",
+        "fr": "Récapitulatif du chapitre 3"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Key Takeaways",
+        "fr": "Points clés à retenir"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Parallel kinematics</b> — two fixed motors, crossed belts, only toolhead moves; dx = 0.5(da+db), dy = 0.5(da−db)",
+         "fr": "<b>Cinématique parallèle</b> — deux moteurs fixes, courroies croisées, seule la tête d'outil se déplace ; dx = 0,5(da+db), dy = 0,5(da−db)"
+        },
+        {
+         "en": "<b>Performance</b> — 300–500 mm/s, 10,000–20,000 mm/s², far exceeding bedslinger designs",
+         "fr": "<b>Performances</b> — 300–500 mm/s, 10 000–20 000 mm/s², dépassant de loin les conceptions bedslinger"
+        },
+        {
+         "en": "<b>Advantages</b> — low moving mass, high acceleration, Z stability, enclosure-friendly",
+         "fr": "<b>Avantages</b> — faible masse en mouvement, haute accélération, stabilité Z, compatible enceinte"
+        },
+        {
+         "en": "<b>Belt tension</b> — 110 ± 5 Hz; <b>frame squareness</b> — ≤0.3 mm diagonal: both non-negotiable",
+         "fr": "<b>Tension courroies</b> — 110 ± 5 Hz ; <b>équerrage châssis</b> — ≤0,3 mm en diagonale : tous deux non négociables"
+        },
+        {
+         "en": "<b>Modern printers</b> — Voron 2.4 (open-source), Bambu Lab X1/P1 (consumer), Prusa XL/Core One",
+         "fr": "<b>Imprimantes modernes</b> — Voron 2.4 (open source), Bambu Lab X1/P1 (grand public), Prusa XL/Core One"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

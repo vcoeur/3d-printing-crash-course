@@ -1,0 +1,2657 @@
+{
+ "module": 4,
+ "module_title": {
+  "en": "FDM Materials Complete Guide",
+  "fr": "Guide complet des matériaux FDM"
+ },
+ "chapters": [
+  {
+   "chapter": 1,
+   "title": {
+    "en": "PLA and Everyday Materials",
+    "fr": "PLA et matériaux du quotidien"
+   },
+   "scenes": [
+    {
+     "id": "4.1.0",
+     "narration": {
+      "en": "Welcome to Chapter 1. Every print that succeeds or fails comes down to the material. We start with the two workhorses of consumer 3D printing: PLA and PETG.",
+      "fr": "Bienvenue au chapitre 1. Chaque impression qui réussit ou échoue dépend du matériau. Nous commençons par les deux piliers de l'impression 3D grand public : le PLA et le PETG."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 4 · Chapter 1",
+        "fr": "Module 4 · Chapitre 1"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "PLA and Everyday Materials",
+        "fr": "PLA et matériaux du quotidien"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "PLA and PETG account for the vast majority of consumer 3D printing worldwide — affordable, widely available, and forgiving enough to let you focus on learning your printer.",
+        "fr": "Le PLA et le PETG représentent la grande majorité de l'impression 3D grand public mondiale — abordables, largement disponibles et suffisamment indulgents pour vous laisser vous concentrer sur l'apprentissage de votre imprimante."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.1.1",
+     "narration": {
+      "en": "PLA is derived from renewable resources like corn starch or sugar cane. It prints at low temperatures, produces minimal odour, and requires no heated chamber. If you've seen a 3D print, it was probably PLA.",
+      "fr": "Le PLA est dérivé de ressources renouvelables comme l'amidon de maïs ou la canne à sucre. Il s'imprime à basse température, produit peu d'odeur et ne nécessite pas d'enceinte chauffée. Si vous avez déjà vu une impression 3D, c'était probablement du PLA."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PLA — The Beginner's Best Friend",
+        "fr": "PLA — Le meilleur ami du débutant"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Origin",
+          "fr": "Origine"
+         },
+         "desc": {
+          "en": "Renewable — corn starch, sugar cane",
+          "fr": "Renouvelable — amidon de maïs, canne à sucre"
+         }
+        },
+        {
+         "title": {
+          "en": "Temperatures",
+          "fr": "Températures"
+         },
+         "desc": {
+          "en": "Low — no chamber needed",
+          "fr": "Basses — enceinte non requise"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Odour",
+          "fr": "Odeur"
+         },
+         "desc": {
+          "en": "Minimal — safe for indoor use",
+          "fr": "Minimale — sûr en intérieur"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.1.2",
+     "narration": {
+      "en": "Think of PLA as the craft paper of 3D printing. Its glass transition temperature sits around 60 degrees Celsius, so a PLA part left in a hot car on a summer day will deform. It is also somewhat brittle, tending to snap rather than flex under sharp impacts.",
+      "fr": "Pensez au PLA comme au papier kraft de l'impression 3D. Sa température de transition vitreuse se situe autour de 60°C, donc une pièce en PLA laissée dans une voiture chaude par une journée d'été se déformera. Il est également assez fragile, tendant à se briser sous des chocs brusques plutôt qu'à fléchir."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PLA Key Properties",
+        "fr": "Propriétés clés du PLA"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "~60°C",
+       "caption": {
+        "en": "Glass transition temperature — deforms in a hot car",
+        "fr": "Température de transition vitreuse — se déforme dans une voiture chaude"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Excellent dimensional accuracy</b> — parts very close to designed dimensions",
+         "fr": "<b>Précision dimensionnelle excellente</b> — pièces très proches des dimensions de conception"
+        },
+        {
+         "en": "<b>Great surface finish</b> — smooth, detailed results",
+         "fr": "<b>Excellente qualité de surface</b> — résultats lisses et détaillés"
+        },
+        {
+         "en": "<b>Virtually zero warping</b> — corners stay flat on the bed",
+         "fr": "<b>Pratiquement aucun gauchissement</b> — les coins restent plats sur le plateau"
+        },
+        {
+         "en": "<b>Brittle</b> — snaps under sharp impact, does not flex",
+         "fr": "<b>Fragile</b> — se brise sous un choc brusque, ne fléchit pas"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.1.3",
+     "narration": {
+      "en": "PLA's optimal settings are forgiving. Start a new spool at 200 degrees and a 60-degree bed. If you hear sizzling or see bubbles in the extruded filament, your filament has absorbed moisture — dry it at 45 to 50 degrees for 4 to 6 hours before continuing.",
+      "fr": "Les réglages optimaux du PLA sont indulgents. Commencez une nouvelle bobine à 200°C et un plateau à 60°C. Si vous entendez un grésissement ou voyez des bulles dans le filament extrudé, votre filament a absorbé de l'humidité — séchez-le à 45-50°C pendant 4 à 6 heures avant de continuer."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PLA Print Settings",
+        "fr": "Réglages d'impression PLA"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Parameter",
+         "fr": "Paramètre"
+        },
+        {
+         "en": "Range",
+         "fr": "Plage"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Nozzle",
+          "fr": "Buse"
+         },
+         "190–230°C"
+        ],
+        [
+         {
+          "en": "Bed",
+          "fr": "Plateau"
+         },
+         "45–60°C (optional)"
+        ],
+        [
+         {
+          "en": "Speed",
+          "fr": "Vitesse"
+         },
+         "40–60 mm/s"
+        ],
+        [
+         {
+          "en": "Cooling",
+          "fr": "Refroid."
+         },
+         "100%"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Start every new PLA spool at 200°C nozzle / 60°C bed. Sizzling sounds or bubbles mean wet filament — dry at 45–50°C for 4–6 hours.",
+        "fr": "Commencez chaque nouvelle bobine de PLA à 200°C / plateau 60°C. Un grésissement ou des bulles signalent un filament humide — séchez à 45-50°C pendant 4 à 6 heures."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.1.4",
+     "narration": {
+      "en": "The PLA label hides a diverse family of formulations. PLA-plus is not a standardised material — it is a marketing term covering PLA modified with various additives such as calcium carbonate, acrylic polymers, or TPU. Manufacturers rarely disclose exact formulations.",
+      "fr": "L'étiquette PLA cache une famille de formulations diverse. Le PLA+ n'est pas un matériau standardisé — c'est un terme marketing désignant du PLA modifié avec divers additifs comme le carbonate de calcium, des polymères acryliques ou du TPU. Les fabricants divulguent rarement les formulations exactes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PLA Variants",
+        "fr": "Variantes du PLA"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "PLA+",
+         "desc": {
+          "en": "Tougher, less brittle — additives vary by brand, not standardised",
+          "fr": "Plus résistant, moins fragile — additifs variables selon la marque, non standardisé"
+         }
+        },
+        {
+         "title": {
+          "en": "Silk PLA",
+          "fr": "PLA Silk"
+         },
+         "desc": {
+          "en": "Glossy iridescent finish — weaker layer adhesion, decorative only",
+          "fr": "Finition brillante irisée — adhérence entre couches plus faible, décoratif uniquement"
+         }
+        },
+        {
+         "title": {
+          "en": "Matte PLA",
+          "fr": "PLA Mat"
+         },
+         "desc": {
+          "en": "Hides layer lines naturally — modern injection-moulded look",
+          "fr": "Masque naturellement les lignes de couches — aspect moderne moulé par injection"
+         }
+        },
+        {
+         "title": {
+          "en": "Speed PLA",
+          "fr": "PLA Vitesse"
+         },
+         "desc": {
+          "en": "Optimised for 300+ mm/s — more headroom on fast machines",
+          "fr": "Optimisé pour 300+ mm/s — plus de marge sur les machines rapides"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.1.5",
+     "narration": {
+      "en": "PLA is frequently marketed as biodegradable and eco-friendly, but the reality is more nuanced. PLA only breaks down under industrial composting conditions — sustained temperatures around 58 to 60 degrees with specific microbial activity. In your home compost, a landfill, or the ocean, PLA persists for decades just like conventional plastic.",
+      "fr": "Le PLA est souvent commercialisé comme biodégradable et écologique, mais la réalité est bien plus nuancée. Le PLA ne se décompose que dans des conditions de compostage industriel — des températures soutenues d'environ 58 à 60°C avec une activité microbienne spécifique. Dans votre bac à compost domestique, dans une décharge ou dans l'océan, le PLA persiste pendant des décennies, tout comme le plastique conventionnel."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Biodegradability Myth",
+        "fr": "Le mythe de la biodégradabilité"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "PLA does NOT break down in home compost, landfill, or the ocean. Studies show no meaningful degradation in marine environments after 428 days. Industrial composting at 58–60°C is required — and most communities lack those facilities.",
+        "fr": "Le PLA ne se décompose PAS dans un compost domestique, une décharge ou l'océan. Des études montrent aucune dégradation significative en milieu marin après 428 jours. Le compostage industriel à 58-60°C est nécessaire — et la plupart des communautés manquent de ces installations."
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Renewable resource</b> — genuine advantage over petroleum-based plastics",
+         "fr": "<b>Ressource renouvelable</b> — véritable avantage sur les plastiques d'origine pétrolière"
+        },
+        {
+         "en": "<b>End-of-life complex</b> — do not choose PLA primarily for environmental reasons",
+         "fr": "<b>Fin de vie complexe</b> — ne choisissez pas le PLA principalement pour des raisons environnementales"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.1.6",
+     "narration": {
+      "en": "PETG is what happens when you need PLA to grow up. It is chemically similar to the PET in water bottles, with glycol added to prevent crystallisation. The result is tougher than PLA, more temperature resistant, chemically resistant, and far easier to print than ABS.",
+      "fr": "Le PETG, c'est le PLA qui a grandi. Il est chimiquement similaire au PET des bouteilles d'eau, avec du glycol ajouté pour prévenir la cristallisation. Le résultat est plus résistant que le PLA, plus tolérant à la chaleur, résistant aux produits chimiques et bien plus facile à imprimer que l'ABS."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PETG — The Functional Upgrade",
+        "fr": "PETG — L'upgrade fonctionnel"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "PLA",
+        "note": {
+         "en": "Craft paper — easy, beautiful, not demanding",
+         "fr": "Papier kraft — facile, beau, pas exigeant"
+        }
+       },
+       "right": {
+        "title": "PETG",
+        "note": {
+         "en": "Cardstock — tougher, more capable, still printable",
+         "fr": "Carton — plus résistant, plus polyvalent, toujours imprimable"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.1.7",
+     "narration": {
+      "en": "PETG's key advantages over PLA are superior layer adhesion, chemical resistance to water and mild acids, higher heat resistance around 75 to 80 degrees, moderate UV resistance, and a slight flexibility that absorbs impacts better than rigid PLA.",
+      "fr": "Les avantages clés du PETG sur le PLA sont une meilleure adhérence entre couches, la résistance chimique à l'eau et aux acides faibles, une meilleure résistance à la chaleur autour de 75 à 80°C, une résistance modérée aux UV, et une légère flexibilité qui absorbe mieux les chocs que le PLA rigide."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PETG Advantages Over PLA",
+        "fr": "Avantages du PETG sur le PLA"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Superior layer adhesion</b> — stronger in the Z-axis",
+         "fr": "<b>Meilleure adhérence entre couches</b> — plus solide dans l'axe Z"
+        },
+        {
+         "en": "<b>Chemical resistance</b> — water, mild acids, many solvents",
+         "fr": "<b>Résistance chimique</b> — eau, acides faibles, nombreux solvants"
+        },
+        {
+         "en": "<b>Higher heat resistance</b> — softens at ~75–80°C vs PLA's ~60°C",
+         "fr": "<b>Meilleure résistance à la chaleur</b> — ramollit à ~75-80°C contre ~60°C pour le PLA"
+        },
+        {
+         "en": "<b>Moderate UV resistance</b> — handles some sun exposure",
+         "fr": "<b>Résistance modérée aux UV</b> — supporte une certaine exposition au soleil"
+        },
+        {
+         "en": "<b>Slight flexibility</b> — more impact-resistant than rigid PLA",
+         "fr": "<b>Légère flexibilité</b> — plus résistant aux chocs que le PLA rigide"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.1.8",
+     "narration": {
+      "en": "PETG's biggest weakness is stringing — thin wisps of plastic stretching between parts during travel moves. The systematic fix starts with drying your filament at 65 degrees for 7 hours, then reducing temperature, increasing retraction speed to 60 millimetres per second, and enabling wipe-before-travel in your slicer.",
+      "fr": "La plus grande faiblesse du PETG est le filage — de minces fils de plastique qui s'étirent entre des parties de l'impression lors des déplacements. La correction systématique commence par le séchage du filament à 65°C pendant 7 heures, puis la réduction de la température, l'augmentation de la vitesse de rétraction à 60 mm/s et l'activation de l'essuie-avant-déplacement dans votre trancheur."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Taming PETG Stringing",
+        "fr": "Maîtriser le filage du PETG"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "retraction"
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Dry first",
+          "fr": "Sécher d'abord"
+         },
+         "sub": {
+          "en": "65°C · 7 h",
+          "fr": "65°C · 7 h"
+         }
+        },
+        {
+         "name": {
+          "en": "Lower temp",
+          "fr": "Baisser temp"
+         },
+         "sub": {
+          "en": "Try 230–235°C",
+          "fr": "Essayer 230-235°C"
+         }
+        },
+        {
+         "name": {
+          "en": "Retraction",
+          "fr": "Rétraction"
+         },
+         "sub": {
+          "en": "60 mm/s speed",
+          "fr": "Vitesse 60 mm/s"
+         }
+        },
+        {
+         "name": {
+          "en": "Wipe travel",
+          "fr": "Essuyer"
+         },
+         "sub": {
+          "en": "Enable in slicer",
+          "fr": "Activer dans slicer"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.1.9",
+     "narration": {
+      "en": "PETG can bond so aggressively to bare borosilicate glass that it will pull chunks out of the bed when you remove the print. Always use a PEI sheet, painter's tape, or a thin glue-stick layer as a release agent.",
+      "fr": "Le PETG peut adhérer si agressivement au verre borosilicaté nu qu'il arrachera des morceaux du plateau lors du retrait de l'impression. Utilisez toujours une feuille PEI, du ruban de masquage peintre ou une fine couche de bâton de colle comme agent de démoulage."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PETG Print Settings",
+        "fr": "Réglages d'impression PETG"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Parameter",
+         "fr": "Paramètre"
+        },
+        {
+         "en": "Range",
+         "fr": "Plage"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Nozzle",
+          "fr": "Buse"
+         },
+         "230–250°C"
+        ],
+        [
+         {
+          "en": "Bed",
+          "fr": "Plateau"
+         },
+         "80–90°C"
+        ],
+        [
+         {
+          "en": "Speed",
+          "fr": "Vitesse"
+         },
+         "30–50 mm/s"
+        ],
+        [
+         {
+          "en": "Cooling",
+          "fr": "Refroid."
+         },
+         "30–50%"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "PETG on bare borosilicate glass can rip chunks out of the bed. Always use PEI, painter's tape, or a glue-stick layer.",
+        "fr": "Le PETG sur verre borosilicaté nu peut arracher des morceaux du plateau. Utilisez toujours du PEI, du ruban de masquage peintre ou une couche de bâton de colle."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.1.10",
+     "narration": {
+      "en": "PETG is often called food-safe because the base polymer is FDA-approved for food contact. But the printed object almost certainly is not food-safe. Layer lines create microscopic crevices where bacteria grow and food residue becomes trapped — impossible to clean even in a dishwasher.",
+      "fr": "Le PETG est souvent dit compatible alimentaire parce que le polymère de base est approuvé par la FDA pour le contact alimentaire. Mais l'objet imprimé n'est presque certainement pas compatible alimentaire. Les lignes de couches créent des crevasses microscopiques où les bactéries prolifèrent et les résidus alimentaires restent piégés — impossible à nettoyer même au lave-vaisselle."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Food Safety Reality Check",
+        "fr": "La réalité de la sécurité alimentaire"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "The filament",
+         "fr": "Le filament"
+        },
+        "note": {
+         "en": "FDA-approved base polymer — may be food-safe",
+         "fr": "Polymère de base approuvé FDA — peut être compatible alimentaire"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "The printed part",
+         "fr": "La pièce imprimée"
+        },
+        "note": {
+         "en": "Layer-line crevices — bacteria trap — NOT food-safe",
+         "fr": "Crevasses entre couches — piège à bactéries — PAS compatible alimentaire"
+        }
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Cookie cutters for occasional single use: acceptable. Water bottles for repeated use: absolutely not.",
+        "fr": "Emporte-pièces pour une utilisation unique occasionnelle : acceptable. Bouteilles d'eau pour un usage répété : absolument pas."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.1.11",
+     "narration": {
+      "en": "To recap Chapter 1: PLA is the ideal starting material — low temperature, minimal warping, great surface finish. PETG is the go-to for functional parts. Neither is truly home-compostable or food-safe in practice. Master PLA first, then expand to PETG for functional work.",
+      "fr": "Pour résumer le chapitre 1 : le PLA est le matériau de départ idéal — basse température, gauchissement minimal, excellente qualité de surface. Le PETG est la référence pour les pièces fonctionnelles. Ni l'un ni l'autre n'est véritablement compostable à domicile ni compatible alimentaire en pratique. Maîtrisez le PLA d'abord, puis passez au PETG pour les travaux fonctionnels."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 1 Recap",
+        "fr": "Récapitulatif du chapitre 1"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>PLA</b> — 190–230°C nozzle, 45–60°C bed, zero warping, great finish; ideal for prototypes and display pieces below 60°C",
+         "fr": "<b>PLA</b> — buse 190-230°C, plateau 45-60°C, sans gauchissement, belle finition ; idéal pour prototypes et pièces d'exposition en dessous de 60°C"
+        },
+        {
+         "en": "<b>PLA+</b> — improved toughness, same printability; additives unstandardised by brand",
+         "fr": "<b>PLA+</b> — meilleure résistance aux chocs, même facilité d'impression ; additifs non standardisés selon la marque"
+        },
+        {
+         "en": "<b>PETG</b> — 230–250°C nozzle, 80–90°C bed; tougher, excellent layer adhesion, chemical resistant; watch stringing and bed adhesion",
+         "fr": "<b>PETG</b> — buse 230-250°C, plateau 80-90°C ; plus résistant, excellente adhérence entre couches, résistant chimiquement ; surveiller le filage et l'adhérence au plateau"
+        },
+        {
+         "en": "<b>Neither is home-compostable or food-safe</b> — despite marketing claims",
+         "fr": "<b>Ni l'un ni l'autre n'est compostable à domicile ni compatible alimentaire</b> — malgré les allégations marketing"
+        },
+        {
+         "en": "<b>Progression:</b> master PLA, then PETG for functional parts",
+         "fr": "<b>Progression :</b> maîtriser le PLA, puis le PETG pour les pièces fonctionnelles"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 2,
+   "title": {
+    "en": "Engineering Materials",
+    "fr": "Matériaux techniques"
+   },
+   "scenes": [
+    {
+     "id": "4.2.0",
+     "narration": {
+      "en": "Chapter 2: engineering materials. ABS, ASA, Nylon, and Polycarbonate deliver properties that rival injection-moulded engineering plastics — but they demand higher temperatures, enclosures, and more careful handling.",
+      "fr": "Chapitre 2 : matériaux techniques. L'ABS, l'ASA, le Nylon et le Polycarbonate offrent des propriétés qui rivalisent avec les plastiques techniques moulés par injection — mais ils exigent des températures plus élevées, des enceintes et une manipulation plus soigneuse."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 4 · Chapter 2",
+        "fr": "Module 4 · Chapitre 2"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Engineering Materials",
+        "fr": "Matériaux techniques"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "These filaments turn your 3D printer into a tool for serious manufacturing — but each one raises the bar on printer capability, safety, and patience.",
+        "fr": "Ces filaments font de votre imprimante 3D un outil pour la fabrication sérieuse — mais chacun élève le niveau d'exigence en termes de capacité de l'imprimante, de sécurité et de patience."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.2.1",
+     "narration": {
+      "en": "ABS is the same material used in LEGO bricks and automotive interior panels. Its glass transition temperature of around 105 degrees means it handles significantly more heat than PLA. It is impact-resistant, can be drilled and tapped, and responds beautifully to acetone vapour smoothing.",
+      "fr": "L'ABS est le même matériau utilisé dans les briques LEGO et les panneaux intérieurs automobiles. Sa température de transition vitreuse d'environ 105°C signifie qu'il supporte beaucoup plus de chaleur que le PLA. Il est résistant aux chocs, peut être percé et taraudé, et réagit magnifiquement au lissage à la vapeur d'acétone."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "ABS — The Classic Engineering Plastic",
+        "fr": "ABS — Le plastique technique classique"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "~105°C",
+       "caption": {
+        "en": "ABS glass transition temperature — handles far more heat than PLA",
+        "fr": "Température de transition vitreuse de l'ABS — supporte bien plus de chaleur que le PLA"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Applications</b> — functional prototypes, automotive parts, electronic enclosures, drone frames",
+         "fr": "<b>Applications</b> — prototypes fonctionnels, pièces automobiles, boîtiers électroniques, châssis de drones"
+        },
+        {
+         "en": "<b>Acetone smoothing</b> — unique ability to chemically dissolve layer lines to injection-moulded finish",
+         "fr": "<b>Lissage à l'acétone</b> — capacité unique à dissoudre chimiquement les lignes de couches pour une finition moulée par injection"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.2.2",
+     "narration": {
+      "en": "ABS presents three major challenges: warping as it contracts during cooling, styrene fumes classified as a probable human carcinogen by IARC Group 2A since 2019, and demanding bed adhesion. An enclosure is not optional for ABS — it is mandatory.",
+      "fr": "L'ABS présente trois défis majeurs : le gauchissement lors du refroidissement, les vapeurs de styrène classées cancérogène humain probable par le CIRC Groupe 2A depuis 2019, et une adhérence au plateau exigeante. Une enceinte n'est pas optionnelle pour l'ABS — elle est obligatoire."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Three ABS Challenges",
+        "fr": "Les trois défis de l'ABS"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Warping",
+          "fr": "Gauchissement"
+         },
+         "desc": {
+          "en": "Contracts on cooling — corners lift, tall parts crack. Enclosure mandatory.",
+          "fr": "Se contracte en refroidissant — coins se soulèvent, pièces hautes se fissurent. Enceinte obligatoire."
+         }
+        },
+        {
+         "title": {
+          "en": "Fumes",
+          "fr": "Émanations"
+         },
+         "desc": {
+          "en": "Styrene — IARC Group 2A probable carcinogen. Ventilate to outdoors.",
+          "fr": "Styrène — CIRC Groupe 2A cancérogène probable. Ventiler vers l'extérieur."
+         }
+        },
+        {
+         "title": {
+          "en": "Bed adhesion",
+          "fr": "Adhérence plateau"
+         },
+         "desc": {
+          "en": "Needs 80–110°C bed + PEI / ABS slurry. Too cold = spaghetti failure.",
+          "fr": "Nécessite plateau 80-110°C + PEI / bouillie ABS. Trop froid = échec spaghetti."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.2.3",
+     "narration": {
+      "en": "ABS fumes are no joke. Research consistently shows that printing ABS releases volatile organic compounds including styrene and ultrafine particles at 3 to 4 times higher levels than PLA. Print in an enclosure vented to the outdoors, or at minimum in a dedicated workshop with a HEPA and carbon air purifier. Never in a bedroom or living area.",
+      "fr": "Les vapeurs d'ABS ne sont pas à prendre à la légère. Les recherches montrent constamment que l'impression d'ABS libère des composés organiques volatils dont le styrène et des particules ultrafines à des niveaux 3 à 4 fois plus élevés qu'avec le PLA. Imprimez dans une enceinte ventilée vers l'extérieur, ou au minimum dans un atelier dédié avec un purificateur HEPA + charbon actif. Jamais dans une chambre ou un espace de vie."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "ABS Fumes — Safety First",
+        "fr": "Vapeurs d'ABS — la sécurité avant tout"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "ABS emits styrene (IARC Group 2A — probable human carcinogen) and ultrafine particles. Always print in an enclosure vented outdoors, or use a HEPA+carbon air purifier in a dedicated workshop. Never print ABS in a bedroom or living space.",
+        "fr": "L'ABS émet du styrène (CIRC Groupe 2A — cancérogène humain probable) et des particules ultrafines. Imprimez toujours dans une enceinte ventilée vers l'extérieur, ou utilisez un purificateur HEPA+charbon actif dans un atelier dédié. N'imprimez jamais d'ABS dans une chambre ou un espace de vie."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.2.4",
+     "narration": {
+      "en": "One of ABS's unique superpowers is acetone vapour smoothing. Acetone dissolves the outer surface of the print, causing layer lines to flow together and disappear. The safer cold-vapour method: place the ABS print in a sealed glass container with acetone-soaked paper towels for 30 to 60 minutes.",
+      "fr": "L'un des superpouvoirs uniques de l'ABS est le lissage à la vapeur d'acétone. L'acétone dissout la surface extérieure de l'impression, faisant fusionner les lignes de couches jusqu'à leur disparition. La méthode à vapeur froide plus sûre : placez l'impression en ABS dans un récipient en verre hermétique avec des serviettes en papier imbibées d'acétone pendant 30 à 60 minutes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Acetone Vapour Smoothing",
+        "fr": "Lissage à la vapeur d'acétone"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Cold vapour (safer)",
+         "fr": "Vapeur froide (plus sûre)"
+        },
+        "note": {
+         "en": "Sealed glass container + acetone-soaked paper towels · 30–60 min",
+         "fr": "Récipient en verre hermétique + serviettes imbibées d'acétone · 30-60 min"
+        },
+        "highlight": true
+       },
+       "right": {
+        "title": {
+         "en": "Hot vapour (faster)",
+         "fr": "Vapeur chaude (plus rapide)"
+        },
+        "note": {
+         "en": "Heated container 40–50°C — ACETONE FLASH POINT −20°C — open flame forbidden",
+         "fr": "Récipient chauffé 40-50°C — POINT D'ÉCLAIR ACÉTONE −20°C — flamme nue interdite"
+        }
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "ASA and HIPS can also be acetone-smoothed (both contain styrene). PLA, PETG, Nylon, and TPU cannot.",
+        "fr": "L'ASA et le HIPS peuvent également être lissés à l'acétone (les deux contiennent du styrène). Le PLA, le PETG, le Nylon et le TPU ne le peuvent pas."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.2.5",
+     "narration": {
+      "en": "ASA is what ABS wants to be when it grows up. It shares nearly all of ABS's strengths while adding the one thing ABS critically lacks: UV resistance. The difference is chemistry — ASA substitutes acrylate rubber for ABS's butadiene rubber, eliminating vulnerability to sunlight degradation.",
+      "fr": "L'ASA est ce que l'ABS aspire à devenir. Il partage presque tous les atouts de l'ABS tout en ajoutant ce qui lui manque cruellement : la résistance aux UV. La différence réside dans la chimie — l'ASA remplace le caoutchouc butadiène de l'ABS par du caoutchouc acrylate, éliminant la vulnérabilité à la dégradation par la lumière solaire."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "ASA — The Outdoor-Friendly ABS Alternative",
+        "fr": "ASA — L'alternative ABS adaptée à l'extérieur"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "ABS",
+        "note": {
+         "en": "Poor UV resistance — degrades and discolours in sunlight",
+         "fr": "Mauvaise résistance UV — se dégrade et se décolore au soleil"
+        }
+       },
+       "right": {
+        "title": "ASA",
+        "note": {
+         "en": "Excellent UV resistance — colour-stable outdoors for years",
+         "fr": "Excellente résistance UV — couleur stable en extérieur pendant des années"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.2.6",
+     "narration": {
+      "en": "The full ABS versus ASA comparison: heat resistance is similar at around 100 to 105 degrees for both. Warping is slightly less severe with ASA. Both emit styrene fumes so ventilation still applies. ASA surfaces are typically matte rather than glossy, and both can be acetone-smoothed.",
+      "fr": "La comparaison complète ABS contre ASA : la résistance à la chaleur est similaire autour de 100 à 105°C pour les deux. Le gauchissement est légèrement moins sévère avec l'ASA. Les deux émettent des vapeurs de styrène, donc la ventilation s'applique toujours. Les surfaces ASA sont généralement mates plutôt que brillantes, et les deux peuvent être lissées à l'acétone."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "ABS vs. ASA Comparison",
+        "fr": "Comparaison ABS vs. ASA"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Property",
+         "fr": "Propriété"
+        },
+        "ABS",
+        "ASA"
+       ],
+       "rows": [
+        [
+         {
+          "en": "UV resistance",
+          "fr": "UV"
+         },
+         {
+          "en": "Poor",
+          "fr": "Médiocre"
+         },
+         {
+          "en": "Excellent",
+          "fr": "Excellente"
+         }
+        ],
+        [
+         {
+          "en": "Heat (Tg)",
+          "fr": "Chaleur (Tg)"
+         },
+         "~105°C",
+         "~100–105°C"
+        ],
+        [
+         {
+          "en": "Warping",
+          "fr": "Gauchissement"
+         },
+         {
+          "en": "High",
+          "fr": "Élevé"
+         },
+         {
+          "en": "Moderate",
+          "fr": "Modéré"
+         }
+        ],
+        [
+         {
+          "en": "Acetone smooth",
+          "fr": "Acétone"
+         },
+         {
+          "en": "Yes",
+          "fr": "Oui"
+         },
+         {
+          "en": "Yes",
+          "fr": "Oui"
+         }
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "ASA is the default recommendation over ABS for nearly every application today. Choose ABS only if you specifically need acetone smoothing results that vary from ASA, or if ASA is unavailable or too expensive in your region.",
+        "fr": "L'ASA est la recommandation par défaut plutôt que l'ABS pour presque toutes les applications aujourd'hui. Choisissez l'ABS uniquement si vous avez spécifiquement besoin de résultats de lissage à l'acétone différents de l'ASA, ou si l'ASA n'est pas disponible ou trop cher dans votre région."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.2.7",
+     "narration": {
+      "en": "ASA's print settings are similar to ABS but slightly hotter: 240 to 270 degrees nozzle, 90 to 110 degree bed, enclosure required, fan off for the first three layers then maximum 10 to 20 percent. Applications include automotive exterior parts, garden equipment, outdoor signage, and marine components.",
+      "fr": "Les réglages d'impression de l'ASA sont similaires à l'ABS mais légèrement plus chauds : buse 240 à 270°C, plateau 90 à 110°C, enceinte requise, ventilateur éteint pour les 3 premières couches puis 10 à 20% maximum. Les applications incluent les pièces extérieures automobiles, le matériel de jardinage, la signalisation extérieure et les composants marins."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "ASA Print Settings & Applications",
+        "fr": "Réglages et applications ASA"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Parameter",
+         "fr": "Paramètre"
+        },
+        {
+         "en": "Range",
+         "fr": "Plage"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Nozzle",
+          "fr": "Buse"
+         },
+         "240–270°C"
+        ],
+        [
+         {
+          "en": "Bed",
+          "fr": "Plateau"
+         },
+         "90–110°C"
+        ],
+        [
+         {
+          "en": "Enclosure",
+          "fr": "Enceinte"
+         },
+         {
+          "en": "Required",
+          "fr": "Requise"
+         }
+        ],
+        [
+         {
+          "en": "Cooling",
+          "fr": "Refroid."
+         },
+         "0% → max 20%"
+        ]
+       ]
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Outdoor applications</b> — automotive exterior, garden equipment, marine parts, outdoor signage",
+         "fr": "<b>Applications extérieures</b> — pièces extérieures automobiles, matériel de jardinage, pièces marines, signalisation extérieure"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.2.8",
+     "narration": {
+      "en": "Nylon, technically polyamide, represents a major step up in mechanical performance. It is exceptionally strong, highly wear-resistant, naturally low-friction, and flexible enough to absorb impacts without breaking. If you need a printed gear, bushing, or structural component that will see real use, Nylon should be on your shortlist.",
+      "fr": "Le Nylon, techniquement le polyamide, représente une avancée majeure en performances mécaniques. Il est exceptionnellement résistant, très résistant à l'usure, naturellement à faible friction et suffisamment flexible pour absorber les chocs sans se briser. Si vous avez besoin d'un engrenage, d'un palier ou d'un composant structurel imprimé qui sera réellement utilisé, le Nylon devrait figurer sur votre liste."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Nylon (PA6, PA12) — The Wear-Resistant Workhorse",
+        "fr": "Nylon (PA6, PA12) — Le cheval de trait résistant à l'usure"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "PA6",
+         "desc": {
+          "en": "Tough, strong, widely available — absorbs moisture rapidly (up to 3% by weight)",
+          "fr": "Robuste, résistant, largement disponible — absorbe rapidement l'humidité (jusqu'à 3% de son poids)"
+         }
+        },
+        {
+         "title": "PA12",
+         "desc": {
+          "en": "Better dimensional stability — lower moisture uptake (~0.5%) vs PA6",
+          "fr": "Meilleure stabilité dimensionnelle — absorption d'humidité plus faible (~0,5%) par rapport au PA6"
+         },
+         "highlight": true
+        },
+        {
+         "title": "PA-CF",
+         "desc": {
+          "en": "Carbon-fibre reinforced — engineering stiffness, reduced warping; abrasive to nozzles",
+          "fr": "Renforcé fibres de carbone — rigidité technique, gauchissement réduit ; abrasif pour les buses"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.2.9",
+     "narration": {
+      "en": "Nylon is among the most moisture-sensitive filaments in existence. PA6 can absorb up to 3 percent of its weight in water from the air — almost a shot glass of moisture for every spool. Wet Nylon produces poor layer adhesion, rough surfaces, and a popping and sizzling sound from steam in the hotend.",
+      "fr": "Le Nylon est l'un des filaments les plus sensibles à l'humidité qui existe. Le PA6 peut absorber jusqu'à 3% de son poids en eau provenant de l'air — presque un verre de liqueur d'humidité pour chaque bobine. Le Nylon humide produit une mauvaise adhérence entre couches, des surfaces rugueuses et un son de claquement et grésissement provenant de la vapeur dans le hotend."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Nylon: Critical Moisture Management",
+        "fr": "Nylon : gestion critique de l'humidité"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "3%",
+       "caption": {
+        "en": "Maximum water uptake of PA6 — almost a shot glass per spool",
+        "fr": "Absorption maximale d'eau du PA6 — presque un verre de liqueur par bobine"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Dry Nylon at 75–90°C for 4–8 hours (up to 24 h for saturated spools) before printing. Most food dehydrators top out at ~70°C — insufficient for Nylon. A dedicated filament dryer is strongly recommended.",
+        "fr": "Séchez le Nylon à 75-90°C pendant 4 à 8 heures (jusqu'à 24 h pour les bobines très saturées) avant l'impression. La plupart des déshydrateurs alimentaires plafonnent à ~70°C — insuffisant pour le Nylon. Un sécheur de filament dédié est fortement recommandé."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.2.10",
+     "narration": {
+      "en": "After drying, store Nylon in an airtight container with fresh desiccant. Better yet, print directly from a dry box — a sealed container with filament feeding through a tube to the printer. Also note that Nylon properties change with moisture: dry-as-printed Nylon is stiffer; after absorbing ambient moisture it becomes more ductile and impact-resistant.",
+      "fr": "Après séchage, stockez le Nylon dans un récipient hermétique avec du dessiccant frais. Mieux encore, imprimez directement depuis une boîte sèche — un récipient fermé avec le filament passant à travers un tube vers l'imprimante. Notez également que les propriétés du Nylon changent avec l'humidité : le Nylon sec tel qu'imprimé est plus rigide ; après absorption d'humidité ambiante, il devient plus ductile et résistant aux chocs."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Nylon Storage & Properties",
+        "fr": "Stockage et propriétés du Nylon"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Dry-as-printed",
+         "fr": "Sec à l'impression"
+        },
+        "note": {
+         "en": "Stiffer, stronger — matches datasheet values",
+         "fr": "Plus rigide, plus résistant — correspond aux valeurs des fiches techniques"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "After ambient exposure",
+         "fr": "Après exposition ambiante"
+        },
+        "note": {
+         "en": "More ductile, impact-resistant — different character",
+         "fr": "Plus ductile, résistant aux chocs — caractère différent"
+        }
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Print directly from a dry box — a sealed container feeding filament through a tube to the printer — to maintain low humidity throughout the print.",
+        "fr": "Imprimez directement depuis une boîte sèche — un récipient fermé alimentant le filament à travers un tube vers l'imprimante — pour maintenir une faible humidité tout au long de l'impression."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.2.11",
+     "narration": {
+      "en": "Polycarbonate sits at the top of the common-material difficulty pyramid. It offers extreme strength, a glass transition temperature around 150 degrees, a heat deflection temperature exceeding 115 degrees, excellent impact resistance, and can be bent without breaking. It is naturally transparent.",
+      "fr": "Le Polycarbonate se trouve au sommet de la pyramide de difficulté des matériaux courants. Il offre une résistance extrême, une température de transition vitreuse d'environ 150°C, une température de déflexion thermique dépassant 115°C, une excellente résistance aux chocs et peut être plié sans se briser. Il est naturellement transparent."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Polycarbonate — The Ultimate Challenge",
+        "fr": "Polycarbonate — Le défi ultime"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "~150°C",
+       "caption": {
+        "en": "PC glass transition temperature — the highest of all common FDM materials",
+        "fr": "Température de transition vitreuse du PC — la plus élevée de tous les matériaux FDM courants"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Extreme strength</b> — bends without breaking",
+         "fr": "<b>Résistance extrême</b> — se plie sans se briser"
+        },
+        {
+         "en": "<b>HDT >115°C</b> — handles serious heat loads",
+         "fr": "<b>HDT >115°C</b> — supporte des charges thermiques importantes"
+        },
+        {
+         "en": "<b>Naturally transparent</b> — optical clarity when printed well",
+         "fr": "<b>Naturellement transparent</b> — clarté optique quand bien imprimé"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.2.12",
+     "narration": {
+      "en": "Polycarbonate is brutally demanding to print. Extreme warping requires a 60 to 70 degree chamber. Nozzle temperatures reach 260 to 310 degrees — only all-metal hotends can handle this safely, as PTFE-lined hotends degrade and release toxic fumes above about 240 degrees. PC is also hygroscopic and UV-sensitive.",
+      "fr": "Le Polycarbonate est brutalement exigeant à imprimer. Le gauchissement extrême nécessite une chambre à 60-70°C. Les températures de buse atteignent 260 à 310°C — seuls les hotends tout métal peuvent gérer cela en toute sécurité, car les hotends avec revêtement PTFE se dégradent et libèrent des vapeurs toxiques au-dessus d'environ 240°C. Le PC est également hygroscopique et sensible aux UV."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Why PC Is So Difficult",
+        "fr": "Pourquoi le PC est si difficile"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Extreme warping",
+          "fr": "Gauchissement extrême"
+         },
+         "desc": {
+          "en": "60–70°C heated chamber needed — more severe than ABS",
+          "fr": "Chambre chauffée à 60-70°C nécessaire — plus sévère que l'ABS"
+         }
+        },
+        {
+         "title": {
+          "en": "High temps",
+          "fr": "Températures élevées"
+         },
+         "desc": {
+          "en": "260–310°C nozzle, 90–120°C bed — all-metal hotend required (no PTFE)",
+          "fr": "Buse 260-310°C, plateau 90-120°C — hotend tout métal requis (pas de PTFE)"
+         }
+        },
+        {
+         "title": {
+          "en": "Moisture + UV",
+          "fr": "Humidité + UV"
+         },
+         "desc": {
+          "en": "Dry 70–80°C / 6–8 h; UV-sensitive — needs coating for outdoor use",
+          "fr": "Sécher 70-80°C / 6-8 h ; sensible UV — revêtement nécessaire pour l'extérieur"
+         }
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "An innovative technique uses 0.75 mm extrusion width at 0.2 mm layer height to apply pressure-based bonding, dramatically improving layer adhesion.",
+        "fr": "Une technique innovante utilise une largeur d'extrusion de 0,75 mm à une hauteur de couche de 0,2 mm pour appliquer une liaison par pression, améliorant considérablement l'adhérence entre couches."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.2.13",
+     "narration": {
+      "en": "To recap Chapter 2: ABS and ASA both need enclosures and ventilation for styrene fumes. ASA wins for outdoor use every time. Nylon demands meticulous moisture management. Polycarbonate is the most demanding common material and requires an all-metal hotend and heated enclosure as absolute prerequisites.",
+      "fr": "Pour résumer le chapitre 2 : l'ABS et l'ASA nécessitent tous deux des enceintes et une ventilation pour les vapeurs de styrène. L'ASA gagne pour l'utilisation extérieure à chaque fois. Le Nylon exige une gestion méticuleuse de l'humidité. Le Polycarbonate est le matériau courant le plus exigeant et nécessite un hotend tout métal et une enceinte chauffée comme prérequis absolus."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 2 Recap",
+        "fr": "Récapitulatif du chapitre 2"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>ABS</b> — Tg ~105°C; enclosure + ventilation mandatory; great for acetone smoothing",
+         "fr": "<b>ABS</b> — Tg ~105°C ; enceinte + ventilation obligatoires ; idéal pour le lissage à l'acétone"
+        },
+        {
+         "en": "<b>ASA</b> — preferred over ABS for outdoor/UV-exposed parts; similar styrene fumes",
+         "fr": "<b>ASA</b> — préféré à l'ABS pour les pièces extérieures/exposées aux UV ; vapeurs de styrène similaires"
+        },
+        {
+         "en": "<b>Nylon</b> — exceptional wear resistance; dry before every print; store airtight; print from dry box",
+         "fr": "<b>Nylon</b> — résistance à l'usure exceptionnelle ; sécher avant chaque impression ; stocker hermétiquement ; imprimer depuis une boîte sèche"
+        },
+        {
+         "en": "<b>PC</b> — highest Tg (~150°C); all-metal hotend + heated enclosure non-negotiable",
+         "fr": "<b>PC</b> — Tg la plus élevée (~150°C) ; hotend tout métal + enceinte chauffée non négociables"
+        },
+        {
+         "en": "<b>Enclosure is a capability gate</b> — not an optional upgrade for engineering materials",
+         "fr": "<b>L'enceinte est un prérequis déterminant</b> — pas une amélioration optionnelle pour les matériaux techniques"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 3,
+   "title": {
+    "en": "Flexible and Specialty Materials",
+    "fr": "Matériaux flexibles et spéciaux"
+   },
+   "scenes": [
+    {
+     "id": "4.3.0",
+     "narration": {
+      "en": "Chapter 3: flexible and specialty materials. Flexible filaments let you print rubber-like parts. Composite filaments embed fibers for engineering-grade stiffness. Specialty filaments add unique visual and functional properties. And support materials enable impossible geometries.",
+      "fr": "Chapitre 3 : matériaux flexibles et spéciaux. Les filaments flexibles vous permettent d'imprimer des pièces semblables au caoutchouc. Les filaments composites intègrent des fibres pour une rigidité de niveau technique. Les filaments spéciaux ajoutent des propriétés visuelles et fonctionnelles uniques. Et les matériaux de support permettent des géométries impossibles."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 4 · Chapter 3",
+        "fr": "Module 4 · Chapitre 3"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Flexible and Specialty Materials",
+        "fr": "Matériaux flexibles et spéciaux"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "This chapter breaks the rigid-plastic paradigm — from rubber-like TPU to carbon fibre composites, metal-filled filaments, and soluble supports.",
+        "fr": "Ce chapitre brise le paradigme du plastique rigide — du TPU semblable au caoutchouc aux composites à fibres de carbone, filaments chargés métal et supports solubles."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.3.1",
+     "narration": {
+      "en": "TPU and TPE are the rubber of the 3D printing world. They can bend, stretch, compress, and return to their original shape. TPU flexibility is measured on the Shore A scale, where lower numbers mean softer and more flexible material.",
+      "fr": "Le TPU et le TPE sont le caoutchouc du monde de l'impression 3D. Ils peuvent se courber, s'étirer, se comprimer et reprendre leur forme d'origine. La flexibilité du TPU est mesurée sur l'échelle Shore A, où les valeurs plus faibles indiquent un matériau plus souple et plus flexible."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "TPU & TPE — Flexible Filaments",
+        "fr": "TPU et TPE — Filaments flexibles"
+       }
+      },
+      {
+       "type": "stages",
+       "items": [
+        {
+         "label": "60A–70A",
+         "sub": {
+          "en": "Extra soft (rubber band) — extremely difficult to print",
+          "fr": "Extra-souple (élastique) — extrêmement difficile à imprimer"
+         }
+        },
+        {
+         "label": "85A",
+         "sub": {
+          "en": "Very soft (shoe insole) — challenging, direct drive required",
+          "fr": "Très souple (semelle chaussure) — difficile, direct drive requis"
+         }
+        },
+        {
+         "label": "95A",
+         "sub": {
+          "en": "Firm flexible (eraser) — sweet spot, good printability",
+          "fr": "Flexible ferme (gomme) — point idéal, bonne imprimabilité"
+         }
+        },
+        {
+         "label": "98A+",
+         "sub": {
+          "en": "Nearly rigid — easy, prints like stiff PETG",
+          "fr": "Quasi-rigide — facile, s'imprime comme du PETG rigide"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.3.2",
+     "narration": {
+      "en": "For 95 percent of applications, 95A TPU is the sweet spot. It offers enough flexibility for vibration dampening, grip surfaces, and impact protection while remaining printable on most machines. 85A TPU is extremely challenging to extrude consistently and requires a well-tuned direct drive extruder.",
+      "fr": "Pour 95% des applications, le TPU 95A est le point idéal. Il offre suffisamment de flexibilité pour l'amortissement des vibrations, les surfaces antidérapantes et la protection aux chocs, tout en restant imprimable sur la plupart des machines. Le TPU 85A est extrêmement difficile à extruder régulièrement et nécessite un extrudeur direct drive bien réglé."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "95A TPU — The Sweet Spot",
+        "fr": "TPU 95A — Le point idéal"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "TPU 95A",
+        "note": {
+         "en": "20–30 mm/s · retraction 0.5–1.5 mm · direct drive preferred · Bowden possible",
+         "fr": "20-30 mm/s · rétraction 0,5-1,5 mm · direct drive préféré · Bowden possible"
+        },
+        "highlight": true
+       },
+       "right": {
+        "title": "TPU 85A",
+        "note": {
+         "en": "15–20 mm/s · retraction OFF (0 mm) · direct drive required — buckling risk",
+         "fr": "15-20 mm/s · rétraction DÉSACTIVÉE (0 mm) · direct drive requis — risque de flambement"
+        }
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Applications: phone cases, drone bumpers, RC tire treads, vibration-dampening feet, gaskets, seals, watch bands, shoe insoles, ergonomic grips.",
+        "fr": "Applications : coques téléphone, pare-chocs drones, bandes de roulement RC, pieds amortisseurs, joints d'étanchéité, bracelets de montre, semelles de chaussures, poignées ergonomiques."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.3.3",
+     "narration": {
+      "en": "The critical thing about flexible filaments is that they compress. A rigid filament pushed by extruder gears moves forward predictably. A soft flexible filament can buckle and compress inside the extruder assembly or Bowden tube rather than push through the nozzle. Direct drive extruders handle this far better than Bowden systems.",
+      "fr": "La chose cruciale à propos des filaments flexibles est qu'ils se compriment. Un filament rigide poussé par les engrenages de l'extrudeur avance de façon prévisible. Un filament souple et flexible peut se tordre et se comprimer à l'intérieur de l'ensemble extrudeur ou du tube Bowden plutôt que de passer à travers la buse. Les extrudeurs direct drive gèrent cela bien mieux que les systèmes Bowden."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Direct Drive Requirement",
+        "fr": "L'exigence du Direct Drive"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Bowden extruder",
+         "fr": "Extrudeur Bowden"
+        },
+        "note": {
+         "en": "Long tube → flexible filament can buckle and compress → inconsistent extrusion, jams",
+         "fr": "Long tube → le filament flexible peut se tordre et se comprimer → extrusion incohérente, bourrages"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Direct drive",
+         "fr": "Direct drive"
+        },
+        "note": {
+         "en": "Motor + gears right above hotend → very short path → handles TPU reliably",
+         "fr": "Moteur + engrenages juste au-dessus du hotend → chemin très court → gère le TPU de façon fiable"
+        },
+        "highlight": true
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "TPU is hygroscopic. Wet TPU produces extreme stringing, rough surfaces, and weak layer bonds. Dry at 60–70°C for 4–6 hours; store in an airtight container with desiccant.",
+        "fr": "Le TPU est hygroscopique. Le TPU humide produit un filage extrême, des surfaces rugueuses et des liaisons entre couches faibles. Séchez à 60-70°C pendant 4 à 6 heures ; stockez dans un récipient hermétique avec dessiccant."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.3.4",
+     "narration": {
+      "en": "Carbon fibre filled filaments blend short chopped fibres into a base polymer to dramatically increase stiffness, dimensional stability, and heat resistance. The fibres act like rebar in concrete — they do not make the material tougher, but they make it much more rigid and warp-resistant.",
+      "fr": "Les filaments chargés de fibres de carbone mélangent des fibres courtes coupées dans un polymère de base pour augmenter considérablement la rigidité, la stabilité dimensionnelle et la résistance à la chaleur. Les fibres agissent comme des armatures dans le béton — elles ne rendent pas le matériau plus résistant aux chocs, mais le rendent beaucoup plus rigide et résistant au gauchissement."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Carbon Fibre Filled Filaments",
+        "fr": "Filaments chargés de fibres de carbone"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Short chopped fibres</b> — not continuous fibres; not aerospace-grade strength",
+         "fr": "<b>Fibres courtes coupées</b> — pas des fibres continues ; pas la résistance des composites aéronautiques"
+        },
+        {
+         "en": "<b>Stiffness</b> — resist bending much better than unfilled counterparts",
+         "fr": "<b>Rigidité</b> — résistent bien mieux à la flexion que leurs homologues non chargés"
+        },
+        {
+         "en": "<b>Dimensional stability</b> — less warping and shrinkage during cooling",
+         "fr": "<b>Stabilité dimensionnelle</b> — moins de gauchissement et de retrait pendant le refroidissement"
+        },
+        {
+         "en": "<b>Surface finish</b> — distinctive matte, textured appearance that hides layer lines",
+         "fr": "<b>Finition de surface</b> — aspect mat et texturé distinctif qui masque les lignes de couches"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.3.5",
+     "narration": {
+      "en": "Carbon fibre giveth and carbon fibre taketh away. Increased stiffness comes with increased brittleness and reduced layer-to-layer adhesion. More expensive at around 40 to 60 dollars per kilogram. And critically — the fibres are abrasive, destroying a standard brass nozzle quickly. You need a hardened steel, tungsten carbide, or ruby-tipped nozzle.",
+      "fr": "Les fibres de carbone donnent et les fibres de carbone reprennent. La rigidité accrue s'accompagne d'une fragilité accrue et d'une adhérence réduite entre couches. Plus cher à environ 40 à 60 dollars par kilogramme. Et surtout — les fibres sont abrasives, détruisant rapidement une buse en laiton standard. Vous avez besoin d'une buse en acier trempé, en carbure de tungstène ou à pointe en rubis."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "CF Filament — Critical Tradeoffs",
+        "fr": "Filament CF — Compromis critiques"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Gains",
+         "fr": "Gains"
+        },
+        "note": {
+         "en": "Stiffness · dimensional stability · heat resistance · matte finish · lighter for rigidity",
+         "fr": "Rigidité · stabilité dimensionnelle · résistance à la chaleur · finition mate · plus léger pour la rigidité"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Costs",
+         "fr": "Coûts"
+        },
+        "note": {
+         "en": "Brittleness · weaker layer adhesion · abrasive (hardened nozzle required) · ~$40–60/kg",
+         "fr": "Fragilité · adhérence entre couches réduite · abrasif (buse durcie requise) · ~40-60 $/kg"
+        }
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Carbon fibre filaments REQUIRE a hardened steel, tungsten carbide, or ruby nozzle. A 0.6 mm diameter is also recommended to reduce clogging risk. Standard brass is destroyed quickly.",
+        "fr": "Les filaments à fibres de carbone NÉCESSITENT une buse en acier trempé, carbure de tungstène ou rubis. Un diamètre de 0,6 mm est également recommandé pour réduire le risque de bouchon. Le laiton standard est détruit rapidement."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.3.6",
+     "narration": {
+      "en": "Three common CF-filled bases cover most needs: PLA-CF for stiff prototypes and RC parts at 200 to 230 degrees, PETG-CF for functional stiff parts and drone frames at 240 to 265 degrees, and PA-CF for engineering-grade stiffness and gears at 260 to 285 degrees. Note that in some testing, standard PETG has outperformed PLA-CF in load-bearing capacity.",
+      "fr": "Trois bases chargées CF courantes couvrent la plupart des besoins : PLA-CF pour les prototypes rigides et pièces RC à 200-230°C, PETG-CF pour les pièces fonctionnelles rigides et châssis de drones à 240-265°C, et PA-CF pour la rigidité de niveau technique et les engrenages à 260-285°C. Notez que dans certains tests, le PETG standard a surpassé le PLA-CF en capacité de charge."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Types of CF-Filled Filaments",
+        "fr": "Types de filaments chargés CF"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Base material",
+         "fr": "Matériau de base"
+        },
+        {
+         "en": "Nozzle temp",
+         "fr": "Temp. buse"
+        },
+        {
+         "en": "Best for",
+         "fr": "Idéal pour"
+        }
+       ],
+       "rows": [
+        [
+         "PLA-CF",
+         "200–230°C",
+         {
+          "en": "Stiff prototypes, RC parts",
+          "fr": "Prototypes rigides, pièces RC"
+         }
+        ],
+        [
+         "PETG-CF",
+         "240–265°C",
+         {
+          "en": "Drone frames, stiff parts",
+          "fr": "Châssis drones, pièces rigides"
+         }
+        ],
+        [
+         "PA-CF",
+         "260–285°C",
+         {
+          "en": "Gears, structural engineering",
+          "fr": "Engrenages, technique structurel"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.3.7",
+     "narration": {
+      "en": "Glass fibre filled filaments offer a different tradeoff: they increase tensile strength and stiffness while also improving impact resistance — unlike carbon fibre which reduces impact resistance. Kevlar-filled filaments are rarer but unique: Kevlar fibres experience shear fracture rather than brittle breakage, providing exceptional damage resistance and causing less nozzle abrasion than carbon fibres.",
+      "fr": "Les filaments chargés de fibre de verre offrent un compromis différent : ils augmentent la résistance à la traction et la rigidité tout en améliorant la résistance aux chocs — contrairement aux fibres de carbone qui réduisent la résistance aux chocs. Les filaments chargés de Kevlar sont plus rares mais uniques : les fibres de Kevlar subissent une fracture par cisaillement plutôt qu'une rupture fragile, offrant une résistance aux dommages exceptionnelle et causant moins d'abrasion de buse que les fibres de carbone."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Glass Fibre & Kevlar Filaments",
+        "fr": "Filaments fibre de verre et Kevlar"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Glass fibre (GF)",
+          "fr": "Fibre de verre (GF)"
+         },
+         "desc": {
+          "en": "Raises tensile strength AND impact resistance — unlike CF. Requires hardened nozzle.",
+          "fr": "Augmente la résistance à la traction ET aux chocs — contrairement au CF. Nécessite une buse durcie."
+         }
+        },
+        {
+         "title": {
+          "en": "Kevlar / aramid",
+          "fr": "Kevlar / aramide"
+         },
+         "desc": {
+          "en": "Shear fracture, not brittle break — exceptional damage resistance. Less abrasive than CF.",
+          "fr": "Fracture par cisaillement, pas de rupture fragile — résistance aux dommages exceptionnelle. Moins abrasif que le CF."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.3.8",
+     "narration": {
+      "en": "The world of specialty filaments is vast and creative. Metal-filled filaments with iron, copper, or bronze provide metallic weight and appearance and can even be patinated. Wood-filled filaments contain real wood fibres and can be sanded and stained. Glow-in-the-dark uses phosphorescent additives. And conductive PLA uses carbon additives to carry a small electrical charge — but it is millions of times less conductive than copper.",
+      "fr": "Le monde des filaments spéciaux est vaste et créatif. Les filaments chargés métal avec du fer, du cuivre ou du bronze offrent un poids et un aspect métalliques et peuvent même être patinés. Les filaments chargés bois contiennent de vraies fibres de bois et peuvent être poncés et teints. Les filaments luminescents utilisent des additifs phosphorescents. Et le PLA conducteur utilise des additifs carbone pour conduire une petite charge électrique — mais il est des millions de fois moins conducteur que le cuivre."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Specialty Filaments — Quick Reference",
+        "fr": "Filaments spéciaux — Référence rapide"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Type",
+         "fr": "Type"
+        },
+        {
+         "en": "What it does",
+         "fr": "Ce qu'il fait"
+        },
+        {
+         "en": "Note",
+         "fr": "Note"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Metal filled",
+          "fr": "Chargé métal"
+         },
+         {
+          "en": "Metallic look, can patinate/rust",
+          "fr": "Aspect métallique, peut patiner/rouiller"
+         },
+         {
+          "en": "Hardened nozzle",
+          "fr": "Buse durcie"
+         }
+        ],
+        [
+         {
+          "en": "Wood filled",
+          "fr": "Chargé bois"
+         },
+         {
+          "en": "Sand and stain like wood",
+          "fr": "Ponçable et teignable"
+         },
+         "≥0.5 mm nozzle"
+        ],
+        [
+         {
+          "en": "Glow-in-dark",
+          "fr": "Luminescent"
+         },
+         {
+          "en": "Phosphorescent after charging",
+          "fr": "Phosphorescent après charge"
+         },
+         {
+          "en": "Abrasive — hardened nozzle",
+          "fr": "Abrasif — buse durcie"
+         }
+        ],
+        [
+         {
+          "en": "Conductive PLA",
+          "fr": "PLA conducteur"
+         },
+         {
+          "en": "Touch sensors, not power",
+          "fr": "Capteurs tactiles, pas alimentation"
+         },
+         {
+          "en": "Millions × less than copper",
+          "fr": "Des millions × moins que le cuivre"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.3.9",
+     "narration": {
+      "en": "Complex geometries with overhangs beyond 45 to 60 degrees, internal cavities, arches, and bridges require support structures. But what if the support is inside a cavity you cannot reach? That is where soluble support materials come in. PVA dissolves in room-temperature water and is ideal for complex internal geometries, pairing best with PLA.",
+      "fr": "Les géométries complexes avec des surplombs au-delà de 45 à 60 degrés, des cavités internes, des arches et des ponts nécessitent des structures de support. Mais que faire si le support se trouve dans une cavité inaccessible ? C'est là qu'interviennent les matériaux de support solubles. Le PVA se dissout dans l'eau à température ambiante et est idéal pour les géométries internes complexes, se combinant mieux avec le PLA."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PVA — Water-Soluble Supports",
+        "fr": "PVA — Supports solubles dans l'eau"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "overhang"
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Parameter",
+         "fr": "Paramètre"
+        },
+        {
+         "en": "Value",
+         "fr": "Valeur"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Nozzle",
+          "fr": "Buse"
+         },
+         "180–220°C"
+        ],
+        [
+         {
+          "en": "Bed",
+          "fr": "Plateau"
+         },
+         "45–60°C"
+        ],
+        [
+         {
+          "en": "Drying",
+          "fr": "Séchage"
+         },
+         "45–50°C · 8–12 h (required)"
+        ],
+        [
+         {
+          "en": "Best with",
+          "fr": "Meilleur avec"
+         },
+         "PLA"
+        ],
+        [
+         {
+          "en": "Biodegrades",
+          "fr": "Biodégradation"
+         },
+         ">90% in 56 days (ISO 14851)"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "PVA is even more moisture-sensitive than Nylon. A spool left in humid air can become a gummy, unprintable mess in hours. Store in vacuum-sealed bags with desiccant; only remove immediately before printing.",
+        "fr": "Le PVA est encore plus sensible à l'humidité que le Nylon. Une bobine laissée en air humide peut devenir une masse gluante et inimprimable en quelques heures. Stockez dans des sachets sous vide avec dessiccant ; ne le sortez que juste avant l'impression."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.3.10",
+     "narration": {
+      "en": "HIPS dissolves in d-Limonene, a citrus oil extract, not in water. It prints at 225 to 255 degrees nozzle and 100 to 110 degree bed. Important: ABS and ASA also partially dissolve in limonene, so verify material compatibility before using HIPS as a support for those materials. HIPS can also be acetone-smoothed.",
+      "fr": "Le HIPS se dissout dans le d-Limonène, un extrait d'huile de citrus, et non dans l'eau. Il s'imprime à une buse de 225 à 255°C et un plateau de 100 à 110°C. Important : l'ABS et l'ASA se dissolvent également partiellement dans le limonène, donc vérifiez la compatibilité des matériaux avant d'utiliser du HIPS comme support pour ces matériaux. Le HIPS peut également être lissé à l'acétone."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "HIPS & Breakaway Supports",
+        "fr": "HIPS et supports détachables"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "HIPS",
+        "note": {
+         "en": "Dissolves in d-Limonene (citrus oil) · 225–255°C nozzle · 100–110°C bed · NOT for ABS/ASA pairs (limonene attacks them too)",
+         "fr": "Se dissout dans le d-Limonène (huile de citrus) · buse 225-255°C · plateau 100-110°C · PAS pour paires ABS/ASA (le limonène les attaque aussi)"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Bambu breakaway",
+         "fr": "Détachable Bambu"
+        },
+        "note": {
+         "en": "Hand-removal — no chemicals · faster than soluble · less effective for deep internal geometry",
+         "fr": "Retrait à la main — sans produits chimiques · plus rapide que les solubles · moins efficace pour les géométries internes profondes"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.3.11",
+     "narration": {
+      "en": "To recap Chapter 3: TPU 95A is the most printable flexible filament — direct drive preferred, dry before printing. Carbon fibre increases stiffness but requires hardened nozzles and is more brittle. Specialty filaments add unique aesthetics with specific nozzle needs. PVA for water-soluble supports pairs best with PLA; HIPS for limonene-soluble supports — verify build material compatibility first.",
+      "fr": "Pour résumer le chapitre 3 : le TPU 95A est le filament flexible le plus imprimable — direct drive préféré, sécher avant l'impression. Les fibres de carbone augmentent la rigidité mais nécessitent des buses durcies et sont plus fragiles. Les filaments spéciaux ajoutent une esthétique unique avec des exigences spécifiques de buse. Le PVA pour les supports solubles dans l'eau se combine mieux avec le PLA ; le HIPS pour les supports solubles au limonène — vérifiez d'abord la compatibilité du matériau de construction."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 3 Recap",
+        "fr": "Récapitulatif du chapitre 3"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>TPU 95A</b> — flexible sweet spot; direct drive preferred; 20–30 mm/s; dry at 60–70°C",
+         "fr": "<b>TPU 95A</b> — point idéal flexible ; direct drive préféré ; 20-30 mm/s ; sécher à 60-70°C"
+        },
+        {
+         "en": "<b>CF-filled</b> — rigidity not toughness; hardened nozzle required; ~$40–60/kg",
+         "fr": "<b>Chargé CF</b> — rigidité et non résistance aux chocs ; buse durcie requise ; ~40-60 $/kg"
+        },
+        {
+         "en": "<b>Specialty filaments</b> — wood, metal, glow, thermochromic, conductive PLA; each has specific nozzle/settings",
+         "fr": "<b>Filaments spéciaux</b> — bois, métal, luminescent, thermochromique, PLA conducteur ; chacun a des exigences spécifiques"
+        },
+        {
+         "en": "<b>PVA</b> — water-soluble, best with PLA; extremely moisture-sensitive — vacuum-seal storage",
+         "fr": "<b>PVA</b> — soluble dans l'eau, meilleur avec PLA ; extrêmement sensible à l'humidité — stockage sous vide"
+        },
+        {
+         "en": "<b>Difficulty progression:</b> PLA → PETG → TPU 95A → ABS/ASA → Nylon → CF-filled → PC",
+         "fr": "<b>Progression de difficulté :</b> PLA → PETG → TPU 95A → ABS/ASA → Nylon → CF → PC"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 4,
+   "title": {
+    "en": "Material Selection and Storage",
+    "fr": "Sélection et stockage des matériaux"
+   },
+   "scenes": [
+    {
+     "id": "4.4.0",
+     "narration": {
+      "en": "Chapter 4: the practical decision layer. You have met every major material family. Now — how do you choose? And once you have a dozen spools, how do you keep them all in print-ready condition?",
+      "fr": "Chapitre 4 : la couche de décision pratique. Vous avez rencontré toutes les grandes familles de matériaux. Maintenant — comment choisir ? Et une fois que vous avez une douzaine de bobines, comment les maintenir toutes en état d'impression ?"
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 4 · Chapter 4",
+        "fr": "Module 4 · Chapitre 4"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Material Selection and Storage",
+        "fr": "Sélection et stockage des matériaux"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "A practical framework for matching any project to the right material, plus the storage and drying knowledge to keep your filaments performing at their best.",
+        "fr": "Un cadre pratique pour associer n'importe quel projet au bon matériau, ainsi que les connaissances en stockage et en séchage pour maintenir vos filaments dans un état optimal."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.4.1",
+     "narration": {
+      "en": "The selection hierarchy is the community's collective wisdom distilled into six steps. Start with PLA for anything that does not need special properties. Move to PETG for functional parts. Choose ASA for outdoor UV exposure. Consider ABS only if you specifically need acetone smoothing. Select TPU when flexibility is the primary requirement. Use Nylon or PC for serious engineering applications.",
+      "fr": "La hiérarchie de sélection est la sagesse collective de la communauté condensée en six étapes. Commencez par le PLA pour tout ce qui ne nécessite pas de propriétés spéciales. Passez au PETG pour les pièces fonctionnelles. Choisissez l'ASA pour l'exposition UV extérieure. Envisagez l'ABS uniquement si vous avez spécifiquement besoin du lissage à l'acétone. Sélectionnez le TPU quand la flexibilité est l'exigence principale. Utilisez le Nylon ou le PC pour les applications techniques sérieuses."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Selection Hierarchy",
+        "fr": "La hiérarchie de sélection"
+       }
+      },
+      {
+       "type": "timeline",
+       "nodes": [
+        {
+         "label": "1",
+         "text": {
+          "en": "PLA — default for anything without special requirements",
+          "fr": "PLA — défaut pour tout sans exigences particulières"
+         }
+        },
+        {
+         "label": "2",
+         "text": {
+          "en": "PETG — functional parts, handled regularly, chemical resistance",
+          "fr": "PETG — pièces fonctionnelles, manipulées régulièrement, résistance chimique"
+         }
+        },
+        {
+         "label": "3",
+         "text": {
+          "en": "ASA — outdoor parts with UV exposure",
+          "fr": "ASA — pièces extérieures avec exposition UV"
+         }
+        },
+        {
+         "label": "4",
+         "text": {
+          "en": "TPU — when flexibility is primary",
+          "fr": "TPU — quand la flexibilité est primordiale"
+         }
+        },
+        {
+         "label": "5",
+         "text": {
+          "en": "Nylon / PC — maximum strength, wear, heat tolerance",
+          "fr": "Nylon / PC — résistance maximale, usure, tolérance à la chaleur"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.4.2",
+     "narration": {
+      "en": "Here is the full decision matrix for the most common scenarios. For beginners: PLA. For decorative pieces: Silk or Matte PLA. For functional indoor parts: PETG. For outdoor exposure: ASA. For high heat above 80 degrees: ABS, ASA, or PC. For flexible parts: TPU 95A. For wearables: TPU 85A. For engineering prototypes or gears: Nylon PA12 or PA6.",
+      "fr": "Voici la matrice de décision complète pour les scénarios les plus courants. Pour les débutants : PLA. Pour les pièces décoratives : PLA Silk ou Mat. Pour les pièces fonctionnelles intérieures : PETG. Pour l'exposition extérieure : ASA. Pour la haute température au-delà de 80°C : ABS, ASA ou PC. Pour les pièces flexibles : TPU 95A. Pour les articles portables : TPU 85A. Pour les prototypes techniques ou engrenages : Nylon PA12 ou PA6."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Material Selection Decision Matrix",
+        "fr": "Matrice de sélection des matériaux"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Use case",
+         "fr": "Cas d'usage"
+        },
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "First prints / beginner",
+          "fr": "Premières impressions"
+         },
+         "PLA"
+        ],
+        [
+         {
+          "en": "Decorative / display",
+          "fr": "Décoratif / exposition"
+         },
+         {
+          "en": "Silk / Matte PLA",
+          "fr": "PLA Silk / Mat"
+         }
+        ],
+        [
+         {
+          "en": "Functional indoor",
+          "fr": "Fonctionnel intérieur"
+         },
+         "PETG"
+        ],
+        [
+         {
+          "en": "Outdoor / UV",
+          "fr": "Extérieur / UV"
+         },
+         "ASA"
+        ],
+        [
+         {
+          "en": "High heat >80°C",
+          "fr": "Haute chaleur >80°C"
+         },
+         "ABS / ASA / PC"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.4.3",
+     "narration": {
+      "en": "Continuing the decision matrix — for flexible and rubber-like parts, 95A TPU. For wearables in direct skin contact, 85A TPU. For engineering prototypes, Nylon PA12. For gears and bushings needing self-lubrication, Nylon PA6 or PA12. For stiff technical parts, PA-CF. For lightweight RC or drone frames, PLA-CF or PETG-CF. For transparent parts, clear PETG.",
+      "fr": "Suite de la matrice de décision — pour les pièces flexibles et caoutchouteuses, TPU 95A. Pour les articles portables en contact direct avec la peau, TPU 85A. Pour les prototypes techniques, Nylon PA12. Pour les engrenages et paliers nécessitant une auto-lubrification, Nylon PA6 ou PA12. Pour les pièces techniques rigides, PA-CF. Pour les châssis RC ou drones légers, PLA-CF ou PETG-CF. Pour les pièces transparentes, PETG transparent."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Decision Matrix (continued)",
+        "fr": "Matrice de décision (suite)"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Use case",
+         "fr": "Cas d'usage"
+        },
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Flexible / rubber-like",
+          "fr": "Flexible / caoutchouc"
+         },
+         "TPU 95A"
+        ],
+        [
+         {
+          "en": "Wearables (skin contact)",
+          "fr": "Portables (peau)"
+         },
+         "TPU 85A"
+        ],
+        [
+         {
+          "en": "Gears / bushings",
+          "fr": "Engrenages / paliers"
+         },
+         "PA6 / PA12"
+        ],
+        [
+         {
+          "en": "Stiff technical parts",
+          "fr": "Pièces techniques rigides"
+         },
+         "PA-CF"
+        ],
+        [
+         {
+          "en": "Transparent parts",
+          "fr": "Pièces transparentes"
+         },
+         {
+          "en": "Clear PETG",
+          "fr": "PETG transparent"
+         }
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "The proliferation of PLA variants (Silk, Matte, Rapid) mostly serves marketing. A good PLA+ or quality standard PLA handles 90% of printing needs.",
+        "fr": "La prolifération des variantes PLA (Silk, Mat, Rapide) sert davantage le marketing. Un bon PLA+ ou un PLA standard de qualité répond à 90% des besoins d'impression."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.4.4",
+     "narration": {
+      "en": "Almost all 3D printing filaments are hygroscopic — they actively absorb moisture from the air. This moisture turns to steam in the hotend, creating bubbles that disrupt melt flow, weaken layer adhesion, cause stringing, and leave rough surfaces. Some materials absorb moisture so rapidly that leaving a spool out overnight noticeably affects print quality.",
+      "fr": "Presque tous les filaments d'impression 3D sont hygroscopiques — ils absorbent activement l'humidité de l'air. Cette humidité se transforme en vapeur dans le hotend, créant des bulles qui perturbent le flux de fusion, affaiblissent l'adhérence entre couches, provoquent du filage et laissent des surfaces rugueuses. Certains matériaux absorbent l'humidité si rapidement que laisser une bobine une nuit affecte notablement la qualité d'impression."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Filament Storage — The Moisture Battle",
+        "fr": "Stockage du filament — La bataille contre l'humidité"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Worst offenders</b> — Nylon, PVA, TPU (overnight can make a spool unprintable)",
+         "fr": "<b>Pires contrevenants</b> — Nylon, PVA, TPU (une nuit peut rendre une bobine inimprimable)"
+        },
+        {
+         "en": "<b>Moderate</b> — PETG, ABS, ASA, PC (degrade over days to weeks of exposure)",
+         "fr": "<b>Modérés</b> — PETG, ABS, ASA, PC (se dégradent sur des jours à semaines d'exposition)"
+        },
+        {
+         "en": "<b>Most tolerant</b> — PLA (degrades over weeks; still benefits from proper storage)",
+         "fr": "<b>Le plus tolérant</b> — PLA (se dégrade sur des semaines ; bénéficie quand même d'un stockage adéquat)"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.4.5",
+     "narration": {
+      "en": "Six signs your filament is wet: popping or sizzling sounds from the hotend, bubbles visible in the extruded filament, excessive stringing that does not improve with retraction tuning, weak brittle layer adhesion, rough uneven surface finish, and steam or smoke visible from the nozzle — that last one is not normal.",
+      "fr": "Six signes que votre filament est humide : sons de claquement ou de grésissement provenant du hotend, bulles visibles dans le filament extrudé, filage excessif qui ne s'améliore pas avec le réglage de la rétraction, adhérence entre couches faible et fragile, finition de surface rugueuse et inégale, et vapeur ou fumée visible à la buse — ce dernier point n'est pas normal."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Signs of Wet Filament",
+        "fr": "Signes que votre filament est humide"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Popping / sizzling</b> from the hotend during printing",
+         "fr": "<b>Claquement / grésissement</b> provenant du hotend pendant l'impression"
+        },
+        {
+         "en": "<b>Bubbling</b> visible in the extruded filament",
+         "fr": "<b>Bulles</b> visibles dans le filament extrudé"
+        },
+        {
+         "en": "<b>Excessive stringing</b> — does not improve with retraction tuning",
+         "fr": "<b>Filage excessif</b> — ne s'améliore pas avec le réglage de la rétraction"
+        },
+        {
+         "en": "<b>Weak, brittle layer adhesion</b> — parts snap along layer lines",
+         "fr": "<b>Adhérence entre couches faible et fragile</b> — les pièces se cassent le long des lignes de couches"
+        },
+        {
+         "en": "<b>Rough uneven surface</b> where it should be smooth",
+         "fr": "<b>Surface rugueuse et inégale</b> là où elle devrait être lisse"
+        },
+        {
+         "en": "<b>Steam / smoke from nozzle</b> — not normal",
+         "fr": "<b>Vapeur / fumée à la buse</b> — anormal"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.4.6",
+     "narration": {
+      "en": "Storage solutions range from simple to serious. Vacuum-sealed bags with desiccant are excellent and inexpensive for rarely-used spools. Airtight plastic bins with desiccant work well for active storage. Filament dry boxes let you print while keeping spools in a dry environment. Electronic filament dryers actively maintain temperature for thorough drying.",
+      "fr": "Les solutions de stockage vont du simple au sérieux. Les sacs sous vide avec dessiccant sont excellents et bon marché pour les bobines peu utilisées. Les boîtes plastique hermétiques avec dessiccant conviennent bien pour le stockage actif. Les boîtes sèches pour filament vous permettent d'imprimer tout en gardant les bobines dans un environnement sec. Les sécheurs de filament électroniques maintiennent activement la température pour un séchage complet."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Storage Solutions",
+        "fr": "Solutions de stockage"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Solution",
+         "fr": "Solution"
+        },
+        {
+         "en": "Cost",
+         "fr": "Coût"
+        },
+        {
+         "en": "Best for",
+         "fr": "Idéal pour"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Vacuum bags + desiccant",
+          "fr": "Sacs sous vide + dessiccant"
+         },
+         "$",
+         {
+          "en": "Long-term storage",
+          "fr": "Stockage longue durée"
+         }
+        ],
+        [
+         {
+          "en": "Airtight bins + desiccant",
+          "fr": "Boîtes hermétiques"
+         },
+         "$$",
+         {
+          "en": "Active spool storage",
+          "fr": "Stockage actif"
+         }
+        ],
+        [
+         {
+          "en": "Dry box (print-while-stored)",
+          "fr": "Boîte sèche"
+         },
+         "$$",
+         {
+          "en": "Moisture-sensitive materials",
+          "fr": "Matériaux sensibles"
+         }
+        ],
+        [
+         {
+          "en": "Electronic dryer",
+          "fr": "Sécheur électronique"
+         },
+         "$$$",
+         {
+          "en": "Active drying before print",
+          "fr": "Séchage actif avant impression"
+         }
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Activated alumina desiccant is superior to standard silica gel — absorbs more moisture and can be regenerated at higher temperatures. Monitor humidity with a digital hygrometer.",
+        "fr": "Le dessiccant en alumine activée est supérieur à la silice gel standard — absorbe plus d'humidité et peut être régénéré à des températures plus élevées. Surveillez l'humidité avec un hygromètre numérique."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.4.7",
+     "narration": {
+      "en": "Best storage practices: keep humidity below 20 percent for most filaments, below 15 percent for Nylon and PVA. Use containers with real sealing gaskets, not just snap lids. Include 50 to 100 grams of silica gel per container. Store in cool dark places away from sunlight. Use colour-changing silica gel to know when desiccant needs refreshing.",
+      "fr": "Bonnes pratiques de stockage : maintenir l'humidité en dessous de 20% pour la plupart des filaments, en dessous de 15% pour le Nylon et le PVA. Utiliser des récipients avec de vrais joints d'étanchéité, pas seulement des couvercles à clipser. Inclure 50 à 100 grammes de silice gel par récipient. Stocker dans des endroits frais et sombres à l'abri de la lumière solaire. Utiliser de la silice gel à changement de couleur pour savoir quand le dessiccant doit être remplacé."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Storage Best Practices",
+        "fr": "Bonnes pratiques de stockage"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Humidity targets</b> — below 20% most filaments; below 15% for Nylon and PVA",
+         "fr": "<b>Cibles d'humidité</b> — en dessous de 20% pour la plupart ; en dessous de 15% pour le Nylon et le PVA"
+        },
+        {
+         "en": "<b>Real gasket seals</b> — snap lids are not enough for hygroscopic materials",
+         "fr": "<b>Vrais joints d'étanchéité</b> — les couvercles à clipser ne suffisent pas pour les matériaux hygroscopiques"
+        },
+        {
+         "en": "<b>50–100 g silica gel</b> per container; colour-changing type shows when to refresh",
+         "fr": "<b>50 à 100 g de silice gel</b> par récipient ; type à changement de couleur indique quand le renouveler"
+        },
+        {
+         "en": "<b>Cool, dark storage</b> — away from direct sunlight",
+         "fr": "<b>Stockage frais et sombre</b> — à l'abri de la lumière directe du soleil"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.4.8",
+     "narration": {
+      "en": "Drying temperatures and times vary significantly by material. PLA dries at 45 to 50 degrees for 6 or more hours. PETG at 55 to 65 degrees for 6 to 7 hours. TPU at 60 to 70 degrees for 4 to 6 hours. ABS and ASA at 75 to 85 degrees for 4 hours. Nylon at 75 to 90 degrees for 4 to 24 hours. PC at 70 to 80 degrees for 6 to 8 hours. PVA at 45 to 50 degrees for 8 to 12 hours.",
+      "fr": "Les températures et durées de séchage varient considérablement selon le matériau. Le PLA se sèche à 45-50°C pendant 6 heures ou plus. Le PETG à 55-65°C pendant 6 à 7 heures. Le TPU à 60-70°C pendant 4 à 6 heures. L'ABS et l'ASA à 75-85°C pendant 4 heures. Le Nylon à 75-90°C pendant 4 à 24 heures. Le PC à 70-80°C pendant 6 à 8 heures. Le PVA à 45-50°C pendant 8 à 12 heures."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Drying Temperatures & Times",
+        "fr": "Températures et durées de séchage"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Temp",
+         "fr": "Temp"
+        },
+        {
+         "en": "Time",
+         "fr": "Durée"
+        }
+       ],
+       "rows": [
+        [
+         "PLA",
+         "45–50°C",
+         "6+ h"
+        ],
+        [
+         "PETG",
+         "55–65°C",
+         "6–7 h"
+        ],
+        [
+         "TPU",
+         "60–70°C",
+         "4–6 h"
+        ],
+        [
+         "ABS / ASA",
+         "75–85°C",
+         "4 h"
+        ],
+        [
+         "Nylon",
+         "75–90°C",
+         "4–24 h"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "PLA deforms physically on the spool if dried above 55°C — it begins to soften at ~60°C. Nylon needs up to 90°C; most food dehydrators top out at ~70°C and are insufficient.",
+        "fr": "Le PLA se déforme physiquement sur la bobine s'il est séché au-dessus de 55°C — il commence à ramollir à ~60°C. Le Nylon a besoin de jusqu'à 90°C ; la plupart des déshydrateurs alimentaires plafonnent à ~70°C et sont insuffisants."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.4.9",
+     "narration": {
+      "en": "PC and PVA drying: polycarbonate dries at 70 to 80 degrees for 6 to 8 hours with a maximum storage humidity of 20 percent. PVA dries at 45 to 50 degrees for 8 to 12 hours with a maximum storage humidity of just 10 percent. For CF and GF-filled filaments, match the drying conditions of the base material.",
+      "fr": "Séchage du PC et du PVA : le polycarbonate sèche à 70-80°C pendant 6 à 8 heures avec une humidité de stockage maximale de 20%. Le PVA sèche à 45-50°C pendant 8 à 12 heures avec une humidité de stockage maximale de seulement 10%. Pour les filaments chargés CF et GF, adaptez les conditions de séchage au matériau de base."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Drying — PC, PVA, and Filled Filaments",
+        "fr": "Séchage — PC, PVA et filaments chargés"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Temp",
+         "fr": "Temp"
+        },
+        {
+         "en": "Time",
+         "fr": "Durée"
+        },
+        {
+         "en": "Max humidity",
+         "fr": "Humidité max"
+        }
+       ],
+       "rows": [
+        [
+         "PC",
+         "70–80°C",
+         "6–8 h",
+         "<20%"
+        ],
+        [
+         "PVA",
+         "45–50°C",
+         "8–12 h",
+         "<10%"
+        ],
+        [
+         {
+          "en": "CF/GF filled",
+          "fr": "CF/GF chargés"
+         },
+         {
+          "en": "Match base",
+          "fr": "Base"
+         },
+         {
+          "en": "Match base",
+          "fr": "Base"
+         },
+         {
+          "en": "Match base",
+          "fr": "Base"
+         }
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Popular dryers: SUNLU S2, EIBOS Filadryer, PrintDry. The Bambu AMS 2 Pro integrates drying up to 65°C. Budget option: a food dehydrator works for PLA and PETG (stay under 55°C) but cannot reach the temperatures needed for Nylon.",
+        "fr": "Sécheurs populaires : SUNLU S2, EIBOS Filadryer, PrintDry. L'AMS 2 Pro Bambu intègre le séchage jusqu'à 65°C. Option budget : un déshydrateur alimentaire fonctionne pour PLA et PETG (rester sous 55°C) mais n'atteint pas les températures nécessaires pour le Nylon."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.4.10",
+     "narration": {
+      "en": "No FDM 3D printed part is truly food-safe without significant post-processing. Three insurmountable barriers: layer lines create microscopic crevices that are a seedbed for bacteria; material additives such as pigments and flow aids are not disclosed and often exclude FDA approval from coloured variants; and printer contamination from brass nozzles — which typically contain lead — and residue from previous prints.",
+      "fr": "Aucune pièce imprimée en 3D par FDM n'est véritablement compatible alimentaire sans post-traitement significatif. Trois obstacles insurmontables : les lignes de couches créent des crevasses microscopiques qui sont un terreau pour les bactéries ; les additifs des matériaux tels que les pigments et agents de fluidification ne sont pas divulgués et excluent souvent l'approbation FDA des variantes colorées ; et la contamination de l'imprimante par les buses en laiton — qui contiennent typiquement du plomb — et les résidus des impressions précédentes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Food Safety — The Three Barriers",
+        "fr": "Sécurité alimentaire — Les trois obstacles"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Layer lines",
+          "fr": "Lignes de couches"
+         },
+         "desc": {
+          "en": "Microscopic crevices — seedbed for bacteria; impossible to clean even in a dishwasher",
+          "fr": "Crevasses microscopiques — terreau pour bactéries ; impossible à nettoyer même au lave-vaisselle"
+         }
+        },
+        {
+         "title": {
+          "en": "Additives",
+          "fr": "Additifs"
+         },
+         "desc": {
+          "en": "Pigments, flow aids — not disclosed; FDA approval often excludes coloured variants",
+          "fr": "Pigments, agents de fluidification — non divulgués ; approbation FDA exclut souvent les variantes colorées"
+         }
+        },
+        {
+         "title": {
+          "en": "Contamination",
+          "fr": "Contamination"
+         },
+         "desc": {
+          "en": "Brass nozzles contain lead; residue from ABS, CF, or other prior prints contaminates",
+          "fr": "Les buses en laiton contiennent du plomb ; résidus d'ABS, CF ou impressions précédentes contaminent"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.4.11",
+     "narration": {
+      "en": "If you must print for food contact, use natural uncoloured PETG, apply a food-safe epoxy coating to seal layer lines completely, and use a stainless steel nozzle. Treat food-contact prints as disposable — plan to replace them. Cookie cutters for occasional use are acceptable; water bottles for repeated use are not.",
+      "fr": "Si vous devez imprimer pour le contact alimentaire, utilisez du PETG naturel non coloré, appliquez un revêtement époxy alimentaire pour sceller complètement les lignes de couches, et utilisez une buse en acier inoxydable. Traitez les impressions en contact alimentaire comme jetables — prévoyez de les remplacer. Les emporte-pièces pour usage occasionnel sont acceptables ; les bouteilles d'eau pour usage répété ne le sont pas."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Food Safety — Practical Guidance",
+        "fr": "Sécurité alimentaire — Guide pratique"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Application",
+         "fr": "Application"
+        },
+        {
+         "en": "Recommendation",
+         "fr": "Recommandation"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Cookie cutters",
+          "fr": "Emporte-pièces"
+         },
+         {
+          "en": "Acceptable — treat as disposable",
+          "fr": "Acceptable — traiter comme jetable"
+         }
+        ],
+        [
+         {
+          "en": "Kitchen tools",
+          "fr": "Ustensiles cuisine"
+         },
+         {
+          "en": "Not recommended unless sealed with food-safe epoxy",
+          "fr": "Déconseillé sauf revêtement époxy alimentaire"
+         }
+        ],
+        [
+         {
+          "en": "Water bottles",
+          "fr": "Bouteilles d'eau"
+         },
+         {
+          "en": "No — bacterial growth risk",
+          "fr": "Non — risque de prolifération bactérienne"
+         }
+        ],
+        [
+         {
+          "en": "Garden markers",
+          "fr": "Marqueurs jardin"
+         },
+         {
+          "en": "Fine — no food contact",
+          "fr": "Convient — pas de contact alimentaire"
+         }
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Mitigation: natural PETG + food-safe epoxy coating (ArtResin, Smooth-On XTC) + stainless steel nozzle + clean hotend. Treat as disposable.",
+        "fr": "Atténuation : PETG naturel + revêtement époxy alimentaire (ArtResin, Smooth-On XTC) + buse inox + hotend propre. Traiter comme jetable."
+       }
+      }
+     ]
+    },
+    {
+     "id": "4.4.12",
+     "narration": {
+      "en": "The environmental impact of 3D printing deserves honest discussion. Failed prints, support material, calibration prints, and misprints accumulate — and most discarded filament will not break down naturally. Recycling options exist but are limited: devices like the ProtoCycler can shred and re-extrude scrap into new filament, and community recycling programmes are emerging in maker spaces and universities.",
+      "fr": "L'impact environnemental de l'impression 3D mérite une discussion honnête. Les impressions ratées, les matériaux de support, les impressions de calibration et les mauvaises impressions s'accumulent — et la plupart des filaments mis au rebut ne se décomposeront pas naturellement. Les options de recyclage existent mais sont limitées : des appareils comme le ProtoCycler peuvent broyer et ré-extruder les chutes en nouveau filament, et des programmes de recyclage communautaire émergent dans les espaces makers et les universités."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Environmental Considerations",
+        "fr": "Considérations environnementales"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>PLA is not home-compostable</b> — requires industrial conditions; persists for decades in nature",
+         "fr": "<b>Le PLA n'est pas compostable à domicile</b> — nécessite des conditions industrielles ; persiste des décennies dans la nature"
+        },
+        {
+         "en": "<b>Failed prints = significant waste</b> — supports, calibration, misprints all accumulate",
+         "fr": "<b>Impressions ratées = déchets importants</b> — supports, calibration, ratés s'accumulent tous"
+        },
+        {
+         "en": "<b>Recycling options</b> — ProtoCycler re-extrudes scrap; community programmes in makerspaces",
+         "fr": "<b>Options de recyclage</b> — ProtoCycler ré-extrude les chutes ; programmes communautaires dans les espaces makers"
+        },
+        {
+         "en": "<b>Reduce waste</b> — right material for the job; save partial spools; infill-only calibration prints",
+         "fr": "<b>Réduire les déchets</b> — bon matériau pour le travail ; sauvegarder les bobines partielles ; impressions de calibration remplissage uniquement"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4.4.13",
+     "narration": {
+      "en": "To close out the module: use the decision matrix as your starting point. Moisture is the enemy of every filament — invest in proper storage. No FDM print is food-safe without coating. PLA is not home-compostable. And always match the material to the application — a well-printed PETG part beats a poorly-printed PC part every time.",
+      "fr": "Pour clore le module : utilisez la matrice de décision comme point de départ. L'humidité est l'ennemi de tout filament — investissez dans un stockage adéquat. Aucune impression FDM n'est compatible alimentaire sans revêtement. Le PLA n'est pas compostable à domicile. Et associez toujours le matériau à l'application — une pièce en PETG bien imprimée surpasse chaque fois une pièce en PC mal imprimée."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 4 Recap — and Module Close",
+        "fr": "Récapitulatif chapitre 4 — et clôture du module"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Use the decision matrix</b> — PLA for ease, PETG for function, ASA for outdoors, TPU for flex, Nylon/PC for engineering",
+         "fr": "<b>Utilisez la matrice de décision</b> — PLA pour la facilité, PETG pour la fonction, ASA pour l'extérieur, TPU pour la flexibilité, Nylon/PC pour la technique"
+        },
+        {
+         "en": "<b>Moisture is the enemy</b> — airtight + desiccant is the minimum; dry before printing Nylon, PVA, TPU",
+         "fr": "<b>L'humidité est l'ennemi</b> — hermétique + dessiccant est le minimum ; sécher avant d'imprimer Nylon, PVA, TPU"
+        },
+        {
+         "en": "<b>No food-safe FDM print without coating</b> — layer lines + additives + brass nozzle create three barriers",
+         "fr": "<b>Pas d'impression FDM compatible alimentaire sans revêtement</b> — lignes de couches + additifs + buse laiton créent trois obstacles"
+        },
+        {
+         "en": "<b>PLA is not home-compostable</b> — industrial facilities required; renewably sourced is its real advantage",
+         "fr": "<b>Le PLA n'est pas compostable à domicile</b> — installations industrielles requises ; l'origine renouvelable est son vrai avantage"
+        },
+        {
+         "en": "<b>Match material to application</b> — start simple; move up the ladder only when the project demands it",
+         "fr": "<b>Adaptez le matériau à l'application</b> — commencez simplement ; montez dans l'échelle de difficulté uniquement quand le projet l'exige"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

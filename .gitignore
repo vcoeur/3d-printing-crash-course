@@ -1,0 +1,14 @@
+# Build outputs & intermediates (regenerable)
+/course_en.md
+/course_fr.md
+.course_*.pdfsrc.md
+player/site/
+player/audio/
+
+# Deploy state — never commit (Netlify coordinates live elsewhere, kept private)
+.netlify/
+
+# Tooling / OS
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,2645 @@
+{
+ "module": 8,
+ "module_title": {
+  "en": "Troubleshooting, Safety, and Best Practices",
+  "fr": "Résolution de problèmes, sécurité et bonnes pratiques"
+ },
+ "chapters": [
+  {
+   "chapter": 1,
+   "title": {
+    "en": "First Layer and Bed Adhesion",
+    "fr": "Première couche et adhérence au plateau"
+   },
+   "scenes": [
+    {
+     "id": "8.1.0",
+     "narration": {
+      "en": "Welcome to Chapter 1. The first layer is the foundation of every successful print — learn to read it and you gain one of the most valuable skills in 3D printing.",
+      "fr": "Bienvenue au chapitre 1. La première couche est le fondement de toute impression réussie — apprenez à la lire et vous acquerrez l'une des compétences les plus précieuses en impression 3D."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 8 · Chapter 1",
+        "fr": "Module 8 · Chapitre 1"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "First Layer and Bed Adhesion",
+        "fr": "Première couche et adhérence au plateau"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Ask any experienced maker what separates a successful print from a failed one — most will give the same answer: the first layer.",
+        "fr": "Demandez à n'importe quel maker expérimenté ce qui distingue une impression réussie d'une impression ratée — la plupart donneront la même réponse : la première couche."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.1.1",
+     "narration": {
+      "en": "The first layer does four critical jobs: it anchors all subsequent layers, resists thermal warping, sets Z-accuracy for the entire print, and prevents the dreaded spaghetti failure.",
+      "fr": "La première couche remplit quatre fonctions critiques : elle ancre toutes les couches suivantes, résiste au gauchissement thermique, détermine la précision en Z pour toute l'impression, et prévient le fameux échec en spaghetti."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Why the First Layer Matters",
+        "fr": "Pourquoi la première couche est essentielle"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "first_layer"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Structural anchor</b> — foundation for all layers above",
+         "fr": "<b>Ancrage structurel</b> — fondement de toutes les couches suivantes"
+        },
+        {
+         "en": "<b>Warp resistance</b> — adhesion fights thermal contraction",
+         "fr": "<b>Résistance au gauchissement</b> — l'adhérence combat la contraction thermique"
+        },
+        {
+         "en": "<b>Z-accuracy</b> — sets the reference height for the whole print",
+         "fr": "<b>Précision en Z</b> — définit la hauteur de référence pour toute l'impression"
+        },
+        {
+         "en": "<b>Prevents spaghetti</b> — a detached print becomes a tangled mess",
+         "fr": "<b>Prévient les spaghettis</b> — une impression décollée devient un enchevêtrement"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.1.2",
+     "narration": {
+      "en": "A well-calibrated first layer has a flat top, lines that touch each other with no gaps, no lifting at the edges, and a uniform matte appearance across the whole surface.",
+      "fr": "Une première couche bien calibrée a un dessus plat, des lignes qui se touchent sans espace, pas de soulèvement aux bords, et un aspect mat uniforme sur toute la surface."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Signs of a Good First Layer",
+        "fr": "Signes d'une bonne première couche"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "first_layer"
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Slight squish</b> — lines are flat-topped, slightly wider than the nozzle",
+         "fr": "<b>Léger écrasement</b> — lignes au dessus plat, légèrement plus larges que la buse"
+        },
+        {
+         "en": "<b>Lines touch</b> — no visible gap between adjacent lines",
+         "fr": "<b>Lignes jointives</b> — pas d'espace visible entre les lignes adjacentes"
+        },
+        {
+         "en": "<b>No edge lifting</b> — corners and edges stay flat",
+         "fr": "<b>Pas de soulèvement</b> — les coins et bords restent plats"
+        },
+        {
+         "en": "<b>Uniform matte</b> — not translucent (too close) or round like spaghetti (too far)",
+         "fr": "<b>Mat uniforme</b> — ni translucide (trop proche) ni rond comme des spaghettis (trop loin)"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.1.3",
+     "narration": {
+      "en": "Z-offset is arguably the single most impactful setting in all of 3D printing — it controls the gap between the nozzle tip and the bed surface at the home position.",
+      "fr": "Le Z-offset est sans doute le réglage le plus important de toute l'impression 3D — il contrôle la distance entre la pointe de la buse et la surface du plateau à la position d'origine."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Z-Offset: The Critical Distance",
+        "fr": "Décalage en Z : la distance critique"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "first_layer"
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Think of Z-offset like the gap between a pen and paper — too much gap and the ink doesn't transfer; too little and you tear the page.",
+        "fr": "Imaginez le Z-offset comme l'espace entre un stylo et du papier — trop grand et l'encre ne se dépose pas ; trop petit et vous déchirez la feuille."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.1.4",
+     "narration": {
+      "en": "Here is how to read what you see on the bed and match each symptom to its fix. Adjust in small steps — 0.02 to 0.05 millimetres at a time — and save the value that works.",
+      "fr": "Voici comment lire ce que vous voyez sur le plateau et associer chaque symptôme à sa solution. Ajustez par petits incréments — 0,02 à 0,05 mm à la fois — et sauvegardez la valeur qui fonctionne."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Z-Offset Diagnostic Table",
+        "fr": "Tableau de diagnostic du Z-offset"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "What you see",
+         "fr": "Ce que vous voyez"
+        },
+        {
+         "en": "Cause",
+         "fr": "Cause"
+        },
+        {
+         "en": "Fix",
+         "fr": "Solution"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Spaghetti lines, widely spaced",
+          "fr": "Lignes espacées, aspect spaghetti"
+         },
+         {
+          "en": "Nozzle too high",
+          "fr": "Buse trop haute"
+         },
+         {
+          "en": "Decrease Z-offset (more negative)",
+          "fr": "Réduire le Z-offset (plus négatif)"
+         }
+        ],
+        [
+         {
+          "en": "Filament not sticking, curling up",
+          "fr": "Filament qui n'adhère pas, se recourbe"
+         },
+         {
+          "en": "Too high OR bed too cold",
+          "fr": "Trop haute OU plateau trop froid"
+         },
+         {
+          "en": "Lower Z and/or +5–10°C bed",
+          "fr": "Abaisser Z et/ou +5–10°C plateau"
+         }
+        ],
+        [
+         {
+          "en": "Lines very squished, translucent",
+          "fr": "Lignes très écrasées, translucides"
+         },
+         {
+          "en": "Nozzle too close",
+          "fr": "Buse trop proche"
+         },
+         {
+          "en": "Increase Z-offset (less negative)",
+          "fr": "Augmenter le Z-offset (moins négatif)"
+         }
+        ],
+        [
+         {
+          "en": "Nozzle scratching the bed",
+          "fr": "Buse rayant le plateau"
+         },
+         {
+          "en": "Dangerously close — stop!",
+          "fr": "Dangereusement proche — arrêtez !"
+         },
+         {
+          "en": "Increase Z-offset significantly",
+          "fr": "Augmenter significativement le Z-offset"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.1.5",
+     "narration": {
+      "en": "Always err on the side of slightly too high when calibrating. A nozzle that is too close can permanently damage your PEI build surface or scratch a glass bed.",
+      "fr": "Privilégiez toujours une position légèrement trop haute lors de la calibration. Une buse trop proche peut endommager définitivement votre surface PEI ou rayer un plateau en verre."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "A nozzle too close can damage PEI (polyetherimide) or scratch a glass bed. Adjust in 0.02–0.05 mm steps and save the good value.",
+        "fr": "Une buse trop proche peut endommager le PEI (polyétherimide) ou rayer un plateau en verre. Ajustez par incréments de 0,02–0,05 mm et sauvegardez la bonne valeur."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.1.6",
+     "narration": {
+      "en": "Even a perfect Z-offset can't compensate for an uneven bed. Modern printers use either manual leveling with a paper or feeler gauge, or automatic bed leveling with a probe.",
+      "fr": "Même un Z-offset parfait ne peut pas compenser un plateau inégal. Les imprimantes modernes utilisent soit le nivellement manuel avec une feuille de papier ou une jauge d'épaisseur, soit le nivellement automatique avec une sonde."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Bed Leveling Techniques",
+        "fr": "Techniques de nivellement du plateau"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Manual leveling",
+         "fr": "Nivellement manuel"
+        },
+        "note": {
+         "en": "Paper method or 0.1 mm feeler gauge; re-level every 5 prints",
+         "fr": "Méthode de la feuille ou jauge 0,1 mm ; reniveler toutes les 5 impressions"
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Auto bed leveling (ABL)",
+         "fr": "Nivellement automatique (ABL)"
+        },
+        "note": {
+         "en": "Probe builds a compensation mesh — BLTouch, inductive, capacitive, or lidar (Bambu X1)",
+         "fr": "La sonde crée un maillage de compensation — BLTouch, inductif, capacitif ou lidar (Bambu X1)"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.1.7",
+     "narration": {
+      "en": "If your first layer looks perfect in the center but poor at the edges, your mesh grid resolution is too low. Increase the probe grid to 5 by 5 or 7 by 7 points in your firmware settings.",
+      "fr": "Si votre première couche semble parfaite au centre mais mauvaise aux bords, la résolution de votre grille de maillage est trop faible. Augmentez la grille de sonde à 5 fois 5 ou 7 fois 7 points dans les paramètres du micrologiciel."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Poor edges with a good center? Increase your ABL probe grid to 5×5 or 7×7 points for better edge coverage.",
+        "fr": "Bords mauvais mais centre correct ? Augmentez la grille ABL à 5×5 ou 7×7 points pour une meilleure couverture des bords."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.1.8",
+     "narration": {
+      "en": "Different filaments bond differently to different surfaces. Using the wrong combination leads to warping or to the part bonding so strongly it damages the bed on removal.",
+      "fr": "Différents filaments adhèrent différemment à différentes surfaces. Une mauvaise combinaison entraîne soit du gauchissement, soit une adhérence si forte que la pièce endommage le plateau au démoulage."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Bed Surface by Material",
+        "fr": "Surface de plateau selon le matériau"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Material",
+         "fr": "Matériau"
+        },
+        {
+         "en": "Surface",
+         "fr": "Surface"
+        },
+        {
+         "en": "Preparation",
+         "fr": "Préparation"
+        }
+       ],
+       "rows": [
+        [
+         "PLA",
+         {
+          "en": "PEI textured or smooth",
+          "fr": "PEI texturé ou lisse"
+         },
+         {
+          "en": "IPA between prints",
+          "fr": "IPA entre les impressions"
+         }
+        ],
+        [
+         "PETG",
+         {
+          "en": "PEI textured",
+          "fr": "PEI texturé"
+         },
+         {
+          "en": "Glue stick as release agent",
+          "fr": "Colle en bâton comme démoulant"
+         }
+        ],
+        [
+         "ABS",
+         {
+          "en": "PEI + enclosure",
+          "fr": "PEI + enceinte"
+         },
+         {
+          "en": "90–110°C bed, no drafts",
+          "fr": "Plateau 90–110°C, sans courant d'air"
+         }
+        ],
+        [
+         "TPU",
+         {
+          "en": "PEI smooth",
+          "fr": "PEI lisse"
+         },
+         {
+          "en": "Light adhesive if needed; avoid textured PEI",
+          "fr": "Adhésif léger si besoin ; éviter PEI texturé"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.1.9",
+     "narration": {
+      "en": "Never use household cleaners containing ammonia on PEI or BuildTak surfaces — they leave residue and can damage the coating. Clean with isopropyl alcohol only.",
+      "fr": "N'utilisez jamais de produits ménagers contenant de l'ammoniac sur les surfaces PEI ou BuildTak — ils laissent des résidus et peuvent endommager le revêtement. Nettoyez uniquement à l'alcool isopropylique."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Never use ammonia-based cleaners on PEI or BuildTak — they damage the coating. Use isopropyl alcohol only.",
+        "fr": "N'utilisez jamais de nettoyants à base d'ammoniac sur PEI ou BuildTak — ils endommagent le revêtement. Utilisez uniquement de l'alcool isopropylique."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.1.10",
+     "narration": {
+      "en": "Slicers offer three adhesion structures. A skirt primes the nozzle without touching the part. A brim extends the first layer footprint to resist warping. A raft is a full sacrificial platform for the most difficult cases.",
+      "fr": "Les trancheurs proposent trois structures d'adhérence. La jupe amorce la buse sans toucher la pièce. La bordure étend l'empreinte de la première couche pour résister au gauchissement. Le radeau est une plateforme sacrificielle complète pour les cas les plus difficiles."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Adhesion Aids: Skirt, Brim, Raft",
+        "fr": "Aides à l'adhérence : jupe, bordure, radeau"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "adhesion"
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Skirt",
+          "fr": "Jupe"
+         },
+         "desc": {
+          "en": "Outline loops not touching the part — primes nozzle, default choice",
+          "fr": "Boucles de contour ne touchant pas la pièce — amorce la buse, choix par défaut"
+         }
+        },
+        {
+         "title": {
+          "en": "Brim",
+          "fr": "Bordure"
+         },
+         "desc": {
+          "en": "Extra lines attached to first layer — ~8 mm wide, best for warping",
+          "fr": "Lignes supplémentaires attachées à la première couche — ~8 mm de large, idéale contre le gauchissement"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Raft",
+          "fr": "Radeau"
+         },
+         "desc": {
+          "en": "Full platform under the model — last resort, adds time and material",
+          "fr": "Plateforme complète sous le modèle — dernier recours, ajoute du temps et de la matière"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.1.11",
+     "narration": {
+      "en": "A brim is usually the right answer for warping issues. Rafts should be your last resort — they consume extra material and leave a rough bottom surface.",
+      "fr": "La bordure est généralement la bonne réponse aux problèmes de gauchissement. Le radeau devrait être votre dernier recours — il consomme du matériau supplémentaire et laisse une surface inférieure rugueuse."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Brim first, raft last. A brim adds surface area with minimal overhead; a raft wastes material and marks the bottom surface.",
+        "fr": "Bordure d'abord, radeau en dernier. La bordure ajoute de la surface avec peu d'impact ; le radeau gaspille du matériau et marque la surface inférieure."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.1.12",
+     "narration": {
+      "en": "To recap Chapter 1: the first layer is your print's foundation. Z-offset is the most critical setting — adjust in tiny steps. Match bed surface to material, clean PEI with IPA, and choose skirt, brim, or raft based on your situation.",
+      "fr": "Pour résumer le chapitre 1 : la première couche est le fondement de votre impression. Le Z-offset est le réglage le plus critique — ajustez par petits incréments. Adaptez la surface au matériau, nettoyez le PEI à l'IPA, et choisissez jupe, bordure ou radeau selon la situation."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 1 Recap",
+        "fr": "Récapitulatif du chapitre 1"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>First layer</b> — the most important layer; learn to read its visual cues",
+         "fr": "<b>Première couche</b> — la couche la plus importante ; apprenez à lire ses indicateurs visuels"
+        },
+        {
+         "en": "<b>Z-offset</b> — single most impactful setting; adjust 0.02–0.05 mm at a time",
+         "fr": "<b>Z-offset</b> — réglage le plus important ; ajuster par incréments de 0,02–0,05 mm"
+        },
+        {
+         "en": "<b>Bed surface</b> — match surface and prep to filament material",
+         "fr": "<b>Surface de plateau</b> — adapter la surface et la préparation au matériau"
+        },
+        {
+         "en": "<b>Clean PEI</b> with isopropyl alcohol regularly",
+         "fr": "<b>Nettoyer le PEI</b> à l'alcool isopropylique régulièrement"
+        },
+        {
+         "en": "<b>Skirts</b> prime · <b>brims</b> prevent warping · <b>rafts</b> are last resort",
+         "fr": "<b>Jupes</b> amorcent · <b>bordures</b> préviennent le gauchissement · <b>radeaux</b> en dernier recours"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 2,
+   "title": {
+    "en": "Common Print Problems and Solutions",
+    "fr": "Problèmes d'impression courants et solutions"
+   },
+   "scenes": [
+    {
+     "id": "8.2.0",
+     "narration": {
+      "en": "Welcome to Chapter 2 — your diagnostic handbook. When a print fails, observe the symptoms carefully, identify the root cause, and apply fixes one at a time.",
+      "fr": "Bienvenue au chapitre 2 — votre manuel de diagnostic. Quand une impression échoue, observez attentivement les symptômes, identifiez la cause profonde et appliquez les corrections une à une."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 8 · Chapter 2",
+        "fr": "Module 8 · Chapitre 2"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Common Print Problems and Solutions",
+        "fr": "Problèmes d'impression courants et solutions"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Calibration parameters are interdependent: Temperature affects flow rate, flow affects pressure advance, pressure advance affects retraction. Always calibrate in order.",
+        "fr": "Les paramètres de calibration sont interdépendants : la température influe sur le débit, le débit sur l'avance de pression, l'avance de pression sur la rétraction. Calibrez toujours dans l'ordre."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.2.1",
+     "narration": {
+      "en": "The calibration order matters: Temperature first, then Flow, then Pressure Advance, then Retraction, then Speed. Changing one and skipping the others creates mystery failures.",
+      "fr": "L'ordre de calibration est important : Température d'abord, puis Débit, puis Avance de pression, puis Rétraction, puis Vitesse. Modifier l'un et ignorer les autres crée des pannes mystérieuses."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Calibration Order",
+        "fr": "Ordre de calibration"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Temperature",
+          "fr": "Température"
+         },
+         "sub": {
+          "en": "Print temp tower",
+          "fr": "Tour de température"
+         }
+        },
+        {
+         "name": {
+          "en": "Flow",
+          "fr": "Débit"
+         },
+         "sub": {
+          "en": "Single-wall cube",
+          "fr": "Cube monoparoi"
+         }
+        },
+        {
+         "name": {
+          "en": "Pressure Adv.",
+          "fr": "Avance press."
+         },
+         "sub": {
+          "en": "Corner test",
+          "fr": "Test de coin"
+         }
+        },
+        {
+         "name": {
+          "en": "Retraction",
+          "fr": "Rétraction"
+         },
+         "sub": {
+          "en": "Stringing tower",
+          "fr": "Tour d'effilage"
+         }
+        },
+        {
+         "name": {
+          "en": "Speed",
+          "fr": "Vitesse"
+         },
+         "sub": {
+          "en": "Ringing/ghosting",
+          "fr": "Ghosting/ringing"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.2.2",
+     "narration": {
+      "en": "Here is an overview of the eleven most common print problems, from under-extrusion to spaghetti failure. We will cover each one in depth.",
+      "fr": "Voici un aperçu des onze problèmes d'impression les plus courants, de la sous-extrusion à l'échec en spaghetti. Nous allons couvrir chacun en détail."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The 11 Common Problems",
+        "fr": "Les 11 problèmes courants"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Under-extrusion</b> · <b>Over-extrusion</b> · <b>Stringing</b> · <b>Warping</b>",
+         "fr": "<b>Sous-extrusion</b> · <b>Sur-extrusion</b> · <b>Effilage</b> · <b>Gauchissement</b>"
+        },
+        {
+         "en": "<b>Layer shifting</b> · <b>Clogged nozzle</b> · <b>Ghosting/Ringing</b>",
+         "fr": "<b>Décalage de couches</b> · <b>Buse bouchée</b> · <b>Ghosting/Ringing</b>"
+        },
+        {
+         "en": "<b>Z-banding</b> · <b>Gaps in top layers</b> · <b>Elephant's foot</b> · <b>Spaghetti</b>",
+         "fr": "<b>Banding en Z</b> · <b>Espaces couches supérieures</b> · <b>Pied d'éléphant</b> · <b>Spaghetti</b>"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.2.3",
+     "narration": {
+      "en": "Under-extrusion means your printer deposits less filament than required. Parts have thin walls, visible gaps, and weak layer bonds — like icing a cake with a clogged piping bag.",
+      "fr": "La sous-extrusion signifie que votre imprimante dépose moins de filament que requis. Les pièces ont des parois fines, des espaces visibles et une faible liaison entre couches — comme glacer un gâteau avec une poche à douille bouchée."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Under-Extrusion",
+        "fr": "Sous-extrusion"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Partial clog",
+          "fr": "Bouchon partiel"
+         },
+         "desc": {
+          "en": "Debris or carbonized filament restricts flow — most common cause",
+          "fr": "Débris ou filament carbonisé restreignant le flux — cause la plus fréquente"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Worn nozzle",
+          "fr": "Buse usée"
+         },
+         "desc": {
+          "en": "Enlarged bore from abrasive filament — inconsistent extrusion",
+          "fr": "Alésage élargi par filament abrasif — extrusion incohérente"
+         }
+        },
+        {
+         "title": {
+          "en": "Heat creep",
+          "fr": "Remontée de chaleur"
+         },
+         "desc": {
+          "en": "Failed hotend fan lets heat travel up — filament softens too early",
+          "fr": "Ventilateur HS laisse la chaleur remonter — le filament ramollit trop tôt"
+         }
+        },
+        {
+         "title": {
+          "en": "Wet filament",
+          "fr": "Filament humide"
+         },
+         "desc": {
+          "en": "Moisture creates steam bubbles — only one filament affected",
+          "fr": "L'humidité crée des bulles de vapeur — affecte seulement un filament"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.2.4",
+     "narration": {
+      "en": "Use this three-question diagnostic flow to pinpoint under-extrusion quickly. Is the extruder clicking? Does it happen with all filaments? Or only with one?",
+      "fr": "Utilisez ce flux de diagnostic en trois questions pour cerner rapidement la sous-extrusion. L'extrudeur claque-t-il ? Le problème survient-il avec tous les filaments ? Ou seulement avec un seul ?"
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Under-Extrusion: Diagnostic Flow",
+        "fr": "Sous-extrusion : flux de diagnostic"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Extruder clicking/skipping?</b> → Likely clog or temperature issue",
+         "fr": "<b>Extrudeur qui claque/saute ?</b> → Probable bouchon ou problème de température"
+        },
+        {
+         "en": "<b>All filaments affected?</b> → Nozzle or extruder mechanical problem",
+         "fr": "<b>Tous les filaments affectés ?</b> → Problème mécanique de buse ou d'extrudeur"
+        },
+        {
+         "en": "<b>Only one filament?</b> → Wet or poor-quality filament",
+         "fr": "<b>Un seul filament affecté ?</b> → Filament humide ou de mauvaise qualité"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.2.5",
+     "narration": {
+      "en": "The cold pull, also called the atomic pull, is the most effective non-destructive nozzle cleaning method. Heat, feed, cool to the sweet spot, then pull firmly in one smooth motion.",
+      "fr": "La traction à froid, aussi appelée traction atomique, est la méthode de nettoyage non destructive la plus efficace. Chauffez, alimentez, refroidissez à la zone idéale, puis tirez fermement en un mouvement fluide."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "The Cold Pull: Step by Step",
+        "fr": "La traction à froid : étape par étape"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Heat",
+          "fr": "Chauffer"
+         },
+         "sub": {
+          "en": "~250°C",
+          "fr": "~250°C"
+         }
+        },
+        {
+         "name": {
+          "en": "Feed",
+          "fr": "Alimenter"
+         },
+         "sub": {
+          "en": "Until clean extrusion",
+          "fr": "Jusqu'à extrusion propre"
+         }
+        },
+        {
+         "name": {
+          "en": "Cool",
+          "fr": "Refroidir"
+         },
+         "sub": {
+          "en": "PLA: 90–110°C",
+          "fr": "PLA : 90–110°C"
+         }
+        },
+        {
+         "name": {
+          "en": "Pull",
+          "fr": "Tirer"
+         },
+         "sub": {
+          "en": "Firm, smooth pull",
+          "fr": "Traction ferme et fluide"
+         }
+        },
+        {
+         "name": {
+          "en": "Inspect",
+          "fr": "Inspecter"
+         },
+         "sub": {
+          "en": "Repeat until clean",
+          "fr": "Répéter jusqu'à propre"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.2.6",
+     "narration": {
+      "en": "PLA works well for cold pulls because it retains the nozzle tip shape. Nylon is also excellent due to its high strength. For a stubborn clog, insert a 0.35 to 0.4 millimetre acupuncture needle at printing temperature.",
+      "fr": "Le PLA est bien adapté aux tractions à froid car il conserve la forme de la pointe de buse. Le nylon est également excellent grâce à sa haute résistance. Pour un bouchon tenace, insérez une aiguille d'acupuncture de 0,35 à 0,4 mm à température d'impression."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Cold pull sweet spots: PLA 90–110°C · PETG 110–130°C · Nylon 140–160°C. Brass nozzles last a few hundred hours with standard materials.",
+        "fr": "Zones idéales de traction à froid : PLA 90–110°C · PETG 110–130°C · Nylon 140–160°C. Les buses en laiton durent quelques centaines d'heures avec des matériaux standards."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.2.7",
+     "narration": {
+      "en": "Over-extrusion is the opposite problem: too much filament produces blobs, thick walls, and poor dimensional accuracy. Calibrate e-steps and flow rate to fix it.",
+      "fr": "La sur-extrusion est le problème inverse : trop de filament produit des gouttes, des parois épaisses et une mauvaise précision dimensionnelle. Calibrez les e-steps et le taux de flux pour y remédier."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Over-Extrusion: Calibration Procedure",
+        "fr": "Sur-extrusion : procédure de calibration"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>E-steps check</b> — mark 120 mm, command 100 mm extrusion, measure remaining (should be 20 mm)",
+         "fr": "<b>Vérification e-steps</b> — marquer 120 mm, commander 100 mm d'extrusion, mesurer le restant (doit être 20 mm)"
+        },
+        {
+         "en": "<b>Formula:</b> New Steps/mm = [100 ÷ measured length] × current Steps/mm",
+         "fr": "<b>Formule :</b> Nouveaux pas/mm = [100 ÷ longueur mesurée] × pas/mm actuels"
+        },
+        {
+         "en": "<b>Flow rate</b> — print single-wall cube, measure wall with calipers, target 0.40 mm for 0.4 mm nozzle",
+         "fr": "<b>Taux de flux</b> — imprimer cube monoparoi, mesurer avec pied à coulisse, cible 0,40 mm pour buse 0,4 mm"
+        },
+        {
+         "en": "<b>Target range</b> — most filaments work best at 92–98% flow rate",
+         "fr": "<b>Plage cible</b> — la plupart des filaments fonctionnent mieux à 92–98 % de flux"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.2.8",
+     "narration": {
+      "en": "Stringing looks like spider silk connecting different parts of your print. It happens when molten filament oozes from the nozzle during travel moves.",
+      "fr": "L'effilage ressemble à de la toile d'araignée reliant différentes parties de votre impression. Il se produit quand le filament fondu suinte de la buse pendant les déplacements à vide."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Stringing: Causes and Fixes",
+        "fr": "Effilage : causes et solutions"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "retraction"
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Wet filament",
+          "fr": "Filament humide"
+         },
+         "desc": {
+          "en": "Steam bubbles disrupt pressure — dry filament first",
+          "fr": "Les bulles de vapeur perturbent la pression — sécher le filament en premier"
+         }
+        },
+        {
+         "title": {
+          "en": "High temperature",
+          "fr": "Température trop haute"
+         },
+         "desc": {
+          "en": "Filament flows too easily — reduce 5–10°C",
+          "fr": "Le filament s'écoule trop facilement — réduire de 5–10°C"
+         }
+        },
+        {
+         "title": {
+          "en": "Poor retraction",
+          "fr": "Rétraction insuffisante"
+         },
+         "desc": {
+          "en": "Not enough pull-back — adjust distance and speed",
+          "fr": "Pas assez de recul — ajuster la distance et la vitesse"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Slow travel",
+          "fr": "Déplacement lent"
+         },
+         "desc": {
+          "en": "More time to ooze — increase travel to 150–200 mm/s",
+          "fr": "Plus de temps pour suinter — augmenter le déplacement à 150–200 mm/s"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.2.9",
+     "narration": {
+      "en": "Retraction settings depend on your extruder type and filament. Direct drive needs only 1 to 2 millimetres for PLA, while Bowden setups need 4 to 6. TPU needs very little retraction at slow speed to avoid grinding.",
+      "fr": "Les réglages de rétraction dépendent du type d'extrudeur et du filament. Le direct drive ne nécessite que 1 à 2 mm pour le PLA, tandis que le Bowden nécessite 4 à 6 mm. Le TPU nécessite très peu de rétraction à faible vitesse pour éviter le broyage."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Retraction Guidelines",
+        "fr": "Recommandations de rétraction"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "retraction"
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Extruder type",
+         "fr": "Type d'extrudeur"
+        },
+        "PLA",
+        "PETG",
+        {
+         "en": "TPU/Flexible",
+         "fr": "TPU/Flexible"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Direct Drive",
+          "fr": "Direct Drive"
+         },
+         "1–2 mm",
+         "3–5 mm",
+         "0.5–1 mm"
+        ],
+        [
+         {
+          "en": "Bowden",
+          "fr": "Bowden"
+         },
+         "4–6 mm",
+         "6–8 mm",
+         "5–7 mm"
+        ]
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Retraction speed: 40–60 mm/s for most filaments; 20–40 mm/s for PETG; 15–25 mm/s for TPU to avoid grinding.",
+        "fr": "Vitesse de rétraction : 40–60 mm/s pour la plupart des filaments ; 20–40 mm/s pour le PETG ; 15–25 mm/s pour le TPU pour éviter le broyage."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.2.10",
+     "narration": {
+      "en": "Warping is thermal contraction at work. As each layer cools it shrinks and pulls inward on the layers below. ABS warps much more than PLA because its coefficient of thermal expansion is about 90 micrometres per metre per degree Celsius.",
+      "fr": "Le gauchissement est la contraction thermique à l'œuvre. À mesure que chaque couche refroidit, elle se rétracte et tire vers l'intérieur sur les couches inférieures. L'ABS gauchit bien plus que le PLA car son coefficient de dilatation thermique est d'environ 90 µm/m·°C."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Warping: Thermal Expansion Coefficients",
+        "fr": "Gauchissement : coefficients de dilatation thermique"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "ABS",
+         "desc": {
+          "en": "~90 µm/m·°C — worst warping; needs enclosure + 90–110°C bed",
+          "fr": "~90 µm/m·°C — gauchissement sévère ; nécessite enceinte + plateau 90–110°C"
+         },
+         "highlight": true
+        },
+        {
+         "title": "PLA",
+         "desc": {
+          "en": "~68 µm/m·°C — moderate; PEI + IPA usually sufficient",
+          "fr": "~68 µm/m·°C — modéré ; PEI + IPA généralement suffisant"
+         }
+        },
+        {
+         "title": "PETG",
+         "desc": {
+          "en": "~60 µm/m·°C — lowest; glue stick release agent on PEI textured",
+          "fr": "~60 µm/m·°C — le plus faible ; colle démoulante sur PEI texturé"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.2.11",
+     "narration": {
+      "en": "Five solutions for warping, ranked by effectiveness: enclosure first, then brim, then higher bed temperature, then eliminating drafts, and finally rounding sharp corners in your CAD model.",
+      "fr": "Cinq solutions contre le gauchissement, classées par efficacité : enceinte d'abord, puis bordure, puis température de plateau plus élevée, puis éliminer les courants d'air, et enfin arrondir les coins vifs dans votre modèle CAO."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Anti-Warping Solutions (Ranked)",
+        "fr": "Solutions anti-gauchissement (classées)"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>1. Enclosure</b> — raises chamber 5–10°C; target 30–50°C for ABS with bed over 90°C",
+         "fr": "<b>1. Enceinte</b> — élève la chambre de 5–10°C ; cible 30–50°C pour l'ABS avec plateau au-dessus de 90°C"
+        },
+        {
+         "en": "<b>2. Brim</b> — increases first-layer surface area to resist lifting forces",
+         "fr": "<b>2. Bordure</b> — augmente la surface de la première couche pour résister aux forces de soulèvement"
+        },
+        {
+         "en": "<b>3. Bed temperature</b> — increase 5–10°C to improve layer-one adhesion",
+         "fr": "<b>3. Température du plateau</b> — augmenter de 5–10°C pour améliorer l'adhérence"
+        },
+        {
+         "en": "<b>4. Eliminate drafts</b> — printer at least 1.5 m from windows, doors, and HVAC vents",
+         "fr": "<b>4. Éliminer les courants d'air</b> — imprimante à au moins 1,5 m des fenêtres, portes et bouches de climatisation"
+        },
+        {
+         "en": "<b>5. Round corners</b> — reduce stress concentration in CAD",
+         "fr": "<b>5. Arrondir les coins</b> — réduire la concentration de contraintes dans la CAO"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.2.12",
+     "narration": {
+      "en": "Layer shifting produces a staircase or zigzag appearance. First identify which axis is affected — X is left and right, Y is front and back — then check belts and pulleys.",
+      "fr": "Le décalage de couches produit un aspect en escalier ou en zigzag. Identifiez d'abord quel axe est affecté — X est gauche/droite, Y est avant/arrière — puis vérifiez les courroies et poulies."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Layer Shifting: Causes and Belt Check",
+        "fr": "Décalage de couches : causes et vérification des courroies"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Loose belts</b> — belt slips on pulleys; deflection should be ~1 mm per 60–70 mm of span",
+         "fr": "<b>Courroies lâches</b> — glissent sur les poulies ; déflexion ~1 mm par 60–70 mm de portée"
+        },
+        {
+         "en": "<b>Loose pulley set screws</b> — pulley spins without moving shaft",
+         "fr": "<b>Vis de serrage de poulies lâches</b> — la poulie tourne sans déplacer l'arbre"
+        },
+        {
+         "en": "<b>Excessive speed</b> — motors skip steps; reduce speed and acceleration",
+         "fr": "<b>Vitesse excessive</b> — les moteurs sautent des pas ; réduire vitesse et accélération"
+        },
+        {
+         "en": "<b>Nozzle collisions</b> — hits curled edges and pushes head off position",
+         "fr": "<b>Collisions de buse</b> — percute des bords courbés et déplace la tête de position"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.2.13",
+     "narration": {
+      "en": "You can verify belt tension by frequency. Pluck the belt like a guitar string and use a phone app to measure the resonant frequency. On the Prusa CORE One, the upper belt targets about 96 hertz and the lower belt 90 to 92 hertz.",
+      "fr": "Vous pouvez vérifier la tension des courroies par fréquence. Pincez la courroie comme une corde de guitare et utilisez une application téléphonique pour mesurer la fréquence de résonance. Sur la Prusa CORE One, la courroie supérieure cible environ 96 Hz et la courroie inférieure 90 à 92 Hz."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Prusa CORE One belt targets: upper ~96 Hz, lower ~90–92 Hz. Never lubricate belts — grease causes teeth to slip. Check alignment instead.",
+        "fr": "Cibles Prusa CORE One : courroie supérieure ~96 Hz, courroie inférieure ~90–92 Hz. Ne lubrifiez jamais les courroies — la graisse fait glisser les dents. Vérifiez plutôt l'alignement."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.2.14",
+     "narration": {
+      "en": "Ghosting, also called ringing, creates visible ripples near sharp corners due to mechanical vibrations from rapid direction changes. Reduce acceleration to 500 to 1000 millimetres per second squared and tighten the frame.",
+      "fr": "Le ghosting, aussi appelé ringing, crée des ondulations visibles près des coins vifs dues aux vibrations mécaniques lors de changements de direction rapides. Réduisez l'accélération à 500–1000 mm/s² et resserrez le cadre."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Ghosting/Ringing and Z-Banding",
+        "fr": "Ghosting/Ringing et banding en Z"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Ghosting/Ringing",
+         "fr": "Ghosting/Ringing"
+        },
+        "note": {
+         "en": "Ripples near corners — reduce acceleration to 500–1000 mm/s², tighten frame, add vibration pads. Klipper Input Shaping for advanced users.",
+         "fr": "Ondulations près des coins — réduire l'accélération à 500–1000 mm/s², resserrer cadre, patins amortisseurs. Input Shaping Klipper pour utilisateurs avancés."
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Z-Banding",
+         "fr": "Banding en Z"
+        },
+        "note": {
+         "en": "Periodic horizontal ridges — bent lead screw, dirty Z-axis, loose coupler. Roll lead screw on flat surface to test; clean with IPA and PTFE grease every 3 months.",
+         "fr": "Bourrelets horizontaux périodiques — vis à billes voilée, axe Z sale, coupleur lâche. Rouler la vis sur surface plane pour tester ; nettoyer à l'IPA et graisser au PTFE tous les 3 mois."
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.2.15",
+     "narration": {
+      "en": "Input Shaping, available in Klipper firmware, uses accelerometer data to mathematically cancel vibrations, allowing higher print speeds without ringing artifacts.",
+      "fr": "Le Input Shaping, disponible dans le micrologiciel Klipper, utilise des données d'accéléromètre pour annuler mathématiquement les vibrations, permettant des vitesses d'impression plus élevées sans artefacts de ringing."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "Input Shaping (Klipper): connect an accelerometer, run resonance measurements, and the firmware automatically compensates — eliminating ghosting at higher speeds.",
+        "fr": "Input Shaping (Klipper) : connectez un accéléromètre, effectuez des mesures de résonance, et le micrologiciel compense automatiquement — éliminant le ghosting à des vitesses plus élevées."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.2.16",
+     "narration": {
+      "en": "Gaps in top layers occur when the solid surface can't bridge the infill underneath. Your top solid section should be at least 0.5 millimetres thick — that means 3 or more layers at 0.2 millimetre height.",
+      "fr": "Les espaces dans les couches supérieures surviennent quand la surface solide ne peut pas couvrir le remplissage en dessous. Votre section supérieure solide doit avoir au moins 0,5 mm d'épaisseur — soit 3 couches ou plus à 0,2 mm de hauteur."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Gaps in Top Layers and Elephant's Foot",
+        "fr": "Espaces dans les couches supérieures et pied d'éléphant"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": {
+         "en": "Gaps in top layers",
+         "fr": "Espaces dans les couches supérieures"
+        },
+        "note": {
+         "en": "Top section under 0.5 mm, or infill under 15–20%. Add 4+ top layers; increase infill.",
+         "fr": "Section supérieure sous 0,5 mm, ou remplissage sous 15–20 %. Ajouter 4+ couches supérieures ; augmenter le remplissage."
+        }
+       },
+       "right": {
+        "title": {
+         "en": "Elephant's foot",
+         "fr": "Pied d'éléphant"
+        },
+        "note": {
+         "en": "First 1–2 layers flare out — Z-offset too low or bed too hot. Raise Z by 0.05 mm; reduce bed temp 5–10°C; use slicer compensation ~0.2 mm.",
+         "fr": "Les 1–2 premières couches s'évasent — Z-offset trop bas ou plateau trop chaud. Augmenter Z de 0,05 mm ; réduire temp. plateau de 5–10°C ; utiliser la compensation du trancheur ~0,2 mm."
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.2.17",
+     "narration": {
+      "en": "Spaghetti is a symptom, not a root cause — it means the print has detached from the bed, supports have collapsed, or a layer shift has moved the nozzle outside the model. AI-powered failure detection can catch it automatically.",
+      "fr": "Le spaghetti est un symptôme, pas une cause — il signifie que l'impression s'est détachée du plateau, que les supports se sont effondrés, ou qu'un décalage de couches a déplacé la buse en dehors du modèle. La détection de pannes par IA peut l'intercepter automatiquement."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Spaghetti Failure and AI Detection",
+        "fr": "Échec en spaghetti et détection par IA"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Root causes</b> — detached print · collapsed supports · layer shift outside model",
+         "fr": "<b>Causes profondes</b> — impression décollée · supports effondrés · décalage hors modèle"
+        },
+        {
+         "en": "<b>Obico</b> (formerly The Spaghetti Detective) — webcam AI trained on millions of hours of print footage",
+         "fr": "<b>Obico</b> (anciennement The Spaghetti Detective) — IA webcam entraînée sur des millions d'heures de vidéos d'impression"
+        },
+        {
+         "en": "<b>Bambu Lab</b> — built-in camera + lidar spaghetti detection",
+         "fr": "<b>Bambu Lab</b> — détection intégrée via caméra + lidar"
+        },
+        {
+         "en": "Enable detection for any print longer than a few hours",
+         "fr": "Activez la détection pour toute impression de plusieurs heures"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.2.18",
+     "narration": {
+      "en": "To recap Chapter 2: systematic diagnosis beats guessing. Temperature, flow, retraction, and speed are interdependent. The cold pull is your best tool for clogs, and AI failure detection is worth enabling for long prints.",
+      "fr": "Pour résumer le chapitre 2 : le diagnostic systématique surpasse le tâtonnement. Température, débit, rétraction et vitesse sont interdépendants. La traction à froid est votre meilleur outil contre les bouchons, et la détection IA vaut la peine d'être activée pour les longues impressions."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 2 Recap",
+        "fr": "Récapitulatif du chapitre 2"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Systematic diagnosis</b> — one symptom, one cause, one fix at a time",
+         "fr": "<b>Diagnostic systématique</b> — un symptôme, une cause, une correction à la fois"
+        },
+        {
+         "en": "<b>Calibration order</b> — Temperature → Flow → Pressure Adv. → Retraction → Speed",
+         "fr": "<b>Ordre de calibration</b> — Température → Débit → Avance de pression → Rétraction → Vitesse"
+        },
+        {
+         "en": "<b>Cold pull</b> — best non-destructive clog fix; run every 20–50 hours to prevent",
+         "fr": "<b>Traction à froid</b> — meilleure correction non destructive ; faire toutes les 20–50 heures en prévention"
+        },
+        {
+         "en": "<b>Mechanical issues</b> (shifts, ghosting, Z-banding) — usually loose belts or excessive speed",
+         "fr": "<b>Problèmes mécaniques</b> (décalages, ghosting, banding en Z) — généralement courroies lâches ou vitesse excessive"
+        },
+        {
+         "en": "<b>AI detection</b> — enable for any unattended print",
+         "fr": "<b>Détection IA</b> — activer pour toute impression sans surveillance"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 3,
+   "title": {
+    "en": "Safety and Maintenance",
+    "fr": "Sécurité et maintenance"
+   },
+   "scenes": [
+    {
+     "id": "8.3.0",
+     "narration": {
+      "en": "Welcome to Chapter 3 — the most important topic in 3D printing: keeping yourself, your home, and your family safe. The risks are real but entirely manageable with the right precautions.",
+      "fr": "Bienvenue au chapitre 3 — le sujet le plus important de l'impression 3D : assurer votre sécurité, celle de votre domicile et de votre famille. Les risques sont réels mais entièrement gérables avec les précautions appropriées."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 8 · Chapter 3",
+        "fr": "Module 8 · Chapitre 3"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "Safety and Maintenance",
+        "fr": "Sécurité et maintenance"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Many beginners print ABS in open bedrooms, assume PLA is safe because it's biodegradable, and believe food-safe filament makes food-safe prints. All three assumptions are wrong.",
+        "fr": "Beaucoup de débutants impriment de l'ABS dans des chambres ouvertes, supposent que le PLA est sans danger car biodégradable, et croient qu'un filament alimentaire produit des impressions sûres. Ces trois hypothèses sont erronées."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.3.1",
+     "narration": {
+      "en": "All FDM printers emit both ultrafine particles under 100 nanometres and volatile organic compounds during operation. Research has identified approximately 200 VOC species across different printing processes, many of them irritants or carcinogens.",
+      "fr": "Toutes les imprimantes FDM émettent à la fois des particules ultrafines de moins de 100 nm et des composés organiques volatils pendant leur fonctionnement. Des recherches ont identifié environ 200 espèces de COV dans différents procédés d'impression, dont beaucoup sont des irritants ou des cancérigènes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "UFPs and VOCs: The Reality",
+        "fr": "UFP et COV : la réalité"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "~200",
+       "caption": {
+        "en": "VOC species identified across FDM printing processes (Azimi et al. 2016)",
+        "fr": "espèces de COV identifiées dans les procédés d'impression FDM (Azimi et al. 2016)"
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.3.2",
+     "narration": {
+      "en": "The landmark Stephens 2013 study measured about 20 billion particles per minute for PLA and about 190 billion for ABS — nearly a tenfold difference. A subsequent meta-analysis found rates ranging from 10 to the 7th up to 2 times 10 to the 12th particles per minute.",
+      "fr": "L'étude de référence Stephens 2013 a mesuré environ 2×10¹⁰ particules par minute pour le PLA et environ 1,9×10¹¹ pour l'ABS — une différence de presque un facteur dix. Une méta-analyse ultérieure a trouvé des taux allant de 10⁷ à 2×10¹² particules par minute."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Particle Emissions by Material",
+        "fr": "Émissions de particules par matériau"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "PLA",
+        "note": {
+         "en": "~2×10¹⁰ particles/min — substantially lower emissions",
+         "fr": "~2×10¹⁰ particules/min — émissions substantiellement plus faibles"
+        }
+       },
+       "right": {
+        "title": "ABS",
+        "note": {
+         "en": "~1.9×10¹¹ particles/min — nearly 10× higher than PLA (Stephens et al. 2013)",
+         "fr": "~1,9×10¹¹ particules/min — presque 10× supérieur au PLA (Stephens et al. 2013)"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.3.3",
+     "narration": {
+      "en": "ABS emits styrene, classified by the IARC as probably carcinogenic to humans, Group 2A. Indoor ABS printing can substantially exceed styrene levels measured in commercial buildings. Nylon emits caprolactam, which can reach roughly 14 times California's 8-hour reference exposure level.",
+      "fr": "L'ABS émet du styrène, classé par le CIRC comme probablement cancérigène, groupe 2A. L'impression intérieure d'ABS peut dépasser substantiellement les niveaux de styrène mesurés dans les bâtiments commerciaux. Le nylon émet du caprolactame, pouvant atteindre environ 14 fois le niveau d'exposition de référence californien sur 8 heures."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "High-Risk Materials: ABS and Nylon",
+        "fr": "Matériaux à risque élevé : ABS et nylon"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "ABS → Styrène",
+         "desc": {
+          "en": "IARC Group 2A — probably carcinogenic. Never print in bedrooms or poorly ventilated spaces.",
+          "fr": "CIRC groupe 2A — probablement cancérigène. N'imprimez jamais dans des chambres à coucher ou espaces mal ventilés."
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Nylon → Caprolactam",
+          "fr": "Nylon → Caprolactame"
+         },
+         "desc": {
+          "en": "Can reach ~14× California's 8-hour REL. Same precautions as ABS.",
+          "fr": "Peut atteindre ~14× le REL californien sur 8 heures. Mêmes précautions que l'ABS."
+         },
+         "highlight": true
+        },
+        {
+         "title": "PLA",
+         "desc": {
+          "en": "Fewer VOCs than ABS but still emits significant UFPs — ventilation still matters.",
+          "fr": "Moins de COV que l'ABS mais émet tout de même des UFP significatifs — la ventilation reste importante."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.3.4",
+     "narration": {
+      "en": "Virginia Tech Environmental Health and Safety recommends fully enclosing 3D printers to limit exposure and maintaining 5 to 10 air changes per hour. For ABS and nylon, use HEPA plus activated carbon filtration or ducted exhaust to outside.",
+      "fr": "Virginia Tech EHS recommande d'enfermer entièrement les imprimantes 3D pour limiter l'exposition et de maintenir 5 à 10 renouvellements d'air par heure. Pour l'ABS et le nylon, utilisez une filtration HEPA + charbon actif ou une évacuation directe vers l'extérieur."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Ventilation Requirements",
+        "fr": "Exigences de ventilation"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Minimum</b> — 5–10 air changes per hour (ACH)",
+         "fr": "<b>Minimum</b> — 5–10 renouvellements d'air par heure (ACH)"
+        },
+        {
+         "en": "<b>Best practice</b> — well-ventilated room, not a bedroom; window or exhaust fan",
+         "fr": "<b>Bonne pratique</b> — pièce bien ventilée, pas une chambre ; fenêtre ou ventilateur d'extraction"
+        },
+        {
+         "en": "<b>ABS/Nylon</b> — HEPA + activated carbon filtration, or ducted exhaust outside",
+         "fr": "<b>ABS/Nylon</b> — filtration HEPA + charbon actif, ou évacuation directe vers l'extérieur"
+        },
+        {
+         "en": "<b>Virginia Tech EHS</b> — fully enclose printer + 5–10 ACH minimum",
+         "fr": "<b>Virginia Tech EHS</b> — enfermer entièrement l'imprimante + 5–10 ACH minimum"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.3.5",
+     "narration": {
+      "en": "Thermal runaway is the leading fire-related failure mode. It occurs when the thermistor fails but the heater keeps receiving power, causing temperatures to climb unchecked until something catches fire.",
+      "fr": "L'emballement thermique est le principal mode de défaillance lié aux incendies. Il survient quand la thermistance tombe en panne mais que le chauffage continue de recevoir de l'alimentation, provoquant une montée en température incontrôlée jusqu'à ce que quelque chose prenne feu."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Thermal Runaway: The Leading Fire Risk",
+        "fr": "Emballement thermique : le principal risque d'incendie"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "Thermistor fails or disconnects — heater keeps running — temperature climbs without limit. Modern firmware's thermal runaway protection shuts the heater off automatically.",
+        "fr": "La thermistance tombe en panne ou se déconnecte — le chauffage continue — la température monte sans limite. La protection contre l'emballement thermique du micrologiciel moderne coupe le chauffage automatiquement."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.3.6",
+     "narration": {
+      "en": "Both Marlin and Klipper have thermal runaway protection built in. You can test yours by heating the nozzle and cooling it with compressed air — a thermal runaway error should trigger within 30 to 60 seconds.",
+      "fr": "Marlin et Klipper ont tous deux une protection contre l'emballement thermique intégrée. Vous pouvez tester la vôtre en chauffant la buse et en la refroidissant avec de l'air comprimé — une erreur d'emballement thermique devrait se déclencher dans les 30 à 60 secondes."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Firmware Thermal Runaway Protection",
+        "fr": "Protection contre l'emballement thermique dans le micrologiciel"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "Marlin",
+        "note": {
+         "en": "Built-in, enabled by default in modern versions. Monitors temperature response to heating commands.",
+         "fr": "Intégré, activé par défaut dans les versions modernes. Surveille la réponse de température aux commandes de chauffe."
+        }
+       },
+       "right": {
+        "title": "Klipper",
+        "note": {
+         "en": "verify_heater module — continuous heater performance checks; triggers printer shutdown on deviation.",
+         "fr": "Module verify_heater — vérifications continues ; déclenche l'arrêt de l'imprimante en cas d'écart."
+        }
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Test it: heat nozzle, cool with compressed air — a thermal runaway error should appear within 30–60 seconds.",
+        "fr": "Testez-le : chauffez la buse, refroidissez à l'air comprimé — une erreur d'emballement thermique doit apparaître dans les 30–60 secondes."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.3.7",
+     "narration": {
+      "en": "Essential fire safety hardware includes a Wi-Fi smoke detector with phone alerts near the printer, a smart plug for remote power shutoff, an ABC-rated fire extinguisher within arm's reach, and a non-combustible surface underneath.",
+      "fr": "Le matériel essentiel de sécurité incendie comprend un détecteur de fumée Wi-Fi avec alertes téléphoniques, une prise intelligente pour la coupure d'alimentation à distance, un extincteur de type ABC à portée de main, et une surface non combustible en dessous."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Fire Safety Hardware Checklist",
+        "fr": "Liste du matériel de sécurité incendie"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Wi-Fi smoke detector",
+          "fr": "Détecteur de fumée Wi-Fi"
+         },
+         "desc": {
+          "en": "Phone alerts near the printer — early warning",
+          "fr": "Alertes téléphoniques à proximité — alerte précoce"
+         }
+        },
+        {
+         "title": {
+          "en": "Smart plug",
+          "fr": "Prise intelligente"
+         },
+         "desc": {
+          "en": "Remote power shutoff from your phone",
+          "fr": "Coupure d'alimentation à distance depuis votre téléphone"
+         }
+        },
+        {
+         "title": {
+          "en": "ABC extinguisher",
+          "fr": "Extincteur ABC"
+         },
+         "desc": {
+          "en": "Within arm's reach of the printer",
+          "fr": "À portée de main de l'imprimante"
+         }
+        },
+        {
+         "title": {
+          "en": "Non-combustible surface",
+          "fr": "Surface non combustible"
+         },
+         "desc": {
+          "en": "Steel shelf, tile, or ceramic underneath",
+          "fr": "Étagère acier, carrelage ou céramique en dessous"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.3.8",
+     "narration": {
+      "en": "For enclosed printers, consider a tube-style clean agent system like BlazeCut. The polymer tube triggers automatically when the enclosure reaches about 105 to 110 degrees Celsius, releasing a residue-free agent without needing power or manual action.",
+      "fr": "Pour les imprimantes en enceinte, envisagez un système d'agent extincteur en tube comme BlazeCut. Le tube polymère se déclenche automatiquement lorsque l'enceinte atteint environ 105 à 110°C, libérant un agent sans résidu sans nécessiter d'alimentation ni d'intervention manuelle."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "BlazeCut T-Series: polymer tube auto-triggers at ~105–110°C, releases residue-free suppressing agent — no power, no manual action needed.",
+        "fr": "BlazeCut T-Series : tube polymère se déclenche automatiquement à ~105–110°C, libère un agent suppresseur sans résidu — aucune alimentation ni action manuelle requise."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.3.9",
+     "narration": {
+      "en": "Two more material-specific hazards: PTFE-lined hotends begin to decompose at approximately 260 degrees Celsius, releasing toxic fluorocarbon fumes. Carbon fiber filaments release microscopic fibres during printing and especially during sanding — use an FFP2 or FFP3 mask and HEPA filtration.",
+      "fr": "Deux autres dangers spécifiques aux matériaux : les buses PTFE commencent à se décomposer à environ 260°C, libérant des fumées fluorocarbonées toxiques. Les filaments à fibre de carbone libèrent des fibres microscopiques pendant l'impression et surtout pendant le ponçage — utilisez un masque FFP2 ou FFP3 et une filtration HEPA."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "PTFE and Carbon Fibre Hazards",
+        "fr": "Dangers du PTFE et de la fibre de carbone"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>PTFE hotend liner</b> — decomposes at ~260°C releasing toxic fluorocarbon fumes; stay below 250°C routinely",
+         "fr": "<b>Tube PTFE hotend</b> — se décompose à ~260°C en libérant des fumées fluorocarbonées toxiques ; restez en dessous de 250°C en routine"
+        },
+        {
+         "en": "<b>Carbon fibre filament</b> — microscopic particles and fibres in air; sanding especially hazardous",
+         "fr": "<b>Filament fibre de carbone</b> — particules et fibres microscopiques dans l'air ; ponçage particulièrement dangereux"
+        },
+        {
+         "en": "<b>CF precautions</b> — hardened steel nozzle + FFP2/FFP3 mask + HEPA filtration",
+         "fr": "<b>Précautions FC</b> — buse en acier trempé + masque FFP2/FFP3 + filtration HEPA"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.3.10",
+     "narration": {
+      "en": "3D printer fires most commonly originate from electrical causes: faulty power supplies, poor solder joints, and worn wiring. Plug into properly grounded, ideally GFCI-protected outlets and never use undersized extension cords.",
+      "fr": "Les incendies d'imprimantes 3D trouvent leur origine le plus souvent dans des causes électriques : alimentations défectueuses, mauvaises soudures et câblages usés. Branchez sur des prises correctement mises à la terre, idéalement protégées par un GFCI, et n'utilisez jamais de rallonges sous-dimensionnées."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Electrical Safety",
+        "fr": "Sécurité électrique"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Grounded outlets</b> — preferably GFCI-protected",
+         "fr": "<b>Prises mises à la terre</b> — de préférence protégées par un GFCI"
+        },
+        {
+         "en": "<b>Certifications</b> — check for UL, CE, or CSA on power supply and printer",
+         "fr": "<b>Certifications</b> — vérifier les marquages UL, CE ou CSA sur l'alimentation et l'imprimante"
+        },
+        {
+         "en": "<b>Extension cords</b> — avoid; if needed, heavy-gauge rated for at least 15A",
+         "fr": "<b>Rallonges</b> — à éviter ; si nécessaire, câble à gros calibre prévu pour au moins 15 A"
+        },
+        {
+         "en": "<b>Inspect cables</b> — especially where they flex; never remove covers without switching off and unplugging",
+         "fr": "<b>Inspecter les câbles</b> — surtout aux endroits où ils fléchissent ; ne jamais retirer les capots sans éteindre et débrancher"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.3.11",
+     "narration": {
+      "en": "Here is a critical truth: no FDM printed part is food-safe by default, even if the raw filament is labeled FDA compliant. The FDM process creates microscopic gaps between layers that trap bacteria — and those gaps cannot be cleaned out, even in a dishwasher.",
+      "fr": "Voici une vérité critique : aucune pièce imprimée FDM n'est alimentairement sûre par défaut, même si le filament brut est étiqueté conforme FDA. Le procédé FDM crée des espaces microscopiques entre les couches qui piègent les bactéries — et ces espaces ne peuvent pas être nettoyés, même au lave-vaisselle."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Food Safety Reality",
+        "fr": "Réalité de la sécurité alimentaire"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "No FDM part is food-safe by default — even with FDA-compliant filament. Layer gaps trap bacteria. Prusa Research: untreated PLA cups worst bacterial growth after 14 days; epoxy-coated cups: zero colonies.",
+        "fr": "Aucune pièce FDM n'est alimentairement sûre par défaut — même avec un filament conforme FDA. Les espaces entre couches piègent les bactéries. Prusa Research : gobelets PLA non traités pire croissance bactérienne après 14 jours ; gobelets revêtus d'époxy : zéro colonie."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.3.12",
+     "narration": {
+      "en": "If you must print food-contact items, use food-grade certified filament plus a stainless steel nozzle plus a food-safe epoxy or silicone coating to seal the layer lines. Even then, coatings wear down over time.",
+      "fr": "Si vous devez imprimer des pièces en contact avec des aliments, utilisez un filament certifié alimentaire, une buse en acier inoxydable et un revêtement époxy ou silicone alimentaire pour sceller les lignes de couches. Même ainsi, les revêtements s'usent avec le temps."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "note",
+       "text": {
+        "en": "If you must: food-grade filament + stainless steel nozzle + food-safe epoxy or silicone coating. Brass nozzles may leach trace metals. Coatings wear — not suitable for daily-use items.",
+        "fr": "Si vous devez : filament certifié alimentaire + buse en acier inoxydable + revêtement époxy ou silicone alimentaire. Les buses en laiton peuvent libérer des traces de métaux. Les revêtements s'usent — non adapté aux objets utilisés quotidiennement."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.3.13",
+     "narration": {
+      "en": "A consistent maintenance schedule prevents the majority of failures before they occur. Think of it in four bands: daily, weekly, monthly, and quarterly.",
+      "fr": "Un programme de maintenance régulier prévient la majorité des pannes avant qu'elles ne surviennent. Pensez-y en quatre niveaux : quotidien, hebdomadaire, mensuel et trimestriel."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Preventive Maintenance Schedule",
+        "fr": "Programme de maintenance préventive"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Frequency",
+         "fr": "Fréquence"
+        },
+        {
+         "en": "Key tasks",
+         "fr": "Tâches clés"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Daily",
+          "fr": "Quotidien"
+         },
+         {
+          "en": "Wipe bed with IPA, check first layer, remove debris, inspect for damage",
+          "fr": "Essuyer plateau avec IPA, vérifier première couche, enlever débris, inspecter"
+         }
+        ],
+        [
+         {
+          "en": "Weekly",
+          "fr": "Hebdomadaire"
+         },
+         {
+          "en": "Clean nozzle exterior (brass brush), check belt tension, lubricate linear rods",
+          "fr": "Nettoyer extérieur buse (brosse laiton), vérifier tension courroies, lubrifier rails"
+         }
+        ],
+        [
+         {
+          "en": "Monthly",
+          "fr": "Mensuel"
+         },
+         {
+          "en": "Deep-clean extruder gears, lubricate lead screws, cold pull, verify bed leveling",
+          "fr": "Nettoyage profond engrenages extrudeur, lubrifier vis à billes, traction à froid, vérifier nivellement"
+         }
+        ],
+        [
+         {
+          "en": "Quarterly",
+          "fr": "Trimestriel"
+         },
+         {
+          "en": "Replace nozzle (~500 h), check wiring, full calibration (e-steps, flow, PID), inspect belts",
+          "fr": "Remplacer buse (~500 h), vérifier câblage, calibration complète (e-steps, flux, PID), inspecter courroies"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.3.14",
+     "narration": {
+      "en": "Using the wrong lubricant causes more harm than good. Light machine oil for linear rails, white lithium or SuperLube PTFE grease for lead screws, and isopropyl alcohol daily for the PEI build plate.",
+      "fr": "Utiliser le mauvais lubrifiant cause plus de tort que de bien. Huile machine légère pour les rails linéaires, graisse blanche au lithium ou SuperLube PTFE pour les vis à billes, et alcool isopropylique quotidien pour le plateau PEI."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Lubrication Guide",
+        "fr": "Guide de lubrification"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Component",
+         "fr": "Composant"
+        },
+        {
+         "en": "Lubricant",
+         "fr": "Lubrifiant"
+        },
+        {
+         "en": "Frequency",
+         "fr": "Fréquence"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Linear rails",
+          "fr": "Rails linéaires"
+         },
+         {
+          "en": "Light machine oil ~30–60 cSt at 40°C",
+          "fr": "Huile machine légère ~30–60 cSt à 40°C"
+         },
+         {
+          "en": "Monthly",
+          "fr": "Mensuel"
+         }
+        ],
+        [
+         {
+          "en": "Lead screws (Z)",
+          "fr": "Vis à billes (Z)"
+         },
+         {
+          "en": "White lithium or SuperLube PTFE",
+          "fr": "Lithium blanc ou SuperLube PTFE"
+         },
+         {
+          "en": "Every 3 months",
+          "fr": "Tous les 3 mois"
+         }
+        ],
+        [
+         {
+          "en": "Bearings (rods)",
+          "fr": "Roulements (tiges)"
+         },
+         {
+          "en": "SuperLube Multi-Purpose with PTFE",
+          "fr": "SuperLube multi-usages avec PTFE"
+         },
+         {
+          "en": "Monthly",
+          "fr": "Mensuel"
+         }
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.3.15",
+     "narration": {
+      "en": "Never use standard WD-40 Multi-Use as a lubricant for linear rails or lead screws. It is primarily a penetrant and water displacer, not a long-term lubricant, and it attracts dust. If you want a WD-40 product, use WD-40 Specialist Dry Lube with PTFE instead — it is a completely different formula.",
+      "fr": "N'utilisez jamais le WD-40 Multi-Use standard comme lubrifiant pour les rails linéaires ou vis à billes. C'est principalement un pénétrant et déplaceur d'eau, pas un lubrifiant longue durée, et il attire la poussière. Si vous voulez un produit WD-40, utilisez le WD-40 Specialist Dry Lube au PTFE — c'est une formule complètement différente."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "Never use standard WD-40 Multi-Use on rails or lead screws — it is a penetrant, not a lubricant, and attracts dust. WD-40 Specialist Dry Lube (PTFE-based) is suitable for rails — it is NOT the same product.",
+        "fr": "N'utilisez jamais le WD-40 Multi-Use standard sur les rails ou vis à billes — c'est un pénétrant, pas un lubrifiant, et il attire la poussière. Le WD-40 Specialist Dry Lube (à base de PTFE) convient pour les rails — ce n'est PAS le même produit."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.3.16",
+     "narration": {
+      "en": "To recap Chapter 3: ventilation is not optional. Verify thermal runaway protection is enabled. No FDM print is food-safe without a coating. Follow the four-band maintenance schedule and use the right lubricants.",
+      "fr": "Pour résumer le chapitre 3 : la ventilation n'est pas optionnelle. Vérifiez que la protection contre l'emballement thermique est activée. Aucune impression FDM n'est alimentairement sûre sans revêtement. Suivez le programme de maintenance en quatre niveaux et utilisez les bons lubrifiants."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 3 Recap",
+        "fr": "Récapitulatif du chapitre 3"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Ventilation</b> — not optional; 5–10 ACH; ABS/nylon need HEPA + carbon filter",
+         "fr": "<b>Ventilation</b> — pas optionnelle ; 5–10 ACH ; ABS/nylon nécessitent filtration HEPA + charbon"
+        },
+        {
+         "en": "<b>Thermal runaway</b> — verify enabled in firmware; test with compressed air",
+         "fr": "<b>Emballement thermique</b> — vérifier l'activation dans le micrologiciel ; tester à l'air comprimé"
+        },
+        {
+         "en": "<b>Fire hardware</b> — Wi-Fi smoke detector, smart plug, ABC extinguisher, non-combustible surface",
+         "fr": "<b>Matériel incendie</b> — détecteur Wi-Fi, prise intelligente, extincteur ABC, surface non combustible"
+        },
+        {
+         "en": "<b>Food safety</b> — layer gaps trap bacteria; coating required; brass nozzle unsafe",
+         "fr": "<b>Sécurité alimentaire</b> — les espaces piègent les bactéries ; revêtement requis ; buse laiton non sûre"
+        },
+        {
+         "en": "<b>Maintenance</b> — daily · weekly · monthly · quarterly; correct lubricants only",
+         "fr": "<b>Maintenance</b> — quotidien · hebdomadaire · mensuel · trimestriel ; lubrifiants corrects uniquement"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "chapter": 4,
+   "title": {
+    "en": "From Model to Finished Part",
+    "fr": "Du modèle à la pièce finie"
+   },
+   "scenes": [
+    {
+     "id": "8.4.0",
+     "narration": {
+      "en": "Welcome to Chapter 4. Finding a model, preparing it for the slicer, and transforming the raw print into a polished functional part is a multi-stage workflow that rewards attention to detail at every step.",
+      "fr": "Bienvenue au chapitre 4. Trouver un modèle, le préparer pour le trancheur, et transformer l'impression brute en une pièce fonctionnelle polie est un flux de travail en plusieurs étapes qui récompense l'attention aux détails à chaque étape."
+     },
+     "elements": [
+      {
+       "type": "kicker",
+       "text": {
+        "en": "Module 8 · Chapter 4",
+        "fr": "Module 8 · Chapitre 4"
+       }
+      },
+      {
+       "type": "title",
+       "text": {
+        "en": "From Model to Finished Part",
+        "fr": "Du modèle à la pièce finie"
+       }
+      },
+      {
+       "type": "lead",
+       "text": {
+        "en": "The complete journey: find a model, verify it, orient it, print it, remove supports, and finish the surface. Each step matters.",
+        "fr": "Le parcours complet : trouver un modèle, le vérifier, l'orienter, l'imprimer, retirer les supports et finir la surface. Chaque étape compte."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.4.1",
+     "narration": {
+      "en": "The 3D printing community has built enormous model libraries. MakerWorld is the fastest-growing platform in 2025 to 2026, with tight Bambu Studio integration and a designer rewards system. Printables is noted for active quality review. Thingiverse was acquired by MyMiniFactory in February 2026.",
+      "fr": "La communauté de l'impression 3D a créé d'immenses bibliothèques de modèles. MakerWorld est la plateforme à la croissance la plus rapide en 2025–2026, avec une intégration étroite à Bambu Studio et un système de récompenses. Printables est reconnue pour son suivi actif de la qualité. Thingiverse a été acquis par MyMiniFactory en février 2026."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Model Repositories",
+        "fr": "Dépôts de modèles"
+       }
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": "MakerWorld",
+         "desc": {
+          "en": "Bambu Lab platform — rewards system — fastest-growing 2025–2026",
+          "fr": "Plateforme Bambu Lab — système de récompenses — croissance la plus rapide 2025–2026"
+         },
+         "highlight": true
+        },
+        {
+         "title": "Printables",
+         "desc": {
+          "en": "Prusa's platform — active quality review community — high model quality",
+          "fr": "Plateforme Prusa — communauté d'évaluation active — haute qualité de modèles"
+         }
+        },
+        {
+         "title": "Thingiverse",
+         "desc": {
+          "en": "Original large repository — acquired by MyMiniFactory February 2026; 6M+ models preserved",
+          "fr": "Grand dépôt historique — acquis par MyMiniFactory en février 2026 ; 6M+ modèles préservés"
+         }
+        },
+        {
+         "title": "Cults3D",
+         "desc": {
+          "en": "Strong design community — free and paid models",
+          "fr": "Forte communauté de designers — modèles gratuits et payants"
+         }
+        },
+        {
+         "title": "MyMiniFactory",
+         "desc": {
+          "en": "Verified human-made designs — tabletop gaming focus — now also hosts Thingiverse",
+          "fr": "Designs vérifiés par humains — jeux de plateau — héberge désormais aussi Thingiverse"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.4.2",
+     "narration": {
+      "en": "Search across multiple platforms — not every great design is on every site. MakerWorld leads on traffic, Printables leads on quality, and Thingiverse has the largest archive.",
+      "fr": "Cherchez sur plusieurs plateformes — les meilleurs designs ne sont pas forcément sur chaque site. MakerWorld mène en trafic, Printables en qualité, et Thingiverse possède la plus grande archive."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Search across multiple platforms — MakerWorld for traffic and Bambu integration, Printables for quality, Thingiverse for archive depth. No single site has everything.",
+        "fr": "Cherchez sur plusieurs plateformes — MakerWorld pour le trafic et l'intégration Bambu, Printables pour la qualité, Thingiverse pour la profondeur d'archive. Aucun site n'a tout."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.4.3",
+     "narration": {
+      "en": "Before slicing, verify three things: the model must be a watertight closed mesh with no holes or non-manifold edges; dimensions must be correctly scaled; and the model should be oriented for optimal printing.",
+      "fr": "Avant de trancher, vérifiez trois choses : le modèle doit être un maillage étanche fermé sans trous ni bords non-manifold ; les dimensions doivent être correctement mises à l'échelle ; et le modèle doit être orienté pour une impression optimale."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Model Preparation: Three Checks",
+        "fr": "Préparation du modèle : trois vérifications"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Watertight?",
+          "fr": "Étanche ?"
+         },
+         "sub": {
+          "en": "No holes, no non-manifold edges; slicers auto-repair on import",
+          "fr": "Sans trous ni bords non-manifold ; les trancheurs réparent à l'import"
+         }
+        },
+        {
+         "name": {
+          "en": "Scaled?",
+          "fr": "Mis à l'échelle ?"
+         },
+         "sub": {
+          "en": "STL has no units — use 3MF to avoid 25.4× scale error",
+          "fr": "STL sans unités — utiliser 3MF pour éviter erreur d'échelle 25,4×"
+         }
+        },
+        {
+         "name": {
+          "en": "Oriented?",
+          "fr": "Orienté ?"
+         },
+         "sub": {
+          "en": "Strength · surface quality · minimal supports",
+          "fr": "Résistance · qualité de surface · supports minimaux"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.4.4",
+     "narration": {
+      "en": "The 3MF format solves the unit ambiguity of STL. It is now an ISO standard — ISO slash IEC 25422 colon 2025 — and includes unambiguous units, materials, and colors. Use 3MF instead of STL whenever possible.",
+      "fr": "Le format 3MF résout l'ambiguïté d'unités du STL. C'est désormais une norme ISO — ISO/IEC 25422:2025 — et il inclut des unités non ambiguës, des matériaux et des couleurs. Utilisez le 3MF à la place du STL dans la mesure du possible."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "3MF: The Modern Standard",
+        "fr": "3MF : le format standard moderne"
+       }
+      },
+      {
+       "type": "compare",
+       "left": {
+        "title": "STL",
+        "note": {
+         "en": "No unit information — a model in inches imports 25.4× too large if slicer assumes mm",
+         "fr": "Pas d'informations d'unités — un modèle en pouces s'importe 25,4× trop grand si le trancheur suppose des mm"
+        }
+       },
+       "right": {
+        "title": "3MF",
+        "note": {
+         "en": "ISO/IEC 25422:2025 — includes units, materials, colors — unambiguous, modern replacement for STL",
+         "fr": "ISO/IEC 25422:2025 — inclut unités, matériaux, couleurs — remplacement moderne non ambigu du STL"
+        },
+        "highlight": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.4.5",
+     "narration": {
+      "en": "Print orientation involves three trade-offs: strength follows layer lines so load paths should run along them; smooth curved surfaces should face vertically; and overhangs beyond 45 to 60 degrees need support.",
+      "fr": "L'orientation d'impression implique trois compromis : la résistance suit les lignes de couches donc les chemins de charge doivent les suivre ; les surfaces courbes lisses doivent être orientées verticalement ; et les surplombs au-delà de 45 à 60° nécessitent des supports."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Orientation Trade-offs",
+        "fr": "Compromis d'orientation"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "anisotropy"
+      },
+      {
+       "type": "cards",
+       "items": [
+        {
+         "title": {
+          "en": "Strength",
+          "fr": "Résistance"
+         },
+         "desc": {
+          "en": "Orient so load paths follow layer lines — parts are weakest across layers",
+          "fr": "Orienter pour que les chemins de charge suivent les lignes de couches — les pièces sont les plus fragiles entre couches"
+         },
+         "highlight": true
+        },
+        {
+         "title": {
+          "en": "Surface quality",
+          "fr": "Qualité de surface"
+         },
+         "desc": {
+          "en": "Smooth curved surfaces vertical (perpendicular to bed) for best appearance",
+          "fr": "Surfaces courbes lisses verticalement (perpendiculaires au plateau) pour le meilleur aspect"
+         }
+        },
+        {
+         "title": {
+          "en": "Supports",
+          "fr": "Supports"
+         },
+         "desc": {
+          "en": "Minimize overhangs beyond 45–60° from vertical",
+          "fr": "Minimiser les surplombs au-delà de 45–60° depuis la verticale"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.4.6",
+     "narration": {
+      "en": "Modern organic or tree supports are designed to snap off easily with minimal scarring. Use flush cutters for clean cuts, work from the top down, and enable 1 to 2 support interface layers for a cleaner surface on overhangs.",
+      "fr": "Les supports organiques ou en arbre modernes sont conçus pour se casser facilement avec un marquage minimal. Utilisez des pinces coupantes pour des coupes nettes, travaillez de haut en bas, et activez 1 à 2 couches d'interface pour une surface plus propre sur les surplombs."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Support Removal Best Practices",
+        "fr": "Bonnes pratiques de retrait des supports"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Organic/tree supports</b> — snap off easily, less surface scarring",
+         "fr": "<b>Supports organiques/en arbre</b> — se cassent facilement, moins de marques de surface"
+        },
+        {
+         "en": "<b>Flush cutters</b> — for clean, close cuts",
+         "fr": "<b>Pinces coupantes de côté</b> — pour des coupes nettes et proches"
+        },
+        {
+         "en": "<b>Top-down</b> — remove small sections at a time",
+         "fr": "<b>De haut en bas</b> — retirer de petites sections à la fois"
+        },
+        {
+         "en": "<b>Interface layers</b> — enable 1–2 between support and model for cleaner overhang surface",
+         "fr": "<b>Couches d'interface</b> — activer 1–2 entre support et modèle pour une surface de surplomb plus propre"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.4.7",
+     "narration": {
+      "en": "Sanding is the most common finishing method. Progress through grits: 120, then 220, then 400, then 800 and above. Wet sanding with water and a drop of dish soap prevents overheating and keeps the sandpaper from clogging.",
+      "fr": "Le ponçage est la méthode de finition la plus courante. Progressez à travers les grains : 120, puis 220, puis 400, puis 800 et plus. Le ponçage humide avec de l'eau et une goutte de liquide vaisselle empêche la surchauffe et évite que le papier de verre se colmate."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Post-Processing: Sanding",
+        "fr": "Post-traitement : ponçage"
+       }
+      },
+      {
+       "type": "stages",
+       "items": [
+        {
+         "label": "120 grit",
+         "sub": {
+          "en": "Remove layer lines",
+          "fr": "Retirer les lignes de couches"
+         }
+        },
+        {
+         "label": "220 grit",
+         "sub": {
+          "en": "Smooth surface",
+          "fr": "Lisser la surface"
+         }
+        },
+        {
+         "label": "400 grit",
+         "sub": {
+          "en": "Refine",
+          "fr": "Affiner"
+         }
+        },
+        {
+         "label": "800+ grit",
+         "sub": {
+          "en": "Final smooth finish",
+          "fr": "Finition lisse finale"
+         }
+        }
+       ]
+      },
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Wet sanding (water + drop of dish soap) prevents overheating and keeps sandpaper from clogging. Apply filler primer between rounds to reveal remaining imperfections.",
+        "fr": "Ponçage humide (eau + goutte de liquide vaisselle) empêche la surchauffe et évite le colmatage. Appliquer un apprêt de remplissage entre les passes pour révéler les imperfections restantes."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.4.8",
+     "narration": {
+      "en": "XTC-3D is a two-part epoxy coating mixed 2 to 1 by volume that self-levels to fill layer lines. It has a 10-minute working time and cures in about 4 hours. One ounce covers approximately 101 square inches.",
+      "fr": "XTC-3D est un revêtement époxy bicomposant mélangé dans un rapport 2 pour 1 en volume qui se nivelle pour remplir les lignes de couches. Il a un temps de travail de 10 minutes et sèche en environ 4 heures. Une once couvre environ 101 pouces carrés."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Gap Filling and Painting",
+        "fr": "Remplissage des espaces et peinture"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>XTC-3D epoxy</b> — 2:1 mix, 10-min working time, ~4-hour cure, 1 oz covers 101 in²",
+         "fr": "<b>Époxy XTC-3D</b> — mélange 2:1, 10 min de travail, séchage ~4 h, 1 oz couvre 101 in²"
+        },
+        {
+         "en": "<b>Wood filler</b> — for larger gaps; sands smooth after drying",
+         "fr": "<b>Enduit à bois</b> — pour les espaces plus larges ; se ponce lisse après séchage"
+        },
+        {
+         "en": "<b>Painting</b> — 2–3 coats filler primer (10 min dry between), sand 220–320 grit between coats",
+         "fr": "<b>Peinture</b> — 2–3 couches d'apprêt de remplissage (10 min de séchage entre), ponçage 220–320 entre les couches"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.4.9",
+     "narration": {
+      "en": "Acetone vapor smoothing is for ABS and ASA only. It achieves a 72 to 81 percent surface roughness reduction and an injection-molded appearance in 10 to 60 minutes. Acetone has a flash point of approximately minus 20 degrees Celsius and is extremely flammable.",
+      "fr": "Le lissage à la vapeur d'acétone est réservé à l'ABS et l'ASA uniquement. Il atteint une réduction de la rugosité de surface de 72 à 81 % et un aspect moulé par injection en 10 à 60 minutes. L'acétone a un point d'éclair d'environ -20°C et est extrêmement inflammable."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Acetone Vapor Smoothing (ABS/ASA only)",
+        "fr": "Lissage à la vapeur d'acétone (ABS/ASA uniquement)"
+       }
+      },
+      {
+       "type": "stat",
+       "value": "72–81%",
+       "caption": {
+        "en": "surface roughness reduction via acetone vapor smoothing in 10–60 minutes",
+        "fr": "réduction de la rugosité de surface par lissage à la vapeur d'acétone en 10–60 minutes"
+       }
+      },
+      {
+       "type": "callout",
+       "variant": "warning",
+       "text": {
+        "en": "ABS/ASA only. Acetone flash point ~−20°C — extremely flammable. Ventilated area, organic vapor respirator, no flames or sparks, glass containers only — acetone dissolves many plastics.",
+        "fr": "ABS/ASA uniquement. Point d'éclair de l'acétone ~−20°C — extrêmement inflammable. Espace ventilé, respirateur à vapeurs organiques, pas de flammes ni d'étincelles, récipients en verre uniquement — l'acétone dissout de nombreux plastiques."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.4.10",
+     "narration": {
+      "en": "For parts that need to be assembled and disassembled repeatedly, heat-set threaded inserts are far superior to tapping plastic threads directly. These small knurled brass inserts melt into the plastic and create strong, reusable metal threads.",
+      "fr": "Pour les pièces qui doivent être assemblées et démontées à plusieurs reprises, les inserts filetés thermofixés sont bien supérieurs au filetage direct du plastique. Ces petits inserts en laiton moletés fondent dans le plastique et créent des filets métalliques solides et réutilisables."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Heat-Set Threaded Inserts",
+        "fr": "Inserts filetés thermofixés"
+       }
+      },
+      {
+       "type": "pipeline",
+       "steps": [
+        {
+         "name": {
+          "en": "Design hole",
+          "fr": "Perçage pilote"
+         },
+         "sub": {
+          "en": "4.0 mm dia. for M3 insert",
+          "fr": "Ø 4,0 mm pour insert M3"
+         }
+        },
+        {
+         "name": {
+          "en": "Heat insert",
+          "fr": "Chauffer l'insert"
+         },
+         "sub": {
+          "en": "Soldering iron: print temp + 10–20°C",
+          "fr": "Fer à souder : temp. impression + 10–20°C"
+         }
+        },
+        {
+         "name": {
+          "en": "Press in",
+          "fr": "Enfoncer"
+         },
+         "sub": {
+          "en": "Plastic melts and reflows around knurls",
+          "fr": "Le plastique fond et reflue autour des moletages"
+         }
+        },
+        {
+         "name": {
+          "en": "Hold 5–10 s",
+          "fr": "Maintenir 5–10 s"
+         },
+         "sub": {
+          "en": "Plastic cools and solidifies",
+          "fr": "Le plastique refroidit et se solidifie"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.4.11",
+     "narration": {
+      "en": "For press-fit assemblies, add 0.3 to 0.5 millimetres clearance for sliding fits, 0.1 to 0.2 millimetres for transition fits, and zero to minus 0.05 millimetres interference for press fits. Use hexagonal or square holes instead of circular ones to reduce stretching and prevent cracking.",
+      "fr": "Pour les assemblages en ajustement serré, ajoutez 0,3 à 0,5 mm de jeu pour les ajustements glissants, 0,1 à 0,2 mm pour les ajustements transitoires, et 0,0 à -0,05 mm d'interférence pour les ajustements serrés. Utilisez des trous hexagonaux ou carrés plutôt que circulaires pour réduire l'étirement et prévenir les fissures."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Press-Fit Tolerances",
+        "fr": "Tolérances d'ajustement serré"
+       }
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Fit type",
+         "fr": "Type d'ajustement"
+        },
+        {
+         "en": "Clearance",
+         "fr": "Jeu"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Sliding fit",
+          "fr": "Ajustement glissant"
+         },
+         "0.3–0.5 mm"
+        ],
+        [
+         {
+          "en": "Transition fit",
+          "fr": "Ajustement transitoire"
+         },
+         "0.1–0.2 mm"
+        ],
+        [
+         {
+          "en": "Press fit",
+          "fr": "Ajustement serré"
+         },
+         "0.0 to −0.05 mm"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.4.12",
+     "narration": {
+      "en": "These seven design rules are your starting points for FDM-ready parts. Always print a tolerance test gauge when designing functional assemblies — every printer and material combination is slightly different.",
+      "fr": "Ces sept règles de conception sont vos points de départ pour des pièces prêtes pour le FDM. Imprimez toujours une jauge de tolérance lors de la conception d'assemblages fonctionnels — chaque combinaison d'imprimante et de matériau est légèrement différente."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "FDM Design Rules",
+        "fr": "Règles de conception FDM"
+       }
+      },
+      {
+       "type": "diagram",
+       "kind": "anisotropy"
+      },
+      {
+       "type": "table",
+       "headers": [
+        {
+         "en": "Parameter",
+         "fr": "Paramètre"
+        },
+        {
+         "en": "Rule of thumb",
+         "fr": "Règle de base"
+        }
+       ],
+       "rows": [
+        [
+         {
+          "en": "Min. wall thickness",
+          "fr": "Épaisseur paroi min."
+         },
+         {
+          "en": "0.8 mm (1.2–1.6 mm for strength)",
+          "fr": "0,8 mm (1,2–1,6 mm pour la résistance)"
+         }
+        ],
+        [
+         {
+          "en": "Min. feature size",
+          "fr": "Taille de détail min."
+         },
+         {
+          "en": "0.5 mm (embossed: 0.8–1.0 mm)",
+          "fr": "0,5 mm (relief : 0,8–1,0 mm)"
+         }
+        ],
+        [
+         {
+          "en": "Overhang limit",
+          "fr": "Limite de surplomb"
+         },
+         {
+          "en": "45–60° from vertical",
+          "fr": "45–60° depuis la verticale"
+         }
+        ],
+        [
+         {
+          "en": "Bridge limit",
+          "fr": "Limite de pont"
+         },
+         {
+          "en": "20–25 mm without support",
+          "fr": "20–25 mm sans support"
+         }
+        ],
+        [
+         {
+          "en": "Min. hole diameter",
+          "fr": "Diamètre trou min."
+         },
+         "2.0 mm"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8.4.13",
+     "narration": {
+      "en": "The Fuzzy Skin texture in PrusaSlicer and Bambu Studio intentionally adds surface roughness that paradoxically makes parts appear less 3D-printed by concealing the regular layer lines — a quick way to improve aesthetics without any post-processing.",
+      "fr": "La texture Fuzzy Skin dans PrusaSlicer et Bambu Studio ajoute intentionnellement une rugosité de surface qui, paradoxalement, donne aux pièces un aspect moins imprimé en 3D en dissimulant les lignes de couches régulières — un moyen rapide d'améliorer l'esthétique sans aucun post-traitement."
+     },
+     "elements": [
+      {
+       "type": "callout",
+       "variant": "tip",
+       "text": {
+        "en": "Fuzzy Skin texture (PrusaSlicer / Bambu Studio) hides regular layer lines by adding controlled surface roughness — the paradox of looking less 3D-printed by adding texture.",
+        "fr": "La texture Fuzzy Skin (PrusaSlicer / Bambu Studio) cache les lignes de couches régulières en ajoutant une rugosité de surface contrôlée — le paradoxe de sembler moins imprimé en 3D en ajoutant de la texture."
+       }
+      }
+     ]
+    },
+    {
+     "id": "8.4.14",
+     "narration": {
+      "en": "To recap Chapter 4 and Module 8: search multiple model repositories, use 3MF when possible, verify orientation carefully, choose post-processing to match your application, and follow design rules for wall thickness, overhangs, and tolerances.",
+      "fr": "Pour résumer le chapitre 4 et le module 8 : cherchez sur plusieurs dépôts, utilisez le 3MF quand c'est possible, vérifiez soigneusement l'orientation, choisissez le post-traitement adapté à votre application, et suivez les règles de conception pour l'épaisseur des parois, les surplombs et les tolérances."
+     },
+     "elements": [
+      {
+       "type": "title",
+       "text": {
+        "en": "Chapter 4 Recap",
+        "fr": "Récapitulatif du chapitre 4"
+       }
+      },
+      {
+       "type": "bullets",
+       "items": [
+        {
+         "en": "<b>Model repos</b> — MakerWorld (traffic), Printables (quality), Thingiverse via MyMiniFactory (archive)",
+         "fr": "<b>Dépôts de modèles</b> — MakerWorld (trafic), Printables (qualité), Thingiverse via MyMiniFactory (archive)"
+        },
+        {
+         "en": "<b>3MF</b> — ISO/IEC 25422:2025; use instead of STL to avoid unit errors",
+         "fr": "<b>3MF</b> — ISO/IEC 25422:2025 ; utiliser à la place du STL pour éviter les erreurs d'unités"
+        },
+        {
+         "en": "<b>Orientation</b> — balance strength, surface quality, and minimal supports",
+         "fr": "<b>Orientation</b> — équilibrer résistance, qualité de surface et supports minimaux"
+        },
+        {
+         "en": "<b>Post-processing</b> — sand 120→800+, XTC-3D epoxy, acetone (ABS/ASA only)",
+         "fr": "<b>Post-traitement</b> — ponçage 120→800+, époxy XTC-3D, acétone (ABS/ASA uniquement)"
+        },
+        {
+         "en": "<b>Design rules</b> — 0.8 mm walls · 45–60° overhangs · 0.3–0.5 mm clearance",
+         "fr": "<b>Règles de conception</b> — parois 0,8 mm · surplombs 45–60° · jeu 0,3–0,5 mm"
+        },
+        {
+         "en": "<b>Heat-set inserts</b> — far superior to tapped plastic for reusable assemblies",
+         "fr": "<b>Inserts thermofixés</b> — bien supérieurs au plastique fileté pour les assemblages réutilisables"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
