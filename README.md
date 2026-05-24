@@ -1,21 +1,32 @@
 # 3D Printing Crash Course
 
 A bilingual (English / French) crash course on 3D printing — 8 modules, 28 chapters,
-fact-checked with ~200 sourced citations. Shipped in three forms:
+fact-checked with ~200 sourced citations.
 
-- **Animated player** — `player/player.html`: a module-by-module slideshow with synced
-  voiceover narration, autoplay, pause/scrub, captions, and an EN ↔ FR toggle.
-- **Read** — self-contained single-file course apps: `dist/course_en.html`,
-  `dist/course_fr.html` (dark/light toggle, embedded fonts/diagrams, no network).
-- **PDF** — `dist/course_en.pdf`, `dist/course_fr.pdf`.
+The online experience is one phone-first **single-page app** (`player/site/index.html`, built
+by `build/build_app.py`): one URL whose GET parameters switch three views in place, with a
+shared header toggle linking them.
+
+```
+index.html?lang=<en|fr>&view=<watch|read|pdf>&at=<module.chapter.scene>
+```
+
+- **Watch** — animated, module-by-module slideshow with synced voiceover, autoplay,
+  pause/scrub, captions.
+- **Read** — the full course prose, with a chapter accordion and schematic diagrams.
+- **PDF** — opens `course_<lang>.pdf`.
+
+`lang`, `view`, and `at` are all bookmarkable; a shared module → chapter nav (a drawer on
+phones) drives both Watch and Read. Self-contained **offline** builds remain in `dist/`:
+`course_<lang>.html` (dark/light, no network) and `course_<lang>.pdf`.
 
 ## Layout
 
 | Path | What |
 |------|------|
 | `course_modules/{en,fr}/module_*.md` | the course content sources (per module) |
-| `build/` | consolidate → PDF + self-contained HTML (`build_all.sh`) |
-| `player/` | the animated player: `player.html`, `course.json`, `scenes/`, build scripts |
+| `build/` | `build_all.sh` → offline PDF + self-contained HTML; `build_app.py` → the online single-page app |
+| `player/` | scene data + audio for the watch view: `course.json`, `scenes/`, `diagrams.js`, audio pipeline, `build_site.sh` |
 | `assets/fonts/` | embedded display + body fonts (woff2) |
 | `assets/images/` | module banner images |
 | `dist/` | built deliverables (HTML + PDF) |
@@ -34,7 +45,8 @@ python3 player/gen_audio_gpt.py     --course player/course.json --out player/aud
 python3 player/gen_audio_voxtral.py --course player/course.json --out player/audio   # Voxtral — expressive (~$16/1M chars)
 # (or the free Edge TTS variant: gen_audio_edge.py, via `uv run --with edge-tts`)
 
-# Assemble the deployable player bundle -> player/site/
+# Assemble the deployable single-page-app bundle -> player/site/
+#   (index.html via build_app.py + course.json + diagrams.js + audio/ + assets/images/ + PDFs)
 bash player/build_site.sh
 ```
 
